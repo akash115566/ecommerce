@@ -1,0 +1,349 @@
+.justin-section {
+  width: 100%;
+  padding: 75px 7%;
+  background: #fff;
+
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.justin-header {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 35px;
+}
+
+.justin-heading p {
+  margin: 0 0 8px;
+
+  font-size: 13px;
+  letter-spacing: 2px;
+
+  color: #777;
+}
+
+.justin-heading h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 34px;
+  font-weight: 400;
+
+  letter-spacing: 1px;
+
+  color: #444;
+}
+
+.justin-view-all {
+  text-decoration: none;
+
+  color: #555;
+
+  font-size: 12px;
+  letter-spacing: 1px;
+
+  white-space: nowrap;
+}
+
+.justin-view-all span {
+  font-size: 17px;
+  margin-left: 5px;
+}
+
+
+/* =========================
+   SLIDER
+========================= */
+
+.justin-slider {
+  width: 100%;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.justin-track {
+  display: flex;
+
+  align-items: flex-start;
+
+  transition:
+    transform 0.8s ease-in-out;
+
+  will-change: transform;
+}
+
+.justin-track.instant-reset {
+  transition: none !important;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.justin-card {
+  flex-shrink: 0;
+
+  padding: 0 5px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.justin-image {
+  width: 100%;
+  height: 360px;
+
+  overflow: hidden;
+
+  background: #f5f4f2;
+
+  border-radius: 5px;
+}
+
+.justin-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.justin-image:hover img {
+  transform: scale(1.04);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.justin-content {
+  padding: 16px 5px 5px;
+}
+
+.justin-content h3 {
+  margin: 0 0 7px;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.3px;
+
+  color: #333;
+
+  line-height: 1.4;
+}
+
+.justin-content p {
+  margin: 0 0 13px;
+
+  font-size: 12px;
+
+  color: #777;
+
+  line-height: 1.5;
+}
+
+
+/* =========================
+   SHOP NOW
+========================= */
+
+.shop-now {
+  display: inline-block;
+
+  text-decoration: none;
+
+  color: #222;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+
+  border-bottom: 1px solid #222;
+
+  padding-bottom: 3px;
+
+  transition: 0.3s ease;
+}
+
+.shop-now span {
+  margin-left: 4px;
+}
+
+.shop-now:hover {
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================
+   ARROWS
+========================= */
+
+.justin-arrow {
+  position: absolute;
+
+  top: 42%;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  color: #222;
+
+  font-size: 28px;
+
+  cursor: pointer;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.12);
+
+  transition: 0.3s ease;
+}
+
+.justin-arrow:hover {
+  background: #222;
+  color: #fff;
+}
+
+.justin-prev {
+  left: 12px;
+}
+
+.justin-next {
+  right: 12px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .justin-section {
+    padding: 60px 5%;
+  }
+
+  .justin-heading h2 {
+    font-size: 29px;
+  }
+
+  .justin-image {
+    height: 300px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .justin-section {
+    padding: 50px 12px;
+  }
+
+  .justin-header {
+    align-items: center;
+
+    margin-bottom: 25px;
+  }
+
+  .justin-heading p {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+
+  .justin-heading h2 {
+    font-size: 22px;
+  }
+
+  .justin-view-all {
+    font-size: 10px;
+  }
+
+  .justin-image {
+    height: 230px;
+  }
+
+  .justin-content {
+    padding: 12px 4px;
+  }
+
+  .justin-content h3 {
+    font-size: 10px;
+  }
+
+  .justin-content p {
+    font-size: 10px;
+  }
+
+  .shop-now {
+    font-size: 9px;
+  }
+
+  .justin-arrow {
+    width: 30px;
+    height: 30px;
+
+    font-size: 21px;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+  .justin-section {
+    padding: 40px 8px;
+  }
+
+  .justin-heading h2 {
+    font-size: 19px;
+  }
+
+  .justin-image {
+    height: 200px;
+  }
+
+}

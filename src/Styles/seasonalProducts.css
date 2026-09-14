@@ -1,0 +1,265 @@
+.seasonal-section {
+  width: 100%;
+  padding: 80px 20px;
+  background: #f8f5ef;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.seasonal-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 35px;
+  padding: 0 10px;
+}
+
+.seasonal-heading h2 {
+  margin: 0;
+
+  font-family: Georgia, serif;
+  font-size: 38px;
+  font-weight: 400;
+
+  color: #222;
+}
+
+.seasonal-heading button {
+  background: none;
+  border: none;
+
+  font-size: 13px;
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   SLIDER
+========================= */
+
+.seasonal-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.seasonal-track {
+  display: flex;
+
+  transition:
+    transform 0.8s ease-in-out;
+
+  will-change: transform;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.seasonal-card {
+  flex: 0 0 25%;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.product-image {
+  position: relative;
+
+  width: 100%;
+  height: 420px;
+
+  overflow: hidden;
+
+  background: #eeeeee;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.product-image:hover img {
+  transform: scale(1.04);
+}
+
+
+/* =========================
+   ADD TO BAG
+========================= */
+
+.quick-add {
+  position: absolute;
+
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+
+  width: calc(100% - 30px);
+
+  padding: 14px;
+
+  border: none;
+
+  background: #111;
+  color: white;
+
+  font-size: 12px;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  opacity: 0;
+
+  transform: translateY(10px);
+
+  transition: all 0.3s ease;
+}
+
+.product-image:hover .quick-add {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.product-content {
+  padding: 18px 5px;
+}
+
+.product-content h3 {
+  margin: 0 0 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+.product-content p {
+  margin: 0 0 8px;
+
+  font-size: 13px;
+
+  color: #666;
+}
+
+.product-content > span {
+  font-size: 12px;
+
+  color: #777;
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+.product-bottom {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 12px;
+}
+
+.product-bottom strong {
+  font-size: 15px;
+}
+
+.product-bottom span {
+  font-size: 11px;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .seasonal-card {
+    flex: 0 0 33.333%;
+    width: 33.333%;
+  }
+
+  .product-image {
+    height: 350px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .seasonal-section {
+    padding: 60px 15px;
+  }
+
+  .seasonal-heading h2 {
+    font-size: 28px;
+  }
+
+  .seasonal-card {
+    flex: 0 0 50%;
+    width: 50%;
+
+    padding: 0 6px;
+  }
+
+  .product-image {
+    height: 280px;
+  }
+
+  .product-content h3 {
+    font-size: 12px;
+  }
+
+  .product-content p {
+    font-size: 11px;
+  }
+
+  .quick-add {
+    opacity: 1;
+
+    transform: none;
+
+    padding: 10px;
+
+    font-size: 10px;
+  }
+
+}

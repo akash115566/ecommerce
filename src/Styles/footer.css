@@ -1,0 +1,480 @@
+.footer {
+  width: 100%;
+
+  background: #faf9f7;
+
+  color: #222;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  position: relative;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   MAIN FOOTER
+========================= */
+
+.footer-container {
+  width: 100%;
+
+  max-width: 1100px;
+
+  margin: auto;
+
+  padding: 65px 0 55px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  column-gap: 55px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   COLUMNS
+========================= */
+
+.footer-column h3 {
+  margin: 0 0 28px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  letter-spacing: 1px;
+
+  color: #555;
+}
+
+.footer-column > a {
+  display: block;
+
+  width: fit-content;
+
+  margin-bottom: 13px;
+
+  color: #111;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  letter-spacing: 0.8px;
+
+  line-height: 1.4;
+
+  transition: color 0.3s ease;
+}
+
+.footer-column > a:hover {
+  color: #777;
+
+  text-decoration: underline;
+}
+
+
+/* =========================
+   NEW BADGE
+========================= */
+
+.new-badge {
+  display: inline-block;
+
+  margin-left: 7px;
+
+  padding: 2px 5px;
+
+  background: #555;
+
+  color: white;
+
+  border-radius: 2px;
+
+  font-size: 7px;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-item {
+  margin-bottom: 14px;
+}
+
+.contact-item span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 11px;
+
+  color: #555;
+}
+
+.contact-item a {
+  color: #222;
+
+  font-size: 11px;
+
+  text-decoration: underline;
+
+  text-underline-offset: 3px;
+}
+
+.contact-link {
+  margin-top: 5px !important;
+}
+
+
+/* =========================
+   FOLLOW
+========================= */
+
+.follow-title {
+  margin-top: 48px !important;
+
+  margin-bottom: 25px !important;
+}
+
+.social-icons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.social-icons a {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #ddd;
+
+  color: white;
+
+  border-radius: 4px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #555;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.footer-bottom {
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 32px;
+
+  border-top: 1px solid #e2e0dd;
+
+  padding: 22px 0 40px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   PAYMENT
+========================= */
+
+.payment-section h4 {
+  margin: 0 0 28px;
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.5px;
+}
+
+.payment-methods {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+}
+
+.payment {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 35px;
+
+  height: 24px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.visa {
+  font-size: 16px;
+
+  color: #1b216d;
+
+  border-bottom: 3px solid #e6d900;
+}
+
+.mastercard {
+  font-size: 17px;
+
+  color: #e74c3c;
+}
+
+.amex {
+  background: #1675b9;
+
+  color: white;
+
+  padding: 2px 4px;
+}
+
+.rupay {
+  color: #303080;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+.paypal {
+  color: #1c3d91;
+
+  font-size: 14px;
+}
+
+.netbanking {
+  background: #111;
+
+  color: white;
+
+  padding: 0 6px;
+
+  font-size: 9px;
+}
+
+.cod {
+  border: 1px solid #555;
+
+  padding: 2px 5px;
+
+  line-height: 1;
+
+  font-size: 7px;
+}
+
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.copyright {
+  border-top: none;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  padding-top: 0;
+}
+
+.copyright p {
+  margin: 0;
+
+  font-size: 11px;
+
+  color: #222;
+}
+
+
+/* =========================
+   SCROLL TOP
+========================= */
+
+.scroll-top {
+  position: fixed;
+
+  left: 15px;
+
+  bottom: 15px;
+
+  width: 32px;
+  height: 32px;
+
+  border: none;
+
+  background: #444;
+
+  color: white;
+
+  border-radius: 3px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+
+  z-index: 100;
+}
+
+.scroll-top:hover {
+  background: #222;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .footer-container {
+    padding: 55px 5% 45px;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 45px 50px;
+  }
+
+  .footer-bottom {
+    margin: 0 5%;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .footer-container {
+    padding: 45px 25px;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px 25px;
+  }
+
+  .footer-column h3 {
+    font-size: 14px;
+
+    margin-bottom: 22px;
+  }
+
+  .footer-column > a {
+    font-size: 9px;
+
+    margin-bottom: 12px;
+  }
+
+  .contact-item span,
+  .contact-item a {
+    font-size: 9px;
+  }
+
+  .social-icons {
+    gap: 6px;
+  }
+
+  .social-icons a {
+    width: 23px;
+    height: 23px;
+
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    margin: 0 25px;
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    padding-bottom: 35px;
+  }
+
+  .copyright {
+    border-top: 1px solid #e2e0dd;
+
+    padding-top: 20px;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+  .footer-container {
+    padding: 40px 15px;
+
+    gap: 35px 15px;
+  }
+
+  .footer-column h3 {
+    font-size: 12px;
+  }
+
+  .footer-column > a {
+    font-size: 8px;
+  }
+
+  .footer-bottom {
+    margin: 0 15px;
+  }
+
+  .payment-methods {
+    gap: 10px;
+  }
+
+}
