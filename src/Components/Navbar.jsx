@@ -1,6 +1,6 @@
 import React, { useState ,useEffect} from "react";
 import { Link } from "react-router-dom";
-import "../Styles/Navbar.css";
+import "../Styles/navbar.css";
 
 function Navbar() {
     const [offerSlide, setOfferSlide] = useState(0);
