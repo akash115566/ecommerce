@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../Context/CartContext";
-import "../Styles/cartDrawer.css";
+import "../Styles/cartdrawer.css";
 
 function CartDrawer({ isOpen, onClose }) {
   const navigate = useNavigate();
