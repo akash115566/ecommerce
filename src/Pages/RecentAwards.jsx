@@ -3,35 +3,35 @@ import "../Styles/recentawards.css";
 
 const awards = [
   {
-    image: "/award.webp",
+    image: "/kromaic.jfif",
     title: "Best Business Excellence Award",
   },
   {
-     image: "/award.webp",
+     image: "/nisha.jfif",
     title: "Outstanding Brand Award",
   },
   {
-     image: "/award.webp",
+     image: "/soap-protam.jfif",
     title: "Excellence in Media Award",
   },
   {
-     image: "/award.webp",
+     image: "/soap.jfif",
     title: "Business Leadership Award",
   },
   {
-     image: "/award.webp",
+     image: "/kromaic.jfif",
     title: "Best Growth Award",
   },
   {
-     image: "/award.webp",
+     image: "/nisha.jfif",
     title: "Entrepreneurship Excellence Award",
   },
   {
-     image: "/award.webp",
+     image: "/soap-protam.jfif",
     title: "Industry Excellence Award",
   },
   {
-     image: "/award.webp",
+     image: "/soap.jfif",
     title: "National Achievement Award",
   },
 ];

@@ -3,49 +3,49 @@ import "../Styles/mostLovedrituals.css";
 
 const products = [
   {
-    image: "/pic.png",
+    image: "/kromaic.jfif",
     title: "FRAGRANT MOISTURE-LOCK DUO",
     description: "Replenishes Moisture & Scents The Skin",
     price: "₹3,845.00",
   },
   {
-   image: "/pic.png",
+   image: "/nisha.jfif",
     title: "BATH SET - LIME & SAFFRON",
     description: "Purifies, Detoxifies & Moisturises",
     price: "₹3,600.00",
   },
   {
-    image: "/pic.png",
+    image: "/kromaic.jfif",
     title: "DAILY CLEANSE & SHIELD PAIR",
     description: "Daily Cleansing & Protection Ritual",
     price: "₹2,870.00",
   },
   {
-    image: "/pic.png",
+    image: "/soap.jfif",
     title: "RADIANT SKIN RITUAL",
     description: "Illuminates Dull Skin",
     price: "₹5,550.00",
   },
   {
-    image: "/pic.png",
+    image: "/soap-protam.jfif",
     title: "ROSE & SANDALWOOD RITUAL",
     description: "Nourishes Skin & Enhances Radiance",
     price: "₹3,250.00",
   },
   {
-   image: "/pic.png",
+   image: "/nisha.jfif",
     title: "AYURVEDIC BODY CARE SET",
     description: "Softens, Nourishes & Hydrates",
     price: "₹4,150.00",
   },
   {
-    image: "/pic.png",
+    image: "/soap.jfif",
     title: "LUXURY HAIR RITUAL",
     description: "Strengthens Hair & Nourishes Scalp",
     price: "₹3,950.00",
   },
   {
-    image: "/pic.png",
+    image: "/kromaic.jfif",
     title: "PREMIUM WELLNESS RITUAL",
     description: "A Complete Everyday Self-Care Ritual",
     price: "₹4,750.00",

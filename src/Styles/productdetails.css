@@ -1,0 +1,1155 @@
+.product-details-page {
+  width: 100%;
+  background: #fff;
+  min-height: 100vh;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* =================================
+   MAIN PRODUCT
+================================= */
+
+.product-main {
+  width: 90%;
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  padding: 45px 0 80px;
+
+  display: grid;
+  grid-template-columns: 48% 52%;
+
+  gap: 50px;
+}
+
+
+/* =================================
+   GALLERY
+================================= */
+
+.product-gallery {
+  width: 100%;
+  position: relative;
+}
+
+
+.main-product-image {
+  position: relative;
+
+  width: 100%;
+  height: 520px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fafafa;
+
+  overflow: hidden;
+}
+
+
+.main-product-image img {
+  width: 75%;
+  height: 90%;
+
+  object-fit: contain;
+
+  transition: 0.4s ease;
+}
+
+
+/* HEART */
+
+.product-heart {
+  position: absolute;
+
+  top: 15px;
+  right: 18px;
+
+  border: none;
+
+  background: transparent;
+
+  font-size: 25px;
+
+  cursor: pointer;
+
+  color: #333;
+
+  z-index: 2;
+}
+
+
+/* =================================
+   THUMBNAILS
+================================= */
+
+.product-thumbnails {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 15px;
+
+  overflow-x: auto;
+
+  padding-bottom: 5px;
+}
+
+
+.thumbnail {
+  min-width: 75px;
+  width: 75px;
+  height: 85px;
+
+  border: 1px solid #ddd;
+
+  background: #fff;
+
+  cursor: pointer;
+
+  padding: 5px;
+
+  transition: 0.3s;
+}
+
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+.thumbnail:hover {
+  border-color: #222;
+}
+
+
+.thumbnail.active {
+  border: 1px solid #222;
+}
+
+
+/* DISCLAIMER */
+
+.image-disclaimer {
+  font-size: 9px;
+
+  color: #777;
+
+  line-height: 15px;
+
+  margin-top: 12px;
+
+  max-width: 500px;
+}
+
+
+/* =================================
+   PRODUCT INFO
+================================= */
+
+.product-info {
+  padding-top: 5px;
+}
+
+
+.breadcrumb {
+  font-size: 8px;
+
+  color: #777;
+
+  letter-spacing: 0.5px;
+
+  margin-bottom: 15px;
+}
+
+
+.product-info h1 {
+  font-family: Georgia, serif;
+
+  font-size: 34px;
+
+  line-height: 1.15;
+
+  font-weight: 400;
+
+  color: #333;
+
+  margin: 0 0 20px;
+}
+
+
+/* =================================
+   SIZE
+================================= */
+
+.size-section > span {
+  display: block;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  margin-bottom: 8px;
+}
+
+
+.size-options {
+  display: flex;
+
+  gap: 5px;
+}
+
+
+.size-btn {
+  padding: 8px 12px;
+
+  background: #fff;
+
+  border: 1px solid #bbb;
+
+  font-size: 10px;
+
+  cursor: pointer;
+}
+
+
+.size-btn.selected {
+  background: #333;
+
+  color: #fff;
+
+  border-color: #333;
+}
+
+
+/* =================================
+   RATING
+================================= */
+
+.rating {
+  margin-top: 18px;
+
+  font-size: 13px;
+
+  letter-spacing: 1px;
+}
+
+
+.rating span {
+  font-size: 9px;
+
+  letter-spacing: 0;
+
+  color: #555;
+
+  margin-left: 7px;
+}
+
+
+/* =================================
+   PRICE
+================================= */
+
+.price {
+  margin-top: 15px;
+
+  font-size: 14px;
+
+  color: #333;
+}
+
+
+.price span {
+  font-size: 8px;
+
+  color: #666;
+}
+
+
+/* =================================
+   BAG
+================================= */
+
+.bag-row {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 20px;
+}
+
+
+.quantity-box {
+  display: flex;
+
+  height: 42px;
+
+  border: 1px solid #bbb;
+}
+
+
+.quantity-box button {
+  width: 32px;
+
+  border: none;
+
+  background: #fff;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+
+.quantity-box span {
+  width: 32px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 12px;
+
+  border-left: 1px solid #ddd;
+
+  border-right: 1px solid #ddd;
+}
+
+
+.add-bag-btn {
+  height: 42px;
+
+  flex: 1;
+
+  border: 1px solid #999;
+
+  background: #fff;
+
+  cursor: pointer;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+
+  transition: 0.3s;
+}
+
+
+.add-bag-btn:hover {
+  background: #222;
+
+  color: #fff;
+}
+
+
+/* =================================
+   DELIVERY
+================================= */
+
+.delivery-section {
+  margin-top: 28px;
+}
+
+
+.delivery-section h3 {
+  font-family: Georgia, serif;
+
+  font-size: 17px;
+
+  font-weight: 400;
+
+  margin-bottom: 10px;
+}
+
+
+.delivery-box {
+  display: flex;
+
+  gap: 15px;
+
+  align-items: center;
+}
+
+
+.pincode {
+  height: 42px;
+
+  width: 250px;
+
+  border: 1px solid #aaa;
+
+  display: flex;
+}
+
+
+.pincode input {
+  flex: 1;
+
+  border: none;
+
+  outline: none;
+
+  padding: 0 10px;
+
+  font-size: 9px;
+}
+
+
+.pincode button {
+  width: 65px;
+
+  border: none;
+
+  background: #fff;
+
+  font-size: 9px;
+
+  color: #8c5b35;
+
+  cursor: pointer;
+}
+
+
+.delivery-box p {
+  font-size: 9px;
+
+  line-height: 14px;
+
+  color: #666;
+}
+
+
+/* =================================
+   OFFERS
+================================= */
+
+.product-offers {
+  display: flex;
+
+  gap: 8px;
+
+  margin-top: 20px;
+}
+
+
+.product-offers button {
+  border: none;
+
+  background: #f2ddd2;
+
+  padding: 9px 13px;
+
+  font-size: 8px;
+
+  cursor: pointer;
+}
+
+
+/* =================================
+   BANK OFFER
+================================= */
+
+.bank-offer {
+  margin-top: 18px;
+
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+
+.club-offer {
+  background: #fbf1dd;
+
+  padding: 13px;
+
+  margin-top: 10px;
+
+  font-size: 9px;
+
+  line-height: 16px;
+}
+
+
+/* =================================
+   ACCORDION
+================================= */
+
+.accordion {
+  margin-top: 22px;
+
+  border-bottom: 1px solid #ccc;
+}
+
+
+.accordion-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 10px 0;
+
+  font-family: Georgia, serif;
+
+  font-size: 17px;
+
+  color: #555;
+}
+
+
+.accordion-content {
+  padding: 5px 0 15px;
+}
+
+
+.accordion-content p {
+  margin: 0;
+
+  font-size: 10px;
+
+  line-height: 17px;
+
+  color: #666;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+  .product-main {
+    width: 92%;
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+
+  .main-product-image {
+    height: 500px;
+  }
+
+
+  .product-info h1 {
+    font-size: 30px;
+  }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+  .product-main {
+    width: 94%;
+
+    padding-top: 25px;
+
+    gap: 30px;
+  }
+
+
+  .main-product-image {
+    height: 400px;
+  }
+
+
+  .main-product-image img {
+    width: 85%;
+  }
+
+
+  .product-info h1 {
+    font-size: 25px;
+  }
+
+
+  .bag-row {
+    width: 100%;
+  }
+
+
+  .quantity-box {
+    height: 45px;
+  }
+
+
+  .add-bag-btn {
+    height: 45px;
+  }
+
+
+  .delivery-box {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  .pincode {
+    width: 100%;
+  }
+
+
+  .delivery-box p {
+    margin: 0;
+  }
+
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 380px) {
+
+  .main-product-image {
+    height: 350px;
+  }
+
+
+  .product-info h1 {
+    font-size: 22px;
+  }
+
+
+  .thumbnail {
+    min-width: 65px;
+
+    width: 65px;
+
+    height: 75px;
+  }
+
+}
+
+
+
+
+
+
+
+
+/* =========================================
+   KEY INGREDIENTS
+========================================= */
+
+.ingredients-section {
+  width: 100%;
+  background: #fff;
+
+  padding: 80px 6%;
+
+  display: grid;
+  grid-template-columns: 28% 72%;
+
+  gap: 40px;
+}
+
+
+.ingredients-title {
+  padding-top: 5px;
+}
+
+
+.ingredients-title span,
+.how-to-use-content span,
+.reviews-heading span {
+  font-size: 9px;
+
+  letter-spacing: 1.5px;
+
+  color: #8c6748;
+}
+
+
+.ingredients-title h2 {
+  margin: 12px 0 25px;
+
+  font-family: Georgia, serif;
+
+  font-size: 27px;
+
+  line-height: 1.25;
+
+  font-weight: 400;
+
+  color: #333;
+}
+
+
+.ingredients-title button {
+  background: transparent;
+
+  border: none;
+
+  border-bottom: 1px solid #555;
+
+  padding: 0 0 5px;
+
+  font-size: 9px;
+
+  cursor: pointer;
+
+  letter-spacing: .5px;
+}
+
+
+/* INGREDIENT GRID */
+
+.ingredients-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  column-gap: 30px;
+
+  row-gap: 35px;
+}
+
+
+.ingredient-card {
+  width: 100%;
+}
+
+
+.ingredient-image {
+  width: 82px;
+  height: 82px;
+
+  border: 1px solid #bbb;
+
+  border-radius: 50%;
+
+  padding: 5px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 12px;
+}
+
+
+.ingredient-image img {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+
+.ingredient-card h3 {
+  margin: 0;
+
+  font-family: Georgia, serif;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  color: #333;
+}
+
+
+.ingredient-line {
+  width: 10px;
+
+  height: 1px;
+
+  background: #555;
+
+  margin: 6px 0;
+}
+
+
+.ingredient-card p {
+  margin: 0;
+
+  font-size: 9px;
+
+  line-height: 15px;
+
+  color: #555;
+}
+
+
+/* =========================================
+   HOW TO USE
+========================================= */
+
+.how-to-use-section {
+  width: 100%;
+
+  background: #faf8f7;
+
+  padding: 45px 10%;
+}
+
+
+.how-to-use-content {
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+
+.how-to-use-content h2 {
+  margin: 8px 0 15px;
+
+  font-family: Georgia, serif;
+
+  font-size: 23px;
+
+  font-weight: 400;
+}
+
+
+.how-to-use-content p {
+  margin: 0;
+
+  font-size: 10px;
+
+  line-height: 18px;
+
+  color: #555;
+}
+
+
+/* =========================================
+   REVIEWS
+========================================= */
+
+.reviews-section {
+  width: 100%;
+
+  padding: 75px 8%;
+
+  background: #fff;
+}
+
+
+.reviews-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  border-bottom: 1px solid #ddd;
+
+  padding-bottom: 25px;
+
+  margin-bottom: 35px;
+}
+
+
+.reviews-heading h2 {
+  margin: 10px 0 0;
+
+  font-family: Georgia, serif;
+
+  font-size: 28px;
+
+  font-weight: 400;
+}
+
+
+.reviews-heading button {
+  padding: 12px 25px;
+
+  background: #333;
+
+  color: #fff;
+
+  border: 1px solid #333;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+
+.reviews-heading button:hover {
+  background: transparent;
+
+  color: #333;
+}
+
+
+/* REVIEW SUMMARY */
+
+.review-summary {
+  display: grid;
+
+  grid-template-columns: 220px 1fr;
+
+  gap: 70px;
+
+  max-width: 800px;
+
+  margin-bottom: 50px;
+}
+
+
+.review-rating {
+  text-align: center;
+}
+
+
+.review-rating strong {
+  font-family: Georgia, serif;
+
+  font-size: 45px;
+
+  font-weight: 400;
+}
+
+
+.stars,
+.review-stars {
+  color: #a87943;
+
+  letter-spacing: 2px;
+
+  font-size: 14px;
+}
+
+
+.review-rating p {
+  font-size: 9px;
+
+  color: #777;
+}
+
+
+/* RATING BARS */
+
+.rating-bars {
+  padding-top: 8px;
+}
+
+
+.rating-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 9px;
+}
+
+
+.rating-row > span {
+  width: 10px;
+
+  font-size: 9px;
+}
+
+
+.rating-bar {
+  width: 250px;
+
+  height: 5px;
+
+  background: #e7e7e7;
+}
+
+
+.rating-bar div {
+  height: 100%;
+
+  background: #9d754d;
+}
+
+
+/* REVIEW CARDS */
+
+.reviews-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+
+.review-card {
+  border: 1px solid #ddd;
+
+  padding: 25px;
+
+  min-height: 180px;
+}
+
+
+.review-card h3 {
+  margin: 15px 0 10px;
+
+  font-family: Georgia, serif;
+
+  font-size: 17px;
+
+  font-weight: 400;
+}
+
+
+.review-card p {
+  margin: 0 0 18px;
+
+  color: #666;
+
+  font-size: 10px;
+
+  line-height: 17px;
+}
+
+
+.review-card > span {
+  font-size: 8px;
+
+  color: #777;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .ingredients-section {
+    grid-template-columns: 1fr;
+
+    padding: 60px 6%;
+  }
+
+
+  .ingredients-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .ingredients-section {
+    padding: 50px 6%;
+
+    gap: 35px;
+  }
+
+
+  .ingredients-title h2 {
+    font-size: 24px;
+  }
+
+
+  .ingredients-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px 18px;
+  }
+
+
+  .ingredient-image {
+    width: 75px;
+    height: 75px;
+  }
+
+
+  .ingredient-card p {
+    font-size: 8px;
+
+    line-height: 14px;
+  }
+
+
+  .how-to-use-section {
+    padding: 40px 7%;
+  }
+
+
+  .reviews-section {
+    padding: 50px 6%;
+  }
+
+
+  .reviews-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+
+  .reviews-heading h2 {
+    font-size: 24px;
+  }
+
+
+  .review-summary {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+
+  .review-rating {
+    text-align: left;
+  }
+
+
+  .rating-bar {
+    width: 100%;
+  }
+
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

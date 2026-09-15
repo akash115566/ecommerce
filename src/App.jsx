@@ -1,36 +1,101 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
+import CartDrawer from "./Components/CartDrawer";
+
 import Home from "./Pages/Home";
-import Slide from "./Pages/Slide";
 import SeasonalProducts from "./Pages/SeasonalProducts";
 import MostLovedRituals from "./Pages/MostLovedRituals";
 import JustIn from "./Pages/JustIn";
 import RecentAwards from "./Pages/RecentAwards";
-import Footer from "./Components/Footer";
+import ProductDetails from "./Pages/ProductDetails";
+import Checkout from "./Pages/Checkout";
+import Payment from "./Pages/Payment";
+
+import {
+  CartProvider,
+  useCart,
+} from "./Context/CartContext";
 
 
+const AppContent = () => {
 
+  const {
+    cartOpen,
+    setCartOpen,
+  } = useCart();
 
-
-const App = () => {
   return (
     <BrowserRouter>
+
       <Navbar />
-      {/* <ScrollToTop /> */}
+
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/seasonal" element={<SeasonalProducts />} />
-        <Route path="/most-loved-rituals" element={<MostLovedRituals />} />
-        <Route path="/just-in" element={<JustIn />} />
-        <Route path="/recent-awards" element={<RecentAwards />} />
-        
-      
-      
+
+        <Route
+          path="/"
+          element={<Home />}
+        />
+
+        <Route
+          path="/seasonal"
+          element={<SeasonalProducts />}
+        />
+
+        <Route
+          path="/most-loved-rituals"
+          element={<MostLovedRituals />}
+        />
+
+        <Route
+          path="/just-in"
+          element={<JustIn />}
+        />
+
+        <Route
+          path="/recent-awards"
+          element={<RecentAwards />}
+        />
+
+        <Route
+          path="/product-details"
+          element={<ProductDetails />}
+        />
+
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/payment" element={<Payment />} />
+
       </Routes>
+
+
+      {/* CART DRAWER */}
+
+      <CartDrawer
+        isOpen={cartOpen}
+        onClose={() => setCartOpen(false)}
+      />
+
+
+
+
       <Footer />
+
     </BrowserRouter>
   );
 };
+
+
+function App() {
+
+  return (
+    <CartProvider>
+
+      <AppContent />
+
+    </CartProvider>
+  );
+}
 
 export default App;

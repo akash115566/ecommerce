@@ -91,7 +91,7 @@ function Footer() {
 
         {/* ================= CONTACT ================= */}
 
-        <div className="footer-column contact-column">
+        {/* <div className="footer-column contact-column">
 
           <h3>CONTACT</h3>
 
@@ -123,7 +123,7 @@ function Footer() {
           </a>
 
 
-          {/* SOCIAL */}
+         
 
           <h3 className="follow-title">
             FOLLOW
@@ -153,7 +153,7 @@ function Footer() {
 
           </div>
 
-        </div>
+        </div> */}
 
       </div>
 

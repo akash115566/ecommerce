@@ -1,0 +1,539 @@
+/* =========================================================
+   CHECKOUT PAGE
+========================================================= */
+
+.checkout-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding-bottom: 60px;
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.checkout-top {
+  text-align: center;
+  padding: 45px 20px 30px;
+  background: #fff;
+}
+
+.checkout-top h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.checkout-top p {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.checkout-container {
+  width: 92%;
+  max-width: 1250px;
+  margin: 30px auto;
+
+  display: grid;
+  grid-template-columns: 1.35fr 0.8fr;
+  gap: 30px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   LEFT
+========================================================= */
+
+.checkout-left {
+  width: 100%;
+}
+
+
+/* =========================================================
+   BOX
+========================================================= */
+
+.checkout-box {
+  background: #fff;
+  padding: 24px;
+  margin-bottom: 20px;
+  border: 1px solid #e5e5e5;
+}
+
+.checkout-box h2 {
+  margin: 0 0 12px;
+
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+}
+
+.checkout-box p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #666;
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.checkout-box-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout-box-title span {
+  font-size: 12px;
+  color: #777;
+}
+
+.login-btn {
+  width: 100%;
+  margin-top: 12px;
+
+  padding: 13px;
+
+  border: none;
+  background: #111;
+  color: #fff;
+
+  font-size: 12px;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   CLUB
+========================================================= */
+
+.club-box {
+  border-top: 2px solid #a37b30;
+}
+
+.benefits-btn {
+  background: transparent;
+
+  border: 1px solid #222;
+
+  padding: 9px 15px;
+
+  font-size: 11px;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+}
+
+.club-options {
+  display: flex;
+  gap: 30px;
+
+  margin-top: 18px;
+
+  border: 1px solid #222;
+  padding: 12px;
+}
+
+.club-options label {
+  font-size: 11px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 10px;
+  letter-spacing: 0.5px;
+
+  color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid #aaa;
+
+  background: #fff;
+
+  padding: 11px 12px;
+
+  outline: none;
+
+  font-size: 13px;
+
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #222;
+}
+
+.form-group small {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #999;
+
+  font-size: 10px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+
+/* =========================================================
+   FORM ROW
+========================================================= */
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+}
+
+
+/* =========================================================
+   SHIPPING METHOD
+========================================================= */
+
+.shipping-method {
+  margin-bottom: 0;
+}
+
+.shipping-option {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px;
+
+  border: 1px solid #ddd;
+
+  cursor: pointer;
+}
+
+.shipping-option input {
+  accent-color: #111;
+}
+
+.shipping-option div {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+
+  font-size: 12px;
+}
+
+.shipping-option strong {
+  font-weight: 400;
+}
+
+.shipping-option span {
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   RIGHT - ORDER SUMMARY
+========================================================= */
+
+.checkout-right {
+  position: sticky;
+  top: 90px;
+}
+
+.order-summary {
+  background: #fff;
+
+  border: 1px solid #e3e3e3;
+
+  padding: 24px;
+}
+
+.order-summary h2 {
+  margin: 0 0 20px;
+
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   SUMMARY PRODUCTS
+========================================================= */
+
+.summary-items {
+  max-height: 430px;
+
+  overflow-y: auto;
+
+  padding-right: 5px;
+}
+
+.summary-product {
+  display: flex;
+
+  gap: 13px;
+
+  padding: 12px 0;
+
+  border-bottom: 1px solid #eee;
+}
+
+.summary-product img {
+  width: 75px;
+  height: 85px;
+
+  object-fit: cover;
+
+  background: #f4f4f4;
+}
+
+.summary-product-info {
+  flex: 1;
+}
+
+.summary-product-info h3 {
+  margin: 0 0 5px;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  line-height: 1.4;
+}
+
+.summary-product-info p {
+  margin: 3px 0;
+
+  font-size: 11px;
+  color: #777;
+}
+
+.summary-product-info strong {
+  display: block;
+
+  margin-top: 6px;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   SUMMARY ROW
+========================================================= */
+
+.summary-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid #eee;
+
+  font-size: 13px;
+}
+
+.summary-row strong {
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+.summary-total {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 0;
+
+  font-size: 17px;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.summary-total strong {
+  font-size: 19px;
+}
+
+
+/* =========================================================
+   POINTS
+========================================================= */
+
+.points-box {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 14px;
+
+  margin-top: 15px;
+
+  background: #f7f7f7;
+}
+
+.points-box span {
+  font-size: 20px;
+}
+
+.points-box p {
+  margin: 0;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   PAYMENT
+========================================================= */
+
+.payment-btn {
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 16px;
+
+  border: none;
+
+  background: #000;
+  color: #fff;
+
+  font-size: 12px;
+
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.payment-btn:hover {
+  background: #333;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.empty-summary {
+  text-align: center;
+
+  padding: 30px 10px;
+
+  color: #888;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .checkout-container {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-right {
+    position: static;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .checkout-top {
+    padding: 30px 15px;
+  }
+
+  .checkout-top h1 {
+    font-size: 23px;
+  }
+
+  .checkout-container {
+    width: 94%;
+
+    margin-top: 20px;
+
+    gap: 15px;
+  }
+
+  .checkout-box {
+    padding: 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .club-options {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .order-summary {
+    padding: 18px;
+  }
+
+}
