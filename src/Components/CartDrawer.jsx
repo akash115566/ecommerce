@@ -4,6 +4,7 @@ import { useCart } from "../Context/CartContext";
 import "../Styles/cartdrawer.css";
 
 function CartDrawer({ isOpen, onClose }) {
+
   const navigate = useNavigate();
 
   const {
@@ -15,16 +16,15 @@ function CartDrawer({ isOpen, onClose }) {
     totalPrice,
   } = useCart();
 
-  // CHECKOUT
+
   const goToCheckout = () => {
     onClose();
     navigate("/checkout");
   };
 
+
   return (
     <>
-      {/* ================= OVERLAY ================= */}
-
       {isOpen && (
         <div
           className="cart-overlay"
@@ -33,23 +33,24 @@ function CartDrawer({ isOpen, onClose }) {
       )}
 
 
-      {/* ================= DRAWER ================= */}
-
       <aside
         className={`cart-drawer ${
-          isOpen ? "cart-drawer-open" : ""
+          isOpen
+            ? "cart-drawer-open"
+            : ""
         }`}
       >
 
-        {/* ================= HEADER ================= */}
+        {/* HEADER */}
 
         <div className="cart-header">
 
           <h2>
-            Your Bag
+            YOUR BAG
           </h2>
 
           <button
+            type="button"
             className="cart-close"
             onClick={onClose}
           >
@@ -59,59 +60,41 @@ function CartDrawer({ isOpen, onClose }) {
         </div>
 
 
-        {/* ================= OFFERS ================= */}
+        {/* OFFER */}
 
         <div className="cart-offer">
 
           <h3>
-            Available Offers
+            AVAILABLE OFFERS
           </h3>
 
           <p>
-            Shop for ₹12,999+ to avail a complimentary
-            limited-edition Tote Bag worth ₹895.
+            Shop for ₹12,999+ to avail a
+            complimentary limited-edition Tote Bag.
           </p>
 
-          <button type="button">
-            SHOW MORE →
-          </button>
-
         </div>
 
 
-        {/* ================= POINTS ================= */}
-
-        <div className="cart-points">
-
-          ✨ Earn upto <strong>242</strong> points
-          with your purchase today.
-
-          <br />
-
-          <span>
-            SIGN IN OR JOIN SOUNDARYA CLUB
-          </span>
-
-        </div>
-
-
-        {/* ================= BAG TITLE ================= */}
+        {/* BAG COUNT */}
 
         <div className="bag-title">
 
           <h2>
-            Your Bag
+            YOUR BAG
           </h2>
 
           <span>
             {totalItems}{" "}
-            {totalItems === 1 ? "item" : "items"}
+            {totalItems === 1
+              ? "ITEM"
+              : "ITEMS"}
           </span>
 
         </div>
 
 
-        {/* ================= PRODUCTS ================= */}
+        {/* PRODUCTS */}
 
         <div className="cart-products">
 
@@ -119,8 +102,12 @@ function CartDrawer({ isOpen, onClose }) {
 
             <div className="empty-cart">
 
+              <h3>
+                Your Bag is Empty
+              </h3>
+
               <p>
-                Your bag is empty.
+                Add some products to continue.
               </p>
 
             </div>
@@ -146,7 +133,7 @@ function CartDrawer({ isOpen, onClose }) {
                 </div>
 
 
-                {/* DETAILS */}
+                {/* INFO */}
 
                 <div className="cart-product-info">
 
@@ -157,6 +144,13 @@ function CartDrawer({ isOpen, onClose }) {
                   <p>
                     {item.size}
                   </p>
+
+
+                  <strong>
+                    ₹
+                    {Number(item.price)
+                      .toLocaleString("en-IN")}
+                  </strong>
 
 
                   {/* QUANTITY */}
@@ -194,15 +188,17 @@ function CartDrawer({ isOpen, onClose }) {
                   </div>
 
 
-                  {/* PRICE */}
+                  {/* ITEM TOTAL */}
 
-                  <strong>
+                  <div className="cart-item-total">
+
                     ₹
                     {(
                       Number(item.price) *
                       item.quantity
                     ).toLocaleString("en-IN")}
-                  </strong>
+
+                  </div>
 
                 </div>
 
@@ -231,7 +227,7 @@ function CartDrawer({ isOpen, onClose }) {
         </div>
 
 
-        {/* ================= FOOTER ================= */}
+        {/* FOOTER */}
 
         {cartItems.length > 0 && (
 
@@ -239,27 +235,25 @@ function CartDrawer({ isOpen, onClose }) {
 
             <div className="cart-total">
 
-              <strong>
-                Total
-              </strong>
+              <span>
+                GRAND TOTAL
+              </span>
 
               <strong>
                 ₹
-                {Number(totalPrice).toLocaleString(
-                  "en-IN"
-                )}
+                {Number(totalPrice)
+                  .toLocaleString("en-IN")}
               </strong>
 
             </div>
 
 
-            {/* CHECKOUT */}
-
             <button
+              type="button"
               className="go-to-bag"
               onClick={goToCheckout}
             >
-              CHECKOUT
+              VIEW BAG & CHECKOUT
             </button>
 
           </div>

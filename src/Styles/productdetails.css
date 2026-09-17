@@ -1,1155 +1,1259 @@
+/* =========================================================
+   PRODUCT DETAILS PAGE
+   INTERNATIONAL LUXURY AYURVEDIC THEME
+========================================================= */
+
 .product-details-page {
   width: 100%;
-  background: #fff;
   min-height: 100vh;
-  color: #333;
+  padding: 90px 6% 110px;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(177, 143, 70, 0.08),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(23, 59, 38, 0.06),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f8f5ed 0%,
+      #eee9dc 48%,
+      #faf8f2 100%
+    );
+
   font-family: "Poppins", sans-serif;
 }
 
 
-/* =================================
-   MAIN PRODUCT
-================================= */
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
 
-.product-main {
-  width: 90%;
-  max-width: 1300px;
+.product-details-container {
+  position: relative;
+
+  width: 100%;
+  max-width: 1280px;
 
   margin: 0 auto;
 
-  padding: 45px 0 80px;
-
   display: grid;
-  grid-template-columns: 48% 52%;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
 
-  gap: 50px;
+  gap: 75px;
+
+  align-items: start;
 }
 
 
-/* =================================
-   GALLERY
-================================= */
+/* =========================================================
+   LEFT IMAGE SECTION
+========================================================= */
 
-.product-gallery {
+.product-image-section {
   width: 100%;
-  position: relative;
 }
 
 
-.main-product-image {
+/* =========================================================
+   MAIN IMAGE BOX
+========================================================= */
+
+.product-details-image {
   position: relative;
 
   width: 100%;
-  height: 520px;
+  height: 620px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 18px;
 
-  background: #fafafa;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.8),
+      rgba(240, 234, 220, 0.7)
+    );
+
+  border: 1px solid rgba(154, 120, 52, 0.28);
+
+  box-shadow:
+    0 25px 70px rgba(30, 48, 36, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
 
   overflow: hidden;
 }
 
 
-.main-product-image img {
-  width: 75%;
-  height: 90%;
+/* Inner luxury border */
 
-  object-fit: contain;
+.product-details-image::before {
+  content: "";
 
-  transition: 0.4s ease;
+  position: absolute;
+
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+
+  border: 1px solid rgba(154, 120, 52, 0.2);
+
+  pointer-events: none;
+
+  z-index: 3;
 }
 
 
-/* HEART */
+/* Decorative circle */
 
-.product-heart {
+.product-details-image::after {
+  content: "";
+
   position: absolute;
 
-  top: 15px;
-  right: 18px;
+  width: 320px;
+  height: 320px;
 
-  border: none;
+  right: -150px;
+  bottom: -150px;
 
-  background: transparent;
+  border-radius: 50%;
 
-  font-size: 25px;
+  border: 1px solid rgba(154, 120, 52, 0.18);
 
-  cursor: pointer;
-
-  color: #333;
+  pointer-events: none;
 
   z-index: 2;
 }
 
 
-/* =================================
-   THUMBNAILS
-================================= */
+/* Main image */
 
-.product-thumbnails {
-  display: flex;
-
-  gap: 10px;
-
-  margin-top: 15px;
-
-  overflow-x: auto;
-
-  padding-bottom: 5px;
-}
-
-
-.thumbnail {
-  min-width: 75px;
-  width: 75px;
-  height: 85px;
-
-  border: 1px solid #ddd;
-
-  background: #fff;
-
-  cursor: pointer;
-
-  padding: 5px;
-
-  transition: 0.3s;
-}
-
-
-.thumbnail img {
+.product-details-image img {
   width: 100%;
   height: 100%;
 
-  object-fit: contain;
-}
-
-
-.thumbnail:hover {
-  border-color: #222;
-}
-
-
-.thumbnail.active {
-  border: 1px solid #222;
-}
-
-
-/* DISCLAIMER */
-
-.image-disclaimer {
-  font-size: 9px;
-
-  color: #777;
-
-  line-height: 15px;
-
-  margin-top: 12px;
-
-  max-width: 500px;
-}
-
-
-/* =================================
-   PRODUCT INFO
-================================= */
-
-.product-info {
-  padding-top: 5px;
-}
-
-
-.breadcrumb {
-  font-size: 8px;
-
-  color: #777;
-
-  letter-spacing: 0.5px;
-
-  margin-bottom: 15px;
-}
-
-
-.product-info h1 {
-  font-family: Georgia, serif;
-
-  font-size: 34px;
-
-  line-height: 1.15;
-
-  font-weight: 400;
-
-  color: #333;
-
-  margin: 0 0 20px;
-}
-
-
-/* =================================
-   SIZE
-================================= */
-
-.size-section > span {
   display: block;
 
-  font-size: 9px;
+  object-fit: contain;
+  object-position: center;
+
+  background: #f1ecdf;
+
+  transition:
+    transform 0.6s ease,
+    opacity 0.3s ease;
+}
+
+
+/* Image hover */
+
+.product-details-image:hover img {
+  transform: scale(1.035);
+}
+
+
+/* =========================================================
+   THUMBNAILS
+========================================================= */
+
+.product-thumbnails {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  margin-top: 16px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+.product-thumbnails::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   THUMBNAIL BOX
+========================================================= */
+
+.product-thumbnail {
+  position: relative;
+
+  flex: 0 0 88px;
+
+  width: 88px;
+  height: 88px;
+
+  padding: 4px;
+
+  border: 1px solid #d4c9b5;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f8f5ed,
+      #ebe4d4
+    );
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* Thumbnail image */
+
+.product-thumbnail img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  background: #f1ecdf;
+
+  transition: transform 0.4s ease;
+}
+
+
+/* Thumbnail hover */
+
+.product-thumbnail:hover {
+  transform: translateY(-3px);
+
+  border-color: #9a7834;
+
+  box-shadow:
+    0 8px 20px rgba(23, 59, 38, 0.1);
+}
+
+.product-thumbnail:hover img {
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   ACTIVE THUMBNAIL
+========================================================= */
+
+.product-thumbnail.active {
+  border: 2px solid #173b26;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 22px rgba(23, 59, 38, 0.14);
+}
+
+
+/* Gold line */
+
+.product-thumbnail.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 3px;
+
+  width: 25px;
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  background: #a27c32;
+}
+
+
+/* =========================================================
+   RIGHT INFORMATION
+========================================================= */
+
+.product-details-info {
+  width: 100%;
+
+  padding: 12px 0 0;
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.product-category {
+  margin: 0 0 18px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  color: #9a7834;
+}
+
+
+/* =========================================================
+   PRODUCT TITLE
+========================================================= */
+
+.product-details-info h1 {
+  max-width: 650px;
+
+  margin: 0 0 20px;
+
+  color: #173b26;
+
+  font-size: clamp(36px, 4vw, 58px);
+
+  line-height: 1.08;
+
+  font-weight: 500;
+
+  letter-spacing: -1px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.product-description {
+  max-width: 570px;
+
+  margin: 0 0 28px;
+
+  color: #68675f;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.product-price {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 34px;
+
+  padding-bottom: 25px;
+
+  border-bottom: 1px solid #d8d0bf;
+}
+
+
+.product-price strong {
+  color: #173b26;
+
+  font-size: 27px;
 
   font-weight: 600;
 
-  margin-bottom: 8px;
+  letter-spacing: 0.3px;
 }
 
+
+.product-price del {
+  color: #999;
+
+  font-size: 15px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   SIZE SECTION
+========================================================= */
+
+.size-section {
+  margin-bottom: 28px;
+}
+
+
+.size-section h3,
+.quantity-section h3,
+.product-benefits h3 {
+  margin: 0 0 13px;
+
+  color: #4d5149;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   SIZE OPTIONS
+========================================================= */
 
 .size-options {
   display: flex;
 
-  gap: 5px;
+  flex-wrap: wrap;
+
+  gap: 10px;
 }
 
 
 .size-btn {
-  padding: 8px 12px;
+  min-width: 76px;
+  height: 43px;
 
-  background: #fff;
+  padding: 0 16px;
 
-  border: 1px solid #bbb;
+  border: 1px solid #cec4b1;
 
-  font-size: 10px;
-
-  cursor: pointer;
-}
-
-
-.size-btn.selected {
-  background: #333;
-
-  color: #fff;
-
-  border-color: #333;
-}
-
-
-/* =================================
-   RATING
-================================= */
-
-.rating {
-  margin-top: 18px;
-
-  font-size: 13px;
-
-  letter-spacing: 1px;
-}
-
-
-.rating span {
-  font-size: 9px;
-
-  letter-spacing: 0;
+  background: rgba(255, 255, 255, 0.35);
 
   color: #555;
 
-  margin-left: 7px;
+  font-family: "Poppins", sans-serif;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 
-/* =================================
-   PRICE
-================================= */
+.size-btn:hover {
+  border-color: #9a7834;
 
-.price {
-  margin-top: 15px;
+  color: #80652b;
 
-  font-size: 14px;
-
-  color: #333;
+  transform: translateY(-2px);
 }
 
 
-.price span {
-  font-size: 8px;
+/* Active size */
 
-  color: #666;
+.size-btn.active {
+  border-color: #173b26;
+
+  background: #173b26;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 7px 18px rgba(23, 59, 38, 0.15);
 }
 
 
-/* =================================
-   BAG
-================================= */
+/* =========================================================
+   QUANTITY
+========================================================= */
 
-.bag-row {
-  display: flex;
-
-  gap: 12px;
-
-  margin-top: 20px;
+.quantity-section {
+  margin-bottom: 30px;
 }
 
 
 .quantity-box {
+  width: fit-content;
+
+  height: 46px;
+
   display: flex;
 
-  height: 42px;
+  align-items: center;
 
-  border: 1px solid #bbb;
+  border: 1px solid #cfc5b2;
+
+  background: rgba(255, 255, 255, 0.35);
 }
 
 
 .quantity-box button {
-  width: 32px;
+  width: 46px;
+  height: 46px;
 
   border: none;
 
-  background: #fff;
+  background: transparent;
+
+  color: #173b26;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 21px;
+
+  line-height: 1;
 
   cursor: pointer;
 
-  font-size: 14px;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.quantity-box button:hover {
+  background: #e7dfce;
+
+  color: #9a7834;
 }
 
 
 .quantity-box span {
-  width: 32px;
+  width: 52px;
+  height: 46px;
 
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
-  font-size: 12px;
+  border-left: 1px solid #cfc5b2;
+  border-right: 1px solid #cfc5b2;
 
-  border-left: 1px solid #ddd;
+  color: #333;
 
-  border-right: 1px solid #ddd;
+  font-size: 13px;
+
+  font-weight: 500;
 }
 
 
-.add-bag-btn {
-  height: 42px;
+/* =========================================================
+   ADD TO BAG
+========================================================= */
 
-  flex: 1;
+.details-add-bag {
+  position: relative;
 
-  border: 1px solid #999;
+  width: 100%;
+  max-width: 520px;
 
-  background: #fff;
+  height: 59px;
 
-  cursor: pointer;
+  border: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      #173b26,
+      #28563a
+    );
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
 
   font-size: 11px;
 
-  letter-spacing: 1px;
-
-  transition: 0.3s;
-}
-
-
-.add-bag-btn:hover {
-  background: #222;
-
-  color: #fff;
-}
-
-
-/* =================================
-   DELIVERY
-================================= */
-
-.delivery-section {
-  margin-top: 28px;
-}
-
-
-.delivery-section h3 {
-  font-family: Georgia, serif;
-
-  font-size: 17px;
-
-  font-weight: 400;
-
-  margin-bottom: 10px;
-}
-
-
-.delivery-box {
-  display: flex;
-
-  gap: 15px;
-
-  align-items: center;
-}
-
-
-.pincode {
-  height: 42px;
-
-  width: 250px;
-
-  border: 1px solid #aaa;
-
-  display: flex;
-}
-
-
-.pincode input {
-  flex: 1;
-
-  border: none;
-
-  outline: none;
-
-  padding: 0 10px;
-
-  font-size: 9px;
-}
-
-
-.pincode button {
-  width: 65px;
-
-  border: none;
-
-  background: #fff;
-
-  font-size: 9px;
-
-  color: #8c5b35;
-
-  cursor: pointer;
-}
-
-
-.delivery-box p {
-  font-size: 9px;
-
-  line-height: 14px;
-
-  color: #666;
-}
-
-
-/* =================================
-   OFFERS
-================================= */
-
-.product-offers {
-  display: flex;
-
-  gap: 8px;
-
-  margin-top: 20px;
-}
-
-
-.product-offers button {
-  border: none;
-
-  background: #f2ddd2;
-
-  padding: 9px 13px;
-
-  font-size: 8px;
-
-  cursor: pointer;
-}
-
-
-/* =================================
-   BANK OFFER
-================================= */
-
-.bank-offer {
-  margin-top: 18px;
-
-  font-size: 9px;
-
   font-weight: 600;
-}
 
-
-.club-offer {
-  background: #fbf1dd;
-
-  padding: 13px;
-
-  margin-top: 10px;
-
-  font-size: 9px;
-
-  line-height: 16px;
-}
-
-
-/* =================================
-   ACCORDION
-================================= */
-
-.accordion {
-  margin-top: 22px;
-
-  border-bottom: 1px solid #ccc;
-}
-
-
-.accordion-header {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  padding: 10px 0;
-
-  font-family: Georgia, serif;
-
-  font-size: 17px;
-
-  color: #555;
-}
-
-
-.accordion-content {
-  padding: 5px 0 15px;
-}
-
-
-.accordion-content p {
-  margin: 0;
-
-  font-size: 10px;
-
-  line-height: 17px;
-
-  color: #666;
-}
-
-
-/* =================================
-   TABLET
-================================= */
-
-@media (max-width: 900px) {
-
-  .product-main {
-    width: 92%;
-
-    grid-template-columns: 1fr;
-
-    gap: 40px;
-  }
-
-
-  .main-product-image {
-    height: 500px;
-  }
-
-
-  .product-info h1 {
-    font-size: 30px;
-  }
-
-}
-
-
-/* =================================
-   MOBILE
-================================= */
-
-@media (max-width: 600px) {
-
-  .product-main {
-    width: 94%;
-
-    padding-top: 25px;
-
-    gap: 30px;
-  }
-
-
-  .main-product-image {
-    height: 400px;
-  }
-
-
-  .main-product-image img {
-    width: 85%;
-  }
-
-
-  .product-info h1 {
-    font-size: 25px;
-  }
-
-
-  .bag-row {
-    width: 100%;
-  }
-
-
-  .quantity-box {
-    height: 45px;
-  }
-
-
-  .add-bag-btn {
-    height: 45px;
-  }
-
-
-  .delivery-box {
-    flex-direction: column;
-
-    align-items: flex-start;
-  }
-
-
-  .pincode {
-    width: 100%;
-  }
-
-
-  .delivery-box p {
-    margin: 0;
-  }
-
-}
-
-
-/* =================================
-   SMALL MOBILE
-================================= */
-
-@media (max-width: 380px) {
-
-  .main-product-image {
-    height: 350px;
-  }
-
-
-  .product-info h1 {
-    font-size: 22px;
-  }
-
-
-  .thumbnail {
-    min-width: 65px;
-
-    width: 65px;
-
-    height: 75px;
-  }
-
-}
-
-
-
-
-
-
-
-
-/* =========================================
-   KEY INGREDIENTS
-========================================= */
-
-.ingredients-section {
-  width: 100%;
-  background: #fff;
-
-  padding: 80px 6%;
-
-  display: grid;
-  grid-template-columns: 28% 72%;
-
-  gap: 40px;
-}
-
-
-.ingredients-title {
-  padding-top: 5px;
-}
-
-
-.ingredients-title span,
-.how-to-use-content span,
-.reviews-heading span {
-  font-size: 9px;
-
-  letter-spacing: 1.5px;
-
-  color: #8c6748;
-}
-
-
-.ingredients-title h2 {
-  margin: 12px 0 25px;
-
-  font-family: Georgia, serif;
-
-  font-size: 27px;
-
-  line-height: 1.25;
-
-  font-weight: 400;
-
-  color: #333;
-}
-
-
-.ingredients-title button {
-  background: transparent;
-
-  border: none;
-
-  border-bottom: 1px solid #555;
-
-  padding: 0 0 5px;
-
-  font-size: 9px;
+  letter-spacing: 2.2px;
 
   cursor: pointer;
 
-  letter-spacing: .5px;
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
 }
 
 
-/* INGREDIENT GRID */
+.details-add-bag::before {
+  content: "";
 
-.ingredients-grid {
-  display: grid;
+  position: absolute;
 
-  grid-template-columns: repeat(4, 1fr);
+  top: 0;
+  left: -100%;
 
-  column-gap: 30px;
-
-  row-gap: 35px;
-}
-
-
-.ingredient-card {
-  width: 100%;
-}
-
-
-.ingredient-image {
-  width: 82px;
-  height: 82px;
-
-  border: 1px solid #bbb;
-
-  border-radius: 50%;
-
-  padding: 5px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  margin-bottom: 12px;
-}
-
-
-.ingredient-image img {
   width: 100%;
   height: 100%;
 
-  border-radius: 50%;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.14),
+      transparent
+    );
 
-  object-fit: cover;
+  transition: left 0.6s ease;
 }
 
 
-.ingredient-card h3 {
-  margin: 0;
+.details-add-bag:hover::before {
+  left: 100%;
+}
 
-  font-family: Georgia, serif;
+
+.details-add-bag:hover {
+  transform: translateY(-3px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #28563a,
+      #376b4b
+    );
+
+  box-shadow:
+    0 15px 35px rgba(23, 59, 38, 0.22);
+}
+
+
+.details-add-bag:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.product-benefits {
+  max-width: 520px;
+
+  margin-top: 35px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid #d8d0bf;
+}
+
+
+.product-benefits h3 {
+  margin-bottom: 16px;
+}
+
+
+/* Benefits list */
+
+.product-benefits ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 13px 25px;
+}
+
+
+.product-benefits li {
+  position: relative;
+
+  padding-left: 20px;
+
+  color: #66635b;
 
   font-size: 12px;
 
-  font-weight: 400;
-
-  color: #333;
+  line-height: 1.65;
 }
 
 
-.ingredient-line {
-  width: 10px;
+/* Star */
 
-  height: 1px;
+.product-benefits li::before {
+  content: "✦";
 
-  background: #555;
+  position: absolute;
 
-  margin: 6px 0;
+  left: 0;
+  top: 1px;
+
+  color: #a27c32;
+
+  font-size: 11px;
 }
 
 
-.ingredient-card p {
-  margin: 0;
+/* =========================================================
+   PRODUCT NOT FOUND
+========================================================= */
 
-  font-size: 9px;
-
-  line-height: 15px;
-
-  color: #555;
-}
-
-
-/* =========================================
-   HOW TO USE
-========================================= */
-
-.how-to-use-section {
+.product-not-found {
   width: 100%;
+  min-height: 70vh;
 
-  background: #faf8f7;
-
-  padding: 45px 10%;
-}
-
-
-.how-to-use-content {
-  max-width: 900px;
-
-  margin: 0 auto;
-}
-
-
-.how-to-use-content h2 {
-  margin: 8px 0 15px;
-
-  font-family: Georgia, serif;
-
-  font-size: 23px;
-
-  font-weight: 400;
-}
-
-
-.how-to-use-content p {
-  margin: 0;
-
-  font-size: 10px;
-
-  line-height: 18px;
-
-  color: #555;
-}
-
-
-/* =========================================
-   REVIEWS
-========================================= */
-
-.reviews-section {
-  width: 100%;
-
-  padding: 75px 8%;
-
-  background: #fff;
-}
-
-
-.reviews-heading {
-  display: flex;
-
-  align-items: flex-end;
-
-  justify-content: space-between;
-
-  border-bottom: 1px solid #ddd;
-
-  padding-bottom: 25px;
-
-  margin-bottom: 35px;
-}
-
-
-.reviews-heading h2 {
-  margin: 10px 0 0;
-
-  font-family: Georgia, serif;
-
-  font-size: 28px;
-
-  font-weight: 400;
-}
-
-
-.reviews-heading button {
-  padding: 12px 25px;
-
-  background: #333;
-
-  color: #fff;
-
-  border: 1px solid #333;
-
-  font-size: 9px;
-
-  letter-spacing: 1px;
-
-  cursor: pointer;
-
-  transition: .3s;
-}
-
-
-.reviews-heading button:hover {
-  background: transparent;
-
-  color: #333;
-}
-
-
-/* REVIEW SUMMARY */
-
-.review-summary {
-  display: grid;
-
-  grid-template-columns: 220px 1fr;
-
-  gap: 70px;
-
-  max-width: 800px;
-
-  margin-bottom: 50px;
-}
-
-
-.review-rating {
-  text-align: center;
-}
-
-
-.review-rating strong {
-  font-family: Georgia, serif;
-
-  font-size: 45px;
-
-  font-weight: 400;
-}
-
-
-.stars,
-.review-stars {
-  color: #a87943;
-
-  letter-spacing: 2px;
-
-  font-size: 14px;
-}
-
-
-.review-rating p {
-  font-size: 9px;
-
-  color: #777;
-}
-
-
-/* RATING BARS */
-
-.rating-bars {
-  padding-top: 8px;
-}
-
-
-.rating-row {
   display: flex;
 
   align-items: center;
+  justify-content: center;
 
-  gap: 10px;
+  background: #f7f4ec;
 
-  margin-bottom: 9px;
+  font-family: "Poppins", sans-serif;
 }
 
 
-.rating-row > span {
-  width: 10px;
+.product-not-found h2 {
+  margin: 0;
 
-  font-size: 9px;
+  color: #173b26;
+
+  font-size: 28px;
+
+  font-weight: 500;
 }
 
 
-.rating-bar {
-  width: 250px;
+/* =========================================================
+   LARGE TABLET
+========================================================= */
 
-  height: 5px;
+@media (max-width: 1100px) {
 
-  background: #e7e7e7;
+  .product-details-page {
+    padding: 70px 5% 90px;
+  }
+
+
+  .product-details-container {
+    gap: 50px;
+  }
+
+
+  .product-details-image {
+    height: 540px;
+  }
+
+
+  .product-details-info h1 {
+    font-size: 44px;
+  }
+
+
+  .product-description {
+    font-size: 13px;
+  }
+
 }
 
 
-.rating-bar div {
-  height: 100%;
-
-  background: #9d754d;
-}
-
-
-/* REVIEW CARDS */
-
-.reviews-grid {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 20px;
-}
-
-
-.review-card {
-  border: 1px solid #ddd;
-
-  padding: 25px;
-
-  min-height: 180px;
-}
-
-
-.review-card h3 {
-  margin: 15px 0 10px;
-
-  font-family: Georgia, serif;
-
-  font-size: 17px;
-
-  font-weight: 400;
-}
-
-
-.review-card p {
-  margin: 0 0 18px;
-
-  color: #666;
-
-  font-size: 10px;
-
-  line-height: 17px;
-}
-
-
-.review-card > span {
-  font-size: 8px;
-
-  color: #777;
-
-  text-transform: uppercase;
-
-  letter-spacing: 1px;
-}
-
-
-/* =========================================
+/* =========================================================
    TABLET
-========================================= */
+========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
 
-  .ingredients-section {
+  .product-details-page {
+    padding: 60px 5% 80px;
+  }
+
+
+  .product-details-container {
     grid-template-columns: 1fr;
 
-    padding: 60px 6%;
+    gap: 50px;
+
+    max-width: 720px;
   }
 
 
-  .ingredients-grid {
-    grid-template-columns: repeat(3, 1fr);
+  /* Image */
+
+  .product-image-section {
+    width: 100%;
+    max-width: 680px;
+
+    margin: 0 auto;
   }
 
 
-  .reviews-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .product-details-image {
+    height: 560px;
+  }
+
+
+  /* Thumbnails */
+
+  .product-thumbnails {
+    justify-content: center;
+  }
+
+
+  /* Information */
+
+  .product-details-info {
+    padding: 0;
+
+    text-align: center;
+  }
+
+
+  .product-category {
+    margin-bottom: 14px;
+  }
+
+
+  .product-details-info h1 {
+    max-width: 680px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 43px;
+  }
+
+
+  .product-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .product-price {
+    justify-content: center;
+  }
+
+
+  .size-options {
+    justify-content: center;
+  }
+
+
+  .quantity-section {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+
+  .details-add-bag {
+    display: block;
+
+    margin: 0 auto;
+
+    max-width: 520px;
+  }
+
+
+  .product-benefits {
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: left;
   }
 
 }
 
 
-/* =========================================
+/* =========================================================
    MOBILE
-========================================= */
+========================================================= */
 
 @media (max-width: 600px) {
 
-  .ingredients-section {
-    padding: 50px 6%;
+  .product-details-page {
+    padding: 35px 18px 60px;
+  }
 
+
+  .product-details-container {
     gap: 35px;
   }
 
 
-  .ingredients-title h2 {
-    font-size: 24px;
+  /* Main Image */
+
+  .product-details-image {
+    height: 430px;
+
+    padding: 12px;
   }
 
 
-  .ingredients-grid {
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 30px 18px;
+  .product-details-image::before {
+    top: 7px;
+    right: 7px;
+    bottom: 7px;
+    left: 7px;
   }
 
 
-  .ingredient-image {
-    width: 75px;
-    height: 75px;
+  .product-details-image::after {
+    width: 200px;
+    height: 200px;
+
+    right: -100px;
+    bottom: -100px;
   }
 
 
-  .ingredient-card p {
+  /* Thumbnails */
+
+  .product-thumbnails {
+    gap: 9px;
+
+    margin-top: 12px;
+
+    justify-content: flex-start;
+  }
+
+
+  .product-thumbnail {
+    flex: 0 0 72px;
+
+    width: 72px;
+    height: 72px;
+  }
+
+
+  /* Category */
+
+  .product-category {
+    margin-bottom: 12px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+  }
+
+
+  /* Title */
+
+  .product-details-info h1 {
+    margin-bottom: 15px;
+
+    font-size: 31px;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.5px;
+  }
+
+
+  /* Description */
+
+  .product-description {
+    margin-bottom: 20px;
+
+    font-size: 12px;
+
+    line-height: 1.75;
+  }
+
+
+  /* Price */
+
+  .product-price {
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 20px;
+  }
+
+
+  .product-price strong {
+    font-size: 22px;
+  }
+
+
+  .product-price del {
+    font-size: 13px;
+  }
+
+
+  /* Size */
+
+  .size-section {
+    margin-bottom: 24px;
+  }
+
+
+  .size-section h3,
+  .quantity-section h3,
+  .product-benefits h3 {
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .size-options {
+    gap: 7px;
+  }
+
+
+  .size-btn {
+    min-width: 68px;
+
+    height: 39px;
+
+    padding: 0 12px;
+
+    font-size: 11px;
+  }
+
+
+  /* Quantity */
+
+  .quantity-section {
+    margin-bottom: 25px;
+  }
+
+
+  .quantity-box {
+    height: 43px;
+  }
+
+
+  .quantity-box button {
+    width: 43px;
+    height: 43px;
+  }
+
+
+  .quantity-box span {
+    width: 46px;
+    height: 43px;
+  }
+
+
+  /* Add Bag */
+
+  .details-add-bag {
+    width: 100%;
+
+    max-width: 100%;
+
+    height: 53px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.6px;
+  }
+
+
+  /* Benefits */
+
+  .product-benefits {
+    margin-top: 28px;
+
+    padding-top: 20px;
+  }
+
+
+  .product-benefits ul {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+
+  .product-benefits li {
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .product-details-page {
+    padding: 25px 15px 50px;
+  }
+
+
+  .product-details-container {
+    gap: 30px;
+  }
+
+
+  /* Image */
+
+  .product-details-image {
+    height: 350px;
+
+    padding: 10px;
+  }
+
+
+  .product-details-image::before {
+    top: 6px;
+    right: 6px;
+    bottom: 6px;
+    left: 6px;
+  }
+
+
+  /* Thumbnail */
+
+  .product-thumbnail {
+    flex: 0 0 63px;
+
+    width: 63px;
+    height: 63px;
+
+    padding: 3px;
+  }
+
+
+  .product-thumbnails {
+    gap: 7px;
+  }
+
+
+  /* Information */
+
+  .product-details-info h1 {
+    font-size: 28px;
+  }
+
+
+  .product-description {
+    font-size: 11px;
+
+    line-height: 1.7;
+  }
+
+
+  .product-price strong {
+    font-size: 20px;
+  }
+
+
+  .product-price del {
+    font-size: 12px;
+  }
+
+
+  .size-btn {
+    min-width: 62px;
+
+    height: 37px;
+
+    padding: 0 9px;
+
+    font-size: 10px;
+  }
+
+
+  .details-add-bag {
+    height: 50px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .product-details-page {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+
+  .product-details-image {
+    height: 300px;
+  }
+
+
+  .product-thumbnail {
+    flex: 0 0 55px;
+
+    width: 55px;
+    height: 55px;
+  }
+
+
+  .product-details-info h1 {
+    font-size: 25px;
+  }
+
+
+  .product-category {
     font-size: 8px;
 
-    line-height: 14px;
+    letter-spacing: 1.5px;
   }
 
 
-  .how-to-use-section {
-    padding: 40px 7%;
+  .product-description {
+    font-size: 10px;
   }
 
 
-  .reviews-section {
-    padding: 50px 6%;
-  }
-
-
-  .reviews-heading {
-    align-items: flex-start;
-
+  .product-price {
     flex-direction: column;
 
-    gap: 20px;
+    gap: 5px;
   }
 
 
-  .reviews-heading h2 {
-    font-size: 24px;
+  .product-price strong {
+    font-size: 19px;
   }
 
 
-  .review-summary {
-    grid-template-columns: 1fr;
+  .size-btn {
+    min-width: 57px;
 
-    gap: 25px;
+    padding: 0 7px;
   }
 
 
-  .review-rating {
-    text-align: left;
+  .quantity-box button {
+    width: 40px;
   }
 
 
-  .rating-bar {
-    width: 100%;
-  }
-
-
-  .reviews-grid {
-    grid-template-columns: 1fr;
+  .quantity-box span {
+    width: 43px;
   }
 
 }

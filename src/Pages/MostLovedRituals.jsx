@@ -1,88 +1,90 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useCart } from "../Context/CartContext";
 import "../Styles/mostLovedrituals.css";
 
 const products = [
   {
-    image: "/kromaic.jfif",
+    image: "/home/serum/serumblack.jfif",
     title: "FRAGRANT MOISTURE-LOCK DUO",
     description: "Replenishes Moisture & Scents The Skin",
-    price: "₹3,845.00",
+    price: 3845,
   },
   {
-   image: "/nisha.jfif",
+    image:  "/home/serum/serumc.jfif",
     title: "BATH SET - LIME & SAFFRON",
     description: "Purifies, Detoxifies & Moisturises",
-    price: "₹3,600.00",
+    price: 3600,
   },
   {
-    image: "/kromaic.jfif",
+    image:  "/home/serum/serumcheck.jfif",
     title: "DAILY CLEANSE & SHIELD PAIR",
     description: "Daily Cleansing & Protection Ritual",
-    price: "₹2,870.00",
+    price: 2870,
   },
   {
-    image: "/soap.jfif",
+    image:  "/home/serum/serumdot.jfif",
     title: "RADIANT SKIN RITUAL",
     description: "Illuminates Dull Skin",
-    price: "₹5,550.00",
+    price: 5550,
   },
   {
-    image: "/soap-protam.jfif",
+    image: "/home/serum/serumdrop.jfif",
     title: "ROSE & SANDALWOOD RITUAL",
     description: "Nourishes Skin & Enhances Radiance",
-    price: "₹3,250.00",
+    price: 3250,
   },
   {
-   image: "/nisha.jfif",
+    image: "/home/serum/serumhand.jfif",
     title: "AYURVEDIC BODY CARE SET",
     description: "Softens, Nourishes & Hydrates",
-    price: "₹4,150.00",
+    price: 4150,
   },
   {
-    image: "/soap.jfif",
+    image: "/home/serum/serumorange.jfif",
     title: "LUXURY HAIR RITUAL",
     description: "Strengthens Hair & Nourishes Scalp",
-    price: "₹3,950.00",
+    price: 3950,
   },
   {
-    image: "/kromaic.jfif",
+    image: "/home/serum/serumshow.jfif",
     title: "PREMIUM WELLNESS RITUAL",
     description: "A Complete Everyday Self-Care Ritual",
-    price: "₹4,750.00",
+    price: 4750,
   },
 ];
 
 function MostLovedRituals() {
   const sliderRef = useRef(null);
+  const navigate = useNavigate();
 
-  /*
-    Products ko 3 baar repeat kiya hai.
-    Isse 8 ke baad 1 par visible jump nahi hoga.
-  */
+  const { addToCart } = useCart();
+
   const infiniteProducts = [
     ...products,
     ...products,
     ...products,
   ];
 
-  // Middle set se start
-  const [currentIndex, setCurrentIndex] = useState(products.length);
+  const [currentIndex, setCurrentIndex] = useState(
+    products.length
+  );
 
   const [cardWidth, setCardWidth] = useState(0);
-  const [visibleCards, setVisibleCards] = useState(4);
 
-  /*
-    Responsive card width
-  */
+  /* =========================
+     RESPONSIVE CARD WIDTH
+  ========================= */
+
   useEffect(() => {
     const updateSlider = () => {
       if (!sliderRef.current) return;
 
       const width = sliderRef.current.offsetWidth;
 
-      const visible = window.innerWidth <= 600 ? 2 : 4;
+      const visible =
+        window.innerWidth <= 600 ? 2 : 4;
 
-      setVisibleCards(visible);
       setCardWidth(width / visible);
     };
 
@@ -91,13 +93,17 @@ function MostLovedRituals() {
     window.addEventListener("resize", updateSlider);
 
     return () => {
-      window.removeEventListener("resize", updateSlider);
+      window.removeEventListener(
+        "resize",
+        updateSlider
+      );
     };
   }, []);
 
-  /*
-    Automatic one-card slide
-  */
+  /* =========================
+     AUTO SLIDER
+  ========================= */
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => prev + 1);
@@ -106,27 +112,30 @@ function MostLovedRituals() {
     return () => clearInterval(timer);
   }, []);
 
-  /*
-    Jab second copy ke end ke paas pahunchta hai,
-    silently middle copy par aa jata hai.
-  */
+  /* =========================
+     INFINITE RESET
+  ========================= */
+
   useEffect(() => {
     if (currentIndex >= products.length * 2) {
       const resetTimer = setTimeout(() => {
-        if (sliderRef.current) {
-          sliderRef.current
-            .querySelector(".ritual-track")
-            ?.classList.add("no-transition");
+        const track =
+          sliderRef.current?.querySelector(
+            ".ritual-track"
+          );
+
+        if (track) {
+          track.classList.add("no-transition");
         }
 
         setCurrentIndex(products.length);
 
         requestAnimationFrame(() => {
           requestAnimationFrame(() => {
-            if (sliderRef.current) {
-              sliderRef.current
-                .querySelector(".ritual-track")
-                ?.classList.remove("no-transition");
+            if (track) {
+              track.classList.remove(
+                "no-transition"
+              );
             }
           });
         });
@@ -136,16 +145,18 @@ function MostLovedRituals() {
     }
   }, [currentIndex]);
 
-  /*
-    Manual next
-  */
+  /* =========================
+     NEXT
+  ========================= */
+
   const nextSlide = () => {
     setCurrentIndex((prev) => prev + 1);
   };
 
-  /*
-    Manual previous
-  */
+  /* =========================
+     PREVIOUS
+  ========================= */
+
   const prevSlide = () => {
     setCurrentIndex((prev) => {
       if (prev <= products.length) {
@@ -156,23 +167,66 @@ function MostLovedRituals() {
     });
   };
 
+  /* =========================
+     ADD TO BAG
+  ========================= */
+
+  const handleAddToBag = (product) => {
+    addToCart({
+      name: product.title,
+      image: product.image,
+      price: product.price,
+      size: "Default",
+      quantity: 1,
+      description: product.description,
+    });
+  };
+
+  /* =========================
+     PRODUCT DETAILS
+  ========================= */
+
+  const openProductDetails = (product) => {
+    navigate("/product-details", {
+      state: {
+        product: {
+          name: product.title,
+          category: "Beauty & Wellness",
+          price: product.price,
+          oldPrice: product.price + 500,
+          images: [product.image],
+          sizes: ["Default"],
+          description: product.description,
+          benefits: [
+            "Nourishes and cares for the skin",
+            "Helps maintain healthy-looking skin",
+            "Suitable for everyday use",
+            "Inspired by Ayurvedic beauty rituals",
+          ],
+        },
+      },
+    });
+  };
+
   return (
     <section className="ritual-section">
 
-      {/* HEADER */}
+      {/* ================= HEADER ================= */}
 
       <div className="ritual-header">
 
         <h2>MOST LOVED RITUALS</h2>
 
-        <button className="view-all">
+        <button
+          className="view-all"
+          type="button"
+        >
           VIEW ALL <span>→</span>
         </button>
 
       </div>
 
-
-      {/* SLIDER */}
+      {/* ================= SLIDER ================= */}
 
       <div
         className="ritual-slider"
@@ -188,68 +242,93 @@ function MostLovedRituals() {
           }}
         >
 
-          {infiniteProducts.map((product, index) => (
+          {infiniteProducts.map(
+            (product, index) => (
 
-            <div
-              className="ritual-card"
-              key={`${product.title}-${index}`}
-              style={{
-                width: `${cardWidth}px`,
-                flexBasis: `${cardWidth}px`,
-              }}
-            >
+              <div
+                className="ritual-card"
+                key={`${product.title}-${index}`}
+                style={{
+                  width: `${cardWidth}px`,
+                  flexBasis: `${cardWidth}px`,
+                }}
+              >
 
-              {/* IMAGE */}
+                {/* ================= IMAGE ================= */}
 
-              <div className="ritual-image">
-
-                <img
-                  src={product.image}
-                  alt={product.title}
-                />
-
-                <button
-                  className="heart-btn"
-                  aria-label="Add to wishlist"
+                <div
+                  className="ritual-image"
+                  onClick={() =>
+                    openProductDetails(product)
+                  }
                 >
-                  ♡
-                </button>
 
-              </div>
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                  />
 
+                  <button
+                    type="button"
+                    className="heart-btn"
+                    aria-label="Add to wishlist"
+                    onClick={(e) =>
+                      e.stopPropagation()
+                    }
+                  >
+                    ♡
+                  </button>
 
-              {/* DETAILS */}
-
-              <div className="ritual-details">
-
-                <h3>
-                  {product.title}
-                </h3>
-
-                <p>
-                  {product.description}
-                </p>
-
-                <div className="ritual-price">
-                  {product.price}
                 </div>
 
-                <button className="add-bag">
-                  Add to Bag
-                </button>
+                {/* ================= DETAILS ================= */}
+
+                <div className="ritual-details">
+
+                  <h3
+                    onClick={() =>
+                      openProductDetails(product)
+                    }
+                  >
+                    {product.title}
+                  </h3>
+
+                  <p>
+                    {product.description}
+                  </p>
+
+                  <div className="ritual-price">
+                    ₹
+                    {product.price.toLocaleString(
+                      "en-IN"
+                    )}
+                  </div>
+
+                  {/* ================= ADD TO BAG ================= */}
+
+                  <button
+                    type="button"
+                    className="add-bag"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleAddToBag(product);
+                    }}
+                  >
+                    ADD TO BAG
+                  </button>
+
+                </div>
 
               </div>
-
-            </div>
-
-          ))}
+            )
+          )}
 
         </div>
 
-
-        {/* ARROWS */}
+        {/* ================= ARROWS ================= */}
 
         <button
+          type="button"
           className="ritual-arrow ritual-prev"
           onClick={prevSlide}
         >
@@ -257,6 +336,7 @@ function MostLovedRituals() {
         </button>
 
         <button
+          type="button"
           className="ritual-arrow ritual-next"
           onClick={nextSlide}
         >

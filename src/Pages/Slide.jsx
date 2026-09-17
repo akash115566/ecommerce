@@ -5,56 +5,69 @@ function Slide() {
 
   const slides = [
     {
-      image: "/images/slide1.jpg",
-      small: "NATURAL BEAUTY",
-      title: "TIME",
-      title2: "TO GLOW",
-      description: "Discover Your Everyday Beauty Ritual",
-      button: "SHOP NOW",
+      image: "/home/slide/tellus.jfif",
+      // small: "NATURAL BEAUTY",
+      // title: "TIME",
+      // title2: "TO GLOW",
+      // description: "Discover Your Everyday Beauty Ritual",
+      // button: "SHOP NOW",
 
-      boxTitle: "DAILY BEAUTY ESSENTIALS",
+      // boxTitle: "DAILY BEAUTY ESSENTIALS",
       boxText:
         "Discover carefully selected skincare products designed for your everyday beauty routine.",
       boxButton: "EXPLORE SKINCARE",
     },
 
     {
-      image: "/images/slide2.jpg",
-      small: "SKIN CARE",
-      title: "PURE",
-      title2: "SELF CARE",
-      description: "Luxury Essentials For Beautiful Skin",
-      button: "EXPLORE",
+      image: "/home/slide/tellusdrop.jfif",
+      // small: "SKIN CARE",
+      // title: "PURE",
+      // title2: "SELF CARE",
+      // description: "Luxury Essentials For Beautiful Skin",
+      // button: "EXPLORE",
 
-      boxTitle: "SKINCARE COLLECTION",
+      // boxTitle: "SKINCARE COLLECTION",
       boxText:
         "Nourish, hydrate and refresh your skin with our premium skincare collection.",
       boxButton: "SHOP SKINCARE",
     },
 
     {
-      image: "/images/slide3.jpg",
-      small: "HAIR CARE",
-      title: "HEALTHY",
-      title2: "HAIR DAYS",
-      description: "Nourish Your Hair With Nature",
-      button: "SHOP HAIR",
+      image: "/home/slide/tellusname.jfif",
+      // small: "HAIR CARE",
+      // title: "HEALTHY",
+      // title2: "HAIR DAYS",
+      // description: "Nourish Your Hair With Nature",
+      // button: "SHOP HAIR",
 
-      boxTitle: "HAIR CARE RITUAL",
+      // boxTitle: "HAIR CARE RITUAL",
       boxText:
         "Give your hair the care it deserves with nourishing oils, shampoos and conditioners.",
       boxButton: "EXPLORE HAIR CARE",
     },
 
     {
-      image: "/images/slide4.jpg",
-      small: "SPECIAL GIFTS",
-      title: "GIVE",
-      title2: "BEAUTIFULLY",
-      description: "Thoughtful Gifts For Every Occasion",
-      button: "SHOP GIFTS",
+      image: "/home/slide/tellussaopgreen.jfif",
+      // small: "SPECIAL GIFTS",
+      // title: "GIVE",
+      // title2: "BEAUTIFULLY",
+      // description: "Thoughtful Gifts For Every Occasion",
+      // button: "SHOP GIFTS",
 
-      boxTitle: "BEAUTY GIFT COLLECTION",
+      // boxTitle: "BEAUTY GIFT COLLECTION",
+      boxText:
+        "Find beautiful gift sets and thoughtful combinations for your loved ones.",
+      boxButton: "EXPLORE GIFTS",
+    },
+     {
+      image: "/home/slide/tellussoap.jfif",
+      // small: "SPECIAL GIFTS",
+      // title: "GIVE",
+      // title2: "BEAUTIFULLY",
+      // description: "Thoughtful Gifts For Every Occasion",
+      // button: "SHOP GIFTS",
+
+      // boxTitle: "BEAUTY GIFT COLLECTION",
       boxText:
         "Find beautiful gift sets and thoughtful combinations for your loved ones.",
       boxButton: "EXPLORE GIFTS",

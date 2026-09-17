@@ -1,15 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Styles/seasonalProducts.css";
+import { useCart } from "../Context/CartContext";
+import Reviews from "./Reviews";
 
 const products = [
   {
-    image: "/kromaic.jfif",
+    image: "/home/soap/soapgreen.jfif",
     images: [
-      "/kromaic.jfif",
-      "/kromaic-2.jfif",
-      "/kromaic-3.jfif",
-      "/kromaic-4.jfif",
+      "/home/soap/soapgreen.jfif",
+     "/home/soap/soapgreen.jfif",
+     "/home/soap/soapgreen.jfif",
+      "/home/soap/soapgreen.jfif",
     ],
     name: "OVERNIGHT REPAIR MASK PANCHPUSHPI",
     description: "Replenishes Moisture, Restores Radiance",
@@ -27,11 +29,11 @@ const products = [
     ],
   },
   {
-    image: "/nisha.jfif",
+    image: "/home/soap/soapred.jfif",
     images: [
-      "/nisha.jfif",
-      "/nisha-2.jfif",
-      "/nisha-3.jfif",
+      "/home/soap/soapred.jfif",
+      "/home/soap/soapred-2.jfif",
+      "/home/soap/nisha-3.jfif",
     ],
     name: "LUXURY SUGAR SOAP PANCHPUSHP",
     description: "Handmade Ayurvedic Soap",
@@ -49,12 +51,12 @@ const products = [
     ],
   },
   {
-    image: "/soap-protam.jfif",
+    image: "/home/soap/soapgreen.jfif",
     images: [
-      "/soap-protam.jfif",
-      "/soap-protam-2.jfif",
-      "/soap-protam-3.jfif",
-      "/soap-protam-4.jfif",
+      "/home/soap/soapgreen.jfif",
+     "/home/soap/soapgreen.jfif",
+     "/home/soap/soapgreen.jfif",
+      "/home/soap/soapgreen.jfif",
     ],
     name: "SERUM INFUSED FACIAL MIST",
     description: "Revitalising & Rehydrating",
@@ -72,11 +74,11 @@ const products = [
     ],
   },
   {
-    image: "/soap.jfif",
+    image: "/home/soap/soapred.jfif",
     images: [
-      "/soap.jfif",
-      "/soap-2.jfif",
-      "/soap-3.jfif",
+      "/home/soap/soapred.jfif",
+      "/home/soap/soapred-2.jfif",
+      "/home/soap/nisha-3.jfif",
     ],
     name: "SHEER SUNSCREEN BODY SPRAY",
     description: "Weightless, Dewy Protection",
@@ -94,11 +96,12 @@ const products = [
     ],
   },
   {
-    image: "/kromaic.jfif",
+    image: "/home/soap/soapgreen.jfif",
     images: [
-      "/kromaic.jfif",
-      "/kromaic-2.jfif",
-      "/kromaic-3.jfif",
+      "/home/soap/soapgreen.jfif",
+     "/home/soap/soapgreen.jfif",
+     "/home/soap/soapgreen.jfif",
+      "/home/soap/soapgreen.jfif",
     ],
     name: "AYURVEDIC FACIAL CLEANSER",
     description: "Gentle cleansing for radiant skin",
@@ -116,11 +119,11 @@ const products = [
     ],
   },
   {
-    image: "/nisha.jfif",
+   image: "/home/soap/soapred.jfif",
     images: [
-      "/nisha.jfif",
-      "/nisha-2.jfif",
-      "/nisha-3.jfif",
+      "/home/soap/soapred.jfif",
+      "/home/soap/soapred-2.jfif",
+      "/home/soap/nisha-3.jfif",
     ],
     name: "LUXURY BODY LOTION",
     description: "Deep nourishment & hydration",
@@ -138,11 +141,12 @@ const products = [
     ],
   },
   {
-    image: "/soap-protam.jfif",
+     image: "/home/soap/soapgreen.jfif",
     images: [
-      "/soap-protam.jfif",
-      "/soap-protam-2.jfif",
-      "/soap-protam-3.jfif",
+      "/home/soap/soapgreen.jfif",
+     "/home/soap/soapgreen.jfif",
+     "/home/soap/soapgreen.jfif",
+      "/home/soap/soapgreen.jfif",
     ],
     name: "AYURVEDIC HAIR CLEANSER",
     description: "Nourishes scalp and strengthens hair",
@@ -160,11 +164,11 @@ const products = [
     ],
   },
   {
-    image: "/soap.jfif",
+    image: "/home/soap/soapred.jfif",
     images: [
-      "/soap.jfif",
-      "/soap-2.jfif",
-      "/soap-3.jfif",
+      "/home/soap/soapred.jfif",
+      "/home/soap/soapred-2.jfif",
+      "/home/soap/nisha-3.jfif",
     ],
     name: "PREMIUM ROSE FACE MIST",
     description: "Refreshing & hydrating facial mist",
@@ -242,16 +246,16 @@ function SeasonalProducts() {
     }
   }, [currentIndex]);
 
-  const openProductDetails = (product) => {
-    navigate("/product-details", {
-      state: {
-        product: {
-          ...product,
-          price: Number(product.price),
-        },
+const openProductDetails = (product) => {
+  navigate("/product-details", {
+    state: {
+      product: {
+        ...product,
+        price: Number(product.price),
       },
-    });
-  };
+    },
+  });
+};
 
   return (
     <>
@@ -284,9 +288,10 @@ function SeasonalProducts() {
         >
           {infiniteProducts.map((product, index) => (
             <div
-              className="seasonal-card"
-              key={`${product.name}-${index}`}
-            >
+  className="seasonal-card"
+  key={`${product.name}-${index}`}
+  onClick={() => openProductDetails(product)}
+>
               <div className="product-image">
 
                 <img
@@ -295,11 +300,20 @@ function SeasonalProducts() {
                 />
 
                 <button
-                  className="quick-add"
-                  onClick={() => openProductDetails(product)}
-                >
-                  ADD TO BAG
-                </button>
+  type="button"
+  className="quick-add"
+  onClick={(e) => {
+    e.stopPropagation();
+
+    addToCart({
+      ...product,
+      price: Number(product.price),
+      quantity: 1,
+    });
+  }}
+>
+  ADD TO BAG
+</button>
 
               </div>
 
@@ -344,16 +358,21 @@ function SeasonalProducts() {
 
   <div className="ingredients-title">
 
-    <span>KEY INGREDIENTS</span>
+    <span>WHAT OUR CUSTOMERS SAY</span>
 
     <h2>
-      What's inside that really
+      Real experiences,
       <br />
-      matters
+      real rituals
     </h2>
 
-    <button>
-      VIEW FULL LIST
+    <p>
+      Discover what our customers have to say about
+      their experience with our Ayurvedic beauty rituals.
+    </p>
+
+    <button type="button">
+      VIEW ALL REVIEWS
     </button>
 
   </div>
@@ -363,66 +382,107 @@ function SeasonalProducts() {
 
     {[
       {
+        name: "Priya Sharma",
+        location: "Delhi, India",
+        rating: 5,
+        comment:
+          "I have been using this product for a few weeks and absolutely love the texture. My skin feels soft, hydrated and fresh after every use.",
         image: "/ingredients/aloe.jpg",
-        name: "Aloe Vera 200X",
-        text:
-          "With its strong, soothing, hydrating, and moisturising properties, Aloe Vera stimulates regeneration of the skin.",
       },
+
       {
+        name: "Ananya Mehta",
+        location: "Mumbai, India",
+        rating: 5,
+        comment:
+          "The fragrance is beautiful and the overall experience feels very luxurious. It has become a part of my daily skincare ritual.",
         image: "/ingredients/jasmine.jpg",
-        name: "Jasmine",
-        text:
-          "This flower's sweet scent is known to help alleviate stress and anxiety, helping the body to unwind.",
       },
+
       {
+        name: "Ritika Kapoor",
+        location: "Bangalore, India",
+        rating: 4,
+        comment:
+          "I really enjoyed using this product. It feels gentle on the skin and gives a lovely refreshing feeling without being heavy.",
         image: "/ingredients/kewda.jpg",
-        name: "Kewda Water",
-        text:
-          "Kewda Water has cooling and refreshing properties and helps provide a soothing experience.",
       },
+
       {
+        name: "Neha Verma",
+        location: "Gurgaon, India",
+        rating: 5,
+        comment:
+          "The quality feels premium and the packaging is beautiful. I especially liked how nourished my skin felt after regular use.",
         image: "/ingredients/marigold.jpg",
-        name: "Marigold",
-        text:
-          "Marigold has a high content of flavonoids that act as antioxidants and support healthy-looking skin.",
       },
+
       {
+        name: "Kavya Singh",
+        location: "Jaipur, India",
+        rating: 5,
+        comment:
+          "The rose-infused feel is amazing. My skin feels comfortable, hydrated and naturally fresh. Definitely something I enjoy using every day.",
         image: "/ingredients/rose.jpg",
-        name: "Rose",
-        text:
-          "Rose helps tone, refresh and deeply hydrate the skin while leaving it soft and comfortable.",
       },
+
       {
+        name: "Meera Malhotra",
+        location: "Chandigarh, India",
+        rating: 5,
+        comment:
+          "A beautiful Ayurvedic-inspired experience. The product feels soothing and luxurious, and I really like the subtle natural fragrance.",
         image: "/ingredients/saffron.jpg",
-        name: "Saffron Stigma Extract",
-        text:
-          "Saffron Stigma is known for its soothing properties and helps improve the appearance of the skin.",
       },
-    ].map((ingredient, index) => (
+    ].map((review, index) => (
 
       <div
-        className="ingredient-card"
+        className="ingredient-card review-card"
         key={index}
       >
 
-        <div className="ingredient-image">
+        {/* CUSTOMER IMAGE */}
+
+        <div className="ingredient-image review-image">
 
           <img
-            src={ingredient.image}
-            alt={ingredient.name}
+            src={review.image}
+            alt={review.name}
           />
 
         </div>
 
-        <h3>
-          {ingredient.name}
-        </h3>
+
+        {/* STARS */}
+
+        <div className="review-stars">
+
+          {"★".repeat(review.rating)}
+
+          {"☆".repeat(5 - review.rating)}
+
+        </div>
+
+
+        {/* COMMENT */}
+
+        <p className="review-comment">
+          "{review.comment}"
+        </p>
+
 
         <div className="ingredient-line"></div>
 
-        <p>
-          {ingredient.text}
-        </p>
+
+        {/* CUSTOMER */}
+
+        <h3>
+          {review.name}
+        </h3>
+
+        <span className="review-location">
+          {review.location}
+        </span>
 
       </div>
 
@@ -431,7 +491,6 @@ function SeasonalProducts() {
   </div>
 
 </section>
-
 
 {/* =========================================
    HOW TO USE
@@ -463,159 +522,7 @@ function SeasonalProducts() {
    REVIEWS
 ========================================= */}
 
-<section className="reviews-section">
-
-  <div className="reviews-heading">
-
-    <div>
-      <span>CUSTOMER REVIEWS</span>
-
-      <h2>
-        What our customers say
-      </h2>
-    </div>
-
-    <button>
-      WRITE A REVIEW
-    </button>
-
-  </div>
-
-
-  <div className="review-summary">
-
-    <div className="review-rating">
-
-      <strong>
-        4.8
-      </strong>
-
-      <div className="stars">
-        ★★★★★
-      </div>
-
-      <p>
-        Based on 126 reviews
-      </p>
-
-    </div>
-
-
-    <div className="rating-bars">
-
-      <div className="rating-row">
-        <span>5</span>
-        <div className="rating-bar">
-          <div style={{ width: "86%" }}></div>
-        </div>
-      </div>
-
-      <div className="rating-row">
-        <span>4</span>
-        <div className="rating-bar">
-          <div style={{ width: "10%" }}></div>
-        </div>
-      </div>
-
-      <div className="rating-row">
-        <span>3</span>
-        <div className="rating-bar">
-          <div style={{ width: "3%" }}></div>
-        </div>
-      </div>
-
-      <div className="rating-row">
-        <span>2</span>
-        <div className="rating-bar">
-          <div style={{ width: "1%" }}></div>
-        </div>
-      </div>
-
-      <div className="rating-row">
-        <span>1</span>
-        <div className="rating-bar">
-          <div style={{ width: "0%" }}></div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-
-  {/* REVIEW CARDS */}
-
-  <div className="reviews-grid">
-
-    <div className="review-card">
-
-      <div className="review-stars">
-        ★★★★★
-      </div>
-
-      <h3>
-        Absolutely refreshing
-      </h3>
-
-      <p>
-        "The facial mist feels incredibly refreshing and
-        lightweight. My skin feels hydrated and fresh
-        throughout the day."
-      </p>
-
-      <span>
-        Verified Customer
-      </span>
-
-    </div>
-
-
-    <div className="review-card">
-
-      <div className="review-stars">
-        ★★★★★
-      </div>
-
-      <h3>
-        Beautiful product
-      </h3>
-
-      <p>
-        "I love how gentle this product feels on my skin.
-        It has become a part of my everyday skincare routine."
-      </p>
-
-      <span>
-        Verified Customer
-      </span>
-
-    </div>
-
-
-    <div className="review-card">
-
-      <div className="review-stars">
-        ★★★★★
-      </div>
-
-      <h3>
-        Worth trying
-      </h3>
-
-      <p>
-        "The fragrance is subtle and the skin feels soft
-        after using it. Really nice product."
-      </p>
-
-      <span>
-        Verified Customer
-      </span>
-
-    </div>
-
-  </div>
-
-</section>
+<Reviews />
     </>
   
   );

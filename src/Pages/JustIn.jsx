@@ -3,42 +3,42 @@ import "../Styles/justin.css";
 
 const products = [
   {
-    image: "/kromaic.jfif",
+    image: "/home/serum/serumorange.jfif",
     name: "ROSE GLOW FACE SERUM",
     use: "Brightens, Hydrates & Revitalises Skin",
   },
   {
-    image: "/nisha.jfif",
+    image: "/home/serum/serumshow.jfif",
     name: "LUXURY SAFFRON CLEANSER",
     use: "Gently Cleanses & Refreshes Skin",
   },
   {
-    image: "/soap-protam.jfif",
+    image: "/home/serum/serumstone.jfif",
     name: "BHRINGRAJ HAIR OIL",
     use: "Nourishes Scalp & Strengthens Hair",
   },
   {
-    image: "/soap.jfif",
+    image: "/home/serum/serumwhite.jfif",
     name: "KUMKUMADI FACE OIL",
     use: "Improves Radiance & Skin Texture",
   },
   {
-    image: "/kromaic.jfif",
+    image: "/home/serum/serumyellow.jfif",
     name: "SANDALWOOD BODY LOTION",
     use: "Deeply Moisturises & Softens Skin",
   },
   {
-    image: "/nisha.jfif",
+    image: "/home/serum/serumblack.jfif",
     name: "VETIVER COOLING MIST",
     use: "Refreshes & Hydrates Skin",
   },
   {
-    image: "/kromaic.jfif",
+    image:"/home/serum/serumc.jfif",
     name: "AYURVEDIC FACE MASK",
     use: "Purifies, Revives & Brightens Skin",
   },
   {
-    image: "/soap.jfif",
+    image: "/home/serum/serumcheck.jfif",
     name: "ROSE & JASMINE BODY MIST",
     use: "Refreshes Skin With A Floral Fragrance",
   },

@@ -13,6 +13,10 @@ import RecentAwards from "./Pages/RecentAwards";
 import ProductDetails from "./Pages/ProductDetails";
 import Checkout from "./Pages/Checkout";
 import Payment from "./Pages/Payment";
+import LatestReads from "./Pages/LatestReads";
+import ForbesArticle from "./Pages/ForbesArticle";
+import Reviews from "./Pages/Reviews";
+
 
 import {
   CartProvider,
@@ -66,6 +70,9 @@ const AppContent = () => {
 
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/latest-reads" element={<LatestReads />} />
+        <Route path="/forbes-article" element={<ForbesArticle />} />
+        <Route path="/reviews" element={<Reviews />} />
 
       </Routes>
 

@@ -1,453 +1,229 @@
 import React from "react";
-import { useCart } from "../Context/CartContext";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../Context/CartContext";
 import "../Styles/checkout.css";
 
 function Checkout() {
-    const navigate = useNavigate();
+
+  const navigate = useNavigate();
+
   const {
     cartItems,
+    increaseQuantity,
+    decreaseQuantity,
+    removeFromCart,
+    totalItems,
     totalPrice,
   } = useCart();
 
+
   return (
-    <div className="checkout-page">
-
-      {/* PAGE TITLE */}
-
-      <div className="checkout-top">
-
-        <h1>
-          CHECKOUT
-        </h1>
-
-        <p>
-          Complete your details to place your order
-        </p>
-
-      </div>
-
+    <main className="checkout-page">
 
       <div className="checkout-container">
 
-        {/* ==================================================
-            LEFT SIDE
-        ================================================== */}
+        {/* =====================================
+            LEFT
+        ===================================== */}
 
-        <div className="checkout-left">
+        <section className="checkout-left">
 
+          <div className="checkout-heading">
 
-          {/* LOGIN */}
-
-          <div className="checkout-box">
-
-            <div className="checkout-box-title">
-
-              <h2>
-                Login
-              </h2>
-
+            <div>
               <span>
-                Already have an account?
+                SHOPPING BAG
               </span>
 
+              <h1>
+                YOUR BAG
+              </h1>
             </div>
 
             <p>
-              To redeem Soundarya points, Gift Cards
-              please log in.
+              {totalItems}{" "}
+              {totalItems === 1
+                ? "ITEM"
+                : "ITEMS"}
             </p>
 
-            <button className="login-btn">
-              LOGIN / SIGN UP
-            </button>
-
           </div>
 
 
-          {/* SOUNDARYA CLUB */}
+          {cartItems.length === 0 ? (
 
-          <div className="checkout-box club-box">
+            <div className="empty-checkout">
 
-            <h2>
-              Soundarya Club
-            </h2>
+              <h2>
+                Your Bag is Empty
+              </h2>
 
-            <p>
-              Earn points and benefits when you shop
-              and enjoy our products.
-            </p>
+              <p>
+                Explore our collection and
+                add something to your bag.
+              </p>
 
-            <button className="benefits-btn">
-              VIEW BENEFITS
-            </button>
-
-
-            <div className="club-options">
-
-              <label>
-                <input
-                  type="radio"
-                  name="club"
-                  defaultChecked
-                />
-
-                I'M INTERESTED
-              </label>
-
-              <label>
-                <input
-                  type="radio"
-                  name="club"
-                />
-
-                NO THANKS
-              </label>
+              <button
+                type="button"
+                onClick={() => navigate("/")}
+              >
+                CONTINUE SHOPPING
+              </button>
 
             </div>
 
-          </div>
+          ) : (
 
+            <div className="checkout-products">
 
-          {/* SHIPPING ADDRESS */}
+              {cartItems.map((item, index) => (
 
-          <div className="checkout-box">
+                <div
+                  className="checkout-product"
+                  key={`${item.name}-${item.size}-${index}`}
+                >
 
-            <h2>
-              Shipping Address
-            </h2>
+                  {/* IMAGE */}
 
-
-            {/* EMAIL */}
-
-            <div className="form-group">
-
-              <label>
-                EMAIL ADDRESS *
-              </label>
-
-              <input
-                type="email"
-                placeholder="Enter your email address"
-              />
-
-              <small>
-                You can create an account after checkout.
-              </small>
-
-            </div>
-
-
-            {/* FIRST NAME */}
-
-            <div className="form-group">
-
-              <label>
-                FIRST NAME *
-              </label>
-
-              <input
-                type="text"
-                placeholder="First Name"
-              />
-
-            </div>
-
-
-            {/* LAST NAME */}
-
-            <div className="form-group">
-
-              <label>
-                LAST NAME *
-              </label>
-
-              <input
-                type="text"
-                placeholder="Last Name"
-              />
-
-            </div>
-
-
-            {/* STREET ADDRESS */}
-
-            <div className="form-group">
-
-              <label>
-                STREET ADDRESS *
-              </label>
-
-              <input
-                type="text"
-                placeholder="Street Address"
-              />
-
-              <input
-                type="text"
-                placeholder="Apartment, suite, unit, etc."
-              />
-
-            </div>
-
-
-            {/* POSTAL CODE */}
-
-            <div className="form-row">
-
-              <div className="form-group">
-
-                <label>
-                  POSTAL CODE *
-                </label>
-
-                <input
-                  type="text"
-                  placeholder="Postal Code"
-                  maxLength="6"
-                />
-
-              </div>
-
-
-              {/* CITY */}
-
-              <div className="form-group">
-
-                <label>
-                  CITY *
-                </label>
-
-                <input
-                  type="text"
-                  placeholder="City"
-                />
-
-              </div>
-
-            </div>
-
-
-            {/* COUNTRY */}
-
-            <div className="form-group">
-
-              <label>
-                COUNTRY *
-              </label>
-
-              <select defaultValue="India">
-
-                <option value="India">
-                  India
-                </option>
-
-                <option value="USA">
-                  United States
-                </option>
-
-                <option value="UAE">
-                  United Arab Emirates
-                </option>
-
-                <option value="UK">
-                  United Kingdom
-                </option>
-
-              </select>
-
-            </div>
-
-
-            {/* STATE */}
-
-            <div className="form-group">
-
-              <label>
-                STATE / PROVINCE *
-              </label>
-
-              <select defaultValue="">
-
-                <option value="" disabled>
-                  Please select a state or province
-                </option>
-
-                <option>
-                  Uttar Pradesh
-                </option>
-
-                <option>
-                  Delhi
-                </option>
-
-                <option>
-                  Maharashtra
-                </option>
-
-                <option>
-                  Haryana
-                </option>
-
-                <option>
-                  Rajasthan
-                </option>
-
-                <option>
-                  Gujarat
-                </option>
-
-                <option>
-                  Punjab
-                </option>
-
-              </select>
-
-            </div>
-
-
-            {/* PHONE */}
-
-            <div className="form-group">
-
-              <label>
-                PHONE NUMBER *
-              </label>
-
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                maxLength="10"
-              />
-
-            </div>
-
-
-            {/* INSTRUCTIONS */}
-
-            <div className="form-group">
-
-              <label>
-                DELIVERY INSTRUCTIONS
-              </label>
-
-              <textarea
-                placeholder="E.g. Please deliver after 5 PM"
-                rows="4"
-              ></textarea>
-
-            </div>
-
-          </div>
-
-
-          {/* SHIPPING METHOD */}
-
-          <div className="checkout-box shipping-method">
-
-            <h2>
-              Shipping Methods
-            </h2>
-
-            <label className="shipping-option">
-
-              <input
-                type="radio"
-                name="shipping"
-                defaultChecked
-              />
-
-              <div>
-
-                <strong>
-                  Fixed Rate
-                </strong>
-
-                <span>
-                  ₹0.00
-                </span>
-
-              </div>
-
-            </label>
-
-          </div>
-
-        </div>
-
-
-        {/* ==================================================
-            RIGHT SIDE - ORDER SUMMARY
-        ================================================== */}
-
-        <div className="checkout-right">
-
-          <div className="order-summary">
-
-            <h2>
-              Order Summary
-            </h2>
-
-
-            {/* ITEMS */}
-
-            <div className="summary-items">
-
-              {cartItems.length === 0 ? (
-
-                <p className="empty-summary">
-                  Your cart is empty.
-                </p>
-
-              ) : (
-
-                cartItems.map((item, index) => (
-
-                  <div
-                    className="summary-product"
-                    key={`${item.name}-${item.size}-${index}`}
-                  >
+                  <div className="checkout-product-image">
 
                     <img
                       src={item.image}
                       alt={item.name}
                     />
 
+                  </div>
 
-                    <div className="summary-product-info">
 
-                      <h3>
-                        {item.name}
-                      </h3>
+                  {/* DETAILS */}
 
-                      <p>
-                        Size: {item.size}
-                      </p>
+                  <div className="checkout-product-info">
 
-                      <p>
-                        Qty: {item.quantity}
-                      </p>
+                    <p className="checkout-category">
+                      {item.category}
+                    </p>
 
-                      <strong>
-                        ₹
-                        {(
-                          Number(item.price) *
-                          item.quantity
-                        ).toLocaleString("en-IN")}
-                      </strong>
+                    <h2>
+                      {item.name}
+                    </h2>
+
+                    <p className="checkout-size">
+                      Size: {item.size}
+                    </p>
+
+
+                    <strong className="checkout-price">
+
+                      ₹
+                      {Number(item.price)
+                        .toLocaleString("en-IN")}
+
+                    </strong>
+
+
+                    {/* QUANTITY */}
+
+                    <div className="checkout-quantity">
+
+                      <button
+                        type="button"
+                        onClick={() =>
+                          decreaseQuantity(
+                            item.name,
+                            item.size
+                          )
+                        }
+                      >
+                        −
+                      </button>
+
+                      <span>
+                        {item.quantity}
+                      </span>
+
+                      <button
+                        type="button"
+                        onClick={() =>
+                          increaseQuantity(
+                            item.name,
+                            item.size
+                          )
+                        }
+                      >
+                        +
+                      </button>
 
                     </div>
 
+
+                    <button
+                      type="button"
+                      className="checkout-remove"
+                      onClick={() =>
+                        removeFromCart(
+                          item.name,
+                          item.size
+                        )
+                      }
+                    >
+                      REMOVE
+                    </button>
+
                   </div>
 
-                ))
 
-              )}
+                  {/* ITEM TOTAL */}
+
+                  <div className="checkout-item-total">
+
+                    ₹
+                    {(
+                      Number(item.price) *
+                      item.quantity
+                    ).toLocaleString("en-IN")}
+
+                  </div>
+
+                </div>
+
+              ))}
 
             </div>
 
+          )}
 
-            {/* SUBTOTAL */}
+        </section>
+
+
+        {/* =====================================
+            ORDER SUMMARY
+        ===================================== */}
+
+        {cartItems.length > 0 && (
+
+          <aside className="checkout-summary">
+
+            <span className="summary-small">
+              ORDER SUMMARY
+            </span>
+
+            <h2>
+              Your Order
+            </h2>
+
+
+            <div className="summary-row">
+
+              <span>
+                Products
+              </span>
+
+              <span>
+                {totalItems}
+              </span>
+
+            </div>
+
 
             <div className="summary-row">
 
@@ -455,15 +231,14 @@ function Checkout() {
                 Subtotal
               </span>
 
-              <strong>
+              <span>
                 ₹
-                {Number(totalPrice).toLocaleString("en-IN")}
-              </strong>
+                {Number(totalPrice)
+                  .toLocaleString("en-IN")}
+              </span>
 
             </div>
 
-
-            {/* SHIPPING */}
 
             <div className="summary-row">
 
@@ -471,64 +246,57 @@ function Checkout() {
                 Shipping
               </span>
 
-              <strong>
-                ₹0.00
-              </strong>
+              <span>
+                FREE
+              </span>
 
             </div>
 
 
-            {/* TOTAL */}
+            <div className="summary-line"></div>
+
 
             <div className="summary-total">
 
               <span>
-                Total
+                GRAND TOTAL
               </span>
 
               <strong>
                 ₹
-                {Number(totalPrice).toLocaleString("en-IN")}
+                {Number(totalPrice)
+                  .toLocaleString("en-IN")}
               </strong>
 
             </div>
 
 
-            {/* POINTS */}
-
-            <div className="points-box">
-
-              <span>
-                ♧
-              </span>
-
-              <p>
-                Earn up to{" "}
-                <strong>
-                  {Math.floor(Number(totalPrice) / 100)}
-                </strong>{" "}
-                points with your purchase today.
-              </p>
-
-            </div>
+            <button
+              type="button"
+              className="payment-btn"
+              onClick={() =>
+                navigate("/payment")
+              }
+            >
+              PROCEED TO PAYMENT
+            </button>
 
 
-            {/* PAYMENT BUTTON */}
+            <button
+              type="button"
+              className="continue-shopping"
+              onClick={() => navigate("/")}
+            >
+              ← CONTINUE SHOPPING
+            </button>
 
-           <button
-  className="payment-btn"
-  onClick={() => navigate("/payment")}
->
-  PROCEED TO PAYMENT
-</button>
+          </aside>
 
-          </div>
-
-        </div>
+        )}
 
       </div>
 
-    </div>
+    </main>
   );
 }
 

@@ -5,6 +5,9 @@ import SeasonalProducts from './SeasonalProducts'
 import MostLovedRituals from './MostLovedRituals'
 import JustIn from './JustIn'
 import RecentAwards from './RecentAwards'
+import LatestReads from './LatestReads'
+
+
 
 const Home = () => {
   return (
@@ -18,19 +21,24 @@ const Home = () => {
 
 <section className="bhringraj-section">
 
-  {/* LEFT CONTENT */}
+  {/* Decorative background element */}
+  <div className="bhringraj-decor"></div>
 
+  {/* LEFT CONTENT */}
   <div className="bhringraj-content">
 
     <p className="bhringraj-small">
-      AYURVEDIC HAIR CARE
+     Ancient Skin Care 
+Wisdom brought back to life a time tested ritual for deeply hydrated,  youthful looking skin...
     </p>
 
     <h2>
-      Bhringraj
+     VITAMIN
       <br />
-      <span>Hair Ritual</span>
+      <span> C SERUM</span>
     </h2>
+
+    <div className="bhringraj-line"></div>
 
     <p className="bhringraj-title">
       A time-tested recipe that works to reduce
@@ -39,28 +47,38 @@ const Home = () => {
 
     <p className="bhringraj-description">
       Discover the ancient Ayurvedic secret to
-      healthier, stronger hair.
+      healthier, stronger and beautifully nourished hair.
     </p>
 
     <button className="bhringraj-button">
-      EXPLORE NOW →
+      <span>EXPLORE NOW</span>
+      <b>→</b>
     </button>
 
   </div>
 
-
   {/* RIGHT IMAGE */}
-
   <div className="bhringraj-image">
 
-    <img
-      src="/media.jfif"
-      alt="Bhringraj Hair Ritual"
-    />
+    <div className="bhringraj-image-frame">
+
+      <img
+        src="/media.jfif"
+        alt="Bhringraj Hair Ritual"
+      />
+
+    </div>
+
+    {/* Image badge */}
+    <div className="bhringraj-badge">
+      <span>100%</span>
+      <small>AYURVEDIC<br />RITUAL</small>
+    </div>
 
   </div>
 
 </section>
+
 
 <SeasonalProducts />
 <MostLovedRituals/>
@@ -75,7 +93,7 @@ const Home = () => {
 
     </section>
     <RecentAwards />
-    <h1></h1>
+    <LatestReads />
   
   </>
   )

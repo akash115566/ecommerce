@@ -20,19 +20,20 @@
 
 .hero-image {
   width: 100%;
-  height: 560px;
+  aspect-ratio: 1920 / 700;
+  min-height: unset;
 
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
+  background-repeat: no-repeat;
 
   position: relative;
-
   display: flex;
   align-items: center;
+  justify-content: center;
 
   animation: imageFade 0.7s ease;
 }
-
 
 @keyframes imageFade {
 

@@ -1,539 +1,480 @@
-/* =========================================================
+/* =========================================
    CHECKOUT PAGE
-========================================================= */
+========================================= */
 
 .checkout-page {
-  width: 100%;
   min-height: 100vh;
-  background: #f5f5f5;
-  padding-bottom: 60px;
+
+  padding: 80px 6%;
+
+  background: #f7f4ec;
+
+  font-family: "Poppins", sans-serif;
 }
 
-
-/* =========================================================
-   TOP
-========================================================= */
-
-.checkout-top {
-  text-align: center;
-  padding: 45px 20px 30px;
-  background: #fff;
-}
-
-.checkout-top h1 {
-  margin: 0 0 8px;
-  font-size: 28px;
-  font-weight: 500;
-  letter-spacing: 2px;
-}
-
-.checkout-top p {
-  margin: 0;
-  color: #777;
-  font-size: 14px;
-}
-
-
-/* =========================================================
-   MAIN CONTAINER
-========================================================= */
 
 .checkout-container {
-  width: 92%;
   max-width: 1250px;
-  margin: 30px auto;
+
+  margin: auto;
 
   display: grid;
-  grid-template-columns: 1.35fr 0.8fr;
-  gap: 30px;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    350px;
+
+  gap: 60px;
 
   align-items: start;
 }
 
 
-/* =========================================================
-   LEFT
-========================================================= */
+/* =========================================
+   HEADING
+========================================= */
 
-.checkout-left {
-  width: 100%;
-}
-
-
-/* =========================================================
-   BOX
-========================================================= */
-
-.checkout-box {
-  background: #fff;
-  padding: 24px;
-  margin-bottom: 20px;
-  border: 1px solid #e5e5e5;
-}
-
-.checkout-box h2 {
-  margin: 0 0 12px;
-
-  font-size: 18px;
-  font-weight: 500;
-  color: #222;
-}
-
-.checkout-box p {
-  font-size: 13px;
-  line-height: 1.6;
-  color: #666;
-}
-
-
-/* =========================================================
-   LOGIN
-========================================================= */
-
-.checkout-box-title {
+.checkout-heading {
   display: flex;
+
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
+
+  margin-bottom: 35px;
+
+  border-bottom: 1px solid #d8d0c0;
+
+  padding-bottom: 20px;
 }
 
-.checkout-box-title span {
+
+.checkout-heading span,
+.summary-small {
+  font-size: 11px;
+
+  letter-spacing: 3px;
+
+  color: #967733;
+}
+
+
+.checkout-heading h1 {
+  margin: 8px 0 0;
+
+  font-size: 42px;
+
+  font-weight: 500;
+
+  color: #173b26;
+}
+
+
+.checkout-heading p {
   font-size: 12px;
+
   color: #777;
 }
 
-.login-btn {
-  width: 100%;
-  margin-top: 12px;
 
-  padding: 13px;
+/* =========================================
+   PRODUCT
+========================================= */
 
-  border: none;
-  background: #111;
-  color: #fff;
-
-  font-size: 12px;
-  letter-spacing: 1px;
-
-  cursor: pointer;
-}
-
-
-/* =========================================================
-   CLUB
-========================================================= */
-
-.club-box {
-  border-top: 2px solid #a37b30;
-}
-
-.benefits-btn {
-  background: transparent;
-
-  border: 1px solid #222;
-
-  padding: 9px 15px;
-
-  font-size: 11px;
-  letter-spacing: 0.5px;
-
-  cursor: pointer;
-}
-
-.club-options {
-  display: flex;
-  gap: 30px;
-
-  margin-top: 18px;
-
-  border: 1px solid #222;
-  padding: 12px;
-}
-
-.club-options label {
-  font-size: 11px;
-
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-
-/* =========================================================
-   FORM
-========================================================= */
-
-.form-group {
-  margin-bottom: 18px;
-}
-
-.form-group label {
-  display: block;
-
-  margin-bottom: 7px;
-
-  font-size: 10px;
-  letter-spacing: 0.5px;
-
-  color: #555;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-
-  box-sizing: border-box;
-
-  border: 1px solid #aaa;
-
-  background: #fff;
-
-  padding: 11px 12px;
-
-  outline: none;
-
-  font-size: 13px;
-
-  font-family: inherit;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  border-color: #222;
-}
-
-.form-group small {
-  display: block;
-
-  margin-top: 6px;
-
-  color: #999;
-
-  font-size: 10px;
-}
-
-.form-group textarea {
-  resize: vertical;
-}
-
-
-/* =========================================================
-   FORM ROW
-========================================================= */
-
-.form-row {
+.checkout-product {
   display: grid;
-  grid-template-columns: 1fr 1fr;
 
-  gap: 15px;
+  grid-template-columns:
+    150px
+    minmax(0, 1fr)
+    100px;
+
+  gap: 25px;
+
+  padding: 25px 0;
+
+  border-bottom: 1px solid #d8d0c0;
 }
 
 
-/* =========================================================
-   SHIPPING METHOD
-========================================================= */
+.checkout-product-image {
+  width: 150px;
+  height: 180px;
 
-.shipping-method {
-  margin-bottom: 0;
+  background: #ece6d9;
+
+  overflow: hidden;
 }
 
-.shipping-option {
-  display: flex;
-  align-items: center;
 
-  gap: 12px;
-
-  padding: 15px;
-
-  border: 1px solid #ddd;
-
-  cursor: pointer;
-}
-
-.shipping-option input {
-  accent-color: #111;
-}
-
-.shipping-option div {
-  display: flex;
-  justify-content: space-between;
-
+.checkout-product-image img {
   width: 100%;
+  height: 100%;
 
-  font-size: 12px;
-}
-
-.shipping-option strong {
-  font-weight: 400;
-}
-
-.shipping-option span {
-  font-weight: 500;
-}
-
-
-/* =========================================================
-   RIGHT - ORDER SUMMARY
-========================================================= */
-
-.checkout-right {
-  position: sticky;
-  top: 90px;
-}
-
-.order-summary {
-  background: #fff;
-
-  border: 1px solid #e3e3e3;
-
-  padding: 24px;
-}
-
-.order-summary h2 {
-  margin: 0 0 20px;
-
-  font-size: 20px;
-  font-weight: 500;
-}
-
-
-/* =========================================================
-   SUMMARY PRODUCTS
-========================================================= */
-
-.summary-items {
-  max-height: 430px;
-
-  overflow-y: auto;
-
-  padding-right: 5px;
-}
-
-.summary-product {
-  display: flex;
-
-  gap: 13px;
-
-  padding: 12px 0;
-
-  border-bottom: 1px solid #eee;
-}
-
-.summary-product img {
-  width: 75px;
-  height: 85px;
+  display: block;
 
   object-fit: cover;
-
-  background: #f4f4f4;
 }
 
-.summary-product-info {
-  flex: 1;
+
+/* =========================================
+   INFO
+========================================= */
+
+.checkout-category {
+  margin: 0 0 8px;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color: #9a7834;
 }
 
-.summary-product-info h3 {
-  margin: 0 0 5px;
 
-  font-size: 13px;
-  font-weight: 500;
+.checkout-product-info h2 {
+  margin: 0 0 8px;
+
+  font-size: 17px;
 
   line-height: 1.4;
+
+  font-weight: 500;
+
+  color: #173b26;
 }
 
-.summary-product-info p {
-  margin: 3px 0;
 
-  font-size: 11px;
+.checkout-size {
+  margin: 0 0 12px;
+
+  font-size: 12px;
+
   color: #777;
 }
 
-.summary-product-info strong {
-  display: block;
 
-  margin-top: 6px;
+.checkout-price {
+  font-size: 15px;
 
-  font-size: 13px;
+  color: #173b26;
 }
 
 
-/* =========================================================
-   SUMMARY ROW
-========================================================= */
+/* =========================================
+   QUANTITY
+========================================= */
+
+.checkout-quantity {
+  display: flex;
+
+  width: fit-content;
+
+  margin-top: 20px;
+
+  border: 1px solid #c9c0ae;
+}
+
+
+.checkout-quantity button {
+  width: 35px;
+  height: 35px;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  font-size: 17px;
+
+  color: #173b26;
+}
+
+
+.checkout-quantity span {
+  width: 40px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   REMOVE
+========================================= */
+
+.checkout-remove {
+  margin-top: 14px;
+
+  border: none;
+
+  background: transparent;
+
+  padding: 0;
+
+  cursor: pointer;
+
+  font-size: 10px;
+
+  letter-spacing: 1.5px;
+
+  color: #777;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   ITEM TOTAL
+========================================= */
+
+.checkout-item-total {
+  text-align: right;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  color: #173b26;
+}
+
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.checkout-summary {
+  position: sticky;
+
+  top: 30px;
+
+  padding: 30px;
+
+  background: #fff;
+
+  border: 1px solid #e0d8c8;
+
+  box-shadow:
+    0 15px 40px rgba(40, 50, 35, 0.07);
+}
+
+
+.checkout-summary h2 {
+  margin: 8px 0 30px;
+
+  font-size: 25px;
+
+  font-weight: 500;
+
+  color: #173b26;
+}
+
 
 .summary-row {
   display: flex;
 
   justify-content: space-between;
 
-  padding: 14px 0;
-
-  border-bottom: 1px solid #eee;
+  margin-bottom: 18px;
 
   font-size: 13px;
-}
-
-.summary-row strong {
-  font-weight: 500;
-}
-
-
-/* =========================================================
-   TOTAL
-========================================================= */
-
-.summary-total {
-  display: flex;
-
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 20px 0;
-
-  font-size: 17px;
-
-  border-bottom: 1px solid #ddd;
-}
-
-.summary-total strong {
-  font-size: 19px;
-}
-
-
-/* =========================================================
-   POINTS
-========================================================= */
-
-.points-box {
-  display: flex;
-
-  align-items: center;
-
-  gap: 10px;
-
-  padding: 14px;
-
-  margin-top: 15px;
-
-  background: #f7f7f7;
-}
-
-.points-box span {
-  font-size: 20px;
-}
-
-.points-box p {
-  margin: 0;
-
-  font-size: 11px;
-
-  line-height: 1.5;
 
   color: #666;
 }
 
 
-/* =========================================================
-   PAYMENT
-========================================================= */
+.summary-line {
+  height: 1px;
+
+  margin: 25px 0;
+
+  background: #ddd5c4;
+}
+
+
+.summary-total {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+
+.summary-total span {
+  font-size: 11px;
+
+  letter-spacing: 1px;
+
+  color: #555;
+}
+
+
+.summary-total strong {
+  font-size: 20px;
+
+  color: #173b26;
+}
+
+
+/* =========================================
+   PAYMENT BUTTON
+========================================= */
 
 .payment-btn {
   width: 100%;
 
-  margin-top: 20px;
-
-  padding: 16px;
+  height: 55px;
 
   border: none;
 
-  background: #000;
-  color: #fff;
+  background: #173b26;
 
-  font-size: 12px;
-
-  letter-spacing: 1.5px;
+  color: white;
 
   cursor: pointer;
+
+  font-size: 11px;
+
+  letter-spacing: 1.5px;
 
   transition: 0.3s;
 }
 
+
 .payment-btn:hover {
-  background: #333;
+  background: #2c593c;
 }
 
 
-/* =========================================================
+/* =========================================
+   CONTINUE SHOPPING
+========================================= */
+
+.continue-shopping {
+  width: 100%;
+
+  margin-top: 15px;
+
+  padding: 12px;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  color: #80652b;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
    EMPTY
-========================================================= */
+========================================= */
 
-.empty-summary {
+.empty-checkout {
+  padding: 100px 20px;
+
   text-align: center;
-
-  padding: 30px 10px;
-
-  color: #888;
 }
 
 
-/* =========================================================
+.empty-checkout h2 {
+  color: #173b26;
+}
+
+
+.empty-checkout p {
+  color: #777;
+
+  font-size: 13px;
+}
+
+
+.empty-checkout button {
+  margin-top: 20px;
+
+  padding: 15px 25px;
+
+  border: none;
+
+  background: #173b26;
+
+  color: #fff;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
    TABLET
-========================================================= */
+========================================= */
 
 @media (max-width: 900px) {
 
   .checkout-container {
     grid-template-columns: 1fr;
+
+    gap: 40px;
   }
 
-  .checkout-right {
+  .checkout-summary {
     position: static;
   }
 
 }
 
 
-/* =========================================================
+/* =========================================
    MOBILE
-========================================================= */
+========================================= */
 
 @media (max-width: 600px) {
 
-  .checkout-top {
-    padding: 30px 15px;
+  .checkout-page {
+    padding: 50px 18px;
   }
 
-  .checkout-top h1 {
-    font-size: 23px;
+
+  .checkout-heading h1 {
+    font-size: 30px;
   }
 
-  .checkout-container {
-    width: 94%;
 
-    margin-top: 20px;
+  .checkout-product {
+    grid-template-columns: 90px 1fr;
 
     gap: 15px;
   }
 
-  .checkout-box {
-    padding: 18px;
+
+  .checkout-product-image {
+    width: 90px;
+    height: 120px;
   }
 
-  .form-row {
-    grid-template-columns: 1fr;
 
-    gap: 0;
+  .checkout-item-total {
+    grid-column: 2;
+
+    text-align: left;
+
+    margin-top: -5px;
   }
 
-  .club-options {
-    flex-direction: column;
 
-    gap: 10px;
-  }
-
-  .order-summary {
-    padding: 18px;
+  .checkout-summary {
+    padding: 22px;
   }
 
 }

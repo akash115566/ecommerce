@@ -6,18 +6,22 @@ export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
   const [cartOpen, setCartOpen] = useState(false);
 
-  // ADD TO CART
-  const addToCart = (product) => {
-    setCartItems((prevItems) => {
+  /* =========================================
+     ADD TO BAG
+  ========================================= */
 
-      const existingProduct = prevItems.find(
+  const addToCart = (product) => {
+    setCartItems((previousItems) => {
+      const existingProduct = previousItems.find(
         (item) =>
           item.name === product.name &&
           item.size === product.size
       );
 
+      /* Same product + same size = quantity increase */
+
       if (existingProduct) {
-        return prevItems.map((item) =>
+        return previousItems.map((item) =>
           item.name === product.name &&
           item.size === product.size
             ? {
@@ -29,23 +33,31 @@ export function CartProvider({ children }) {
         );
       }
 
+      /* New product */
+
       return [
-        ...prevItems,
+        ...previousItems,
         {
           ...product,
+          price: Number(product.price),
           quantity: product.quantity || 1,
         },
       ];
     });
 
-    // Cart Drawer open hoga
+    /* Open side bag */
+
     setCartOpen(true);
   };
 
-  // QUANTITY +
+
+  /* =========================================
+     INCREASE QUANTITY
+  ========================================= */
+
   const increaseQuantity = (name, size) => {
-    setCartItems((prevItems) =>
-      prevItems.map((item) =>
+    setCartItems((previousItems) =>
+      previousItems.map((item) =>
         item.name === name && item.size === size
           ? {
               ...item,
@@ -56,10 +68,14 @@ export function CartProvider({ children }) {
     );
   };
 
-  // QUANTITY -
+
+  /* =========================================
+     DECREASE QUANTITY
+  ========================================= */
+
   const decreaseQuantity = (name, size) => {
-    setCartItems((prevItems) =>
-      prevItems
+    setCartItems((previousItems) =>
+      previousItems
         .map((item) =>
           item.name === name && item.size === size
             ? {
@@ -72,39 +88,60 @@ export function CartProvider({ children }) {
     );
   };
 
-  // REMOVE PRODUCT
+
+  /* =========================================
+     REMOVE PRODUCT
+  ========================================= */
+
   const removeFromCart = (name, size) => {
-    setCartItems((prevItems) =>
-      prevItems.filter(
+    setCartItems((previousItems) =>
+      previousItems.filter(
         (item) =>
-          !(item.name === name && item.size === size)
+          !(
+            item.name === name &&
+            item.size === size
+          )
       )
     );
   };
 
-  // TOTAL ITEMS
+
+  /* =========================================
+     TOTAL ITEMS
+  ========================================= */
+
   const totalItems = cartItems.reduce(
     (total, item) => total + item.quantity,
     0
   );
 
-  // TOTAL PRICE
+
+  /* =========================================
+     GRAND TOTAL
+  ========================================= */
+
   const totalPrice = cartItems.reduce(
     (total, item) =>
-      total + Number(item.price) * item.quantity,
+      total +
+      Number(item.price) * item.quantity,
     0
   );
+
 
   return (
     <CartContext.Provider
       value={{
         cartItems,
+
         addToCart,
+
         increaseQuantity,
         decreaseQuantity,
         removeFromCart,
+
         totalItems,
         totalPrice,
+
         cartOpen,
         setCartOpen,
       }}
@@ -114,7 +151,7 @@ export function CartProvider({ children }) {
   );
 }
 
-// CUSTOM HOOK
+
 export function useCart() {
   return useContext(CartContext);
 }
