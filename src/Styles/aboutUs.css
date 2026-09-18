@@ -1,0 +1,1323 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* =========================================================
+   TELLUS ESSENTIALS
+   ABOUT US — INTERNATIONAL LUXURY DESIGN
+========================================================= */
+
+.about-page {
+  width: 100%;
+  overflow: hidden;
+
+  background: #f4f0e6;
+  color: #282a22;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.about-label {
+  display: inline-block;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 3.5px;
+
+  text-transform: uppercase;
+
+  color: #a17a3c;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.about-hero {
+  position: relative;
+
+  min-height: 92vh;
+
+  padding: 30px 3%;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  align-items: center;
+
+  gap: 70px;
+
+  overflow: hidden;
+
+  background: #f4f0e6;
+}
+
+.about-hero-left {
+  position: relative;
+
+  z-index: 3;
+
+  animation: aboutHeroLeft 1.1s ease forwards;
+}
+
+.about-eyebrow {
+  display: block;
+
+  margin-bottom: 28px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 4px;
+
+  color: #9d783d;
+}
+
+.about-hero h1 {
+  margin: 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(90px, 12vw, 170px);
+
+  line-height: 0.78;
+
+  font-weight: 400;
+
+  letter-spacing: -7px;
+
+  color: #292a23;
+}
+
+.about-hero h1 em {
+  color: #a17a3c;
+
+  font-weight: 400;
+}
+
+.about-hero-line {
+  margin-top: 60px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+.about-hero-line span {
+  width: 80px;
+
+  height: 1px;
+
+  background: #a98245;
+}
+
+.about-hero-line p {
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+
+  color: #777267;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.about-hero-visual1 {
+  position: relative;
+
+  min-height: 700px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.hero-image1 {
+  position: relative;
+
+  width: 100%;
+  max-width: 540px;
+  height: 680px;
+
+  overflow: hidden;
+
+  background: #eee9dc;
+
+  border-radius: 4px 4px 230px 230px;
+
+  box-shadow: 0 35px 80px rgba(40, 35, 25, 0.20);
+
+  animation: heroImageReveal 1.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.hero-image1::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(30, 30, 22, 0.02),
+      rgba(30, 30, 22, 0.3)
+    );
+}
+
+.hero-image1 img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+  object-position: center center;
+
+  transform: none;
+
+  transition: transform 1.3s ease;
+}
+
+.hero-image1:hover img {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   GOLD CIRCLE
+========================================================= */
+
+.hero-gold-circle {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border: 1px solid rgba(165, 126, 61, 0.35);
+
+  border-radius: 50%;
+
+  right: -20px;
+
+  animation:
+    circleFloat 7s ease-in-out infinite,
+    slowRotate 30s linear infinite;
+}
+
+
+/* =========================================================
+   STAMP
+========================================================= */
+
+.hero-stamp {
+  position: absolute;
+
+  left: 5px;
+  bottom: 85px;
+
+  width: 135px;
+  height: 135px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  border-radius: 50%;
+
+  background: #292b23;
+
+  color: #dfcfaa;
+
+  border: 1px solid rgba(191, 151, 83, 0.5);
+
+  box-shadow:
+    0 20px 45px rgba(32, 30, 22, 0.25);
+
+  z-index: 5;
+
+  animation: stampFloat 5s ease-in-out infinite;
+}
+
+.hero-stamp span {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing: 3px;
+}
+
+.hero-stamp strong {
+  font-size: 18px;
+
+  color: #b99659;
+}
+
+
+/* =========================================================
+   VERTICAL TEXT
+========================================================= */
+
+.hero-vertical-text {
+  position: absolute;
+
+  right: 25px;
+  top: 50%;
+
+  transform: rotate(90deg) translateX(50%);
+
+  transform-origin: right center;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 5px;
+
+  color: rgba(103, 96, 78, 0.6);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.about-intro {
+  padding: 145px 9%;
+
+  display: grid;
+
+  grid-template-columns: 100px 1fr;
+
+  gap: 60px;
+
+  background: #292b23;
+
+  color: #f5f0e5;
+}
+
+.about-intro-number {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  color: #b99657;
+}
+
+.about-intro-content {
+  max-width: 950px;
+}
+
+.about-intro-content h2 {
+  margin: 22px 0 38px;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(55px, 7vw, 95px);
+
+  font-weight: 400;
+
+  line-height: 0.98;
+
+  letter-spacing: -3px;
+}
+
+.about-intro-content h2 em {
+  color: #bd9959;
+}
+
+.intro-highlight {
+  max-width: 780px;
+
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 16px;
+
+  line-height: 2;
+
+  color: #c7c3b7;
+}
+
+
+/* =========================================================
+   PHILOSOPHY
+========================================================= */
+
+.about-philosophy {
+  padding: 150px 8%;
+
+  display: grid;
+
+  grid-template-columns: 0.95fr 1.05fr;
+
+  gap: 110px;
+
+  align-items: center;
+
+  background: #f4f0e6;
+}
+
+.philosophy-image {
+  position: relative;
+
+  max-width: 530px;
+
+  width: 100%;
+
+  margin: auto;
+}
+
+.philosophy-image img {
+  width: 100%;
+  height: 650px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 250px 250px 5px 5px;
+
+  box-shadow:
+    0 35px 70px rgba(50, 44, 31, 0.18);
+
+  transition: transform 1s ease;
+}
+
+.philosophy-image:hover img {
+  transform: scale(1.025);
+}
+
+.image-number {
+  position: absolute;
+
+  right: -35px;
+  bottom: 45px;
+
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #eee8db;
+
+  border: 1px solid rgba(158, 121, 60, 0.5);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color: #9a7339;
+
+  animation: stampFloat 5s ease-in-out infinite;
+}
+
+.philosophy-content {
+  max-width: 650px;
+}
+
+.philosophy-content h2 {
+  margin: 22px 0 30px;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(52px, 5vw, 75px);
+
+  font-weight: 400;
+
+  line-height: 1.02;
+
+  letter-spacing: -2px;
+}
+
+.philosophy-content h2 em {
+  color: #a0793c;
+}
+
+.about-small-line {
+  width: 70px;
+
+  height: 1px;
+
+  margin-bottom: 30px;
+
+  background: #ad8446;
+}
+
+.philosophy-content p {
+  margin: 0 0 22px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 2;
+
+  color: #6f6b60;
+}
+
+
+/* =========================================================
+   PILLARS
+========================================================= */
+
+.about-pillars {
+  padding: 140px 8%;
+
+  background: #ece8dd;
+}
+
+.pillars-heading {
+  max-width: 600px;
+
+  margin: 0 auto 75px;
+
+  text-align: center;
+}
+
+.pillars-heading h2 {
+  margin: 22px 0 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(55px, 6vw, 80px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  letter-spacing: -2px;
+}
+
+.pillars-heading h2 em {
+  color: #a17a3d;
+}
+
+.pillars-grid {
+  max-width: 1250px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid rgba(103, 86, 53, 0.2);
+
+  border-bottom: 1px solid rgba(103, 86, 53, 0.2);
+}
+
+.pillar {
+  position: relative;
+
+  min-height: 390px;
+
+  padding: 50px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.pillar:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  top: 15%;
+  right: 0;
+
+  width: 1px;
+  height: 70%;
+
+  background: rgba(103, 86, 53, 0.2);
+}
+
+.pillar-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.pillar-top span {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+  color: #a47c3d;
+}
+
+.pillar-top i {
+  font-family: Georgia, serif;
+
+  font-size: 30px;
+
+  font-style: normal;
+
+  color: #b08848;
+}
+
+.pillar h3 {
+  margin: 40px 0 20px;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 34px;
+
+  line-height: 1.1;
+
+  font-weight: 400;
+}
+
+.pillar p {
+  max-width: 280px;
+
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.9;
+
+  color: #777267;
+}
+
+
+/* =========================================================
+   STATEMENT
+========================================================= */
+
+.about-statement {
+  position: relative;
+
+  min-height: 650px;
+
+  padding: 120px 7%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  background: #292b23;
+
+  color: #f4efe3;
+}
+
+.statement-orbit {
+  position: absolute;
+
+  width: 570px;
+  height: 570px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(185, 146, 80, 0.22);
+
+  animation: slowRotate 30s linear infinite;
+}
+
+.statement-orbit::before {
+  content: "";
+
+  position: absolute;
+
+  width: 390px;
+  height: 390px;
+
+  left: 90px;
+  top: 90px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(185, 146, 80, 0.12);
+}
+
+.statement-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 850px;
+}
+
+.statement-content h2 {
+  margin: 25px 0 35px;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(55px, 7vw, 95px);
+
+  font-weight: 400;
+
+  line-height: 0.98;
+
+  letter-spacing: -3px;
+}
+
+.statement-content h2 em {
+  color: #bd9959;
+}
+
+.statement-content p {
+  max-width: 650px;
+
+  margin: auto;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 2;
+
+  color: #c2beb2;
+}
+
+
+/* =========================================================
+   MODERN SKIN
+========================================================= */
+
+.modern-skin {
+  padding: 150px 8%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 0.9fr;
+
+  gap: 100px;
+
+  align-items: center;
+
+  background: #f4f0e6;
+}
+
+.modern-content {
+  max-width: 650px;
+}
+
+.modern-content h2 {
+  margin: 22px 0 35px;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(50px, 5vw, 72px);
+
+  font-weight: 400;
+
+  line-height: 1.03;
+
+  letter-spacing: -2px;
+}
+
+.modern-content h2 em {
+  color: #a27b3e;
+}
+
+.modern-content p {
+  margin: 0 0 22px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 2;
+
+  color: #6f6b60;
+}
+
+.modern-signature {
+  margin-top: 45px;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 28px;
+
+  font-style: italic;
+
+  color: #9b7439;
+}
+
+.modern-image {
+  position: relative;
+
+  height: 600px;
+
+  overflow: hidden;
+}
+
+.modern-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 1.2s ease;
+}
+
+.modern-image:hover img {
+  transform: scale(1.06);
+}
+
+.modern-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 45%,
+      rgba(26, 28, 21, 0.65)
+    );
+}
+
+.modern-image-text {
+  position: absolute;
+
+  left: 35px;
+  bottom: 35px;
+
+  z-index: 2;
+
+  color: white;
+}
+
+.modern-image-text span {
+  display: block;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 4px;
+}
+
+.modern-image-text strong {
+  display: block;
+
+  margin-top: 6px;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 38px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.about-final {
+  position: relative;
+
+  padding: 150px 7%;
+
+  background: #eee9dd;
+
+  text-align: center;
+}
+
+.final-inner {
+  max-width: 950px;
+
+  margin: auto;
+}
+
+.about-final h2 {
+  margin: 25px 0 35px;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(55px, 7vw, 95px);
+
+  font-weight: 400;
+
+  line-height: 0.98;
+
+  letter-spacing: -3px;
+}
+
+.about-final h2 em {
+  color: #a17a3d;
+}
+
+.final-divider {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  color: #ad8446;
+}
+
+.final-divider span {
+  width: 90px;
+
+  height: 1px;
+
+  background: #b18a4c;
+}
+
+.about-final p {
+  margin: 25px 0 0;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  color: #817a6b;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes aboutHeroLeft {
+
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+@keyframes heroImageReveal {
+
+  from {
+    opacity: 0;
+    transform: translateX(60px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+
+}
+
+@keyframes circleFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+
+}
+
+@keyframes stampFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-13px);
+  }
+
+}
+
+@keyframes slowRotate {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .about-hero {
+    grid-template-columns: 1fr;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .about-hero-left {
+    text-align: center;
+  }
+
+  .about-hero-line {
+    justify-content: center;
+  }
+
+  .about-hero-visual {
+    min-height: 650px;
+  }
+
+  .about-hero h1 {
+    font-size: 110px;
+  }
+
+  .about-philosophy,
+  .modern-skin {
+    grid-template-columns: 1fr;
+
+    gap: 80px;
+  }
+
+  .philosophy-content,
+  .modern-content {
+    max-width: 750px;
+
+    margin: auto;
+  }
+
+  .philosophy-image {
+    max-width: 600px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .about-hero {
+    min-height: auto;
+
+    padding: 80px 20px;
+
+    gap: 55px;
+  }
+
+  .about-eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 3px;
+  }
+
+  .about-hero h1 {
+    font-size: 76px;
+
+    letter-spacing: -4px;
+  }
+
+  .about-hero-line {
+    margin-top: 45px;
+  }
+
+  .about-hero-line span {
+    width: 45px;
+  }
+
+  .about-hero-line p {
+    font-size: 10px;
+  }
+
+  .about-hero-visual {
+    min-height: 500px;
+  }
+
+  .hero-image {
+    width: 88%;
+
+    height: 520px;
+
+    border-radius: 4px 4px 180px 180px;
+  }
+
+  .hero-gold-circle {
+    width: 360px;
+    height: 360px;
+
+    right: -20px;
+  }
+
+  .hero-stamp {
+    width: 105px;
+    height: 105px;
+
+    left: 0;
+    bottom: 45px;
+  }
+
+  .hero-vertical-text {
+    display: none;
+  }
+
+
+  /* INTRO */
+
+  .about-intro {
+    padding: 85px 22px;
+
+    display: block;
+  }
+
+  .about-intro-number {
+    margin-bottom: 35px;
+  }
+
+  .about-intro-content h2 {
+    font-size: 49px;
+
+    letter-spacing: -1px;
+  }
+
+  .intro-highlight {
+    font-size: 13px;
+  }
+
+
+  /* PHILOSOPHY */
+
+  .about-philosophy {
+    padding: 85px 22px;
+
+    gap: 65px;
+  }
+
+  .philosophy-image img {
+    height: 500px;
+
+    border-radius: 200px 200px 5px 5px;
+  }
+
+  .image-number {
+    width: 80px;
+    height: 80px;
+
+    right: -3px;
+    bottom: 25px;
+  }
+
+  .philosophy-content h2 {
+    font-size: 46px;
+  }
+
+  .philosophy-content p {
+    font-size: 13px;
+  }
+
+
+  /* PILLARS */
+
+  .about-pillars {
+    padding: 85px 20px;
+  }
+
+  .pillars-heading {
+    margin-bottom: 55px;
+  }
+
+  .pillars-heading h2 {
+    font-size: 48px;
+  }
+
+  .pillars-grid {
+    display: block;
+  }
+
+  .pillar {
+    min-height: auto;
+
+    padding: 45px 25px;
+  }
+
+  .pillar:not(:last-child)::after {
+    top: auto;
+    right: 15%;
+    bottom: 0;
+
+    width: 70%;
+    height: 1px;
+  }
+
+  .pillar h3 {
+    font-size: 30px;
+  }
+
+
+  /* STATEMENT */
+
+  .about-statement {
+    min-height: 560px;
+
+    padding: 90px 22px;
+  }
+
+  .statement-orbit {
+    width: 400px;
+    height: 400px;
+  }
+
+  .statement-orbit::before {
+    width: 270px;
+    height: 270px;
+
+    left: 65px;
+    top: 65px;
+  }
+
+  .statement-content h2 {
+    font-size: 49px;
+
+    letter-spacing: -1px;
+  }
+
+  .statement-content p {
+    font-size: 13px;
+  }
+
+
+  /* MODERN */
+
+  .modern-skin {
+    padding: 85px 22px;
+
+    gap: 60px;
+  }
+
+  .modern-content h2 {
+    font-size: 46px;
+  }
+
+  .modern-content p {
+    font-size: 13px;
+  }
+
+  .modern-image {
+    height: 450px;
+  }
+
+  .modern-image-text strong {
+    font-size: 29px;
+  }
+
+
+  /* FINAL */
+
+  .about-final {
+    padding: 95px 20px;
+  }
+
+  .about-final h2 {
+    font-size: 49px;
+
+    letter-spacing: -1px;
+  }
+
+  .final-divider span {
+    width: 50px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .about-hero h1 {
+    font-size: 65px;
+  }
+
+  .hero-image {
+    height: 450px;
+  }
+
+  .about-intro-content h2,
+  .philosophy-content h2,
+  .pillars-heading h2,
+  .statement-content h2,
+  .modern-content h2,
+  .about-final h2 {
+    font-size: 42px;
+  }
+
+  .philosophy-image img {
+    height: 440px;
+  }
+
+  .modern-image {
+    height: 400px;
+  }
+
+}

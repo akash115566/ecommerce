@@ -87,12 +87,12 @@ Wisdom brought back to life a time tested ritual for deeply hydrated,  youthful 
   <section className="full-banner">
 
       <img
-        src="/media.jfif"
+        src="/home/serum/serumdot.jfif"
         alt="Beauty Collection"
       />
 
     </section>
-    <RecentAwards />
+    {/* <RecentAwards /> */}
     <LatestReads />
   
   </>

@@ -1,0 +1,675 @@
+/* =========================================================
+   TELLUS ESSENTIALS — OUR STORY
+   INTERNATIONAL LUXURY SKINCARE DESIGN
+========================================================= */
+
+.our-story-section {
+  position: relative;
+  overflow: hidden;
+  padding: 125px 7%;
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(185, 145, 74, 0.09),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(110, 130, 95, 0.08),
+      transparent 30%
+    ),
+    #f5f1e8;
+  color: #25251f;
+}
+
+/* subtle texture */
+
+.our-story-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  pointer-events: none;
+  background-image:
+    radial-gradient(
+      rgba(90, 75, 45, 0.08) 0.6px,
+      transparent 0.6px
+    );
+  background-size: 8px 8px;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.story-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1350px;
+  margin: auto;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.story-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 80px;
+}
+
+.story-eyebrow {
+  display: inline-block;
+  margin-bottom: 17px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: #9b783e;
+}
+
+.story-heading h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(55px, 6vw, 88px);
+  line-height: 0.95;
+  font-weight: 400;
+  letter-spacing: -2px;
+  color: #25251f;
+}
+
+.story-heading h2 em {
+  color: #a47d3d;
+  font-weight: 400;
+}
+
+/* =========================================================
+   GOLD DIVIDER
+========================================================= */
+
+.story-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  width: 180px;
+  margin: 28px auto 0;
+}
+
+.story-line span {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #b49154
+  );
+}
+
+.story-line span:last-child {
+  background: linear-gradient(
+    90deg,
+    #b49154,
+    transparent
+  );
+}
+
+.story-line i {
+  font-size: 13px;
+  color: #b08a49;
+  font-style: normal;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 90px;
+  align-items: center;
+}
+
+/* =========================================================
+   IMAGE AREA
+========================================================= */
+
+.story-visual {
+  position: relative;
+}
+
+.story-image-wrap {
+  position: relative;
+  width: min(100%, 530px);
+  margin: auto;
+}
+
+.story-image {
+  position: relative;
+  overflow: hidden;
+  width: 88%;
+  height: 620px;
+
+  border-radius: 270px 270px 8px 8px;
+
+  box-shadow:
+    0 35px 70px rgba(48, 42, 28, 0.18);
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  display: block;
+
+  transform: scale(1.02);
+  transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.story-image-wrap:hover .story-image img {
+  transform: scale(1.08);
+}
+
+/* image dark luxury overlay */
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20, 20, 15, 0.02),
+      rgba(20, 20, 15, 0.42)
+    );
+}
+
+/* =========================================================
+   IMAGE FRAME
+========================================================= */
+
+.story-image-frame {
+  position: absolute;
+
+  width: 88%;
+  height: 620px;
+
+  top: 24px;
+  left: 24px;
+
+  border: 1px solid rgba(164, 125, 61, 0.55);
+
+  border-radius: 270px 270px 8px 8px;
+
+  z-index: -1;
+}
+
+/* =========================================================
+   IMAGE CAPTION
+========================================================= */
+
+.image-caption {
+  position: absolute;
+  left: 35px;
+  right: 35px;
+  bottom: 32px;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #fff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   ROTATING CIRCLE
+========================================================= */
+
+.story-circle {
+  position: absolute;
+
+  right: -25px;
+  bottom: 35px;
+
+  width: 145px;
+  height: 145px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eee8da;
+
+  border: 1px solid rgba(164, 125, 61, 0.5);
+
+  box-shadow:
+    0 20px 45px rgba(45, 38, 25, 0.15);
+}
+
+.story-circle span {
+  width: 105px;
+
+  text-align: center;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  line-height: 2.1;
+  letter-spacing: 2px;
+
+  color: #8e6b36;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.story-content {
+  max-width: 650px;
+}
+
+.story-intro {
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(25px, 2.4vw, 35px);
+  line-height: 1.4;
+
+  color: #333329;
+
+  margin-bottom: 30px;
+}
+
+.story-intro strong {
+  display: block;
+
+  margin-top: 4px;
+
+  font-weight: 400;
+
+  color: #9b763a;
+}
+
+.story-content p:not(.story-intro) {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+  line-height: 2;
+
+  color: #6b685d;
+
+  margin: 0 0 23px;
+}
+
+.story-content strong {
+  color: #48473d;
+  font-weight: 600;
+}
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.story-divider {
+  width: 75px;
+  height: 1px;
+
+  margin: 30px 0;
+
+  background: #b28a49;
+}
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.story-signature {
+  margin-top: 42px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.story-signature span {
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 27px;
+
+  font-style: italic;
+
+  color: #9b763a;
+}
+
+.story-signature small {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+
+  color: #888374;
+}
+
+/* =========================================================
+   PHILOSOPHY
+========================================================= */
+
+.story-philosophy {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  margin-top: 110px;
+
+  border-top: 1px solid rgba(112, 96, 65, 0.2);
+  border-bottom: 1px solid rgba(112, 96, 65, 0.2);
+}
+
+.philosophy-item {
+  position: relative;
+
+  padding: 38px 45px;
+
+  text-align: center;
+}
+
+.philosophy-item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  top: 25%;
+  right: 0;
+
+  width: 1px;
+  height: 50%;
+
+  background: rgba(112, 96, 65, 0.18);
+}
+
+.philosophy-item span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+
+  color: #b08a49;
+}
+
+.philosophy-item h4 {
+  margin: 0 0 8px;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 25px;
+  font-weight: 400;
+
+  color: #34342b;
+}
+
+.philosophy-item p {
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 12px;
+  line-height: 1.7;
+
+  color: #817d70;
+}
+
+/* =========================================================
+   FLOATING DECORATIONS
+========================================================= */
+
+.story-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(2px);
+
+  pointer-events: none;
+}
+
+.story-glow-one {
+  width: 250px;
+  height: 250px;
+
+  top: -100px;
+  left: -100px;
+
+  background: rgba(177, 141, 79, 0.08);
+}
+
+.story-glow-two {
+  width: 350px;
+  height: 350px;
+
+  right: -180px;
+  bottom: -180px;
+
+  background: rgba(93, 118, 85, 0.08);
+}
+
+.story-leaf {
+  position: absolute;
+
+  color: rgba(153, 119, 60, 0.3);
+
+  font-size: 75px;
+
+  font-family: serif;
+
+  pointer-events: none;
+}
+
+.leaf-one {
+  top: 16%;
+  left: 4%;
+}
+
+.leaf-two {
+  right: 5%;
+  top: 62%;
+
+  font-size: 55px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .our-story-section {
+    padding: 100px 5%;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+  .story-visual {
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .story-content {
+    max-width: 750px;
+    margin: auto;
+  }
+
+  .story-image {
+    width: 90%;
+    margin: auto;
+  }
+
+  .story-image-frame {
+    width: 90%;
+  }
+
+  .story-circle {
+    right: -5px;
+  }
+
+  .story-philosophy {
+    margin-top: 80px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .our-story-section {
+    padding: 75px 20px;
+  }
+
+  .story-heading {
+    margin-bottom: 55px;
+  }
+
+  .story-eyebrow {
+    font-size: 8px;
+    letter-spacing: 2.5px;
+  }
+
+  .story-heading h2 {
+    font-size: 54px;
+  }
+
+  .story-grid {
+    gap: 55px;
+  }
+
+  .story-image {
+    height: 500px;
+    width: 92%;
+  }
+
+  .story-image-frame {
+    height: 500px;
+
+    top: 16px;
+    left: 16px;
+
+    width: 92%;
+  }
+
+  .story-circle {
+    width: 115px;
+    height: 115px;
+
+    right: -2px;
+    bottom: 25px;
+  }
+
+  .story-circle span {
+    width: 82px;
+    font-size: 6px;
+    letter-spacing: 1.5px;
+  }
+
+  .image-caption {
+    left: 20px;
+    right: 20px;
+    bottom: 23px;
+
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+  .story-intro {
+    font-size: 25px;
+    line-height: 1.45;
+  }
+
+  .story-content p:not(.story-intro) {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .story-signature {
+    margin-top: 35px;
+  }
+
+  .story-philosophy {
+    grid-template-columns: 1fr;
+
+    margin-top: 65px;
+  }
+
+  .philosophy-item {
+    padding: 30px 20px;
+  }
+
+  .philosophy-item:not(:last-child)::after {
+    top: auto;
+    bottom: 0;
+
+    right: 15%;
+
+    width: 70%;
+    height: 1px;
+  }
+
+  .leaf-one {
+    left: -20px;
+    top: 8%;
+  }
+
+  .leaf-two {
+    right: -10px;
+    top: 50%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .our-story-section {
+    padding: 65px 16px;
+  }
+
+  .story-image,
+  .story-image-frame {
+    height: 450px;
+  }
+
+  .story-heading h2 {
+    font-size: 48px;
+  }
+
+  .story-circle {
+    width: 95px;
+    height: 95px;
+  }
+
+  .story-circle span {
+    width: 70px;
+    font-size: 5px;
+  }
+}

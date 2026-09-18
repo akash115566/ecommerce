@@ -16,6 +16,8 @@ import Payment from "./Pages/Payment";
 import LatestReads from "./Pages/LatestReads";
 import ForbesArticle from "./Pages/ForbesArticle";
 import Reviews from "./Pages/Reviews";
+import OurStory from "./Pages/OurStory";
+import AboutUs from "./Pages/AboutUs";
 
 
 import {
@@ -73,7 +75,8 @@ const AppContent = () => {
         <Route path="/latest-reads" element={<LatestReads />} />
         <Route path="/forbes-article" element={<ForbesArticle />} />
         <Route path="/reviews" element={<Reviews />} />
-
+        <Route path="/our-story" element={<OurStory />} />
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
 
 

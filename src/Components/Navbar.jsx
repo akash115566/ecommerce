@@ -290,12 +290,18 @@ useEffect(() => {
             </div>
 
           ))}
+          <Link
+            to="/our-story"
+            className="nav-item simple-link"
+          >
+            OUR STORY
+          </Link>
 
 
           {/* ABOUT */}
 
           <Link
-            to="/about"
+            to="/about-us"
             className="nav-item simple-link"
           >
             ABOUT US
