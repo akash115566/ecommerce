@@ -1,0 +1,463 @@
+/* =========================================================
+   BLOG SECTION
+========================================================= */
+
+.blog-section {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 6%;
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(196, 164, 92, 0.09),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f8f5ed,
+      #eee8d9
+    );
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.blog-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+.blog-glow-one {
+  width: 280px;
+  height: 280px;
+  background: rgba(177, 143, 67, 0.12);
+  top: -100px;
+  right: 5%;
+}
+
+.blog-glow-two {
+  width: 220px;
+  height: 220px;
+  background: rgba(70, 90, 55, 0.08);
+  bottom: -80px;
+  left: -60px;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.blog-container {
+  position: relative;
+  max-width: 1450px;
+  margin: auto;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.blog-heading {
+  max-width: 760px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.blog-small-title {
+  display: inline-block;
+  margin-bottom: 18px;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 4px;
+
+  color: #9b7735;
+}
+
+.blog-heading h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.05;
+  font-weight: 500;
+
+  color: #1e291d;
+}
+
+.blog-heading h2 em {
+  color: #a27d39;
+  font-style: italic;
+}
+
+.blog-heading p {
+  max-width: 650px;
+  margin: 22px auto 0;
+
+  font-size: 15px;
+  line-height: 1.8;
+
+  color: #66645d;
+}
+
+
+/* =========================================================
+   BLOG GRID
+========================================================= */
+
+.blog-grid {
+  display: grid;
+
+  /* 4 cards in one row */
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+
+/* =========================================================
+   BLOG CARD
+========================================================= */
+
+.blog-card {
+  position: relative;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  border: 1px solid rgba(170, 145, 88, 0.18);
+
+  box-shadow:
+    0 15px 40px rgba(45, 39, 25, 0.07);
+
+  transition:
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.blog-card:hover {
+  border-color: rgba(162, 125, 57, 0.4);
+
+  box-shadow:
+    0 25px 60px rgba(45, 39, 25, 0.13);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.blog-image {
+  position: relative;
+  display: block;
+
+  width: 100%;
+  height: 300px;
+
+  overflow: hidden;
+
+  background: #e8e2d4;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.blog-card:hover .blog-image img {
+  transform: scale(1.09);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.blog-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(15, 20, 13, 0.45),
+      transparent 55%
+    );
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+}
+
+.blog-card:hover .blog-image::after {
+  opacity: 1;
+}
+
+.blog-image-overlay {
+  position: absolute;
+
+  left: 50%;
+  bottom: 25px;
+
+  transform: translate(-50%, 20px);
+
+  z-index: 3;
+
+  opacity: 0;
+
+  white-space: nowrap;
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.blog-image-overlay span {
+  display: inline-block;
+
+  padding: 10px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+
+  color: #fff;
+
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 600;
+
+  backdrop-filter: blur(5px);
+}
+
+.blog-card:hover .blog-image-overlay {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.blog-content {
+  padding: 28px 25px 30px;
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+.blog-meta span {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+
+  color: #9a783b;
+}
+
+.blog-meta i {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #b59a65;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.blog-content h3 {
+  margin: 0 0 13px;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 25px;
+  line-height: 1.25;
+  font-weight: 500;
+
+  color: #263123;
+
+  transition: color 0.3s ease;
+}
+
+.blog-card:hover .blog-content h3 {
+  color: #a07832;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.blog-content p {
+  margin: 0 0 22px;
+
+  font-size: 13px;
+  line-height: 1.75;
+
+  color: #74736c;
+}
+
+
+/* =========================================================
+   READ MORE
+========================================================= */
+
+.blog-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  position: relative;
+
+  color: #293526;
+
+  text-decoration: none;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  transition: color 0.3s ease;
+}
+
+.blog-read-more span {
+  font-size: 17px;
+  line-height: 1;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.blog-read-more::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 1px;
+
+  background: #a07832;
+
+  transition: width 0.35s ease;
+}
+
+.blog-read-more:hover {
+  color: #a07832;
+}
+
+.blog-read-more:hover::after {
+  width: calc(100% - 25px);
+}
+
+.blog-read-more:hover span {
+  transform: translateX(6px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .blog-image {
+    height: 330px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .blog-section {
+    padding: 80px 5%;
+  }
+
+  .blog-heading {
+    margin-bottom: 45px;
+  }
+
+  .blog-heading h2 {
+    font-size: 38px;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .blog-image {
+    height: 300px;
+  }
+
+  .blog-content {
+    padding: 25px 22px 28px;
+  }
+
+  .blog-content h3 {
+    font-size: 24px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .blog-section {
+    padding: 65px 18px;
+  }
+
+  .blog-heading h2 {
+    font-size: 34px;
+  }
+
+  .blog-image {
+    height: 270px;
+  }
+
+}

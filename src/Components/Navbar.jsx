@@ -42,36 +42,36 @@ useEffect(() => {
         "Hand Care",
       ],
     },
-    {
-      name: "HAIR",
-      link: "/hair",
-      items: [
-        "Shampoo",
-        "Conditioner",
-        "Hair Oil",
-        "Hair Masks",
-      ],
-    },
-    {
-      name: "MAKEUP",
-      link: "/makeup",
-      items: [
-        "Lipstick",
-        "Foundation",
-        "Blush",
-        "Eye Makeup",
-      ],
-    },
-    {
-      name: "GIFTING",
-      link: "/gifting",
-      items: [
-        "Gift Sets",
-        "Beauty Boxes",
-        "Premium Gifts",
-        "Combos",
-      ],
-    },
+    // {
+    //   name: "HAIR",
+    //   link: "/hair",
+    //   items: [
+    //     "Shampoo",
+    //     "Conditioner",
+    //     "Hair Oil",
+    //     "Hair Masks",
+    //   ],
+    // },
+    // {
+    //   name: "MAKEUP",
+    //   link: "/makeup",
+    //   items: [
+    //     "Lipstick",
+    //     "Foundation",
+    //     "Blush",
+    //     "Eye Makeup",
+    //   ],
+    // },
+    // {
+    //   name: "GIFTING",
+    //   link: "/gifting",
+    //   items: [
+    //     "Gift Sets",
+    //     "Beauty Boxes",
+    //     "Premium Gifts",
+    //     "Combos",
+    //   ],
+    // },
     {
       name: "TRAVEL MINIS",
       link: "#",
@@ -295,6 +295,12 @@ useEffect(() => {
             className="nav-item simple-link"
           >
             OUR STORY
+          </Link>
+          <Link
+            to="/blog"
+            className="nav-item simple-link"
+          >
+            BLOG
           </Link>
 
 

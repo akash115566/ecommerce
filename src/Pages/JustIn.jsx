@@ -1,46 +1,65 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import "../Styles/justin.css";
+import { motion } from "framer-motion";
+import ProductDetails from "./ProductDetails";
 
 const products = [
   {
-    image: "/home/serum/serumorange.jfif",
+    image: "/home/scrub/brownscrub.jfif",
     name: "ROSE GLOW FACE SERUM",
     use: "Brightens, Hydrates & Revitalises Skin",
+    price: 1299,
+    oldPrice: 1599,
   },
   {
-    image: "/home/serum/serumshow.jfif",
+    image: "/home/scrub/teaserub.jfif",
     name: "LUXURY SAFFRON CLEANSER",
     use: "Gently Cleanses & Refreshes Skin",
+    price: 999,
+    oldPrice: 1299,
   },
   {
-    image: "/home/serum/serumstone.jfif",
+    image: "/home/scrub/skinscrub.jfif",
     name: "BHRINGRAJ HAIR OIL",
     use: "Nourishes Scalp & Strengthens Hair",
+    price: 1199,
+    oldPrice: 1499,
   },
   {
-    image: "/home/serum/serumwhite.jfif",
+    image: "/home/scrub/redscrub.jfif",
     name: "KUMKUMADI FACE OIL",
     use: "Improves Radiance & Skin Texture",
+    price: 1499,
+    oldPrice: 1799,
   },
   {
-    image: "/home/serum/serumyellow.jfif",
+    image: "/home/scrub/goldscrub.jfif",
     name: "SANDALWOOD BODY LOTION",
     use: "Deeply Moisturises & Softens Skin",
+    price: 1099,
+    oldPrice: 1399,
   },
   {
-    image: "/home/serum/serumblack.jfif",
+    image: "/home/scrub/enerscrub.jfif",
     name: "VETIVER COOLING MIST",
     use: "Refreshes & Hydrates Skin",
+    price: 899,
+    oldPrice: 1199,
   },
   {
-    image:"/home/serum/serumc.jfif",
+    image: "/home/scrub/clayserub.jfif",
     name: "AYURVEDIC FACE MASK",
     use: "Purifies, Revives & Brightens Skin",
+    price: 1299,
+    oldPrice: 1599,
   },
   {
-    image: "/home/serum/serumcheck.jfif",
+    image: "/home/scrub/brownscrub.jfif",
     name: "ROSE & JASMINE BODY MIST",
     use: "Refreshes Skin With A Floral Fragrance",
+    price: 999,
+    oldPrice: 1299,
   },
 ];
 
@@ -50,14 +69,16 @@ function JustIn() {
   const [currentIndex, setCurrentIndex] = useState(products.length);
   const [cardWidth, setCardWidth] = useState(0);
 
-  // Products ko 3 times repeat kar rahe hain
   const infiniteProducts = [
     ...products,
     ...products,
     ...products,
   ];
 
-  // Card width calculate
+  /* =========================
+     CARD WIDTH
+  ========================= */
+
   useEffect(() => {
     const updateWidth = () => {
       if (!sliderRef.current) return;
@@ -80,7 +101,11 @@ function JustIn() {
     };
   }, []);
 
-  // Continuous auto slider
+
+  /* =========================
+     AUTO SLIDER
+  ========================= */
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => prev + 1);
@@ -89,10 +114,15 @@ function JustIn() {
     return () => clearInterval(timer);
   }, []);
 
-  // Invisible reset
+
+  /* =========================
+     INVISIBLE RESET
+  ========================= */
+
   useEffect(() => {
     if (currentIndex >= products.length * 2) {
       const timer = setTimeout(() => {
+
         const track =
           sliderRef.current?.querySelector(
             ".justin-track"
@@ -111,20 +141,30 @@ function JustIn() {
             }
           });
         });
+
       }, 850);
 
       return () => clearTimeout(timer);
     }
   }, [currentIndex]);
 
-  // Next button
+
+  /* =========================
+     NEXT
+  ========================= */
+
   const nextSlide = () => {
     setCurrentIndex((prev) => prev + 1);
   };
 
-  // Previous button
+
+  /* =========================
+     PREVIOUS
+  ========================= */
+
   const prevSlide = () => {
     setCurrentIndex((prev) => {
+
       if (prev <= products.length) {
         return products.length * 2 - 1;
       }
@@ -133,12 +173,11 @@ function JustIn() {
     });
   };
 
+
   return (
     <section className="justin-section">
 
-      {/* =========================
-          TOP HEADER
-      ========================= */}
+      {/* HEADER */}
 
       <div className="justin-header">
 
@@ -152,16 +191,18 @@ function JustIn() {
 
         </div>
 
-        <a href="/shop" className="justin-view-all">
+
+        <Link
+          to="/shop"
+          className="justin-view-all"
+        >
           VIEW ALL <span>→</span>
-        </a>
+        </Link>
 
       </div>
 
 
-      {/* =========================
-          SLIDER
-      ========================= */}
+      {/* SLIDER */}
 
       <div
         className="justin-slider"
@@ -200,7 +241,7 @@ function JustIn() {
               </div>
 
 
-              {/* PRODUCT DETAILS */}
+              {/* DETAILS */}
 
               <div className="justin-content">
 
@@ -212,12 +253,16 @@ function JustIn() {
                   {product.use}
                 </p>
 
-                <a
-                  href="/shop"
-                  className="shop-now"
-                >
-                  SHOP NOW <span>→</span>
-                </a>
+
+                {/* PRODUCT DETAILS LINK */}
+
+               <Link
+  to="/product-details"
+  state={{ product }}
+  className="shop-now"
+>
+  SHOP NOW <span>→</span>
+</Link>
 
               </div>
 
@@ -228,7 +273,7 @@ function JustIn() {
         </div>
 
 
-        {/* ARROWS */}
+        {/* PREVIOUS */}
 
         <button
           className="justin-arrow justin-prev"
@@ -237,6 +282,9 @@ function JustIn() {
         >
           ‹
         </button>
+
+
+        {/* NEXT */}
 
         <button
           className="justin-arrow justin-next"

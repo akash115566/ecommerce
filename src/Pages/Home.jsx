@@ -63,7 +63,7 @@ Wisdom brought back to life a time tested ritual for deeply hydrated,  youthful 
     <div className="bhringraj-image-frame">
 
       <img
-        src="/media.jfif"
+        src="/home/serum/serumdot.jfif"
         alt="Bhringraj Hair Ritual"
       />
 

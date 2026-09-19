@@ -18,6 +18,8 @@ import ForbesArticle from "./Pages/ForbesArticle";
 import Reviews from "./Pages/Reviews";
 import OurStory from "./Pages/OurStory";
 import AboutUs from "./Pages/AboutUs";
+import Blog from "./Pages/Blog";
+import WhySkinCare from "./Pages/WhySkinCare";
 
 
 import {
@@ -77,6 +79,8 @@ const AppContent = () => {
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/our-story" element={<OurStory />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/why-skin-care" element={<WhySkinCare />} />
       </Routes>
 
 
