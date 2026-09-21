@@ -387,7 +387,7 @@ const openProductDetails = (product) => {
         rating: 5,
         comment:
           "I have been using this product for a few weeks and absolutely love the texture. My skin feels soft, hydrated and fresh after every use.",
-        image: "/ingredients/aloe.jpg",
+        image: "/home/girl.jfif",
       },
 
       {
@@ -396,7 +396,7 @@ const openProductDetails = (product) => {
         rating: 5,
         comment:
           "The fragrance is beautiful and the overall experience feels very luxurious. It has become a part of my daily skincare ritual.",
-        image: "/ingredients/jasmine.jpg",
+       image: "/home/girlad.jfif",
       },
 
       {
@@ -405,7 +405,7 @@ const openProductDetails = (product) => {
         rating: 4,
         comment:
           "I really enjoyed using this product. It feels gentle on the skin and gives a lovely refreshing feeling without being heavy.",
-        image: "/ingredients/kewda.jpg",
+        image: "/home/girladd.jfif",
       },
 
       {
@@ -414,7 +414,7 @@ const openProductDetails = (product) => {
         rating: 5,
         comment:
           "The quality feels premium and the packaging is beautiful. I especially liked how nourished my skin felt after regular use.",
-        image: "/ingredients/marigold.jpg",
+       image: "/home/girladdd.jfif",
       },
 
       {
@@ -423,7 +423,7 @@ const openProductDetails = (product) => {
         rating: 5,
         comment:
           "The rose-infused feel is amazing. My skin feels comfortable, hydrated and naturally fresh. Definitely something I enjoy using every day.",
-        image: "/ingredients/rose.jpg",
+        image: "/home/girl.jfif",
       },
 
       {
@@ -432,7 +432,7 @@ const openProductDetails = (product) => {
         rating: 5,
         comment:
           "A beautiful Ayurvedic-inspired experience. The product feels soothing and luxurious, and I really like the subtle natural fragrance.",
-        image: "/ingredients/saffron.jpg",
+        image: "/home/girlad.jfif",
       },
     ].map((review, index) => (
 
