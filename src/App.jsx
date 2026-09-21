@@ -20,12 +20,16 @@ import OurStory from "./Pages/OurStory";
 import AboutUs from "./Pages/AboutUs";
 import Blog from "./Pages/Blog";
 import WhySkinCare from "./Pages/WhySkinCare";
+import SeaBuckthornBlog from "./Pages/SeaBuckthornBlog";
+import GreenTeaBlog from "./Pages/GreenTeaBlog";
+import GoldCharcoalSoap from "./Pages/GoldCharcoalSoap";
 
 
 import {
   CartProvider,
   useCart,
 } from "./Context/CartContext";
+
 
 
 const AppContent = () => {
@@ -81,6 +85,9 @@ const AppContent = () => {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/why-skin-care" element={<WhySkinCare />} />
+        <Route path="/sea-buckthorn-blog" element={<SeaBuckthornBlog />} />
+        <Route path="/green-tea-blog" element={<GreenTeaBlog />} />
+        <Route path="/gold-charcoal-soap" element={<GoldCharcoalSoap />} />
       </Routes>
 
 

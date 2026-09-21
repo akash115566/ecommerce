@@ -6,6 +6,7 @@ import MostLovedRituals from './MostLovedRituals'
 import JustIn from './JustIn'
 import RecentAwards from './RecentAwards'
 import LatestReads from './LatestReads'
+import GoldCharcoalSoap from './GoldCharcoalSoap'
 
 
 
@@ -41,9 +42,10 @@ Wisdom brought back to life a time tested ritual for deeply hydrated,  youthful 
     <div className="bhringraj-line"></div>
 
     <p className="bhringraj-title">
-      A time-tested recipe that works to reduce
-      hairfall and improve hair density.
-    </p>
+  A refined vitamin C ritual that helps revive
+  dull-looking skin, enhance radiance, and reveal
+  a smoother, naturally luminous complexion.
+</p>
 
     <p className="bhringraj-description">
       Discover the ancient Ayurvedic secret to
@@ -63,7 +65,7 @@ Wisdom brought back to life a time tested ritual for deeply hydrated,  youthful 
     <div className="bhringraj-image-frame">
 
       <img
-        src="/home/serum/serumdot.jfif"
+        src="/home/serum/serumshow.jfif"
         alt="Bhringraj Hair Ritual"
       />
 
@@ -82,6 +84,7 @@ Wisdom brought back to life a time tested ritual for deeply hydrated,  youthful 
 
 <SeasonalProducts />
 <MostLovedRituals/>
+<GoldCharcoalSoap />
 <JustIn />
 
   <section className="full-banner">

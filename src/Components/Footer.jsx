@@ -31,12 +31,12 @@ function Footer() {
           <a href="/shop/makeup">MAKEUP</a>
           <a href="/shop/facial-care">FACIAL CARE</a>
           <a href="/shop/body-care">BODY CARE</a>
-          <a href="/shop/hair-care">HAIR CARE</a>
+          {/* <a href="/shop/hair-care">HAIR CARE</a>
           <a href="/shop/mens-care">MEN'S CARE</a>
           <a href="/shop/mother-baby-care">
             MOTHER & BABY CARE
-          </a>
-          <a href="/shop/wellness">WELLNESS</a>
+          </a> */}
+          {/* <a href="/shop/wellness">WELLNESS</a> */}
           <a href="/shop/gifting">GIFTING</a>
 
           <a href="/shop/corporate-gifting">
@@ -57,11 +57,11 @@ function Footer() {
           <a href="/about/social-responsibility">
             SOCIAL RESPONSIBILITY
           </a>
-          <a href="/about/media">MEDIA & PRESS</a>
-          <a href="/policies">POLICIES</a>
+          {/* <a href="/about/media">MEDIA & PRESS</a>
+          <a href="/policies">POLICIES</a> */}
           <a href="/terms">TERMS</a>
           <a href="/faqs">FAQS</a>
-          <a href="/club-faqs">SOUNDARYA CLUB FAQS</a>
+          {/* <a href="/club-faqs">SOUNDARYA CLUB FAQS</a> */}
           <a href="/stores">STORES</a>
           <a href="/careers">CAREERS</a>
 
@@ -75,11 +75,11 @@ function Footer() {
           <h3>QUICK LINKS</h3>
 
           <a href="/account">MY ACCOUNT</a>
-          <a href="/club">SOUNDARYA CLUB SIGN IN</a>
+          {/* <a href="/club">SOUNDARYA CLUB SIGN IN</a>
           <a href="/offers">CURRENT OFFERS</a>
           <a href="/customised-skincare">
             CUSTOMISED SKINCARE
-          </a>
+          </a> */}
           <a href="/blog">BLOG</a>
           <a href="/orders">MY ORDER(S)</a>
           <a href="/track-order">TRACK MY ORDER</a>

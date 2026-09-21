@@ -72,24 +72,24 @@ useEffect(() => {
     //     "Combos",
     //   ],
     // },
-    {
-      name: "TRAVEL MINIS",
-      link: "#",
-      items: [
-        "Travel Kits",
-        "Mini Skincare",
-        "Mini Haircare",
-      ],
-    },
-    {
-      name: "BABY CARE",
-      link: "#",
-      items: [
-        "Baby Lotion",
-        "Baby Oil",
-        "Baby Wash",
-      ],
-    },
+    // {
+    //   name: "TRAVEL MINIS",
+    //   link: "#",
+    //   items: [
+    //     "Travel Kits",
+    //     "Mini Skincare",
+    //     "Mini Haircare",
+    //   ],
+    // },
+    // {
+    //   name: "BABY CARE",
+    //   link: "#",
+    //   items: [
+    //     "Baby Lotion",
+    //     "Baby Oil",
+    //     "Baby Wash",
+    //   ],
+    // },
     {
       name: "MEN",
       link: "#",
@@ -99,15 +99,15 @@ useEffect(() => {
         "Body Care",
       ],
     },
-    {
-      name: "WELLNESS",
-      link: "#",
-      items: [
-        "Wellness Oils",
-        "Supplements",
-        "Self Care",
-      ],
-    },
+    // {
+    //   name: "WELLNESS",
+    //   link: "#",
+    //   items: [
+    //     "Wellness Oils",
+    //     "Supplements",
+    //     "Self Care",
+    //   ],
+    // },
     {
       name: "FRAGRANCE",
       link: "#",
@@ -161,11 +161,11 @@ useEffect(() => {
           <Link to="/" className="logo">
 
             <span>
-              PURE
+             Tellus Essentials 
             </span>
 
             <strong>
-              ESSENTIALS
+              Premium Luxury Skin Care
             </strong>
 
             <small>

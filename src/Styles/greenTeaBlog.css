@@ -1,0 +1,777 @@
+/* =========================================================
+   GREEN TEA BLOG
+   LUXURY BOTANICAL SKINCARE
+========================================================= */
+
+.green-blog-page {
+  background: #f5f3eb;
+  color: #202a20;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.green-blog-hero {
+  min-height: 90vh;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 31, 20, .82),
+      rgba(10, 31, 20, .30)
+    ),
+    url("/home/greentea/greentea-hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.green-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 75% 40%,
+      transparent,
+      rgba(0, 0, 0, .3)
+    );
+}
+
+.green-hero-content {
+  width: min(1100px, 88%);
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding-top: 50px;
+}
+
+.green-blog-category {
+  display: block;
+
+  font-size: 11px;
+  letter-spacing: 4px;
+
+  margin-bottom: 28px;
+  opacity: .85;
+}
+
+.green-hero-content h1 {
+  max-width: 850px;
+
+  font-family: Georgia, serif;
+  font-weight: 400;
+
+  font-size: clamp(50px, 7vw, 94px);
+  line-height: 1.02;
+
+  margin: 0;
+}
+
+.green-hero-content h1 span {
+  display: block;
+
+  font-style: italic;
+  font-weight: 300;
+
+  color: #d6c99e;
+}
+
+.green-hero-content p {
+  max-width: 570px;
+
+  font-size: 16px;
+  line-height: 1.9;
+
+  margin: 32px 0;
+
+  color: rgba(255,255,255,.86);
+}
+
+.green-hero-line {
+  height: 1px;
+  background: #c9b77d;
+}
+
+.green-scroll {
+  position: absolute;
+
+  bottom: 35px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: white;
+
+  font-size: 9px;
+  letter-spacing: 3px;
+
+  text-align: center;
+}
+
+.green-scroll div {
+  width: 1px;
+  height: 55px;
+
+  background: white;
+  opacity: .5;
+
+  margin: 12px auto 0;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.green-intro-section {
+  width: min(1250px, 88%);
+  margin: auto;
+
+  padding: 130px 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 100px;
+
+  align-items: center;
+}
+
+.green-intro-image {
+  position: relative;
+}
+
+.green-intro-image img {
+  width: 100%;
+  height: 620px;
+
+  object-fit: cover;
+  display: block;
+}
+
+.green-image-label {
+  position: absolute;
+
+  bottom: 25px;
+  left: 25px;
+
+  background: rgba(255,255,255,.94);
+
+  padding: 13px 20px;
+
+  font-size: 9px;
+  letter-spacing: 2px;
+
+  display: flex;
+  gap: 15px;
+}
+
+.green-image-label span {
+  color: #71844e;
+}
+
+.green-intro-content {
+  padding-right: 5%;
+}
+
+.green-mini-title {
+  font-size: 10px;
+  letter-spacing: 4px;
+
+  color: #72834f;
+}
+
+.green-intro-content h2,
+.green-section-heading h2,
+.green-editorial-content h2,
+.green-routine-heading h2 {
+  font-family: Georgia, serif;
+
+  font-size: clamp(40px, 5vw, 65px);
+
+  font-weight: 400;
+  line-height: 1.08;
+
+  margin: 25px 0 35px;
+}
+
+.green-intro-content h2 em,
+.green-section-heading h2 em,
+.green-editorial-content h2 em,
+.green-routine-heading h2 em {
+  color: #71844e;
+  font-weight: 400;
+}
+
+.green-intro-content p,
+.green-editorial-content p {
+  color: #62685e;
+
+  font-size: 14px;
+  line-height: 2;
+
+  margin-bottom: 22px;
+}
+
+.green-signature {
+  margin-top: 40px;
+
+  border-left: 1px solid #8a9a68;
+
+  padding-left: 20px;
+}
+
+.green-signature span {
+  display: block;
+
+  font-family: Georgia, serif;
+  font-style: italic;
+
+  font-size: 19px;
+}
+
+.green-signature strong {
+  display: block;
+
+  color: #71844e;
+
+  letter-spacing: 2px;
+  font-size: 11px;
+
+  margin-top: 4px;
+}
+
+
+/* =========================================================
+   MARQUEE
+========================================================= */
+
+.green-marquee {
+  overflow: hidden;
+
+  border-top: 1px solid #d5d9ca;
+  border-bottom: 1px solid #d5d9ca;
+
+  padding: 24px 0;
+}
+
+.green-marquee-track {
+  width: max-content;
+
+  display: flex;
+  align-items: center;
+
+  gap: 35px;
+
+  animation: greenMarquee 25s linear infinite;
+}
+
+.green-marquee-track span {
+  font-family: Georgia, serif;
+
+  font-size: 25px;
+  letter-spacing: 2px;
+
+  color: #69735e;
+}
+
+.green-marquee-track i {
+  color: #a18b4f;
+
+  font-style: normal;
+}
+
+@keyframes greenMarquee {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-35%);
+  }
+
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.green-benefits-section {
+  padding: 130px 6%;
+
+  background: #e9ede2;
+}
+
+.green-section-heading {
+  text-align: center;
+
+  max-width: 800px;
+
+  margin: auto;
+}
+
+.green-section-heading > span,
+.green-routine-heading > span {
+  font-size: 10px;
+
+  letter-spacing: 4px;
+
+  color: #71844e;
+}
+
+.green-benefits-grid {
+  max-width: 1250px;
+
+  margin: 70px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.green-benefit-card {
+  position: relative;
+
+  min-height: 350px;
+
+  padding: 40px 30px;
+
+  border-top: 1px solid #c5cbb9;
+  border-right: 1px solid #c5cbb9;
+
+  transition:
+    background .4s ease,
+    transform .4s ease;
+}
+
+.green-benefit-card:first-child {
+  border-left: 1px solid #c5cbb9;
+}
+
+.green-benefit-card:hover {
+  background: #f5f6f0;
+
+  transform: translateY(-8px);
+}
+
+.green-benefit-number {
+  font-size: 11px;
+
+  color: #71844e;
+}
+
+.green-benefit-icon {
+  margin: 65px 0 25px;
+
+  font-size: 22px;
+
+  color: #8b9a67;
+}
+
+.green-benefit-card h3 {
+  font-family: Georgia, serif;
+
+  font-size: 24px;
+  font-weight: 400;
+
+  margin-bottom: 18px;
+}
+
+.green-benefit-card p {
+  color: #6d7469;
+
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.green-benefit-arrow {
+  position: absolute;
+
+  right: 30px;
+  bottom: 30px;
+
+  font-size: 20px;
+
+  color: #71844e;
+}
+
+
+/* =========================================================
+   EDITORIAL
+========================================================= */
+
+.green-editorial {
+  max-width: 1250px;
+
+  width: 88%;
+
+  margin: auto;
+
+  padding: 140px 0;
+
+  display: grid;
+
+  grid-template-columns: .9fr 1.1fr;
+
+  gap: 100px;
+
+  align-items: center;
+}
+
+.green-editorial-content {
+  padding-left: 5%;
+}
+
+.green-editorial-quote {
+  margin-top: 40px;
+
+  padding-left: 25px;
+
+  border-left: 1px solid #81915f;
+
+  font-family: Georgia, serif;
+
+  font-style: italic;
+
+  font-size: 22px;
+
+  line-height: 1.5;
+
+  color: #5f6d4b;
+}
+
+.green-editorial-image {
+  position: relative;
+}
+
+.green-editorial-image img {
+  width: 100%;
+
+  height: 680px;
+
+  object-fit: cover;
+}
+
+.green-floating-badge {
+  position: absolute;
+
+  bottom: 35px;
+  left: -35px;
+
+  width: 115px;
+  height: 115px;
+
+  border-radius: 50%;
+
+  background: #536640;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+}
+
+.green-floating-badge strong {
+  font-family: Georgia, serif;
+
+  font-size: 13px;
+
+  margin-top: 4px;
+}
+
+
+/* =========================================================
+   ROUTINE
+========================================================= */
+
+.green-routine-section {
+  background: #eef0e8;
+
+  padding: 120px 6%;
+}
+
+.green-routine-heading {
+  text-align: center;
+
+  max-width: 750px;
+
+  margin: auto;
+}
+
+.green-routine-steps {
+  max-width: 1100px;
+
+  margin: 80px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1px;
+
+  background: #c8cdbf;
+}
+
+.green-routine-step {
+  background: #eef0e8;
+
+  padding: 45px 35px;
+}
+
+.green-routine-step > span {
+  color: #71844e;
+
+  font-size: 11px;
+}
+
+.green-routine-step h3 {
+  font-family: Georgia, serif;
+
+  font-size: 27px;
+
+  font-weight: 400;
+
+  margin: 30px 0 15px;
+}
+
+.green-routine-step p {
+  color: #697066;
+
+  line-height: 1.9;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.green-final-section {
+  min-height: 600px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(13, 37, 22, .70),
+      rgba(13, 37, 22, .70)
+    ),
+    url("/home/greentea/greentea-final.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  color: white;
+}
+
+.green-final-content {
+  width: 90%;
+
+  max-width: 750px;
+}
+
+.green-final-content > span {
+  font-size: 10px;
+
+  letter-spacing: 4px;
+}
+
+.green-final-content h2 {
+  font-family: Georgia, serif;
+
+  font-size: clamp(50px, 7vw, 85px);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  margin: 25px 0;
+}
+
+.green-final-content h2 em {
+  color: #d5cf9b;
+
+  font-weight: 400;
+}
+
+.green-final-content p {
+  font-size: 14px;
+
+  color: rgba(255,255,255,.82);
+
+  line-height: 1.8;
+}
+
+.green-final-content button {
+  margin-top: 35px;
+
+  padding: 16px 27px;
+
+  border: 1px solid rgba(255,255,255,.5);
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: .4s ease;
+}
+
+.green-final-content button span {
+  margin-left: 15px;
+
+  font-size: 15px;
+}
+
+.green-final-content button:hover {
+  background: white;
+
+  color: #263b2b;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .green-intro-section,
+  .green-editorial {
+    gap: 50px;
+  }
+
+  .green-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .green-benefit-card:nth-child(2) {
+    border-right: none;
+  }
+
+  .green-benefit-card:nth-child(3) {
+    border-left: 1px solid #c5cbb9;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .green-blog-hero {
+    min-height: 78vh;
+  }
+
+  .green-intro-section,
+  .green-editorial {
+    grid-template-columns: 1fr;
+
+    padding: 80px 0;
+  }
+
+  .green-intro-image img {
+    height: 500px;
+  }
+
+  .green-editorial-content {
+    padding-left: 0;
+
+    order: 2;
+  }
+
+  .green-editorial-image {
+    order: 1;
+  }
+
+  .green-editorial-image img {
+    height: 500px;
+  }
+
+  .green-floating-badge {
+    left: 20px;
+  }
+
+  .green-benefits-section,
+  .green-routine-section {
+    padding: 80px 6%;
+  }
+
+  .green-routine-steps {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .green-hero-content h1 {
+    font-size: 48px;
+  }
+
+  .green-hero-content p {
+    font-size: 13px;
+  }
+
+  .green-intro-content h2,
+  .green-section-heading h2,
+  .green-editorial-content h2,
+  .green-routine-heading h2 {
+    font-size: 40px;
+  }
+
+  .green-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .green-benefit-card {
+    border-left: 1px solid #c5cbb9;
+    border-right: 1px solid #c5cbb9;
+  }
+
+  .green-benefit-card:nth-child(2),
+  .green-benefit-card:nth-child(3) {
+    border-left: 1px solid #c5cbb9;
+  }
+
+  .green-intro-image img,
+  .green-editorial-image img {
+    height: 430px;
+  }
+
+  .green-final-section {
+    min-height: 500px;
+  }
+
+}

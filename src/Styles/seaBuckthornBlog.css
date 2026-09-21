@@ -1,0 +1,658 @@
+/* =========================================================
+   SEA BUCKTHORN BLOG
+   INTERNATIONAL LUXURY SKINCARE STYLE
+========================================================= */
+
+.sea-blog-page {
+  background: #f7f4ed;
+  color: #20251d;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.sea-blog-hero {
+  min-height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(15, 24, 17, .78),
+      rgba(15, 24, 17, .25)
+    ),
+    url("/home/serum/seabuckthorn-hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.sea-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 75% 40%,
+      transparent,
+      rgba(0, 0, 0, .28)
+    );
+}
+
+.sea-hero-content {
+  width: min(1100px, 88%);
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding-top: 50px;
+}
+
+.sea-blog-category {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 4px;
+  margin-bottom: 28px;
+  opacity: .85;
+}
+
+.sea-hero-content h1 {
+  max-width: 850px;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(48px, 7vw, 92px);
+  line-height: 1.02;
+  margin: 0;
+}
+
+.sea-hero-content h1 span {
+  display: block;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.sea-hero-content p {
+  max-width: 570px;
+  font-size: 16px;
+  line-height: 1.9;
+  margin: 32px 0;
+  color: rgba(255,255,255,.86);
+}
+
+.sea-hero-line {
+  height: 1px;
+  background: #d8b878;
+}
+
+.sea-scroll {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.sea-scroll div {
+  width: 1px;
+  height: 55px;
+  background: white;
+  opacity: .5;
+  margin: 12px auto 0;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.sea-intro-section {
+  width: min(1250px, 88%);
+  margin: auto;
+  padding: 130px 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.sea-intro-image {
+  position: relative;
+}
+
+.sea-intro-image img {
+  width: 100%;
+  height: 620px;
+  object-fit: cover;
+  display: block;
+}
+
+.sea-image-label {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+
+  background: rgba(255,255,255,.92);
+  padding: 13px 20px;
+
+  font-size: 9px;
+  letter-spacing: 2px;
+
+  display: flex;
+  gap: 15px;
+}
+
+.sea-image-label span {
+  color: #9b7b42;
+}
+
+.sea-intro-content {
+  padding-right: 5%;
+}
+
+.section-mini-title {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #9a7a42;
+}
+
+.sea-intro-content h2,
+.sea-section-heading h2,
+.editorial-content h2,
+.routine-heading h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(40px, 5vw, 65px);
+  font-weight: 400;
+  line-height: 1.08;
+  margin: 25px 0 35px;
+}
+
+.sea-intro-content h2 em,
+.sea-section-heading h2 em,
+.editorial-content h2 em,
+.routine-heading h2 em {
+  color: #9a7a42;
+  font-weight: 400;
+}
+
+.sea-intro-content p,
+.editorial-content p {
+  color: #62645c;
+  font-size: 14px;
+  line-height: 2;
+  margin-bottom: 22px;
+}
+
+.sea-signature {
+  margin-top: 40px;
+  border-left: 1px solid #b79963;
+  padding-left: 20px;
+}
+
+.sea-signature span {
+  display: block;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 19px;
+}
+
+.sea-signature strong {
+  display: block;
+  color: #9a7a42;
+  letter-spacing: 2px;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+
+/* =========================================================
+   MARQUEE
+========================================================= */
+
+.sea-marquee {
+  overflow: hidden;
+  border-top: 1px solid #ddd7c9;
+  border-bottom: 1px solid #ddd7c9;
+  padding: 24px 0;
+}
+
+.sea-marquee-track {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  animation: seaMarquee 25s linear infinite;
+}
+
+.sea-marquee-track span {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  letter-spacing: 2px;
+  color: #76715f;
+}
+
+.sea-marquee-track i {
+  color: #b18c4c;
+  font-style: normal;
+}
+
+@keyframes seaMarquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-35%);
+  }
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.sea-benefits-section {
+  padding: 130px 6%;
+  background: #eeece3;
+}
+
+.sea-section-heading {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.sea-section-heading > span,
+.routine-heading > span {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #9a7a42;
+}
+
+.sea-benefits-grid {
+  max-width: 1250px;
+  margin: 70px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.sea-benefit-card {
+  position: relative;
+  min-height: 350px;
+
+  padding: 40px 30px;
+
+  border-top: 1px solid #ccc7b9;
+  border-right: 1px solid #ccc7b9;
+
+  transition:
+    background .4s ease,
+    transform .4s ease;
+}
+
+.sea-benefit-card:first-child {
+  border-left: 1px solid #ccc7b9;
+}
+
+.sea-benefit-card:hover {
+  background: #f8f6f0;
+  transform: translateY(-8px);
+}
+
+.benefit-number {
+  font-size: 11px;
+  color: #9a7a42;
+}
+
+.benefit-icon {
+  margin: 65px 0 25px;
+  font-size: 22px;
+  color: #a18148;
+}
+
+.sea-benefit-card h3 {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.sea-benefit-card p {
+  color: #707067;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.benefit-arrow {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  font-size: 20px;
+  color: #9a7a42;
+}
+
+
+/* =========================================================
+   EDITORIAL
+========================================================= */
+
+.sea-editorial {
+  max-width: 1250px;
+  width: 88%;
+  margin: auto;
+  padding: 140px 0;
+
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.editorial-content {
+  padding-left: 5%;
+}
+
+.editorial-quote {
+  margin-top: 40px;
+  padding-left: 25px;
+  border-left: 1px solid #b18c4c;
+
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.5;
+  color: #74603c;
+}
+
+.editorial-image {
+  position: relative;
+}
+
+.editorial-image img {
+  width: 100%;
+  height: 680px;
+  object-fit: cover;
+}
+
+.floating-badge {
+  position: absolute;
+  bottom: 35px;
+  left: -35px;
+
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+
+  background: #9a7a42;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.floating-badge strong {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+
+/* =========================================================
+   ROUTINE
+========================================================= */
+
+.sea-routine-section {
+  background: #f0eee6;
+  padding: 120px 6%;
+}
+
+.routine-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: auto;
+}
+
+.routine-steps {
+  max-width: 1100px;
+  margin: 80px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #cbc6b8;
+}
+
+.routine-step {
+  background: #f0eee6;
+  padding: 45px 35px;
+}
+
+.routine-step > span {
+  color: #a08046;
+  font-size: 11px;
+}
+
+.routine-step h3 {
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: 400;
+  margin: 30px 0 15px;
+}
+
+.routine-step p {
+  color: #696a62;
+  line-height: 1.9;
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.sea-final-section {
+  min-height: 600px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(20, 29, 21, .65),
+      rgba(20, 29, 21, .65)
+    ),
+    url("/home/serum/seabuckthorn-final.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+}
+
+.sea-final-content {
+  width: 90%;
+  max-width: 750px;
+}
+
+.sea-final-content > span {
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+.sea-final-content h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(50px, 7vw, 85px);
+  font-weight: 400;
+  line-height: 1;
+  margin: 25px 0;
+}
+
+.sea-final-content h2 em {
+  color: #dfc48d;
+  font-weight: 400;
+}
+
+.sea-final-content p {
+  font-size: 14px;
+  color: rgba(255,255,255,.8);
+  line-height: 1.8;
+}
+
+.sea-final-content button {
+  margin-top: 35px;
+
+  padding: 16px 27px;
+
+  border: 1px solid rgba(255,255,255,.5);
+  background: transparent;
+  color: white;
+
+  font-size: 10px;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: .4s ease;
+}
+
+.sea-final-content button span {
+  margin-left: 15px;
+  font-size: 15px;
+}
+
+.sea-final-content button:hover {
+  background: white;
+  color: #263025;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .sea-intro-section,
+  .sea-editorial {
+    gap: 50px;
+  }
+
+  .sea-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sea-benefit-card:nth-child(2) {
+    border-right: none;
+  }
+
+  .sea-benefit-card:nth-child(3) {
+    border-left: 1px solid #ccc7b9;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .sea-blog-hero {
+    min-height: 78vh;
+  }
+
+  .sea-intro-section,
+  .sea-editorial {
+    grid-template-columns: 1fr;
+    padding: 80px 0;
+  }
+
+  .sea-intro-image img {
+    height: 500px;
+  }
+
+  .editorial-content {
+    padding-left: 0;
+    order: 2;
+  }
+
+  .editorial-image {
+    order: 1;
+  }
+
+  .editorial-image img {
+    height: 500px;
+  }
+
+  .floating-badge {
+    left: 20px;
+  }
+
+  .sea-benefits-section,
+  .sea-routine-section {
+    padding: 80px 6%;
+  }
+
+  .routine-steps {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .sea-hero-content h1 {
+    font-size: 48px;
+  }
+
+  .sea-hero-content p {
+    font-size: 13px;
+  }
+
+  .sea-intro-content h2,
+  .sea-section-heading h2,
+  .editorial-content h2,
+  .routine-heading h2 {
+    font-size: 40px;
+  }
+
+  .sea-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sea-benefit-card {
+    border-left: 1px solid #ccc7b9;
+    border-right: 1px solid #ccc7b9;
+  }
+
+  .sea-benefit-card:nth-child(2),
+  .sea-benefit-card:nth-child(3) {
+    border-left: 1px solid #ccc7b9;
+  }
+
+  .sea-intro-image img,
+  .editorial-image img {
+    height: 430px;
+  }
+
+  .sea-final-section {
+    min-height: 500px;
+  }
+
+}
