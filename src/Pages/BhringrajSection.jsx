@@ -1,58 +1,79 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import { useCart } from "../Context/CartContext";
+import React, { useEffect, useState } from "react";
 import "../Styles/bhringraj.css";
 
+const serumImages = [
+  "/home/serum/serumshow.jfif",
+  "/home/serum/serumblack.jfif",
+  "/home/serum/serumc.jfif",
+  "/home/serum/serum1.jfif",
+];
+
 function BhringrajSection() {
-  const navigate = useNavigate();
-  const { addToCart } = useCart();
 
-  const product = {
-    name: "Vitamin C Serum",
-    category: "Ayurvedic Hair Care",
-    image: "/media.jfif",
-    price: 1299,
-    oldPrice: 1599,
-    size: "50ml",
-    description:
-      "A time-tested Ayurvedic hair care serum that helps reduce hair fall and improve hair density.",
-    images: [
-      "/media.jfif",
-    ],
-    sizes: ["50ml", "100ml"],
-  };
+  const [currentImage, setCurrentImage] = useState(0);
 
-  /* PRODUCT DETAILS */
-  const openProduct = () => {
-    navigate("/product-details", {
-      state: {
-        product,
-      },
-    });
-  };
+  useEffect(() => {
 
-  /* ADD TO BAG */
-  const handleAddToBag = (e) => {
-    e.stopPropagation();
+    const slider = setInterval(() => {
 
-    addToCart({
-      ...product,
-      quantity: 1,
-    });
-  };
+      setCurrentImage((prev) =>
+        (prev + 1) % serumImages.length
+      );
+
+    }, 4000);
+
+    return () => clearInterval(slider);
+
+  }, []);
 
   return (
+
     <section className="bhringraj-section">
 
-      {/* Decorative background */}
-      <div className="bhringraj-decor"></div>
+      {/* =====================================================
+          FIXED BACKGROUND DESIGN
+      ===================================================== */}
 
-      {/* LEFT CONTENT */}
+      <div className="bhringraj-background">
+
+        <div className="bg-circle bg-circle-one"></div>
+
+        <div className="bg-circle bg-circle-two"></div>
+
+        <div className="bg-leaf bg-leaf-one"></div>
+
+        <div className="bg-leaf bg-leaf-two"></div>
+
+        <div className="bg-dot-pattern"></div>
+
+      </div>
+
+
+      {/* =====================================================
+          MOVING DELIVERY TRUCK
+      ===================================================== */}
+
+      <div className="delivery-track">
+
+        <div className="delivery-truck">
+          🚚
+        </div>
+
+      </div>
+
+
+      {/* =====================================================
+          LEFT CONTENT
+      ===================================================== */}
+
       <div className="bhringraj-content">
 
         <p className="bhringraj-small">
-          AYURVEDIC HAIR CARE
+          Ancient Skin Care Wisdom brought back to life —
+          a time tested ritual for deeply hydrated,
+          youthful looking skin...
         </p>
+
 
         <h2>
           VITAMIN
@@ -60,66 +81,118 @@ function BhringrajSection() {
           <span>C SERUM</span>
         </h2>
 
+
         <div className="bhringraj-line"></div>
 
+
         <p className="bhringraj-title">
-          A time-tested recipe that works to reduce
-          hairfall and improve hair density.
+          A refined vitamin C ritual that helps revive
+          dull-looking skin, enhance radiance, and reveal
+          a smoother, naturally luminous complexion.
         </p>
+
 
         <p className="bhringraj-description">
-          Discover the ancient Ayurvedic secret to
-          healthier, stronger and beautifully nourished hair.
+          Discover the power of carefully selected
+          botanicals and skin-loving actives crafted
+          for beautifully nourished, radiant skin.
         </p>
 
-        {/* PRODUCT PAGE */}
-        <button
-          type="button"
-          className="bhringraj-button"
-          onClick={openProduct}
-        >
-          <span>EXPLORE NOW</span>
-          <b>→</b>
-        </button>
 
-        {/* ADD TO BAG */}
-        <button
-          type="button"
-          className="bhringraj-add-bag"
-          onClick={handleAddToBag}
-        >
-          ADD TO BAG
+        <button className="bhringraj-button">
+
+          <span>
+            EXPLORE NOW
+          </span>
+
+          <b>
+            →
+          </b>
+
         </button>
 
       </div>
 
-      {/* RIGHT IMAGE */}
-      <div
-        className="bhringraj-image"
-        onClick={openProduct}
-      >
+
+      {/* =====================================================
+          RIGHT IMAGE AREA
+      ===================================================== */}
+
+      <div className="bhringraj-image">
+
+        {/* Fixed decorative circle */}
+
+        <div className="image-bg-shape"></div>
+
+
+        {/* Fixed leaf decoration */}
+
+        <div className="image-leaf image-leaf-left"></div>
+
+        <div className="image-leaf image-leaf-right"></div>
+
+
+        {/* Product image */}
 
         <div className="bhringraj-image-frame">
 
-          <img
-            src="/media.jfif"
-            alt="Vitamin C Serum"
-          />
+          {serumImages.map((image, index) => (
+
+            <img
+              key={image}
+              src={image}
+              alt="Tellus Vitamin C Serum"
+              className={
+                index === currentImage
+                  ? "active-serum-image"
+                  : "serum-image"
+              }
+            />
+
+          ))}
 
         </div>
 
+
+        {/* =================================================
+            BADGE
+        ================================================= */}
+
         <div className="bhringraj-badge">
-          <span>100%</span>
+
+          <span>
+            100%
+          </span>
+
           <small>
-            AYURVEDIC
+            NATURAL
             <br />
             RITUAL
           </small>
+
+        </div>
+
+
+        {/* Image counter */}
+
+        <div className="serum-counter">
+
+          <span>
+            0{currentImage + 1}
+          </span>
+
+          <i></i>
+
+          <span>
+            0{serumImages.length}
+          </span>
+
         </div>
 
       </div>
 
     </section>
+
   );
 }
 

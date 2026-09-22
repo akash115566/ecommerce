@@ -6,50 +6,57 @@ import "../Styles/mostLovedrituals.css";
 const products = [
   {
     image: "/home/serum/serumblack.jfif",
-    title: "FRAGRANT MOISTURE-LOCK DUO",
-    description: "Replenishes Moisture & Scents The Skin",
+    title: "SEABUCKTHORN VITAMIN C SERUM",
+    description: "Brightens Dull Skin & Boosts Natural Radiance",
     price: 3845,
   },
+
   {
-    image:  "/home/serum/serumc.jfif",
-    title: "BATH SET - LIME & SAFFRON",
-    description: "Purifies, Detoxifies & Moisturises",
+    image: "/home/serum/serumc.jfif",
+    title: "VITAMIN C RADIANCE SERUM",
+    description: "Revives Dull Skin & Enhances Natural Glow",
     price: 3600,
   },
+
   {
-    image:  "/home/serum/serumcheck.jfif",
-    title: "DAILY CLEANSE & SHIELD PAIR",
-    description: "Daily Cleansing & Protection Ritual",
+    image: "/home/serum/serumcheck.jfif",
+    title: "PURE GLOW FACIAL SERUM",
+    description: "Hydrates, Nourishes & Helps Refine Skin Texture",
     price: 2870,
   },
+
   {
-    image:  "/home/serum/serumdot.jfif",
-    title: "RADIANT SKIN RITUAL",
-    description: "Illuminates Dull Skin",
+    image: "/home/serum/serumdot.jfif",
+    title: "SEABUCKTHORN GLOW SERUM",
+    description: "Illuminates Dull Skin & Restores Radiance",
     price: 5550,
   },
+
   {
     image: "/home/serum/serumdrop.jfif",
-    title: "ROSE & SANDALWOOD RITUAL",
-    description: "Nourishes Skin & Enhances Radiance",
+    title: "HYDRATING BOTANICAL SERUM",
+    description: "Deeply Hydrates Skin & Leaves It Soft and Supple",
     price: 3250,
   },
+
   {
     image: "/home/serum/serumhand.jfif",
-    title: "AYURVEDIC BODY CARE SET",
-    description: "Softens, Nourishes & Hydrates",
+    title: "LUXURY REPAIR FACE SERUM",
+    description: "Nourishes Dry Skin & Supports a Smooth, Radiant Look",
     price: 4150,
   },
+
   {
     image: "/home/serum/serumorange.jfif",
-    title: "LUXURY HAIR RITUAL",
-    description: "Strengthens Hair & Nourishes Scalp",
+    title: "ORANGE VITAMIN C SERUM",
+    description: "Brightens Skin & Helps Reveal a Fresh, Luminous Glow",
     price: 3950,
   },
+
   {
     image: "/home/serum/serumshow.jfif",
-    title: "PREMIUM WELLNESS RITUAL",
-    description: "A Complete Everyday Self-Care Ritual",
+    title: "PREMIUM ANTI-DULLNESS SERUM",
+    description: "Replenishes Moisture & Enhances Skin Radiance",
     price: 4750,
   },
 ];

@@ -1,70 +1,236 @@
 /* =========================================================
-   BHRINGRAJ / VITAMIN C SERUM
-   INTERNATIONAL LUXURY AYURVEDIC THEME
+   TELLUS ESSENTIALS
+   PREMIUM VITAMIN C HERO SECTION
+========================================================= */
+
+
+
+/* =========================================================
+   MAIN SECTION
 ========================================================= */
 
 .bhringraj-section {
-  position: relative;
   width: 100%;
-  min-height: 680px;
-  padding: 90px 8%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 70px;
 
-  background:
-    radial-gradient(
-      circle at 85% 50%,
-      rgba(180, 150, 80, 0.12),
-      transparent 35%
-    ),
-    linear-gradient(
-      135deg,
-      #f7f3e9 0%,
-      #eee8d8 50%,
-      #f8f5ed 100%
-    );
+  min-height: 620px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: grid;
+
+  grid-template-columns: 48% 52%;
+
+  align-items: center;
+
+  background: #faf4df;
+
+  padding: 60px 8%;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   FIXED BACKGROUND
+========================================================= */
+
+.bhringraj-background {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -3;
+
+  pointer-events: none;
 
   overflow: hidden;
 }
 
 
 /* =========================================================
-   DECORATIVE BACKGROUND
+   LARGE FIXED CIRCLE
 ========================================================= */
 
-.bhringraj-decor {
+.bg-circle {
   position: absolute;
-  width: 480px;
-  height: 480px;
 
-  right: -180px;
-  top: 50%;
-  transform: translateY(-50%);
-
-  border: 1px solid rgba(128, 101, 43, 0.18);
   border-radius: 50%;
-
-  box-shadow:
-    0 0 0 35px rgba(128, 101, 43, 0.035),
-    0 0 0 70px rgba(128, 101, 43, 0.025);
 
   pointer-events: none;
 }
 
-.bhringraj-decor::before {
-  content: "";
+
+.bg-circle-one {
+  width: 570px;
+
+  height: 570px;
+
+  right: -170px;
+
+  top: -190px;
+
+  background: rgba(221, 194, 113, 0.13);
+
+  border: 1px solid rgba(109, 91, 40, 0.08);
+}
+
+
+.bg-circle-two {
+  width: 420px;
+
+  height: 420px;
+
+  right: 90px;
+
+  bottom: -270px;
+
+  background: rgba(82, 96, 31, 0.08);
+
+  border: 1px solid rgba(70, 79, 29, 0.07);
+}
+
+
+/* =========================================================
+   FIXED LEAF SHAPES
+========================================================= */
+
+.bg-leaf {
   position: absolute;
 
-  width: 300px;
-  height: 300px;
+  width: 230px;
 
-  top: 90px;
-  left: 90px;
+  height: 100px;
 
-  border: 1px solid rgba(128, 101, 43, 0.13);
-  border-radius: 50%;
+  border-radius: 100% 0 100% 0;
+
+  background: rgba(55, 73, 24, 0.08);
+
+  transform: rotate(-25deg);
+}
+
+
+.bg-leaf-one {
+  left: -80px;
+
+  bottom: -15px;
+}
+
+
+.bg-leaf-two {
+  right: 35%;
+
+  top: -70px;
+
+  transform:
+    rotate(140deg);
+
+  opacity: 0.55;
+}
+
+
+/* =========================================================
+   DOT PATTERN
+========================================================= */
+
+.bg-dot-pattern {
+  position: absolute;
+
+  left: 7%;
+
+  bottom: 70px;
+
+  width: 130px;
+
+  height: 130px;
+
+  opacity: 0.3;
+
+  background-image:
+    radial-gradient(
+      #756a43 1px,
+      transparent 1px
+    );
+
+  background-size: 13px 13px;
+}
+
+
+/* =========================================================
+   DELIVERY TRACK
+========================================================= */
+
+.delivery-track {
+  position: absolute;
+
+  top: 7px;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 55px;
+
+  overflow: hidden;
+
+  z-index: 10;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   TRUCK
+========================================================= */
+
+.delivery-truck {
+  position: absolute;
+
+  top: 0;
+
+  left: -100px;
+
+  font-size: 42px;
+
+  line-height: 1;
+
+  filter:
+    drop-shadow(
+      0 4px 4px rgba(0, 0, 0, 0.12)
+    );
+
+  animation:
+    truckMove 11s linear infinite;
+}
+
+
+@keyframes truckMove {
+
+  0% {
+    left: -100px;
+
+    transform: scaleX(1);
+  }
+
+  45% {
+    left: 48%;
+
+    transform: scaleX(1);
+  }
+
+  50% {
+    left: 52%;
+
+    transform: scaleX(1);
+  }
+
+  100% {
+    left: calc(100% + 100px);
+
+    transform: scaleX(1);
+  }
+
 }
 
 
@@ -73,522 +239,634 @@
 ========================================================= */
 
 .bhringraj-content {
-  position: relative;
-  z-index: 2;
+  width: 100%;
 
-  max-width: 600px;
+  max-width: 570px;
+
+  position: relative;
+
+  z-index: 3;
+
+  padding: 20px 0;
 }
 
 
-/* Small heading */
+/* =========================================================
+   SMALL ORANGE HEADING
+========================================================= */
 
 .bhringraj-small {
-  margin: 0 0 18px;
+  margin: 0 0 22px;
 
-  font-family: "Poppins", sans-serif;
+  color: #ef7517;
 
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 4px;
+  font-family: "Montserrat", sans-serif;
 
-  color: #8b6b2e;
+  font-size: 18px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.2px;
+
+  text-transform: uppercase;
 }
 
 
-/* Main heading */
+/* =========================================================
+   MAIN HEADING
+========================================================= */
 
 .bhringraj-content h2 {
   margin: 0;
 
-  font-family: "Poppins", sans-serif;
+  color: #28330e;
 
-  font-size: clamp(52px, 6vw, 86px);
-  line-height: 0.95;
+  font-family: "Montserrat", sans-serif;
 
-  font-weight: 500;
-  letter-spacing: -2px;
+  font-size: clamp(
+    42px,
+    4.2vw,
+    66px
+  );
 
-  color: #12351f;
+  font-weight: 700;
+
+  line-height: 0.98;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
 }
+
 
 .bhringraj-content h2 span {
-  color: #9a7834;
+  color: #28330e;
+
+  position: relative;
 }
 
 
-/* Golden line */
+/* =========================================================
+   HEADING DECORATIVE UNDERLINE
+========================================================= */
 
 .bhringraj-line {
   width: 75px;
-  height: 2px;
 
-  margin: 30px 0;
+  height: 4px;
 
-  background: linear-gradient(
-    to right,
-    #9a7834,
-    #c6a75a
-  );
-}
+  margin: 27px 0 22px;
 
+  background: #ef7517;
 
-/* Main text */
-
-.bhringraj-title {
-  max-width: 520px;
-
-  margin: 0 0 18px;
-
-  font-family: "Poppins", sans-serif;
-
-  font-size: 18px;
-  line-height: 1.7;
-
-  font-weight: 500;
-
-  color: #294631;
-}
-
-
-/* Description */
-
-.bhringraj-description {
-  max-width: 500px;
-
-  margin: 0 0 35px;
-
-  font-family: "Poppins", sans-serif;
-
-  font-size: 14px;
-  line-height: 1.8;
-
-  color: #6c6a60;
-}
-
-
-/* =========================================================
-   BUTTONS
-========================================================= */
-
-.bhringraj-button,
-.bhringraj-add-bag {
-  min-height: 50px;
-
-  border: none;
-  cursor: pointer;
-
-  font-family: "Poppins", sans-serif;
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background 0.3s ease;
-}
-
-
-/* Explore button */
-
-.bhringraj-button {
-  display: inline-flex;
-
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 45px;
-
-  padding: 0 22px;
-
-  background: #12351f;
-  color: #fff;
-
-  font-size: 12px;
-  font-weight: 600;
-
-  letter-spacing: 1.5px;
-}
-
-.bhringraj-button b {
-  font-size: 20px;
-  font-weight: 400;
-
-  color: #d5b866;
-}
-
-.bhringraj-button:hover {
-  transform: translateY(-3px);
-
-  background: #1d4b2d;
-
-  box-shadow:
-    0 10px 25px rgba(18, 53, 31, 0.2);
-}
-
-
-/* Add to bag */
-
-.bhringraj-add-bag {
-  margin-left: 12px;
-
-  padding: 0 25px;
-
-  border: 1px solid #9a7834;
-
-  background: transparent;
-
-  color: #6f5727;
-
-  font-size: 12px;
-  font-weight: 600;
-
-  letter-spacing: 1.5px;
-}
-
-.bhringraj-add-bag:hover {
-  transform: translateY(-3px);
-
-  background: #9a7834;
-
-  color: #fff;
-
-  box-shadow:
-    0 10px 25px rgba(154, 120, 52, 0.2);
-}
-
-
-/* =========================================================
-   RIGHT IMAGE
-========================================================= */
-
-.bhringraj-image {
   position: relative;
-  z-index: 2;
-
-  min-height: 500px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
 }
 
 
-/* Image frame */
-
-.bhringraj-image-frame {
-  position: relative;
-
-  width: min(430px, 100%);
-  height: 500px;
-
-  padding: 18px;
-
-  background: rgba(255, 255, 255, 0.45);
-
-  border: 1px solid rgba(154, 120, 52, 0.28);
-
-  box-shadow:
-    0 25px 60px rgba(45, 50, 35, 0.12);
-
-  overflow: hidden;
-
-  transition:
-    transform 0.5s ease,
-    box-shadow 0.5s ease;
-}
-
-
-/* Inner golden border */
-
-.bhringraj-image-frame::before {
+.bhringraj-line::after {
   content: "";
 
   position: absolute;
 
-  inset: 10px;
+  left: 0;
 
-  border: 1px solid rgba(154, 120, 52, 0.25);
+  top: -5px;
 
-  pointer-events: none;
+  width: 28px;
+
+  height: 2px;
+
+  background: #28330e;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.bhringraj-title {
+  max-width: 510px;
+
+  margin: 0 0 16px;
+
+  color: #333422;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.bhringraj-description {
+  max-width: 500px;
+
+  margin: 0 0 28px;
+
+  color: #66624d;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.bhringraj-button {
+  min-width: 175px;
+
+  height: 52px;
+
+  padding: 0 8px 0 24px;
+
+  border: none;
+
+  border-radius: 0;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  background: #28330e;
+
+  color: #fff8e7;
+
+  cursor: pointer;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  overflow: hidden;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.bhringraj-button b {
+  width: 38px;
+
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #ef7517;
+
+  color: white;
+
+  font-size: 20px;
+
+  font-weight: 400;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.bhringraj-button:hover {
+  background: #ef7517;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(55, 52, 20, 0.16);
+}
+
+
+.bhringraj-button:hover b {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   RIGHT IMAGE AREA
+========================================================= */
+
+.bhringraj-image {
+  width: 100%;
+
+  min-height: 520px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
 
   z-index: 2;
 }
 
 
-/* Product image */
+/* =========================================================
+   FIXED IMAGE BACKGROUND SHAPE
+========================================================= */
 
-.bhringraj-image-frame img {
-  width: 100%;
-  height: 100%;
+.image-bg-shape {
+  position: absolute;
 
-  display: block;
+  width: 420px;
 
-  object-fit: cover;
-  object-position: center;
+  height: 420px;
 
-  transition: transform 0.6s ease;
-}
+  border-radius: 50%;
 
+  background:
+    radial-gradient(
+      circle,
+      rgba(219, 189, 96, 0.32) 0%,
+      rgba(219, 189, 96, 0.14) 45%,
+      transparent 72%
+    );
 
-/* Hover image */
-
-.bhringraj-image:hover .bhringraj-image-frame {
-  transform: translateY(-8px);
-
-  box-shadow:
-    0 35px 70px rgba(45, 50, 35, 0.18);
-}
-
-.bhringraj-image:hover .bhringraj-image-frame img {
-  transform: scale(1.04);
+  z-index: -2;
 }
 
 
 /* =========================================================
-   AYURVEDIC BADGE
+   FIXED LEAVES
 ========================================================= */
 
-.bhringraj-badge {
+.image-leaf {
   position: absolute;
 
-  right: 5%;
-  bottom: 8%;
+  width: 145px;
 
-  width: 115px;
-  height: 115px;
+  height: 65px;
+
+  border-radius:
+    100% 0
+    100% 0;
+
+  background: #4c5822;
+
+  opacity: 0.9;
+
+  z-index: -1;
+}
+
+
+.image-leaf-left {
+  left: 11%;
+
+  bottom: 105px;
+
+  transform:
+    rotate(25deg);
+}
+
+
+.image-leaf-right {
+  right: 8%;
+
+  top: 105px;
+
+  transform:
+    rotate(150deg);
+}
+
+
+/* =========================================================
+   IMAGE FRAME
+========================================================= */
+
+.bhringraj-image-frame {
+  width: 460px;
+
+  height: 460px;
+
+  position: relative;
 
   display: flex;
-  flex-direction: column;
 
   align-items: center;
+
   justify-content: center;
+
+  overflow: hidden;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGES
+========================================================= */
+
+.serum-image,
+.active-serum-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  opacity: 0;
+
+  transform:
+    scale(0.94)
+    translateY(10px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 1s cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+
+  pointer-events: none;
+}
+
+
+.active-serum-image {
+  opacity: 1;
+
+  transform:
+    scale(1)
+    translateY(0);
+
+  z-index: 3;
+}
+
+
+/* =========================================================
+   IMAGE GLOW
+========================================================= */
+
+.bhringraj-image-frame::after {
+  content: "";
+
+  position: absolute;
+
+  width: 75%;
+
+  height: 75%;
 
   border-radius: 50%;
 
-  background: #12351f;
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.25),
+      transparent 65%
+    );
 
-  border: 2px solid #c5a653;
+  pointer-events: none;
 
-  box-shadow:
-    0 15px 35px rgba(18, 53, 31, 0.25);
+  z-index: 4;
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.bhringraj-badge {
+  width: 105px;
+
+  height: 105px;
+
+  position: absolute;
+
+  right: 3%;
+
+  bottom: 65px;
+
+  z-index: 6;
+
+  border:
+    1px solid
+    rgba(57, 67, 21, 0.55);
+
+  border-radius: 50%;
+
+  background:
+    rgba(250, 244, 223, 0.92);
+
+  backdrop-filter: blur(5px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
 
   text-align: center;
+
+  box-shadow:
+    0 12px 30px
+    rgba(50, 45, 18, 0.10);
+
+  animation:
+    badgeFloat 4s ease-in-out infinite;
+}
+
+
+@keyframes badgeFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+
 }
 
 
 .bhringraj-badge span {
-  font-family: "Poppins", sans-serif;
+  color: #28330e;
 
-  font-size: 24px;
-  font-weight: 600;
+  font-family: "DM Serif Display", serif;
+
+  font-size: 28px;
 
   line-height: 1;
-
-  color: #d8bd72;
 }
 
 
 .bhringraj-badge small {
-  margin-top: 7px;
+  margin-top: 5px;
 
-  font-family: "Poppins", sans-serif;
+  color: #5f603e;
 
-  font-size: 9px;
-  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
 
-  letter-spacing: 1.5px;
+  font-size: 7px;
 
-  color: #f5f0e4;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  line-height: 1.4;
 }
 
 
 /* =========================================================
-   TABLET
+   IMAGE COUNTER
 ========================================================= */
 
-@media (max-width: 1000px) {
+.serum-counter {
+  position: absolute;
 
-  .bhringraj-section {
-    padding: 75px 6%;
+  right: 5%;
 
-    grid-template-columns: 1fr 1fr;
+  bottom: 20px;
 
-    gap: 40px;
-  }
+  display: flex;
 
-  .bhringraj-content h2 {
-    font-size: 58px;
-  }
+  align-items: center;
 
-  .bhringraj-title {
-    font-size: 16px;
-  }
+  gap: 9px;
 
-  .bhringraj-description {
-    font-size: 13px;
-  }
+  color: #59603b;
 
-  .bhringraj-image-frame {
-    height: 430px;
-  }
+  font-family: "Montserrat", sans-serif;
 
-  .bhringraj-badge {
-    width: 95px;
-    height: 95px;
-  }
+  font-size: 10px;
 
-  .bhringraj-badge span {
-    font-size: 20px;
-  }
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  z-index: 5;
+}
+
+
+.serum-counter i {
+  width: 35px;
+
+  height: 1px;
+
+  background: #777451;
 }
 
 
 /* =========================================================
-   MOBILE
+   FLOATING IMAGE ANIMATION
 ========================================================= */
 
-@media (max-width: 768px) {
+.bhringraj-image-frame {
+  animation:
+    imageFloating 5s ease-in-out infinite;
+}
+
+
+@keyframes imageFloating {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-9px);
+  }
+
+}
+
+
+/* =========================================================
+   DESKTOP LARGE
+========================================================= */
+
+@media (min-width: 1400px) {
 
   .bhringraj-section {
-    min-height: auto;
+    min-height: 680px;
 
-    padding: 65px 6% 70px;
+    padding-left: 10%;
 
-    grid-template-columns: 1fr;
-
-    gap: 50px;
-
-    text-align: center;
+    padding-right: 10%;
   }
 
 
   .bhringraj-content {
-    max-width: 100%;
-  }
-
-
-  .bhringraj-small {
-    font-size: 10px;
-    letter-spacing: 3px;
-
-    margin-bottom: 15px;
-  }
-
-
-  .bhringraj-content h2 {
-    font-size: clamp(48px, 14vw, 65px);
-
-    letter-spacing: -1px;
-  }
-
-
-  .bhringraj-line {
-    margin: 25px auto;
-  }
-
-
-  .bhringraj-title {
-    max-width: 520px;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    font-size: 15px;
-    line-height: 1.7;
-  }
-
-
-  .bhringraj-description {
-    max-width: 500px;
-
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 28px;
-
-    font-size: 13px;
-  }
-
-
-  /* Buttons */
-
-  .bhringraj-button,
-  .bhringraj-add-bag {
-    min-height: 48px;
-  }
-
-
-  .bhringraj-button {
-    gap: 30px;
-  }
-
-
-  .bhringraj-add-bag {
-    margin-left: 8px;
-
-    padding: 0 18px;
-  }
-
-
-  /* Image */
-
-  .bhringraj-image {
-    min-height: auto;
-
-    width: 100%;
+    max-width: 620px;
   }
 
 
   .bhringraj-image-frame {
-    width: min(390px, 100%);
-    height: 430px;
+    width: 520px;
+
+    height: 520px;
   }
 
 
-  .bhringraj-badge {
-    right: 3%;
-    bottom: 5%;
+  .image-bg-shape {
+    width: 500px;
 
-    width: 90px;
-    height: 90px;
+    height: 500px;
   }
 
-
-  .bhringraj-badge span {
-    font-size: 18px;
-  }
-
-
-  .bhringraj-badge small {
-    font-size: 8px;
-  }
-
-
-  .bhringraj-decor {
-    width: 350px;
-    height: 350px;
-
-    right: -180px;
-    top: 72%;
-  }
 }
 
 
 /* =========================================================
-   SMALL MOBILE
+   LAPTOP
 ========================================================= */
 
-@media (max-width: 480px) {
+@media (max-width: 1200px) {
 
   .bhringraj-section {
-    padding: 50px 20px 55px;
+    grid-template-columns: 50% 50%;
 
-    gap: 38px;
+    padding:
+      60px 6%;
   }
 
 
   .bhringraj-content h2 {
     font-size: 48px;
-    line-height: 0.98;
+  }
+
+
+  .bhringraj-small {
+    font-size: 15px;
   }
 
 
@@ -597,89 +875,327 @@
   }
 
 
-  .bhringraj-description {
-    font-size: 12px;
-  }
-
-
-  /* Buttons stack */
-
-  .bhringraj-button,
-  .bhringraj-add-bag {
-    width: 100%;
-
-    margin: 0 0 10px;
-  }
-
-
-  .bhringraj-button {
-    justify-content: space-between;
-
-    padding: 0 20px;
-  }
-
-
-  .bhringraj-add-bag {
-    padding: 0 20px;
-  }
-
-
   .bhringraj-image-frame {
-    height: 360px;
+    width: 400px;
 
-    padding: 12px;
+    height: 400px;
   }
 
 
-  .bhringraj-image-frame::before {
-    inset: 7px;
+  .image-bg-shape {
+    width: 380px;
+
+    height: 380px;
   }
 
 
   .bhringraj-badge {
-    right: 0;
-    bottom: 4%;
+    width: 90px;
 
-    width: 78px;
-    height: 78px;
+    height: 90px;
   }
 
-
-  .bhringraj-badge span {
-    font-size: 16px;
-  }
-
-
-  .bhringraj-badge small {
-    font-size: 7px;
-    letter-spacing: 1px;
-  }
 }
 
 
 /* =========================================================
-   EXTRA SMALL
+   TABLET
 ========================================================= */
 
-@media (max-width: 360px) {
+@media (max-width: 900px) {
 
   .bhringraj-section {
-    padding-left: 15px;
-    padding-right: 15px;
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+
+    padding:
+      80px 7% 60px;
   }
 
 
-  .bhringraj-content h2 {
-    font-size: 42px;
+  .bhringraj-content {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    text-align: center;
   }
 
 
   .bhringraj-small {
-    letter-spacing: 2px;
+    font-size: 15px;
+  }
+
+
+  .bhringraj-line {
+    margin:
+      24px auto;
+  }
+
+
+  .bhringraj-title,
+  .bhringraj-description {
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+
+  .bhringraj-button {
+    margin: 0 auto;
+  }
+
+
+  .bhringraj-image {
+    min-height: 480px;
+
+    margin-top: 15px;
   }
 
 
   .bhringraj-image-frame {
+    width: 430px;
+
+    height: 430px;
+  }
+
+
+  .image-bg-shape {
+    width: 410px;
+
+    height: 410px;
+  }
+
+
+  .delivery-track {
+    top: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .bhringraj-section {
+    padding:
+      65px 20px 45px;
+  }
+
+
+  .bhringraj-small {
+    margin-bottom: 18px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+  }
+
+
+  .bhringraj-content h2 {
+    font-size: 38px;
+
+    line-height: 1;
+  }
+
+
+  .bhringraj-line {
+    width: 55px;
+
+    height: 3px;
+
+    margin:
+      20px auto;
+  }
+
+
+  .bhringraj-title {
+    font-size: 13px;
+
+    line-height: 1.65;
+  }
+
+
+  .bhringraj-description {
+    font-size: 11px;
+
+    line-height: 1.7;
+  }
+
+
+  .bhringraj-button {
+    min-width: 160px;
+
+    height: 48px;
+
+    padding-left: 20px;
+
+    font-size: 9px;
+  }
+
+
+  .bhringraj-button b {
+    width: 35px;
+
+    height: 35px;
+  }
+
+
+  .bhringraj-image {
+    min-height: 380px;
+
+    margin-top: 10px;
+  }
+
+
+  .bhringraj-image-frame {
+    width: 330px;
+
+    height: 330px;
+  }
+
+
+  .image-bg-shape {
+    width: 320px;
+
     height: 320px;
   }
+
+
+  .image-leaf {
+    width: 100px;
+
+    height: 45px;
+  }
+
+
+  .image-leaf-left {
+    left: 0;
+
+    bottom: 75px;
+  }
+
+
+  .image-leaf-right {
+    right: 0;
+
+    top: 75px;
+  }
+
+
+  .bhringraj-badge {
+    width: 78px;
+
+    height: 78px;
+
+    right: 0;
+
+    bottom: 55px;
+  }
+
+
+  .bhringraj-badge span {
+    font-size: 21px;
+  }
+
+
+  .bhringraj-badge small {
+    font-size: 5px;
+  }
+
+
+  .serum-counter {
+    right: 3%;
+
+    bottom: 15px;
+
+    font-size: 8px;
+  }
+
+
+  .serum-counter i {
+    width: 25px;
+  }
+
+
+  .delivery-truck {
+    font-size: 32px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .bhringraj-section {
+    padding:
+      60px 15px 35px;
+  }
+
+
+  .bhringraj-content h2 {
+    font-size: 32px;
+  }
+
+
+  .bhringraj-small {
+    font-size: 10px;
+  }
+
+
+  .bhringraj-title {
+    font-size: 11px;
+  }
+
+
+  .bhringraj-description {
+    font-size: 10px;
+  }
+
+
+  .bhringraj-image {
+    min-height: 320px;
+  }
+
+
+  .bhringraj-image-frame {
+    width: 280px;
+
+    height: 280px;
+  }
+
+
+  .image-bg-shape {
+    width: 270px;
+
+    height: 270px;
+  }
+
+
+  .bhringraj-badge {
+    width: 68px;
+
+    height: 68px;
+
+    bottom: 35px;
+  }
+
+
+  .bhringraj-badge span {
+    font-size: 18px;
+  }
+
+
+  .delivery-truck {
+    font-size: 28px;
+  }
+
 }

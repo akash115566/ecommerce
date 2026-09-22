@@ -7,59 +7,66 @@ import ProductDetails from "./ProductDetails";
 const products = [
   {
     image: "/home/scrub/brownscrub.jfif",
-    name: "ROSE GLOW FACE SERUM",
-    use: "Brightens, Hydrates & Revitalises Skin",
-    price: 1299,
-    oldPrice: 1599,
+    name: "LUXURY HERBAL FACE SCRUB",
+    use: "Gently Exfoliates, Purifies & Revives Skin",
+    price: 2500,
+    oldPrice: 2999,
   },
+
   {
     image: "/home/scrub/teaserub.jfif",
-    name: "LUXURY SAFFRON CLEANSER",
-    use: "Gently Cleanses & Refreshes Skin",
-    price: 999,
-    oldPrice: 1299,
+    name: "SAFFRON GLOW FACE SCRUB",
+    use: "Removes Dead Skin & Reveals Natural Radiance",
+    price: 2500,
+    oldPrice: 2999,
   },
+
   {
     image: "/home/scrub/skinscrub.jfif",
-    name: "BHRINGRAJ HAIR OIL",
-    use: "Nourishes Scalp & Strengthens Hair",
-    price: 1199,
-    oldPrice: 1499,
+    name: "AYURVEDIC HERBAL SCRUB",
+    use: "Deeply Exfoliates & Smoothens Skin Texture",
+    price: 2500,
+    oldPrice: 2999,
   },
+
   {
     image: "/home/scrub/redscrub.jfif",
-    name: "KUMKUMADI FACE OIL",
-    use: "Improves Radiance & Skin Texture",
-    price: 1499,
-    oldPrice: 1799,
+    name: "ROSE RADIANCE FACE SCRUB",
+    use: "Polishes, Softens & Brightens Dull-Looking Skin",
+    price: 2500,
+    oldPrice: 2999,
   },
+
   {
     image: "/home/scrub/goldscrub.jfif",
-    name: "SANDALWOOD BODY LOTION",
-    use: "Deeply Moisturises & Softens Skin",
-    price: 1099,
-    oldPrice: 1399,
+    name: "GOLDEN GLOW BODY SCRUB",
+    use: "Exfoliates Dead Skin & Leaves Skin Silky Smooth",
+    price: 2500,
+    oldPrice: 2999,
   },
+
   {
     image: "/home/scrub/enerscrub.jfif",
-    name: "VETIVER COOLING MIST",
-    use: "Refreshes & Hydrates Skin",
-    price: 899,
-    oldPrice: 1199,
+    name: "ENERGISING HERBAL BODY SCRUB",
+    use: "Refreshes, Exfoliates & Revitalises Skin",
+    price: 2500,
+    oldPrice: 2999,
   },
+
   {
     image: "/home/scrub/clayserub.jfif",
-    name: "AYURVEDIC FACE MASK",
-    use: "Purifies, Revives & Brightens Skin",
-    price: 1299,
-    oldPrice: 1599,
+    name: "AYURVEDIC CLAY FACE SCRUB",
+    use: "Purifies Pores, Exfoliates & Refreshes Skin",
+    price: 2500,
+    oldPrice: 2999,
   },
+
   {
     image: "/home/scrub/brownscrub.jfif",
-    name: "ROSE & JASMINE BODY MIST",
-    use: "Refreshes Skin With A Floral Fragrance",
-    price: 999,
-    oldPrice: 1299,
+    name: "PREMIUM BOTANICAL FACE SCRUB",
+    use: "Gently Buffs Away Dead Skin & Restores Softness",
+    price: 2500,
+    oldPrice: 2999,
   },
 ];
 

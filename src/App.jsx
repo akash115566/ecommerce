@@ -50,6 +50,9 @@ const AppContent = () => {
           path="/"
           element={<Home />}
         />
+            <Route path="/our-story" element={<OurStory />} />
+        <Route path="/about-us" element={<AboutUs />} />
+         <Route path="/home" element={<Home />} />
 
         <Route
           path="/seasonal"
@@ -81,8 +84,7 @@ const AppContent = () => {
         <Route path="/latest-reads" element={<LatestReads />} />
         <Route path="/forbes-article" element={<ForbesArticle />} />
         <Route path="/reviews" element={<Reviews />} />
-        <Route path="/our-story" element={<OurStory />} />
-        <Route path="/about-us" element={<AboutUs />} />
+    
         <Route path="/blog" element={<Blog />} />
         <Route path="/why-skin-care" element={<WhySkinCare />} />
         <Route path="/sea-buckthorn-blog" element={<SeaBuckthornBlog />} />

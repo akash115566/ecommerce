@@ -9,35 +9,35 @@ const products = [
     title: "PREMIUM LUXURY GOLD CHARCOAL SOAP",
     description:
       "Deeply Cleanses, Purifies & Refreshes The Skin",
-    price: 899,
+    price: 1800,
   },
   {
      image: "/home/gold soap/soapblue.jfif",
     title: "PREMIUM GOLD CHARCOAL DETOX SOAP",
     description:
       "Purifies Skin & Helps Remove Daily Impurities",
-    price: 949,
+    price: 1800,
   },
   {
    image: "/home/gold soap/soapbrown.jfif",
     title: "LUXURY CHARCOAL GLOW SOAP",
     description:
       "Cleanses, Refreshes & Enhances Natural Radiance",
-    price: 999,
+    price: 1800,
   },
   {
     image: "/home/gold soap/soapgold.jfif",
     title: "GOLD CHARCOAL WELLNESS SOAP",
     description:
       "Nourishes, Cleanses & Leaves Skin Feeling Fresh",
-    price: 849,
+    price: 1800,
   },
   {
    image: "/home/gold soap/soapyellow.jfif",
     title: "PREMIUM DETOX CHARCOAL BAR",
     description:
       "Deep Cleansing Care For Smooth-Looking Skin",
-    price: 899,
+    price: 1800,
   },
 //   {
 //     image: "/home/soap/goldcharcoal6.jfif",

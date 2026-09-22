@@ -7,6 +7,7 @@ import JustIn from './JustIn'
 import RecentAwards from './RecentAwards'
 import LatestReads from './LatestReads'
 import GoldCharcoalSoap from './GoldCharcoalSoap'
+import BhringrajSection from './BhringrajSection'
 
 
 
@@ -20,12 +21,12 @@ const Home = () => {
     BHRINGRAJ HAIR RITUAL
 ========================= */}
 
-<section className="bhringraj-section">
+{/* <section className="bhringraj-section">
 
-  {/* Decorative background element */}
+ 
   <div className="bhringraj-decor"></div>
 
-  {/* LEFT CONTENT */}
+
   <div className="bhringraj-content">
 
     <p className="bhringraj-small">
@@ -59,7 +60,7 @@ Wisdom brought back to life a time tested ritual for deeply hydrated,  youthful 
 
   </div>
 
-  {/* RIGHT IMAGE */}
+
   <div className="bhringraj-image">
 
     <div className="bhringraj-image-frame">
@@ -71,7 +72,6 @@ Wisdom brought back to life a time tested ritual for deeply hydrated,  youthful 
 
     </div>
 
-    {/* Image badge */}
     <div className="bhringraj-badge">
       <span>100%</span>
       <small>AYURVEDIC<br />RITUAL</small>
@@ -79,7 +79,8 @@ Wisdom brought back to life a time tested ritual for deeply hydrated,  youthful 
 
   </div>
 
-</section>
+</section> */}
+<BhringrajSection />
 
 
 <SeasonalProducts />
@@ -87,12 +88,54 @@ Wisdom brought back to life a time tested ritual for deeply hydrated,  youthful 
 <GoldCharcoalSoap />
 <JustIn />
 
-  <section className="full-banner">
+     <section className="full-banner">
 
+      {/* MAIN BANNER IMAGE */}
       <img
         src="/home/serum/serumdot.jfif"
-        alt="Beauty Collection"
+        alt="Tellus Beauty Collection"
+        className="full-banner-image"
       />
+
+      {/* DARK SOFT OVERLAY */}
+      <div className="full-banner-overlay"></div>
+
+
+      {/* RUNNING TOY / CHARACTER */}
+      <div className="running-character">
+        <span>🏃</span>
+      </div>
+
+
+      {/* CENTER CONTENT */}
+      <div className="full-banner-content">
+
+        <h2>
+          WHAT LED US
+          <br />
+          TO OUR BEAUTY RITUALS
+        </h2>
+
+        <button className="banner-play">
+          ▶
+        </button>
+
+      </div>
+
+
+      {/* BOTTOM ANIMATED PRODUCT */}
+      <div className="bottom-product-animation">
+
+        <img
+          src="/home/serum/serumblack.jfif"
+          alt="Tellus Premium Product"
+        />
+
+      </div>
+
+
+      {/* BOTTOM DECORATIVE LINE */}
+      <div className="banner-bottom-line"></div>
 
     </section>
     {/* <RecentAwards /> */}

@@ -411,47 +411,599 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   TELLUS ESSENTIALS
+   FULL IMAGE BANNER
+========================================================= */
+
 .full-banner {
   width: 100%;
-  margin: 0;
-  padding: 0;
+  height: 620px;
+
+  position: relative;
+
   overflow: hidden;
+
+  background: #f8f2df;
+
+  isolation: isolate;
 }
 
-.full-banner img {
+
+/* =========================================================
+   MAIN IMAGE
+========================================================= */
+
+.full-banner-image {
+  position: absolute;
+
+  inset: 0;
+
   width: 100%;
-  height: 500px;
-  display: block;
-  object-fit: fill !important;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  z-index: -3;
+
+  animation: bannerZoom 12s ease-in-out infinite alternate;
 }
 
 
-/* Desktop */
+/* =========================================================
+   VERY SLOW BACKGROUND ZOOM
+========================================================= */
 
-@media (min-width: 1200px) {
-  .full-banner img {
-    width: 100%;
-    min-height: 300px;
-    object-fit: cover;
+@keyframes bannerZoom {
+
+  0% {
+    transform: scale(1);
   }
+
+  100% {
+    transform: scale(1.06);
+  }
+
 }
 
 
-/* Tablet */
+/* =========================================================
+   SOFT OVERLAY
+========================================================= */
+
+.full-banner-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.10),
+      rgba(0, 0, 0, 0.02) 40%,
+      rgba(0, 0, 0, 0.08)
+    );
+
+  z-index: -2;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   RUNNING CHARACTER
+========================================================= */
+
+.running-character {
+  position: absolute;
+
+  top: -2px;
+
+  left: -90px;
+
+  width: 75px;
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 10;
+
+  pointer-events: none;
+
+  animation:
+    characterRun 10s linear infinite;
+}
+
+
+/* CHARACTER */
+
+.running-character span {
+  display: block;
+
+  font-size: 43px;
+
+  line-height: 1;
+
+  filter:
+    drop-shadow(
+      0 3px 3px
+      rgba(0, 0, 0, 0.25)
+    );
+
+  animation:
+    characterBounce 0.45s ease-in-out infinite alternate;
+}
+
+
+/* =========================================================
+   CHARACTER MOVEMENT
+========================================================= */
+
+@keyframes characterRun {
+
+  0% {
+    left: -90px;
+  }
+
+  100% {
+    left: calc(100% + 90px);
+  }
+
+}
+
+
+/* =========================================================
+   RUNNING / BOUNCING EFFECT
+========================================================= */
+
+@keyframes characterBounce {
+
+  0% {
+    transform:
+      translateY(0)
+      rotate(-3deg);
+  }
+
+  100% {
+    transform:
+      translateY(-5px)
+      rotate(3deg);
+  }
+
+}
+
+
+/* =========================================================
+   CENTER CONTENT
+========================================================= */
+
+.full-banner-content {
+  position: absolute;
+
+  top: 38px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 90%;
+
+  text-align: center;
+
+  z-index: 5;
+
+  color: white;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.full-banner-content h2 {
+  margin: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: clamp(
+    28px,
+    4vw,
+    52px
+  );
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 3px 12px
+    rgba(0, 0, 0, 0.35);
+
+  animation:
+    headingAppear 1.2s ease both;
+}
+
+
+/* =========================================================
+   HEADING ANIMATION
+========================================================= */
+
+@keyframes headingAppear {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   PLAY BUTTON
+========================================================= */
+
+.banner-play {
+  margin-top: 28px;
+
+  width: 62px;
+  height: 62px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.8);
+
+  background:
+    rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(8px);
+
+  color: white;
+
+  font-size: 18px;
+
+  padding-left: 4px;
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+
+  animation:
+    playPulse 2.2s ease-in-out infinite;
+}
+
+
+.banner-play:hover {
+  transform: scale(1.12);
+
+  background:
+    rgba(255, 255, 255, 0.28);
+
+  box-shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   PLAY PULSE
+========================================================= */
+
+@keyframes playPulse {
+
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0
+      rgba(255, 255, 255, 0.25);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 12px
+      rgba(255, 255, 255, 0);
+  }
+
+}
+
+
+/* =========================================================
+   BOTTOM PRODUCT ANIMATION
+========================================================= */
+
+.bottom-product-animation {
+  position: absolute;
+
+  right: 28px;
+
+  bottom: -5px;
+
+  width: 145px;
+
+  height: 145px;
+
+  z-index: 8;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: center;
+
+  pointer-events: none;
+
+  animation:
+    productFloat 3s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.bottom-product-animation img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  object-position: bottom center;
+
+  filter:
+    drop-shadow(
+      0 8px 8px
+      rgba(0, 0, 0, 0.25)
+    );
+
+  animation:
+    productRotate 4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   PRODUCT FLOAT
+========================================================= */
+
+@keyframes productFloat {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-14px);
+  }
+
+}
+
+
+/* =========================================================
+   PRODUCT ROTATION
+========================================================= */
+
+@keyframes productRotate {
+
+  0%,
+  100% {
+    transform:
+      rotate(-3deg)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      rotate(3deg)
+      scale(1.04);
+  }
+
+}
+
+
+/* =========================================================
+   BOTTOM LINE
+========================================================= */
+
+.banner-bottom-line {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #28330e,
+      #ef7517,
+      #28330e
+    );
+
+  z-index: 20;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 900px) {
-  .full-banner img {
-    min-height: 350px;
-    object-fit: cover;
+
+  .full-banner {
+    height: 520px;
   }
+
+
+  .full-banner-content {
+    top: 32px;
+  }
+
+
+  .full-banner-content h2 {
+    font-size: 34px;
+  }
+
+
+  .bottom-product-animation {
+    width: 120px;
+    height: 120px;
+
+    right: 15px;
+  }
+
+
+  .running-character span {
+    font-size: 38px;
+  }
+
 }
 
 
-/* Mobile */
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 600px) {
-  .full-banner img {
-    min-height: 250px;
-    object-fit: cover;
+
+  .full-banner {
+    height: 430px;
   }
+
+
+  .full-banner-image {
+    object-position: center;
+  }
+
+
+  .full-banner-content {
+    top: 55px;
+
+    width: 94%;
+  }
+
+
+  .full-banner-content h2 {
+    font-size: 25px;
+
+    line-height: 1.12;
+
+    letter-spacing: 0.5px;
+  }
+
+
+  .banner-play {
+    width: 48px;
+    height: 48px;
+
+    margin-top: 18px;
+
+    font-size: 14px;
+  }
+
+
+  .running-character {
+    top: 0;
+  }
+
+
+  .running-character span {
+    font-size: 30px;
+  }
+
+
+  .bottom-product-animation {
+    width: 95px;
+    height: 95px;
+
+    right: 5px;
+
+    bottom: -2px;
+  }
+
+
+  .banner-bottom-line {
+    height: 4px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .full-banner {
+    height: 370px;
+  }
+
+
+  .full-banner-content {
+    top: 48px;
+  }
+
+
+  .full-banner-content h2 {
+    font-size: 21px;
+  }
+
+
+  .banner-play {
+    width: 43px;
+    height: 43px;
+
+    margin-top: 15px;
+  }
+
+
+  .bottom-product-animation {
+    width: 80px;
+    height: 80px;
+  }
+
 }

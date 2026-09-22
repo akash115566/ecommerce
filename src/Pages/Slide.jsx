@@ -124,14 +124,14 @@ function Slide() {
 
   return (
 
-    <section className="hero-slider">
+    <section className="hero-slider2">
 
       {/* =========================
           IMAGE SLIDER
       ========================= */}
 
       <div
-        className="hero-image"
+        className="hero-image2"
         style={{
           backgroundImage: `url(${slide.image})`,
         }}
