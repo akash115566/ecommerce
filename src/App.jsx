@@ -23,6 +23,8 @@ import WhySkinCare from "./Pages/WhySkinCare";
 import SeaBuckthornBlog from "./Pages/SeaBuckthornBlog";
 import GreenTeaBlog from "./Pages/GreenTeaBlog";
 import GoldCharcoalSoap from "./Pages/GoldCharcoalSoap";
+import Leadpopup from "./Pages/Leadpopup";
+import Gifting from "./Pages/Gifting";
 
 
 import {
@@ -90,6 +92,10 @@ const AppContent = () => {
         <Route path="/sea-buckthorn-blog" element={<SeaBuckthornBlog />} />
         <Route path="/green-tea-blog" element={<GreenTeaBlog />} />
         <Route path="/gold-charcoal-soap" element={<GoldCharcoalSoap />} />
+        <Route path="/leadpopup" element={<Leadpopup />} />
+        <Route path="/gifting" element={<Gifting />} />
+      
+        
       </Routes>
 
 

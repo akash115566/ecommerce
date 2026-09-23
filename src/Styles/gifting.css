@@ -1,0 +1,497 @@
+/* =========================================================
+   GIFTING PAGE
+   INTERNATIONAL LUXURY DESIGN
+========================================================= */
+
+.gifting-page {
+  width: 100%;
+  overflow: hidden;
+  background: #f8f6ef;
+  color: #27271d;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.gifting-hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 100px 7%;
+
+  background:
+    linear-gradient(
+      rgba(32, 31, 20, 0.35),
+      rgba(32, 31, 20, 0.35)
+    ),
+    url("/home/gifting/giftinghero.jfif")
+    center / cover no-repeat;
+
+  position: relative;
+}
+
+
+.gifting-hero-content {
+  max-width: 850px;
+  color: #fff;
+}
+
+
+.gifting-hero-content span {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+
+.gifting-hero-content h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(48px, 6vw, 82px);
+  font-weight: 400;
+  line-height: 1.05;
+  margin: 0 0 30px;
+}
+
+
+.gifting-hero-content p {
+  max-width: 620px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.gifting-section {
+  padding: 110px 7%;
+}
+
+
+.gifting-heading {
+  max-width: 750px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+
+.gifting-heading span {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 4px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+
+.gifting-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 5vw, 62px);
+  font-weight: 400;
+  line-height: 1.12;
+  margin: 0 0 25px;
+}
+
+
+.gifting-heading p {
+  max-width: 650px;
+  margin: auto;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #66645b;
+}
+
+
+/* =========================================================
+   CORPORATE
+========================================================= */
+
+.corporate-section {
+  background: #f4f1e9;
+}
+
+
+/* =========================================================
+   PERSONAL
+========================================================= */
+
+.personal-section {
+  background: #fff;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.gifting-cards {
+  max-width: 1300px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+
+.gifting-card {
+  background: #fff;
+  overflow: hidden;
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+
+.gifting-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 25px 60px rgba(30, 30, 20, 0.12);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.gifting-image {
+  height: 390px;
+  overflow: hidden;
+}
+
+
+.gifting-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+
+.gifting-card:hover .gifting-image img {
+  transform: scale(1.07);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.gifting-card-content {
+  padding: 30px 28px 35px;
+}
+
+
+.gifting-card-content h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 400;
+  margin: 0 0 14px;
+}
+
+
+.gifting-card-content p {
+  color: #6c6a61;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+
+.gifting-card-content a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #27271d;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  border-bottom: 1px solid #27271d;
+
+  padding-bottom: 7px;
+
+  transition: gap 0.3s ease;
+}
+
+
+.gifting-card-content a:hover {
+  gap: 20px;
+}
+
+
+.gifting-card-content a span {
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.gifting-action {
+  text-align: center;
+  margin-top: 60px;
+}
+
+
+.gifting-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+  padding: 0 35px;
+
+  background: #29291f;
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.gifting-button:hover {
+  background: #6c623f;
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.gifting-divider {
+  height: 1px;
+  background: #ddd9cd;
+
+  position: relative;
+  margin: 0 7%;
+}
+
+
+.gifting-divider span {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 50px;
+  height: 50px;
+
+  background: #f8f6ef;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.gifting-bottom {
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 100px 7%;
+
+  background:
+    linear-gradient(
+      rgba(38, 37, 28, 0.7),
+      rgba(38, 37, 28, 0.7)
+    ),
+    url("/home/gifting/giftingbottom.jfif")
+    center / cover no-repeat;
+
+  color: #fff;
+}
+
+
+.gifting-bottom span {
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+
+
+.gifting-bottom h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 5vw, 65px);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 22px 0;
+}
+
+
+.gifting-bottom p {
+  max-width: 600px;
+  margin: auto;
+
+  font-size: 15px;
+  line-height: 1.8;
+
+  opacity: 0.85;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .gifting-hero {
+    min-height: 560px;
+  }
+
+  .gifting-section {
+    padding: 90px 5%;
+  }
+
+  .gifting-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gifting-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 450px;
+    width: 100%;
+    margin: auto;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .gifting-hero {
+    min-height: 520px;
+    padding: 80px 20px;
+  }
+
+
+  .gifting-hero-content h1 {
+    font-size: 45px;
+  }
+
+
+  .gifting-hero-content p {
+    font-size: 14px;
+  }
+
+
+  .gifting-section {
+    padding: 75px 20px;
+  }
+
+
+  .gifting-heading {
+    margin-bottom: 45px;
+  }
+
+
+  .gifting-heading h2 {
+    font-size: 39px;
+  }
+
+
+  .gifting-cards {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+
+  .gifting-card:last-child {
+    grid-column: auto;
+    max-width: none;
+  }
+
+
+  .gifting-image {
+    height: 390px;
+  }
+
+
+  .gifting-card-content {
+    padding: 25px;
+  }
+
+
+  .gifting-button {
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+
+  .gifting-bottom {
+    min-height: 450px;
+    padding: 80px 20px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .gifting-hero-content h1 {
+    font-size: 39px;
+  }
+
+
+  .gifting-heading h2 {
+    font-size: 34px;
+  }
+
+
+  .gifting-image {
+    height: 330px;
+  }
+
+}

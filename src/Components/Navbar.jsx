@@ -442,6 +442,12 @@ function Navbar() {
             >
               BLOGS
             </Link>
+              <Link
+              to="/gifting"
+              className="main-nav-link"
+            >
+             GIFTING
+            </Link>
 
           </nav>
 
@@ -456,7 +462,7 @@ function Navbar() {
           >
 
             <span className="logo-main">
-              Tellus
+              TEllus
             </span>
 
             <span className="logo-sub">

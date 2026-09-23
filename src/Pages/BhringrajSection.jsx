@@ -5,7 +5,7 @@ const serumImages = [
   "/home/serum/serumshow.jfif",
   "/home/serum/serumblack.jfif",
   "/home/serum/serumc.jfif",
-  "/home/serum/serum1.jfif",
+  "/home/serum/serumdot.jfif",
 ];
 
 function BhringrajSection() {

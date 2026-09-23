@@ -8,13 +8,17 @@ import RecentAwards from './RecentAwards'
 import LatestReads from './LatestReads'
 import GoldCharcoalSoap from './GoldCharcoalSoap'
 import BhringrajSection from './BhringrajSection'
+import Leadpopup from './Leadpopup'
+import Gifting from './Gifting'
 
 
 
 const Home = () => {
   return (
   <>
+  <Leadpopup />
   <Slide/>
+  <Gifting />
 
 
 {/* =========================
