@@ -1,0 +1,387 @@
+/* =========================================================
+   SOS VIDEO AD
+========================================================= */
+
+.sos-video-ad {
+  position: relative;
+
+  width: 100%;
+  min-height: 680px;
+
+  overflow: hidden;
+
+  background: #181813;
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.sos-video {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.sos-video-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 20, 15, 0.82) 0%,
+      rgba(20, 20, 15, 0.52) 40%,
+      rgba(20, 20, 15, 0.15) 75%,
+      rgba(20, 20, 15, 0.35) 100%
+    );
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.sos-video-content {
+  position: relative;
+
+  z-index: 3;
+
+  min-height: 680px;
+
+  max-width: 1400px;
+
+  margin: auto;
+
+  padding: 80px 7%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   SMALL TEXT
+========================================================= */
+
+.sos-video-small {
+  margin-bottom: 18px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: #d8c28b;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.sos-video-content h2 {
+  margin: 0;
+
+  max-width: 3rem;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(
+    48px,
+    7vw,
+    92px
+  );
+
+  line-height: 0.95;
+
+  font-weight: 400;
+
+  letter-spacing: 1px;
+}
+
+.sos-video-content h2 span {
+  color: #c8aa69;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.sos-video-content p {
+  max-width: 480px;
+
+  margin: 30px 0;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+
+  color: rgba(
+    255,
+    255,
+    255,
+    0.78
+  );
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.sos-video-button {
+  min-width: 245px;
+
+  height: 52px;
+
+  padding: 0 22px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.7);
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.08
+  );
+
+  backdrop-filter: blur(8px);
+
+  color: #fff;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.sos-video-button span {
+  font-size: 20px;
+
+  transition:
+    transform 0.35s ease;
+}
+
+.sos-video-button:hover {
+  background: #fff;
+
+  color: #25251d;
+
+  transform: translateY(-3px);
+}
+
+.sos-video-button:hover span {
+  transform: translateX(6px);
+}
+
+
+/* =========================================================
+   BOTTOM COLLECTION LINE
+========================================================= */
+
+.sos-video-bottom {
+  position: absolute;
+
+  z-index: 4;
+
+  bottom: 28px;
+
+  left: 7%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  color: rgba(
+    255,
+    255,
+    255,
+    0.72
+  );
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+.sos-video-bottom i {
+  width: 22px;
+
+  height: 1px;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.45
+  );
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .sos-video-ad {
+    min-height: 600px;
+  }
+
+  .sos-video-content {
+    min-height: 600px;
+
+    padding:
+      70px 6%;
+  }
+
+  .sos-video-content h2 {
+    font-size: 64px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .sos-video-ad {
+    min-height: 650px;
+  }
+
+  .sos-video {
+    object-position: center;
+  }
+
+  .sos-video-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(20, 20, 15, 0.35),
+        rgba(20, 20, 15, 0.82)
+      );
+  }
+
+  .sos-video-content {
+    min-height: 650px;
+
+    padding:
+      60px 25px 100px;
+
+    justify-content: flex-end;
+  }
+
+  .sos-video-small {
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+  }
+
+  .sos-video-content h2 {
+    font-size: 49px;
+
+    line-height: 0.98;
+  }
+
+  .sos-video-content p {
+    margin: 22px 0;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .sos-video-button {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+  .sos-video-bottom {
+    left: 25px;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    font-size: 7px;
+
+    letter-spacing: 1.8px;
+  }
+
+  .sos-video-bottom i {
+    width: 12px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .sos-video-content h2 {
+    font-size: 42px;
+  }
+
+  .sos-video-content p {
+    font-size: 12px;
+  }
+}

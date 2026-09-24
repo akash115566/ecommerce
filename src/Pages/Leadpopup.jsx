@@ -1,30 +1,28 @@
 import React, { useState, useEffect } from "react";
 import "../Styles/leadpopup.css";
 
-
 const Leadpopup = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
-    mobile: "",
-    email: "",
-    business: "",
-    message: "",
+    businessAddress: "",
+    contact: "",
+    mail: "",
   });
 
-useEffect(() => {
-  const popupShown = sessionStorage.getItem("leadPopupShown");
+  useEffect(() => {
+    const popupShown = sessionStorage.getItem("leadPopupShown");
 
-  if (!popupShown) {
-    const timer = setTimeout(() => {
-      setShowPopup(true);
-      sessionStorage.setItem("leadPopupShown", "true");
-    }, 3000);
+    if (!popupShown) {
+      const timer = setTimeout(() => {
+        setShowPopup(true);
+        sessionStorage.setItem("leadPopupShown", "true");
+      }, 3000);
 
-    return () => clearTimeout(timer);
-  }
-}, []);
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -40,13 +38,15 @@ useEffect(() => {
 *🚀 New Lead - MSME Business Care*
 
 👤 Name: ${formData.name}
-📱 Mobile: ${formData.mobile}
-📧 Email: ${formData.email}
-🏢 Business: ${formData.business}
-📝 Message: ${formData.message}
+
+🏢 Business Address: ${formData.businessAddress}
+
+📱 Contact: ${formData.contact}
+
+📧 Mail: ${formData.mail}
 `;
 
-    // Apna WhatsApp Number
+    // WhatsApp Number
     const whatsappNumber = "917042438293";
 
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
@@ -59,88 +59,84 @@ useEffect(() => {
 
     setFormData({
       name: "",
-      mobile: "",
-      email: "",
-      business: "",
-      message: "",
+      businessAddress: "",
+      contact: "",
+      mail: "",
     });
   };
 
   if (!showPopup) return null;
 
   return (
-    <>
-   
-    
-   
     <div className="popup-overlay">
       <div className="popup-container">
 
+        {/* CLOSE BUTTON */}
         <button
           className="close-btn"
           onClick={() => setShowPopup(false)}
+          type="button"
         >
           ×
         </button>
 
+        {/* HEADING */}
         <h2>🚀 Grow Your Business</h2>
 
         <p>
-         Contact us for enquiries and bookings
+          For any type of query, please fill in your details.
         </p>
 
         <form onSubmit={handleSubmit}>
 
+          {/* NAME */}
           <input
             type="text"
             name="name"
-            placeholder="Your Name"
+            placeholder="Name"
             value={formData.name}
             onChange={handleChange}
             required
           />
 
-          <input
-            type="tel"
-            name="mobile"
-            placeholder="Mobile Number"
-            value={formData.mobile}
+          {/* BUSINESS ADDRESS */}
+          <textarea
+            name="businessAddress"
+            rows="3"
+            placeholder="Business Address"
+            value={formData.businessAddress}
             onChange={handleChange}
             required
           />
 
+          {/* CONTACT */}
+          <input
+            type="tel"
+            name="contact"
+            placeholder="Contact Number"
+            value={formData.contact}
+            onChange={handleChange}
+            required
+          />
+
+          {/* MAIL */}
           <input
             type="email"
-            name="email"
-            placeholder="Email Address"
-            value={formData.email}
+            name="mail"
+            placeholder="Mail"
+            value={formData.mail}
             onChange={handleChange}
+            required
           />
 
-          <input
-            type="text"
-            name="business"
-            placeholder="Business Name"
-            value={formData.business}
-            onChange={handleChange}
-          />
-
-          <textarea
-            name="message"
-            rows="4"
-            placeholder="Tell us about your business"
-            value={formData.message}
-            onChange={handleChange}
-          />
-
+          {/* SUBMIT */}
           <button type="submit" className="submit-btn">
-            Get Free Consultation
+            Submit
           </button>
 
         </form>
       </div>
     </div>
-     </>
   );
 };
 

@@ -10,6 +10,8 @@ import GoldCharcoalSoap from './GoldCharcoalSoap'
 import BhringrajSection from './BhringrajSection'
 import Leadpopup from './Leadpopup'
 import Gifting from './Gifting'
+import ProductSlider from './ProductSlider'
+import SOSVideoAd from './SOSVideoAd'
 
 
 
@@ -18,7 +20,8 @@ const Home = () => {
   <>
   <Leadpopup />
   <Slide/>
-  <Gifting />
+  <SOSVideoAd/>
+  {/* <Gifting /> */}
 
 
 {/* =========================
@@ -89,6 +92,7 @@ Wisdom brought back to life a time tested ritual for deeply hydrated,  youthful 
 
 <SeasonalProducts />
 <MostLovedRituals/>
+<ProductSlider />
 <GoldCharcoalSoap />
 <JustIn />
 

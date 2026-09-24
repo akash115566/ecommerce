@@ -25,6 +25,8 @@ import GreenTeaBlog from "./Pages/GreenTeaBlog";
 import GoldCharcoalSoap from "./Pages/GoldCharcoalSoap";
 import Leadpopup from "./Pages/Leadpopup";
 import Gifting from "./Pages/Gifting";
+import ProductSlider from "./Pages/ProductSlider";
+import SOSVideoAd from "./Pages/SOSVideoAd";
 
 
 import {
@@ -94,6 +96,10 @@ const AppContent = () => {
         <Route path="/gold-charcoal-soap" element={<GoldCharcoalSoap />} />
         <Route path="/leadpopup" element={<Leadpopup />} />
         <Route path="/gifting" element={<Gifting />} />
+         <Route path="/product-slider" element={<ProductSlider />} />
+         <Route path="/sosvideo" element={<SOSVideoAd />} />
+
+        
       
         
       </Routes>
