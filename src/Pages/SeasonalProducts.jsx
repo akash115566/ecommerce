@@ -13,7 +13,7 @@ const products = [
       "/home/soap/soapgreen.jfif",
       "/home/soap/soapgreen.jfif",
     ],
-    name: "PREMIUM AYURVEDIC SOAP",
+    name: "Lemon green tea soap ",
     description: "Gentle cleansing & nourishing care",
     size: "100 g",
     sizes: ["100 g"],
@@ -36,7 +36,7 @@ const products = [
       "/home/soap/soapred-2.jfif",
       "/home/soap/nisha-3.jfif",
     ],
-    name: "LUXURY ROSE AYURVEDIC SOAP",
+    name: "Goat milk soap ",
     description: "Refreshing & nourishing skin care",
     size: "100 g",
     sizes: ["100 g"],
@@ -60,7 +60,7 @@ const products = [
       "/home/soap/soapgold.jfif",
       "/home/soap/soapgold.jfif",
     ],
-    name: "LUXURY GOLDEN AYURVEDIC SOAP",
+    name: "CAmel milk soap ",
     description: "Radiance & gentle cleansing",
     size: "100 g",
     sizes: ["100 g"],
@@ -83,7 +83,7 @@ const products = [
       "/home/soap/soapred-2.jfif",
       "/home/soap/nisha-3.jfif",
     ],
-    name: "PREMIUM PINK AYURVEDIC SOAP",
+    name: "Sea butter soap",
     description: "Soft, fresh & nourishing care",
     size: "100 g",
     sizes: ["100 g"],
@@ -107,7 +107,7 @@ const products = [
       "/home/soap/soapgreen.jfif",
       "/home/soap/soapgreen.jfif",
     ],
-    name: "PURE WHITE AYURVEDIC SOAP",
+    name: "Seabuthorn soap ",
     description: "Pure cleansing & everyday freshness",
     size: "100 g",
     sizes: ["100 g"],
@@ -123,52 +123,7 @@ const products = [
     ],
   },
 
-  {
-    image: "/home/soap/soapred.jfif",
-    images: [
-      "/home/soap/soapred.jfif",
-      "/home/soap/soapred-2.jfif",
-      "/home/soap/nisha-3.jfif",
-    ],
-    name: "PREMIUM RED AYURVEDIC SOAP",
-    description: "Rich cleansing & refreshing care",
-    size: "100 g",
-    sizes: ["100 g"],
-    price: 1200,
-    category: "Skin Care",
-    productDescription:
-      "A premium Ayurvedic soap designed to make everyday cleansing feel refined, refreshing and nourishing.",
-    benefits: [
-      "Gently cleanses skin",
-      "Helps remove impurities",
-      "Leaves skin feeling refreshed",
-      "Suitable for everyday use",
-    ],
-  },
-
-  {
-    image: "/home/soap/soapgreen.jfif",
-    images: [
-      "/home/soap/soapgreen.jfif",
-      "/home/soap/soapgreen.jfif",
-      "/home/soap/soapgreen.jfif",
-      "/home/soap/soapgreen.jfif",
-    ],
-    name: "GREEN HERBAL AYURVEDIC SOAP",
-    description: "Herbal cleansing & skin freshness",
-    size: "100 g",
-    sizes: ["100 g"],
-    price: 1200,
-    category: "Skin Care",
-    productDescription:
-      "A herbal-inspired Ayurvedic soap created for a refreshing cleansing ritual and comfortable everyday skin care.",
-    benefits: [
-      "Gently cleanses the skin",
-      "Helps remove excess impurities",
-      "Leaves skin feeling fresh",
-      "Ideal for daily use",
-    ],
-  },
+ 
 
   
 ];
