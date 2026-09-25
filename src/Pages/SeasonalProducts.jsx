@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../Styles/seasonalProducts.css";
 import { useCart } from "../Context/CartContext";
 import Reviews from "./Reviews";
+import ReviewsSection from "./ReviewsSection";
 
 const products = [
   {
@@ -60,7 +61,7 @@ const products = [
       "/home/soap/soapgold.jfif",
       "/home/soap/soapgold.jfif",
     ],
-    name: "CAmel milk soap ",
+    name: "Camel milk soap ",
     description: "Radiance & gentle cleansing",
     size: "100 g",
     sizes: ["100 g"],
@@ -294,7 +295,7 @@ const openProductDetails = (product) => {
    KEY INGREDIENTS
 ========================================= */}
 
-<section className="ingredients-section">
+{/* <section className="ingredients-section">
 
   <div className="ingredients-title">
 
@@ -363,7 +364,7 @@ const openProductDetails = (product) => {
         rating: 5,
         comment:
           "The rose-infused feel is amazing. My skin feels comfortable, hydrated and naturally fresh. Definitely something I enjoy using every day.",
-        image: "/home/girl.jfif",
+        image: "/home/girlaad.jfif",
       },
 
       {
@@ -372,7 +373,7 @@ const openProductDetails = (product) => {
         rating: 5,
         comment:
           "A beautiful Ayurvedic-inspired experience. The product feels soothing and luxurious, and I really like the subtle natural fragrance.",
-        image: "/home/girlad.jfif",
+        image: "/home/girlaadd.jfif",
       },
     ].map((review, index) => (
 
@@ -381,7 +382,7 @@ const openProductDetails = (product) => {
         key={index}
       >
 
-        {/* CUSTOMER IMAGE */}
+      
 
         <div className="ingredient-image review-image">
 
@@ -393,7 +394,7 @@ const openProductDetails = (product) => {
         </div>
 
 
-        {/* STARS */}
+       
 
         <div className="review-stars">
 
@@ -404,7 +405,7 @@ const openProductDetails = (product) => {
         </div>
 
 
-        {/* COMMENT */}
+    
 
         <p className="review-comment">
           "{review.comment}"
@@ -414,7 +415,7 @@ const openProductDetails = (product) => {
         <div className="ingredient-line"></div>
 
 
-        {/* CUSTOMER */}
+       
 
         <h3>
           {review.name}
@@ -430,7 +431,8 @@ const openProductDetails = (product) => {
 
   </div>
 
-</section>
+</section> */}
+<ReviewsSection />
 
 {/* =========================================
    HOW TO USE

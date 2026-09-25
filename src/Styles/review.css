@@ -1,0 +1,283 @@
+/* =========================================================
+   REVIEW FORM
+========================================================= */
+
+.review-form-box {
+  grid-column: 1 / -1;
+
+  margin: 20px 0 55px;
+
+  padding: 50px;
+
+  background: #fbf9f2;
+
+  border: 1px solid rgba(48, 52, 15, 0.12);
+
+  box-shadow:
+    0 20px 50px rgba(48, 52, 15, 0.08);
+}
+
+
+.review-form-heading {
+  margin-bottom: 35px;
+}
+
+
+.review-form-heading span {
+  font-size: 11px;
+
+  letter-spacing: 3px;
+
+  color: #a38345;
+}
+
+
+.review-form-heading h3 {
+  margin: 10px 0 0;
+
+  font-family: Georgia, serif;
+
+  font-size: 36px;
+
+  line-height: 1.15;
+
+  font-weight: 400;
+
+  color: #30340f;
+}
+
+
+/* =========================================================
+   FORM ROW
+========================================================= */
+
+.review-form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 25px;
+}
+
+
+.review-input-group {
+  margin-bottom: 25px;
+}
+
+
+.review-input-group label,
+.review-rating-input label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color: #30340f;
+
+  font-weight: 600;
+}
+
+
+.review-input-group input,
+.review-input-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 15px 16px;
+
+  border: 1px solid #ddd8c9;
+
+  outline: none;
+
+  background: #fff;
+
+  color: #30340f;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  transition: 0.3s ease;
+}
+
+
+.review-input-group textarea {
+  resize: vertical;
+}
+
+
+.review-input-group input:focus,
+.review-input-group textarea:focus {
+  border-color: #a38345;
+
+  box-shadow:
+    0 0 0 3px rgba(163, 131, 69, 0.08);
+}
+
+
+/* =========================================================
+   RATING
+========================================================= */
+
+.review-rating-input {
+  margin-bottom: 25px;
+}
+
+
+.rating-select {
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+}
+
+
+.rating-star {
+  border: none;
+
+  background: transparent;
+
+  padding: 0;
+
+  cursor: pointer;
+
+  font-size: 30px;
+
+  color: #d4cebf;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.rating-star:hover {
+  color: #b08a3c;
+
+  transform: scale(1.12);
+}
+
+
+.rating-star.active {
+  color: #b08a3c;
+}
+
+
+.rating-number {
+  margin-left: 10px;
+
+  font-size: 13px;
+
+  color: #777;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.submit-review-btn {
+  padding: 15px 32px;
+
+  border: none;
+
+  background: #30340f;
+
+  color: #fff;
+
+  cursor: pointer;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  transition: 0.3s ease;
+}
+
+
+.submit-review-btn:hover {
+  background: #a38345;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   REVIEW STARS
+========================================================= */
+
+.review-stars {
+  color: #b08a3c;
+
+  font-size: 15px;
+
+  letter-spacing: 3px;
+
+  margin: 15px 0;
+}
+
+
+.empty-stars {
+  color: #d8d1c2;
+}
+
+
+/* =========================================================
+   VERIFIED
+========================================================= */
+
+.verified-review {
+  display: block;
+
+  margin-top: 12px;
+
+  font-size: 9px;
+
+  letter-spacing: 1.5px;
+
+  color: #8b8f72;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .review-form-box {
+    padding: 30px 22px;
+  }
+
+
+  .review-form-row {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+
+  .review-form-heading h3 {
+    font-size: 30px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .review-form-box {
+    padding: 25px 18px;
+  }
+
+
+  .rating-star {
+    font-size: 26px;
+  }
+
+}

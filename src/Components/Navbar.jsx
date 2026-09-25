@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../Styles/navbar.css";
+import SeasonalProducts from "../Pages/SeasonalProducts";
 
 function Navbar() {
   const [offerSlide, setOfferSlide] = useState(0);
@@ -76,55 +77,55 @@ function Navbar() {
       ],
     },
 
-    "HAIR CARE": {
-      products: [
-        {
-          name: "Bhringraj Hair Oil",
-          image: "/home/serum/serumblack.jfif",
-          link: "/hair",
-        },
-        {
-          name: "Luxury Hair Serum",
-          image: "/home/serum/serumc.jfif",
-          link: "/hair",
-        },
-        {
-          name: "Ayurvedic Hair Mask",
-          image: "/home/serum/serumblack.jfif",
-          link: "/hair",
-        },
-        {
-          name: "Nourishing Shampoo",
-          image: "/home/serum/serumc.jfif",
-          link: "/hair",
-        },
-        {
-          name: "Premium Conditioner",
-          image: "/home/serum/serumblack.jfif",
-          link: "/hair",
-        },
-      ],
+    // "HAIR CARE": {
+    //   products: [
+    //     {
+    //       name: "Bhringraj Hair Oil",
+    //       image: "/home/serum/serumblack.jfif",
+    //       link: "/hair",
+    //     },
+    //     {
+    //       name: "Luxury Hair Serum",
+    //       image: "/home/serum/serumc.jfif",
+    //       link: "/hair",
+    //     },
+    //     {
+    //       name: "Ayurvedic Hair Mask",
+    //       image: "/home/serum/serumblack.jfif",
+    //       link: "/hair",
+    //     },
+    //     {
+    //       name: "Nourishing Shampoo",
+    //       image: "/home/serum/serumc.jfif",
+    //       link: "/hair",
+    //     },
+    //     {
+    //       name: "Premium Conditioner",
+    //       image: "/home/serum/serumblack.jfif",
+    //       link: "/hair",
+    //     },
+    //   ],
 
-      banners: [
-        {
-          image: "/home/serum/serumblack.jfif",
-          title: "HAIR RITUALS",
-          link: "/hair",
-        },
-        {
-          image: "/home/serum/serumc.jfif",
-          title: "NATURAL HAIR CARE",
-          link: "/hair",
-        },
-      ],
-    },
+    //   banners: [
+    //     {
+    //       image: "/home/serum/serumblack.jfif",
+    //       title: "HAIR RITUALS",
+    //       link: "/hair",
+    //     },
+    //     {
+    //       image: "/home/serum/serumc.jfif",
+    //       title: "NATURAL HAIR CARE",
+    //       link: "/hair",
+    //     },
+    //   ],
+    // },
 
     "BATH & BODY": {
       products: [
         {
           name: "Luxury Body Wash",
           image: "/home/serum/serumblack.jfif",
-          link: "/bath-body",
+          link: "/seasonal",
         },
         {
           name: "Natural Body Lotion",
@@ -141,6 +142,35 @@ function Navbar() {
           image: "/home/serum/serumc.jfif",
           link: "/bath-body",
         },
+      ],
+
+      banners: [
+        {
+          image: "/home/serum/serumblack.jfif",
+          title: "BODY RITUALS",
+          link: "/bath-body",
+        },
+        {
+          image: "/home/serum/serumc.jfif",
+          title: "BATH ESSENTIALS",
+          link: "/bath-body",
+        },
+      ],
+    },
+     "GIFTING": {
+      products: [
+        {
+          name: "Normal Gift",
+          image: "/home/serum/serumblack.jfif",
+          link: "/gifting",
+        },
+       
+        {
+          name: "Luxury Gift",
+          image: "/home/serum/serumblack.jfif",
+          link: "/bath-body",
+        },
+      
       ],
 
       banners: [
@@ -467,7 +497,7 @@ function Navbar() {
           >
 
             <span className="logo-main">
-              TEllus
+              TEllUS
             </span>
 
             <span className="logo-sub">

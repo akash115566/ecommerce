@@ -84,7 +84,7 @@ function Footer() {
           <a href="/orders">MY ORDER(S)</a>
           <a href="/track-order">TRACK MY ORDER</a>
           <a href="/ingredients">OUR INGREDIENTS</a>
-          <a href="/uk">FOREST ESSENTIALS UK</a>
+          {/* <a href="/uk">FOREST ESSENTIALS UK</a> */}
 
         </div>
 

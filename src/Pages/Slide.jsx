@@ -168,12 +168,12 @@ function Slide() {
             {slide.description}
           </p>
 
-
+{/* 
           <button className="hero-button">
 
             {slide.button} →
 
-          </button>
+          </button> */}
 
         </div>
 

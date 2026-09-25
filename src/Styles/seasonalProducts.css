@@ -184,7 +184,7 @@
 .product-bottom {
   display: flex;
 
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 
   margin-top: 12px;
@@ -192,6 +192,7 @@
 
 .product-bottom strong {
   font-size: 15px;
+    align-items: center;
 }
 
 .product-bottom span {

@@ -27,6 +27,7 @@ import Leadpopup from "./Pages/Leadpopup";
 import Gifting from "./Pages/Gifting";
 import ProductSlider from "./Pages/ProductSlider";
 import SOSVideoAd from "./Pages/SOSVideoAd";
+import ReviewsSection from "./Pages/ReviewsSection";
 
 
 import {
@@ -98,6 +99,7 @@ const AppContent = () => {
         <Route path="/gifting" element={<Gifting />} />
          <Route path="/product-slider" element={<ProductSlider />} />
          <Route path="/sosvideo" element={<SOSVideoAd />} />
+         <Route path="/review" element={<ReviewsSection />} />
 
         
       
