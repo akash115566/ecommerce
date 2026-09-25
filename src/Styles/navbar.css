@@ -1713,3 +1713,590 @@ body {
   }
 
 }
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+.mobile-nav {
+  display: none;
+}
+
+
+/* =========================================================
+   MOBILE TOP
+========================================================= */
+
+.mobile-nav-top {
+  height: 62px;
+
+  padding: 0 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #fbf8ed;
+
+  border-top: 1px solid rgba(48, 52, 15, 0.1);
+  border-bottom: 1px solid rgba(48, 52, 15, 0.15);
+
+  position: relative;
+  z-index: 1001;
+}
+
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+
+.mobile-menu-btn {
+  width: 42px;
+  height: 42px;
+
+  padding: 8px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 5px;
+
+  cursor: pointer;
+}
+
+.mobile-menu-btn span {
+  width: 23px;
+  height: 1.5px;
+
+  background: #30340f;
+
+  display: block;
+
+  transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   MOBILE LOGO
+========================================================= */
+
+.mobile-logo {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  color: #30340f;
+
+  line-height: 1;
+}
+
+.mobile-logo span {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 21px;
+
+  letter-spacing: 2px;
+}
+
+.mobile-logo small {
+  margin-top: 5px;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 6px;
+
+  letter-spacing: 2px;
+
+  color: #9e8643;
+}
+
+
+/* =========================================================
+   MOBILE CART
+========================================================= */
+
+.mobile-cart {
+  width: 42px;
+  height: 42px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  color: #30340f;
+
+  font-size: 18px;
+}
+
+.mobile-cart b {
+  position: absolute;
+
+  top: 2px;
+  right: 0;
+
+  min-width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+
+  background: #b38325;
+
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 9px;
+
+  font-family: Poppins, sans-serif;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu {
+  position: absolute;
+
+  top: 62px;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+
+  background: #fbf8ed;
+
+  border-bottom: 1px solid rgba(48, 52, 15, 0.15);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.12);
+
+  z-index: 1000;
+
+  max-height: calc(100vh - 62px);
+
+  overflow-y: auto;
+
+  animation: mobileMenuOpen 0.3s ease;
+}
+
+@keyframes mobileMenuOpen {
+
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE MENU ITEMS
+========================================================= */
+
+.mobile-menu-item {
+  width: 100%;
+
+  min-height: 52px;
+
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  border: none;
+
+  border-bottom: 1px solid rgba(48, 52, 15, 0.1);
+
+  background: transparent;
+
+  color: #30340f;
+
+  text-decoration: none;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 12px;
+
+  letter-spacing: 1.2px;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition: background 0.25s ease;
+}
+
+.mobile-menu-item:hover {
+  background: #f2eee1;
+}
+
+
+/* =========================================================
+   SHOP BUTTON
+========================================================= */
+
+.mobile-shop-btn {
+  font-weight: 500;
+}
+
+.mobile-plus {
+  font-family: Poppins, sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 300;
+}
+
+
+/* =========================================================
+   CONCERN LIST
+========================================================= */
+
+.mobile-concern-list {
+  background: #f5f1e6;
+
+  border-bottom: 1px solid rgba(48, 52, 15, 0.1);
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.mobile-category {
+  width: 100%;
+
+  min-height: 48px;
+
+  padding: 0 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: none;
+
+  border-bottom: 1px solid rgba(48, 52, 15, 0.08);
+
+  background: transparent;
+
+  color: #30340f;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 1.2px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: background 0.25s ease;
+}
+
+.mobile-category:hover {
+  background: #eee8d9;
+}
+
+
+/* =========================================================
+   MOBILE PRODUCTS
+========================================================= */
+
+.mobile-products {
+  padding: 12px 15px 16px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  background: #fbf8ed;
+
+  animation: productsOpen 0.25s ease;
+}
+
+@keyframes productsOpen {
+
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE PRODUCT
+========================================================= */
+
+.mobile-product {
+  min-width: 0;
+
+  display: block;
+
+  text-decoration: none;
+
+  color: #30340f;
+
+  background: #fffdf7;
+
+  border: 1px solid rgba(48, 52, 15, 0.08);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.mobile-product:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.mobile-product-image {
+  width: 100%;
+
+  height: 125px;
+
+  overflow: hidden;
+
+  background: #f1eee4;
+}
+
+.mobile-product-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.5s ease;
+}
+
+.mobile-product:hover
+.mobile-product-image img {
+  transform: scale(1.06);
+}
+
+
+/* =========================================================
+   PRODUCT NAME
+========================================================= */
+
+.mobile-product > span {
+  min-height: 42px;
+
+  padding: 9px 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  color: #30340f;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .desktop-left-nav {
+    display: none !important;
+  }
+
+  .right-menu {
+    display: none !important;
+  }
+
+  .main-header {
+    display: none !important;
+  }
+
+  .mobile-nav {
+    display: block;
+
+    width: 100%;
+
+    position: relative;
+  }
+
+  .offer-bar {
+    min-height: 30px;
+
+    height: 30px;
+
+    font-size: 9px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .mobile-nav-top {
+    height: 60px;
+  }
+
+  .mobile-menu {
+    top: 60px;
+
+    max-height: calc(100vh - 60px);
+  }
+
+  .mobile-logo span {
+    font-size: 20px;
+  }
+
+  .mobile-product-image {
+    height: 120px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .mobile-nav-top {
+    height: 58px;
+
+    padding: 0 10px;
+  }
+
+  .mobile-menu {
+    top: 58px;
+
+    max-height: calc(100vh - 58px);
+  }
+
+  .mobile-logo span {
+    font-size: 18px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .mobile-logo small {
+    font-size: 5px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .mobile-products {
+    padding: 10px 12px 14px;
+
+    gap: 9px;
+  }
+
+  .mobile-product-image {
+    height: 105px;
+  }
+
+  .mobile-product > span {
+    font-size: 8.5px;
+
+    min-height: 40px;
+
+    padding: 8px 5px;
+  }
+
+  .mobile-category {
+    padding: 0 25px;
+
+    min-height: 46px;
+  }
+
+  .mobile-menu-item {
+    min-height: 50px;
+
+    padding: 0 18px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .mobile-products {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 7px;
+
+    padding: 8px;
+  }
+
+  .mobile-product-image {
+    height: 95px;
+  }
+
+  .mobile-product > span {
+    font-size: 8px;
+  }
+
+}
