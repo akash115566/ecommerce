@@ -3,8 +3,8 @@ import "../Styles/review.css";
 
 const defaultReviews = [
   {
-    name: "Priya Sharma",
-    location: "Delhi, India",
+    name: "Beatrix ",
+    location: "UK",
     rating: 5,
     comment:
       "I have been using this product for a few weeks and absolutely love the texture. My skin feels soft, hydrated and fresh after every use.",
@@ -12,8 +12,8 @@ const defaultReviews = [
   },
 
   {
-    name: "Ananya Mehta",
-    location: "Mumbai, India",
+    name: "Sophia",
+    location: "USA",
     rating: 5,
     comment:
       "The fragrance is beautiful and the overall experience feels very luxurious. It has become a part of my daily skincare ritual.",
@@ -21,8 +21,8 @@ const defaultReviews = [
   },
 
   {
-    name: "Ritika Kapoor",
-    location: "Bangalore, India",
+    name: "Elena",
+    location: "Russia",
     rating: 4,
     comment:
       "I really enjoyed using this product. It feels gentle on the skin and gives a lovely refreshing feeling without being heavy.",
@@ -30,8 +30,8 @@ const defaultReviews = [
   },
 
   {
-    name: "Neha Verma",
-    location: "Gurgaon, India",
+    name: "Amara",
+    location: "Italy",
     rating: 5,
     comment:
       "The quality feels premium and the packaging is beautiful. I especially liked how nourished my skin felt after regular use.",
@@ -39,8 +39,8 @@ const defaultReviews = [
   },
 
   {
-    name: "Kavya Singh",
-    location: "Jaipur, India",
+    name: "Chloe",
+    location: "France",
     rating: 5,
     comment:
       "The rose-infused feel is amazing. My skin feels comfortable, hydrated and naturally fresh. Definitely something I enjoy using every day.",
@@ -48,8 +48,8 @@ const defaultReviews = [
   },
 
   {
-    name: "Meera Malhotra",
-    location: "Chandigarh, India",
+    name: "Zeynep",
+    location: "UK",
     rating: 5,
     comment:
       "A beautiful Ayurvedic-inspired experience. The product feels soothing and luxurious, and I really like the subtle natural fragrance.",

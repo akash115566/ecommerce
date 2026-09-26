@@ -1,181 +1,578 @@
-*{
+/* =========================================================
+   TELLUS ESSENTIALS — PREMIUM LEAD POPUP
+========================================================= */
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Overlay */
-.popup-overlay{
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.popup-overlay {
   position: fixed;
   inset: 0;
+
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.7);
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(48, 52, 15, 0.25),
+      rgba(20, 24, 10, 0.82)
+    );
+
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+
+  padding: 20px;
+
   z-index: 999999;
+
+  animation: overlayFade 0.35s ease;
 }
 
-/* Popup Box */
-.popup-container{
-  width: 100%;
-  max-width: 500px;
-  background: #fff;
-  border-radius: 16px;
-  padding: 30px;
-  position: relative;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
-  animation: popupScale .4s ease;
-  max-height: 90vh;
-  overflow-y: auto;
-}
-
-@keyframes popupScale{
-  from{
-    transform: scale(.8);
+@keyframes overlayFade {
+  from {
     opacity: 0;
   }
-  to{
-    transform: scale(1);
+
+  to {
     opacity: 1;
   }
 }
 
-/* Close Button */
-.close-btn{
+
+/* =========================================================
+   POPUP CONTAINER
+========================================================= */
+
+.popup-container {
+  position: relative;
+
+  width: 100%;
+  max-width: 520px;
+
+  max-height: 92vh;
+  overflow-y: auto;
+
+  padding: 42px 40px 38px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffdf7 0%,
+      #f8f5e9 100%
+    );
+
+  border: 1px solid rgba(158, 134, 67, 0.35);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.30),
+    0 10px 30px rgba(48, 52, 15, 0.15);
+
+  animation: popupLuxury 0.55s cubic-bezier(.22, 1, .36, 1);
+
+  scrollbar-width: thin;
+  scrollbar-color: #9e8643 transparent;
+}
+
+@keyframes popupLuxury {
+
+  0% {
+    opacity: 0;
+    transform:
+      translateY(35px)
+      scale(0.94);
+  }
+
+  100% {
+    opacity: 1;
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   TOP GOLD LINE
+========================================================= */
+
+.popup-container::before {
+  content: "";
+
   position: absolute;
-  top: 10px;
-  right: 15px;
-  border: none;
-  background: transparent;
-  font-size: 30px;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 90px;
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #9e8643,
+      #c5aa64,
+      #9e8643,
+      transparent
+    );
+
+  border-radius: 0 0 10px 10px;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.close-btn {
+  position: absolute;
+
+  top: 16px;
+  right: 18px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(158, 134, 67, 0.25);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.65);
+
+  color: #30340f;
+
+  font-size: 25px;
+  font-weight: 300;
+
   cursor: pointer;
-  color: #333;
+
+  transition:
+    all 0.3s ease;
 }
 
-/* Heading */
-.popup-container h2{
+.close-btn:hover {
+  background: #30340f;
+
+  color: #fff;
+
+  border-color: #30340f;
+
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.popup-container h2 {
   text-align: center;
+
   margin-bottom: 10px;
-  color: #0d47a1;
-  font-size: 30px;
+
+  color: #30340f;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: 34px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.5px;
 }
 
-.popup-container p{
+
+/* =========================================================
+   SUB HEADING
+========================================================= */
+
+.popup-container p {
+  max-width: 420px;
+
+  margin: 0 auto 25px;
+
   text-align: center;
-  color: #666;
-  margin-bottom: 20px;
+
+  color: #6d6b5d;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.popup-container form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+
+/* =========================================================
+   INPUT + TEXTAREA
+========================================================= */
+
+.popup-container input,
+.popup-container textarea {
+
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border: 1px solid #ddd7c6;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  color: #30340f;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.popup-container input::placeholder,
+.popup-container textarea::placeholder {
+  color: #999688;
+}
+
+
+.popup-container input:hover,
+.popup-container textarea:hover {
+  border-color: #bca56a;
+}
+
+
+.popup-container input:focus,
+.popup-container textarea:focus {
+
+  background: #ffffff;
+
+  border-color: #9e8643;
+
+  box-shadow:
+    0 0 0 3px rgba(158, 134, 67, 0.10);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.popup-container textarea {
+
+  resize: vertical;
+
+  min-height: 105px;
+
   line-height: 1.5;
 }
 
-/* Form */
-.popup-container form{
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
 
-.popup-container input,
-.popup-container textarea{
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.submit-btn {
+
+  position: relative;
+
+  overflow: hidden;
+
   width: 100%;
-  padding: 14px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  outline: none;
-  font-size: 15px;
-}
 
-.popup-container input:focus,
-.popup-container textarea:focus{
-  border-color: #0d47a1;
-}
+  margin-top: 5px;
 
-.popup-container textarea{
-  resize: vertical;
-  min-height: 100px;
-}
+  padding: 15px 20px;
 
-/* Button */
-.submit-btn{
-  background: #0d47a1;
-  color: #fff;
-  border: none;
-  padding: 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
+  border: 1px solid #30340f;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #30340f,
+      #42471b
+    );
+
+  color: #ffffff;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 13px;
+
   font-weight: 600;
-  transition: .3s;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(48, 52, 15, 0.20);
+
+  transition:
+    all 0.35s ease;
 }
 
-.submit-btn:hover{
-  background: #08306b;
+
+/* GOLD SHINE */
+
+.submit-btn::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 80%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.25),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.6s ease;
+}
+
+
+.submit-btn:hover::before {
+  left: 140%;
+}
+
+
+.submit-btn:hover {
+
+  background:
+    linear-gradient(
+      135deg,
+      #9e8643,
+      #b69a55
+    );
+
+  border-color: #9e8643;
+
   transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 28px rgba(158, 134, 67, 0.30);
 }
 
-/* Tablet */
-@media (max-width: 768px){
-  .popup-container{
-    max-width: 95%;
-    padding: 22px;
-  }
 
-  .popup-container h2{
-    font-size: 24px;
-  }
-
-  .popup-container p{
-    font-size: 14px;
-  }
-
-  .popup-container input,
-  .popup-container textarea{
-    padding: 12px;
-    font-size: 14px;
-  }
-
-  .submit-btn{
-    padding: 13px;
-    font-size: 15px;
-  }
+.submit-btn:active {
+  transform: translateY(0);
 }
 
-/* Mobile */
-@media (max-width: 480px){
-  .popup-overlay{
-    padding: 10px;
-  }
 
-  .popup-container{
-    width: 100%;
-    border-radius: 12px;
+/* =========================================================
+   INPUT AUTOFILL
+========================================================= */
+
+.popup-container input:-webkit-autofill {
+
+  -webkit-box-shadow:
+    0 0 0 1000px #ffffff inset;
+
+  -webkit-text-fill-color: #30340f;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .popup-overlay {
     padding: 18px;
   }
 
-  .popup-container h2{
-    font-size: 20px;
+  .popup-container {
+
+    max-width: 500px;
+
+    padding: 36px 28px 30px;
+
+    border-radius: 19px;
   }
 
-  .popup-container p{
-    font-size: 13px;
+  .popup-container h2 {
+    font-size: 29px;
   }
 
-  .close-btn{
-    font-size: 26px;
-    top: 8px;
-    right: 12px;
+  .popup-container p {
+    font-size: 12.5px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .popup-overlay {
+    padding: 12px;
+  }
+
+  .popup-container {
+
+    width: 100%;
+
+    max-height: 94vh;
+
+    padding: 34px 18px 22px;
+
+    border-radius: 17px;
+  }
+
+  .popup-container::before {
+    width: 70px;
+  }
+
+  .close-btn {
+
+    top: 11px;
+    right: 11px;
+
+    width: 34px;
+    height: 34px;
+
+    font-size: 22px;
+  }
+
+  .popup-container h2 {
+
+    font-size: 25px;
+
+    margin-bottom: 8px;
+  }
+
+  .popup-container p {
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+  }
+
+  .popup-container form {
+    gap: 10px;
   }
 
   .popup-container input,
-  .popup-container textarea{
-    padding: 11px;
-    font-size: 14px;
+  .popup-container textarea {
+
+    padding: 12px 13px;
+
+    font-size: 13px;
+
+    border-radius: 9px;
   }
 
-  .submit-btn{
-    padding: 12px;
-    font-size: 14px;
+  .popup-container textarea {
+    min-height: 90px;
   }
+
+  .submit-btn {
+
+    padding: 13px;
+
+    font-size: 12px;
+
+    letter-spacing: 1.2px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .popup-container {
+
+    padding: 31px 14px 18px;
+
+  }
+
+  .popup-container h2 {
+    font-size: 22px;
+  }
+
+  .popup-container p {
+    font-size: 11px;
+  }
+
 }

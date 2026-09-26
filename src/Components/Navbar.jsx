@@ -362,6 +362,15 @@ function Navbar() {
           ================================================= */}
 
           <nav className="desktop-left-nav">
+             {/* LOGO — STARTING */}
+              <Link to="/" className="header-logo">
+    <img
+      src="/home/logo.jpeg"
+      alt="Tellus Essentials"
+      style={{ height:"50px",width:'80px',background: "transparent",zIndex:"3px"}}
+    />
+  </Link>
+ 
 
 
             {/* ===============================================
@@ -676,7 +685,7 @@ function Navbar() {
 
             {/* TRACK ORDER */}
 
-            <Link
+            {/* <Link
               to="/track-order"
               className="track-order"
             >
@@ -687,7 +696,7 @@ function Navbar() {
 
               Track Order
 
-            </Link>
+            </Link> */}
 
 
             {/* SEARCH */}

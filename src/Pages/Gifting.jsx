@@ -5,39 +5,40 @@ import "../Styles/gifting.css";
 
 const corporateGifts = [
   {
-    image: "/home/gifting/corporate1.jfif",
+    image: "/home/gift/giftcamel.jfif",
     title: "Luxury Corporate Hampers",
     text: "Thoughtfully curated luxury hampers for clients, teams and business partners.",
   },
   {
-    image: "/home/gifting/corporate2.jfif",
+    image: "/home/gift/giftfour.jfif",
     title: "Employee Appreciation",
     text: "Beautiful gifting options to celebrate and appreciate your employees.",
   },
   {
-    image: "/home/gifting/corporate3.jfif",
+    image: "/home/gift/giftgoat.jfif",
     title: "Festive Corporate Gifts",
     text: "Elegant festive gifts designed to create meaningful business relationships.",
   },
-];
-
-const personalGifts = [
   {
-    image: "/home/gifting/personal1.jfif",
+   image: "/home/gift/giftgold.jfif",
     title: "Birthday Gifts",
     text: "Make birthdays memorable with luxurious skincare and wellness gifts.",
   },
   {
-    image: "/home/gifting/personal2.jfif",
+   image: "/home/gift/giftmilk.jfif",
     title: "Anniversary Gifts",
     text: "Celebrate special relationships with beautifully curated gift sets.",
   },
   {
-    image: "/home/gifting/personal3.jfif",
+    image: "/home/gift/giftsea.jfif",
     title: "Self-Care Gifts",
     text: "A luxurious collection designed for moments of personal indulgence.",
   },
 ];
+
+// const personalGifts = [
+  
+// ];
 
 const Gifting = () => {
   return (
@@ -185,7 +186,7 @@ const Gifting = () => {
 
       {/* ================= PERSONAL ================= */}
 
-      <section className="gifting-section personal-section">
+      {/* <section className="gifting-section personal-section">
 
         <motion.div
           className="gifting-heading"
@@ -278,7 +279,7 @@ const Gifting = () => {
 
         </motion.div>
 
-      </section>
+      </section> */}
 
 
       {/* ================= BOTTOM ================= */}
