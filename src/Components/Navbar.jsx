@@ -224,25 +224,25 @@ function Navbar() {
 
        {
   name: "Hair Cleanser",
-  image: "/home/serum/serumblack.jfif",
+  image: "/home/hair/hairbox.jfif",
   link: "/hair",
 },
 
 {
   name: "Hair Oil",
-  image: "/home/serum/serumc.jfif",
+  image: "/home/hair/haircream.jfif",
   link: "/hair",
 },
 
 {
   name: "Hair Mask",
-  image: "/home/serum/serumblack.jfif",
+ image: "/home/hair/hairoil.jfif",
   link: "/hair",
 },
 
 {
   name: "Hair Serum",
-  image: "/home/serum/serumc.jfif",
+  image: "/home/hair/hairpack.jfif",
   link: "/hair",
 },
 
