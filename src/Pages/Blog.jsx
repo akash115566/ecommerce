@@ -39,7 +39,7 @@ const blogs = [
     title: "How to Build the Perfect Skin Care Routine",
     text: "A simple guide to creating a skincare routine that works beautifully with your everyday lifestyle.",
     image: "/home/serum/serumwhite.jfif",
-    link: "/blog/skin-care-routine",
+    link: "/ancietskin",
   },
 ];
 

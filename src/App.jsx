@@ -28,6 +28,7 @@ import Gifting from "./Pages/Gifting";
 import ProductSlider from "./Pages/ProductSlider";
 import SOSVideoAd from "./Pages/SOSVideoAd";
 import ReviewsSection from "./Pages/ReviewsSection";
+import AncientSkinTherapies from "./Pages/AncientSkinTherapies";
 
 
 import {
@@ -100,6 +101,7 @@ const AppContent = () => {
          <Route path="/product-slider" element={<ProductSlider />} />
          <Route path="/sosvideo" element={<SOSVideoAd />} />
          <Route path="/review" element={<ReviewsSection />} />
+         <Route path="/ancietskin" element={<AncientSkinTherapies />} />
 
         
       

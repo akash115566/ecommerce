@@ -120,25 +120,25 @@ function Navbar() {
 
         {
           name: "Luxury Body Wash",
-          image: "/home/serum/serumblack.jfif",
+          image: "/home/soap/soapgold.jfif",
           link: "/seasonal",
         },
 
         {
           name: "Natural Body Lotion",
-          image: "/home/serum/serumc.jfif",
+           image: "/home/soap/soapgreen.jfif",
           link: "/bath-body",
         },
 
         {
           name: "Bath & Body Oil",
-          image: "/home/serum/serumblack.jfif",
+           image: "/home/soap/soappink.jfif",
           link: "/bath-body",
         },
 
         {
           name: "Hand Care Ritual",
-          image: "/home/serum/serumc.jfif",
+          image: "/home/soap/soapred.jfif",
           link: "/bath-body",
         },
 
@@ -147,13 +147,13 @@ function Navbar() {
       banners: [
 
         {
-          image: "/home/serum/serumblack.jfif",
+           image: "/home/soap/soapwhite.jfif",
           title: "BODY RITUALS",
           link: "/bath-body",
         },
 
         {
-          image: "/home/serum/serumc.jfif",
+           image: "/home/soap/soapgold.jfif",
           title: "BATH ESSENTIALS",
           link: "/bath-body",
         },
@@ -172,25 +172,25 @@ function Navbar() {
 
         {
           name: "Normal Gift",
-          image: "/home/serum/serumblack.jfif",
+          image: "/home/gift/giftcamel.jfif",
           link: "/gifting",
         },
 
         {
           name: "Luxury Gift",
-          image: "/home/serum/serumc.jfif",
+          image: "/home/gift/giftfour.jfif",
           link: "/gifting",
         },
 
         {
           name: "Premium Gift Set",
-          image: "/home/serum/serumblack.jfif",
+          image: "/home/gift/giftgoat.jfif",
           link: "/gifting",
         },
 
         {
           name: "Signature Gift",
-          image: "/home/serum/serumc.jfif",
+          image: "/home/gift/giftmilk.jfif",
           link: "/gifting",
         },
 
@@ -199,13 +199,13 @@ function Navbar() {
       banners: [
 
         {
-          image: "/home/serum/serumblack.jfif",
+          image: "/home/gift/giftbbox.jfif",
           title: "LUXURY GIFTING",
           link: "/gifting",
         },
 
         {
-          image: "/home/serum/serumc.jfif",
+          image: "/home/gift/giftboox.jfif",
           title: "SIGNATURE GIFTS",
           link: "/gifting",
         },
@@ -218,46 +218,46 @@ function Navbar() {
        MEN
     ======================================================= */
 
-    "MEN": {
+    "HAIR  CLEANSER": {
 
       products: [
 
-        {
-          name: "Men Face Wash",
-          image: "/home/serum/serumblack.jfif",
-          link: "/men",
-        },
+       {
+  name: "Hair Cleanser",
+  image: "/home/serum/serumblack.jfif",
+  link: "/hair",
+},
 
-        {
-          name: "Men Face Serum",
-          image: "/home/serum/serumc.jfif",
-          link: "/men",
-        },
+{
+  name: "Hair Oil",
+  image: "/home/serum/serumc.jfif",
+  link: "/hair",
+},
 
-        {
-          name: "Men Hair Care",
-          image: "/home/serum/serumblack.jfif",
-          link: "/men",
-        },
+{
+  name: "Hair Mask",
+  image: "/home/serum/serumblack.jfif",
+  link: "/hair",
+},
 
-        {
-          name: "Men Body Care",
-          image: "/home/serum/serumc.jfif",
-          link: "/men",
-        },
+{
+  name: "Hair Serum",
+  image: "/home/serum/serumc.jfif",
+  link: "/hair",
+},
 
       ],
 
       banners: [
 
         {
-          image: "/home/serum/serumblack.jfif",
-          title: "MEN'S GROOMING",
+          image: "/home/hair/hairjatrapha.jfif",
+          title: "HAIR GROOMING",
           link: "/men",
         },
 
         {
-          image: "/home/serum/serumc.jfif",
+          image: "/home/hair/hairbox.jfif",
           title: "MEN'S ESSENTIALS",
           link: "/men",
         },
