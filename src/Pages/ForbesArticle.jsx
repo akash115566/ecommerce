@@ -55,7 +55,7 @@ function ForbesArticle() {
               <span>By</span>
 
               <h3>
-                Forest Essentials
+                TELLUS Essentials
               </h3>
             </div>
 
@@ -72,7 +72,7 @@ function ForbesArticle() {
             </Link>
 
             <Link to="/tags/forest-essentials">
-              Forest Essentials
+              TELLUS Essentials
             </Link>
 
           </div>

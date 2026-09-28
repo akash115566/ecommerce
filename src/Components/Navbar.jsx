@@ -51,7 +51,7 @@ function Navbar() {
        SKIN CARE
     ======================================================= */
 
-    "SKIN CARE": {
+    "FACE": {
       products: [
 
         {
@@ -115,6 +115,194 @@ function Navbar() {
     ======================================================= */
 
     "BATH & BODY": {
+
+      products: [
+
+        {
+          name: "Luxury Body Wash",
+          image: "/home/soap/soapgold.jfif",
+          link: "/seasonal",
+        },
+
+        {
+          name: "Natural Body Lotion",
+           image: "/home/soap/soapgreen.jfif",
+          link: "/bath-body",
+        },
+
+        {
+          name: "Bath & Body Oil",
+           image: "/home/soap/soappink.jfif",
+          link: "/bath-body",
+        },
+
+        {
+          name: "Hand Care Ritual",
+          image: "/home/soap/soapred.jfif",
+          link: "/bath-body",
+        },
+
+      ],
+
+      banners: [
+
+        {
+           image: "/home/soap/soapwhite.jfif",
+          title: "BODY RITUALS",
+          link: "/bath-body",
+        },
+
+        {
+           image: "/home/soap/soapgold.jfif",
+          title: "BATH ESSENTIALS",
+          link: "/bath-body",
+        },
+
+      ],
+    },
+
+     " PREMIUM LUXURY SOAPS": {
+
+      products: [
+
+        {
+          name: "Luxury Body Wash",
+          image: "/home/soap/soapgold.jfif",
+          link: "/seasonal",
+        },
+
+        {
+          name: "Natural Body Lotion",
+           image: "/home/soap/soapgreen.jfif",
+          link: "/bath-body",
+        },
+
+        {
+          name: "Bath & Body Oil",
+           image: "/home/soap/soappink.jfif",
+          link: "/bath-body",
+        },
+
+        {
+          name: "Hand Care Ritual",
+          image: "/home/soap/soapred.jfif",
+          link: "/bath-body",
+        },
+
+      ],
+
+      banners: [
+
+        {
+           image: "/home/soap/soapwhite.jfif",
+          title: "BODY RITUALS",
+          link: "/bath-body",
+        },
+
+        {
+           image: "/home/soap/soapgold.jfif",
+          title: "BATH ESSENTIALS",
+          link: "/bath-body",
+        },
+
+      ],
+    },
+
+     " DUNKY MILK SOAP": {
+
+      products: [
+
+        {
+          name: "Luxury Body Wash",
+          image: "/home/soap/soapgold.jfif",
+          link: "/seasonal",
+        },
+
+        {
+          name: "Natural Body Lotion",
+           image: "/home/soap/soapgreen.jfif",
+          link: "/bath-body",
+        },
+
+        {
+          name: "Bath & Body Oil",
+           image: "/home/soap/soappink.jfif",
+          link: "/bath-body",
+        },
+
+        {
+          name: "Hand Care Ritual",
+          image: "/home/soap/soapred.jfif",
+          link: "/bath-body",
+        },
+
+      ],
+
+      banners: [
+
+        {
+           image: "/home/soap/soapwhite.jfif",
+          title: "BODY RITUALS",
+          link: "/bath-body",
+        },
+
+        {
+           image: "/home/soap/soapgold.jfif",
+          title: "BATH ESSENTIALS",
+          link: "/bath-body",
+        },
+
+      ],
+    },
+
+    " CAMEL MILK SOAP": {
+
+      products: [
+
+        {
+          name: "Luxury Body Wash",
+          image: "/home/soap/soapgold.jfif",
+          link: "/seasonal",
+        },
+
+        {
+          name: "Natural Body Lotion",
+           image: "/home/soap/soapgreen.jfif",
+          link: "/bath-body",
+        },
+
+        {
+          name: "Bath & Body Oil",
+           image: "/home/soap/soappink.jfif",
+          link: "/bath-body",
+        },
+
+        {
+          name: "Hand Care Ritual",
+          image: "/home/soap/soapred.jfif",
+          link: "/bath-body",
+        },
+
+      ],
+
+      banners: [
+
+        {
+           image: "/home/soap/soapwhite.jfif",
+          title: "BODY RITUALS",
+          link: "/bath-body",
+        },
+
+        {
+           image: "/home/soap/soapgold.jfif",
+          title: "BATH ESSENTIALS",
+          link: "/bath-body",
+        },
+
+      ],
+    },
+
+       " GOAT MILK SOAP": {
 
       products: [
 
@@ -270,7 +458,48 @@ function Navbar() {
        FRAGRANCE
     ======================================================= */
 
-    "FRAGRANCE": {
+    "CLUB MEMBERSHIP": {
+
+      products: [
+
+        {
+          name: "Luxury Perfume",
+          image: "/home/serum/serumblack.jfif",
+          link: "/fragrance",
+        },
+
+        {
+          name: "Premium Body Mist",
+          image: "/home/serum/serumc.jfif",
+          link: "/fragrance",
+        },
+
+        {
+          name: "Essential Oils",
+          image: "/home/serum/serumblack.jfif",
+          link: "/fragrance",
+        },
+
+      ],
+
+      banners: [
+
+        {
+          image: "/home/serum/serumblack.jfif",
+          title: "SIGNATURE FRAGRANCE",
+          link: "/fragrance",
+        },
+
+        {
+          image: "/home/serum/serumc.jfif",
+          title: "LUXURY SCENTS",
+          link: "/fragrance",
+        },
+
+      ],
+    },
+
+     "7 STAR HOTEL LUXURY RANGE": {
 
       products: [
 

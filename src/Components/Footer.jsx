@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   FaInstagram,
   FaFacebookF,
@@ -7,9 +8,14 @@ import {
   FaLinkedinIn,
   FaChevronUp,
 } from "react-icons/fa";
+
+import { Link } from "react-router-dom";
+
 import "../Styles/footer.css";
 
+
 function Footer() {
+
   const scrollTop = () => {
     window.scrollTo({
       top: 0,
@@ -17,10 +23,13 @@ function Footer() {
     });
   };
 
+
   return (
+
     <footer className="footer">
 
       <div className="footer-container">
+
 
         {/* ================= SHOP ================= */}
 
@@ -28,23 +37,50 @@ function Footer() {
 
           <h3>SHOP</h3>
 
-          <a href="/shop/makeup">MAKEUP</a>
-          <a href="/shop/facial-care">FACIAL CARE</a>
-          <a href="/shop/body-care">BODY CARE</a>
-          {/* <a href="/shop/hair-care">HAIR CARE</a>
-          <a href="/shop/mens-care">MEN'S CARE</a>
-          <a href="/shop/mother-baby-care">
-            MOTHER & BABY CARE
-          </a> */}
-          {/* <a href="/shop/wellness">WELLNESS</a> */}
-          <a href="/shop/gifting">GIFTING</a>
+          <Link to="/shop/makeup">
+            MAKEUP
+          </Link>
 
-          <a href="/shop/corporate-gifting">
+          <Link to="/shop/facial-care">
+            FACIAL CARE
+          </Link>
+
+          <Link to="/shop/body-care">
+            BODY CARE
+          </Link>
+
+          <Link to="/shop/hair-care">
+            HAIR CARE
+          </Link>
+
+          <Link to="/shop/mens-care">
+            MEN'S CARE
+          </Link>
+
+          <Link to="/shop/mother-baby-care">
+            MOTHER & BABY CARE
+          </Link>
+
+          <Link to="/shop/wellness">
+            WELLNESS
+          </Link>
+
+          <Link to="/shop/gifting">
+            GIFTING
+          </Link>
+
+          <Link to="/shop/corporate-gifting">
+
             CORPORATE GIFTING
-            <span className="new-badge">NEW</span>
-          </a>
+
+            <span className="new-badge">
+              NEW
+            </span>
+
+          </Link>
 
         </div>
+
 
 
         {/* ================= ABOUT ================= */}
@@ -53,19 +89,32 @@ function Footer() {
 
           <h3>ABOUT</h3>
 
-          <a href="/about">OUR PHILOSOPHY</a>
-          <a href="/about/social-responsibility">
+          <Link to="/ourphilosophy">
+            OUR PHILOSOPHY
+          </Link>
+
+          <Link to="/about/social-responsibility">
             SOCIAL RESPONSIBILITY
-          </a>
-          {/* <a href="/about/media">MEDIA & PRESS</a>
-          <a href="/policies">POLICIES</a> */}
-          <a href="/terms">TERMS</a>
-          <a href="/faqs">FAQS</a>
-          {/* <a href="/club-faqs">SOUNDARYA CLUB FAQS</a> */}
-          <a href="/stores">STORES</a>
-          <a href="/careers">CAREERS</a>
+          </Link>
+
+          <Link to="/terms">
+            TERMS
+          </Link>
+
+          <Link to="/faqs">
+            FAQS
+          </Link>
+
+          <Link to="/stores">
+            STORES
+          </Link>
+
+          <Link to="/careers">
+            CAREERS
+          </Link>
 
         </div>
+
 
 
         {/* ================= QUICK LINKS ================= */}
@@ -74,24 +123,33 @@ function Footer() {
 
           <h3>QUICK LINKS</h3>
 
-          <a href="/account">MY ACCOUNT</a>
-          {/* <a href="/club">SOUNDARYA CLUB SIGN IN</a>
-          <a href="/offers">CURRENT OFFERS</a>
-          <a href="/customised-skincare">
-            CUSTOMISED SKINCARE
-          </a> */}
-          <a href="/blog">BLOG</a>
-          <a href="/orders">MY ORDER(S)</a>
-          <a href="/track-order">TRACK MY ORDER</a>
-          <a href="/ingredients">OUR INGREDIENTS</a>
-          {/* <a href="/uk">FOREST ESSENTIALS UK</a> */}
+          <Link to="/account">
+            MY ACCOUNT
+          </Link>
+
+          <Link to="/blog">
+            BLOG
+          </Link>
+
+          <Link to="/orders">
+            MY ORDER(S)
+          </Link>
+
+          <Link to="/track-order">
+            TRACK MY ORDER
+          </Link>
+
+          <Link to="/ingredients">
+            OUR INGREDIENTS
+          </Link>
 
         </div>
 
 
+
         {/* ================= CONTACT ================= */}
 
-        {/* <div className="footer-column contact-column">
+        <div className="footer-column contact-column">
 
           <h3>CONTACT</h3>
 
@@ -99,11 +157,12 @@ function Footer() {
 
             <span>Email:</span>
 
-            <a href="mailto:hello@example.com">
-              hello@example.com
+            <a href="mailto:hello@tellusessentials.com">
+              hello@tellusessentials.com
             </a>
 
           </div>
+
 
           <div className="contact-item">
 
@@ -115,58 +174,80 @@ function Footer() {
 
           </div>
 
-          <a
-            href="/contact"
+
+          <Link
+            to="/contact"
             className="contact-link"
           >
-            Contact Us
-          </a>
+            CONTACT US
+          </Link>
 
 
-         
+
+          {/* FOLLOW */}
 
           <h3 className="follow-title">
             FOLLOW
           </h3>
 
+
           <div className="social-icons">
 
-            <a href="#" aria-label="Instagram">
+            <a
+              href="#"
+              aria-label="Instagram"
+            >
               <FaInstagram />
             </a>
 
-            <a href="#" aria-label="Facebook">
+            <a
+              href="#"
+              aria-label="Facebook"
+            >
               <FaFacebookF />
             </a>
 
-            <a href="#" aria-label="YouTube">
+            <a
+              href="#"
+              aria-label="YouTube"
+            >
               <FaYoutube />
             </a>
 
-            <a href="#" aria-label="Twitter">
+            <a
+              href="#"
+              aria-label="Twitter"
+            >
               <FaTwitter />
             </a>
 
-            <a href="#" aria-label="LinkedIn">
+            <a
+              href="#"
+              aria-label="LinkedIn"
+            >
               <FaLinkedinIn />
             </a>
 
           </div>
 
-        </div> */}
+        </div>
 
       </div>
+
 
 
       {/* ================= BOTTOM ================= */}
 
       <div className="footer-bottom">
 
+
         {/* PAYMENT */}
 
         <div className="payment-section">
 
-          <h4>PAYMENT METHODS</h4>
+          <h4>
+            PAYMENT METHODS
+          </h4>
 
           <div className="payment-methods">
 
@@ -205,17 +286,19 @@ function Footer() {
         </div>
 
 
+
         {/* COPYRIGHT */}
 
         <div className="copyright">
 
           <p>
-            © 2026 Your Beauty Store
+            © 2026 Tellus Essentials. All Rights Reserved.
           </p>
 
         </div>
 
       </div>
+
 
 
       {/* SCROLL TOP */}
@@ -225,11 +308,17 @@ function Footer() {
         onClick={scrollTop}
         aria-label="Back to top"
       >
+
         <FaChevronUp />
+
       </button>
 
+
     </footer>
+
   );
+
 }
+
 
 export default Footer;

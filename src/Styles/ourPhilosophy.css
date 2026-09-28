@@ -1,0 +1,820 @@
+/* =========================================================
+   TELLUS ESSENTIALS
+   OUR PHILOSOPHY — LUXURY EDITORIAL DESIGN
+========================================================= */
+
+.philosophy-page {
+  width: 100%;
+  overflow: hidden;
+  background: #fbf8ed;
+  color: #30340f;
+  font-family: "Montserrat", sans-serif;
+}
+
+.philosophy-container {
+  width: min(1180px, 88%);
+  margin: auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.philosophy-hero {
+  position: relative;
+  min-height: 680px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(31, 37, 12, 0.42),
+      rgba(31, 37, 12, 0.65)
+    ),
+    url("/home/serum/serumblack.jfif");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.philosophy-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1000px, 90%);
+
+  color: #fff;
+}
+
+.hero-kicker {
+  display: block;
+
+  margin-bottom: 28px;
+
+  color: #d4bb72;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.philosophy-hero h1 {
+  margin: 0;
+
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(50px, 7vw, 92px);
+  line-height: 1.02;
+  font-weight: 400;
+}
+
+.philosophy-hero p {
+  margin: 35px auto 0;
+
+  max-width: 620px;
+
+  font-size: 15px;
+  line-height: 1.9;
+  letter-spacing: .4px;
+
+  color: rgba(255,255,255,.84);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.philosophy-intro {
+  padding: 130px 0;
+
+  text-align: center;
+}
+
+.philosophy-intro-label {
+  color: #9e8643;
+
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+
+.philosophy-intro h2 {
+  margin: 25px 0 45px;
+
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(44px, 5.5vw, 70px);
+  line-height: 1.05;
+  font-weight: 400;
+}
+
+.philosophy-intro-text {
+  max-width: 800px;
+  margin: auto;
+}
+
+.philosophy-intro-text p {
+  margin-bottom: 20px;
+
+  color: #68695d;
+
+  font-size: 15px;
+  line-height: 2;
+}
+
+
+/* =========================================================
+   SPLIT
+========================================================= */
+
+.philosophy-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  min-height: 650px;
+
+  background: #eeeade;
+}
+
+.philosophy-split-image {
+  min-height: 650px;
+  overflow: hidden;
+}
+
+.philosophy-split-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 1s ease;
+}
+
+.philosophy-split-image:hover img {
+  transform: scale(1.05);
+}
+
+.philosophy-split-content {
+  padding: 90px 10%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.philosophy-split-content > span,
+.luxury-content > span,
+.botanical-heading > span,
+.product-heading > span,
+.hospitality-content > span,
+.status-inner > span,
+.brand-positioning > .philosophy-container > span,
+.philosophy-final-inner > span {
+  color: #9e8643;
+
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.philosophy-split-content h2,
+.luxury-content h2 {
+  margin: 25px 0 30px;
+
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(45px, 5vw, 70px);
+  line-height: 1.02;
+  font-weight: 400;
+}
+
+.philosophy-split-content p,
+.luxury-content p {
+  max-width: 520px;
+
+  margin-bottom: 18px;
+
+  color: #68695d;
+
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+
+/* =========================================================
+   EUROPEAN LUXURY
+========================================================= */
+
+.european-luxury {
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 100px 8%;
+
+  background:
+    linear-gradient(
+      rgba(39, 44, 17, .78),
+      rgba(39, 44, 17, .78)
+    ),
+    url("/home/serum/serumc.jfif");
+
+  background-size: cover;
+  background-position: center;
+
+  color: #fff;
+}
+
+.luxury-content {
+  max-width: 680px;
+}
+
+.luxury-content h2 {
+  color: #fff;
+}
+
+.luxury-content p {
+  color: rgba(255,255,255,.78);
+}
+
+
+/* =========================================================
+   BOTANICAL SECTION
+========================================================= */
+
+.botanical-section {
+  padding: 130px 0;
+
+  background: #f3f0e6;
+}
+
+.botanical-heading {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.botanical-heading h2,
+.product-heading h2 {
+  margin: 25px 0;
+
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(45px, 5vw, 68px);
+  line-height: 1.05;
+  font-weight: 400;
+}
+
+.botanical-heading p {
+  max-width: 680px;
+  margin: auto;
+
+  color: #68695d;
+
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.botanical-grid {
+  margin-top: 70px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.botanical-card {
+  min-height: 280px;
+
+  padding: 35px 28px;
+
+  background: #fbf8ed;
+
+  transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+}
+
+.botanical-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 50px rgba(40,40,15,.09);
+}
+
+.botanical-card > span {
+  color: #b29a5a;
+
+  font-family: "DM Serif Display", serif;
+  font-size: 27px;
+}
+
+.botanical-card h3 {
+  margin: 35px 0 15px;
+
+  font-family: "DM Serif Display", serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.botanical-card p {
+  color: #717267;
+
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   SKIN WELLNESS
+========================================================= */
+
+.skin-wellness {
+  padding: 140px 20px;
+
+  text-align: center;
+
+  background: #30340f;
+
+  color: #fff;
+}
+
+.skin-wellness-inner {
+  max-width: 850px;
+  margin: auto;
+}
+
+.skin-wellness span {
+  color: #cbb46b;
+
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+
+.skin-wellness h2 {
+  margin: 25px 0 35px;
+
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(48px, 6vw, 78px);
+  line-height: 1;
+  font-weight: 400;
+}
+
+.skin-wellness p {
+  max-width: 720px;
+  margin: 0 auto 20px;
+
+  color: rgba(255,255,255,.75);
+
+  font-size: 14px;
+  line-height: 2;
+}
+
+
+/* =========================================================
+   PRODUCT PHILOSOPHY
+========================================================= */
+
+.product-philosophy {
+  padding: 130px 0;
+}
+
+.product-heading {
+  text-align: center;
+}
+
+.product-grid {
+  margin-top: 70px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.product-philosophy-card {
+  padding: 45px;
+
+  border: 1px solid rgba(48,52,15,.12);
+
+  transition:
+    background .35s ease,
+    transform .35s ease;
+}
+
+.product-philosophy-card:hover {
+  transform: translateY(-7px);
+
+  background: #f1eee2;
+}
+
+.product-philosophy-card h3 {
+  margin-bottom: 15px;
+
+  font-family: "DM Serif Display", serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.product-philosophy-card p {
+  color: #6d6e62;
+
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   HOSPITALITY
+========================================================= */
+
+.hospitality-section {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  background: #e9e4d7;
+}
+
+.hospitality-image {
+  min-height: 650px;
+
+  background:
+    linear-gradient(
+      rgba(20,25,8,.35),
+      rgba(20,25,8,.55)
+    ),
+    url("/home/soap/soap.jfif");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.hospitality-overlay {
+  padding: 60px;
+  color: #fff;
+}
+
+.hospitality-overlay span {
+  color: #d7bd73;
+
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.hospitality-overlay h2 {
+  margin-top: 20px;
+
+  font-family: "DM Serif Display", serif;
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.hospitality-content {
+  padding: 90px 10%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hospitality-content h2 {
+  margin: 25px 0 30px;
+
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(45px, 5vw, 68px);
+  line-height: 1;
+  font-weight: 400;
+}
+
+.hospitality-content p {
+  color: #68695d;
+
+  font-size: 14px;
+  line-height: 1.9;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status-section {
+  padding: 140px 20px;
+
+  text-align: center;
+
+  background: #f5f1e7;
+}
+
+.status-inner {
+  max-width: 850px;
+  margin: auto;
+}
+
+.status-inner h2 {
+  margin: 25px 0 35px;
+
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: 1;
+  font-weight: 400;
+}
+
+.status-inner p {
+  max-width: 700px;
+  margin: 0 auto 20px;
+
+  color: #6d6e62;
+
+  font-size: 14px;
+  line-height: 2;
+}
+
+
+/* =========================================================
+   BRAND POSITIONING
+========================================================= */
+
+.brand-positioning {
+  padding: 130px 0;
+
+  background: #30340f;
+
+  color: #fff;
+
+  text-align: center;
+}
+
+.brand-positioning h2 {
+  margin: 25px 0 60px;
+
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(48px, 6vw, 75px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.positioning-lines {
+  max-width: 800px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  border-top: 1px solid rgba(255,255,255,.18);
+}
+
+.positioning-lines div {
+  padding: 22px;
+
+  border-bottom: 1px solid rgba(255,255,255,.18);
+
+  color: #ded5bd;
+
+  font-size: 13px;
+  letter-spacing: .5px;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.philosophy-final {
+  padding: 140px 20px;
+
+  text-align: center;
+
+  background: #fbf8ed;
+}
+
+.philosophy-final-inner {
+  max-width: 850px;
+  margin: auto;
+}
+
+.philosophy-final h2 {
+  margin: 25px 0 35px;
+
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(50px, 6vw, 82px);
+  line-height: 1;
+  font-weight: 400;
+}
+
+.philosophy-final p {
+  max-width: 680px;
+  margin: 0 auto 20px;
+
+  color: #6b6c60;
+
+  font-size: 15px;
+  line-height: 2;
+}
+
+.philosophy-final strong {
+  display: block;
+
+  margin-top: 30px;
+
+  font-family: "DM Serif Display", serif;
+  font-size: 25px;
+  line-height: 1.7;
+  font-weight: 400;
+
+  color: #45482b;
+}
+
+.final-tagline {
+  margin-top: 55px;
+
+  color: #9e8643;
+
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .botanical-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .philosophy-split,
+  .hospitality-section {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-split-image,
+  .hospitality-image {
+    min-height: 550px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .philosophy-container {
+    width: 90%;
+  }
+
+  .philosophy-hero {
+    min-height: 570px;
+  }
+
+  .philosophy-hero h1 {
+    font-size: 47px;
+  }
+
+  .philosophy-hero p {
+    font-size: 13px;
+  }
+
+  .philosophy-intro,
+  .botanical-section,
+  .product-philosophy,
+  .status-section,
+  .philosophy-final {
+    padding: 85px 0;
+  }
+
+  .philosophy-intro h2,
+  .botanical-heading h2,
+  .product-heading h2 {
+    font-size: 43px;
+  }
+
+  .philosophy-split-content,
+  .hospitality-content {
+    padding: 70px 8%;
+  }
+
+  .philosophy-split-image,
+  .hospitality-image {
+    min-height: 430px;
+  }
+
+  .philosophy-split-content h2,
+  .luxury-content h2,
+  .hospitality-content h2 {
+    font-size: 45px;
+  }
+
+  .european-luxury {
+    min-height: 600px;
+    padding: 80px 8%;
+  }
+
+  .botanical-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .botanical-card {
+    min-height: auto;
+  }
+
+  .skin-wellness {
+    padding: 90px 20px;
+  }
+
+  .skin-wellness h2 {
+    font-size: 48px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-philosophy-card {
+    padding: 35px 25px;
+  }
+
+  .hospitality-overlay {
+    padding: 40px 25px;
+  }
+
+  .hospitality-overlay h2 {
+    font-size: 45px;
+  }
+
+  .status-inner h2 {
+    font-size: 48px;
+  }
+
+  .positioning-lines {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-positioning {
+    padding: 90px 0;
+  }
+
+  .brand-positioning h2 {
+    font-size: 48px;
+  }
+
+  .philosophy-final h2 {
+    font-size: 50px;
+  }
+
+  .philosophy-final strong {
+    font-size: 21px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .philosophy-hero h1 {
+    font-size: 40px;
+  }
+
+  .philosophy-intro h2,
+  .botanical-heading h2,
+  .product-heading h2 {
+    font-size: 37px;
+  }
+
+  .philosophy-split-content h2,
+  .luxury-content h2,
+  .hospitality-content h2 {
+    font-size: 39px;
+  }
+
+  .skin-wellness h2,
+  .status-inner h2,
+  .brand-positioning h2 {
+    font-size: 40px;
+  }
+
+  .philosophy-final h2 {
+    font-size: 43px;
+  }
+
+}

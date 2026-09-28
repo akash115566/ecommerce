@@ -29,6 +29,7 @@ import ProductSlider from "./Pages/ProductSlider";
 import SOSVideoAd from "./Pages/SOSVideoAd";
 import ReviewsSection from "./Pages/ReviewsSection";
 import AncientSkinTherapies from "./Pages/AncientSkinTherapies";
+import OurPhilosophy from "./Pages/OurPhilosophy";
 
 
 import {
@@ -102,6 +103,7 @@ const AppContent = () => {
          <Route path="/sosvideo" element={<SOSVideoAd />} />
          <Route path="/review" element={<ReviewsSection />} />
          <Route path="/ancietskin" element={<AncientSkinTherapies />} />
+          <Route path="/ourphilosophy" element={<OurPhilosophy /> } />
 
         
       
