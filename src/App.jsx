@@ -30,12 +30,16 @@ import SOSVideoAd from "./Pages/SOSVideoAd";
 import ReviewsSection from "./Pages/ReviewsSection";
 import AncientSkinTherapies from "./Pages/AncientSkinTherapies";
 import OurPhilosophy from "./Pages/OurPhilosophy";
+import Skincare from "./Pages/Skincare";
+import Serum from "./Pages/Serum"; 
+import DonkeyMilkSoap from "./Pages/DonkeyMilkSoap";
 
 
 import {
   CartProvider,
   useCart,
 } from "./Context/CartContext";
+
 
 
 
@@ -104,6 +108,9 @@ const AppContent = () => {
          <Route path="/review" element={<ReviewsSection />} />
          <Route path="/ancietskin" element={<AncientSkinTherapies />} />
           <Route path="/ourphilosophy" element={<OurPhilosophy /> } />
+          <Route path="/skincare" element={<Skincare /> } />
+           <Route path="/serum" element={<Serum /> } />
+            <Route path="/donkeymilk" element={<DonkeyMilkSoap /> } />
 
         
       

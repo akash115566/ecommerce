@@ -57,7 +57,7 @@ function Navbar() {
         {
           name: "Vitamin C Face Serum",
           image: "/home/serum/serumblack.jfif",
-          link: "/product-details",
+          link: "/serum",
         },
 
         {
@@ -128,7 +128,7 @@ function Navbar() {
         {
           name: "Natural Body Lotion",
            image: "/home/soap/soapgreen.jfif",
-          link: "/bath-body",
+          link: "/SKINCARE",
         },
 
         {
@@ -162,179 +162,158 @@ function Navbar() {
       ],
     },
 
-     "PREMIUM LUXURY SOAP": {
-      products: [
+   "PREMIUM LUXURY SOAP": {
+  products: [
 
-        {
-          name: "Vitamin C Face Serum",
-          image: "/home/serum/serumblack.jfif",
-          link: "/product-details",
-        },
-
-        {
-          name: "Panchpushp Facial Mist",
-          image: "/home/serum/serumc.jfif",
-          link: "/product-details",
-        },
-
-        {
-          name: "Luxury Face Cream",
-          image: "/home/serum/serumblack.jfif",
-          link: "/product-details",
-        },
-
-        {
-          name: "Natural Face Cleanser",
-          image: "/home/serum/serumc.jfif",
-          link: "/product-details",
-        },
-
-        {
-          name: "Hydrating Skin Serum",
-          image: "/home/serum/serumblack.jfif",
-          link: "/product-details",
-        },
-
-        {
-          name: "Premium Sunscreen",
-          image: "/home/serum/serumc.jfif",
-          link: "/product-details",
-        },
-
-      ],
-
-      banners: [
-
-        {
-          image: "/home/serum/serumblack.jfif",
-          title: "LUXURY SKINCARE",
-          link: "/face",
-        },
-
-        {
-          image: "/home/serum/serumc.jfif",
-          title: "PREMIUM RITUALS",
-          link: "/face",
-        },
-
-      ],
+    {
+      name: "Pure Camel Milk Luxury Soap",
+      image: "/home/gift/giftbbox.jfif",
+      link: "/skincare",
     },
 
-     "DUNKY MILK SOAP": {
-      products: [
-
-        {
-          name: "Vitamin C Face Serum",
-          image: "/home/serum/serumblack.jfif",
-          link: "/product-details",
-        },
-
-        {
-          name: "Panchpushp Facial Mist",
-          image: "/home/serum/serumc.jfif",
-          link: "/product-details",
-        },
-
-        {
-          name: "Luxury Face Cream",
-          image: "/home/serum/serumblack.jfif",
-          link: "/product-details",
-        },
-
-        {
-          name: "Natural Face Cleanser",
-          image: "/home/serum/serumc.jfif",
-          link: "/product-details",
-        },
-
-        {
-          name: "Hydrating Skin Serum",
-          image: "/home/serum/serumblack.jfif",
-          link: "/product-details",
-        },
-
-        {
-          name: "Premium Sunscreen",
-          image: "/home/serum/serumc.jfif",
-          link: "/product-details",
-        },
-
-      ],
-
-      banners: [
-
-        {
-          image: "/home/serum/serumblack.jfif",
-          title: "LUXURY SKINCARE",
-          link: "/face",
-        },
-
-        {
-          image: "/home/serum/serumc.jfif",
-          title: "PREMIUM RITUALS",
-          link: "/face",
-        },
-
-      ],
+    {
+      name: "Saffron & Turmeric Glow Soap",
+       image: "/home/gift/giftbboxx.jfif",
+      link: "/product-details",
     },
 
-     "CAMEL MILK SOAP": {
-      products: [
+   
+  
 
-        {
-          name: "Vitamin C Face Serum",
-          image: "/home/serum/serumblack.jfif",
-          link: "/product-details",
-        },
+  ],
 
-        {
-          name: "Panchpushp Facial Mist",
-          image: "/home/serum/serumc.jfif",
-          link: "/product-details",
-        },
+  banners: [
 
-        {
-          name: "Luxury Face Cream",
-          image: "/home/serum/serumblack.jfif",
-          link: "/product-details",
-        },
-
-        {
-          name: "Natural Face Cleanser",
-          image: "/home/serum/serumc.jfif",
-          link: "/product-details",
-        },
-
-        {
-          name: "Hydrating Skin Serum",
-          image: "/home/serum/serumblack.jfif",
-          link: "/product-details",
-        },
-
-        {
-          name: "Premium Sunscreen",
-          image: "/home/serum/serumc.jfif",
-          link: "/product-details",
-        },
-
-      ],
-
-      banners: [
-
-        {
-          image: "/home/serum/serumblack.jfif",
-          title: "LUXURY SKINCARE",
-          link: "/face",
-        },
-
-        {
-          image: "/home/serum/serumc.jfif",
-          title: "PREMIUM RITUALS",
-          link: "/face",
-        },
-
-      ],
+    {
+      image: "/home/gift/giftbox.jfif",
+      title: "CAMEL MILK LUXURY",
+      link: "/product-details",
     },
+
+    {
+      image: "/home/gift/giftcamel.jfif",
+      title: "PREMIUM GLOW RITUALS",
+      link: "/product-details",
+    },
+
+  ],
+},
+
+  "DUNKY MILK SOAP": {
+  products: [
+
+    {
+      name: "Pure Dunky Milk Luxury Soap",
+      image: "/home/gift/giftdon.jfif",
+      link: "/donkeymilk",
+        price: 499,
+      oldPrice: 599,
+    },
+
+    {
+      name: "Dunky Milk & Saffron Soap",
+      image: "/home/gift/giftdonk.jfif",
+      link: "/product-details",
+        price: 499,
+      oldPrice: 599,
+    },
+
+  
+    {
+      name: "Dunky Milk & Shea Butter Soap",
+      image: "/home/gift/giftdonkey.jfif",
+      link: "/product-details",
+        price: 499,
+      oldPrice: 599,
+    },
+
+  
+
+  ],
+
+  banners: [
+
+    {
+      image: "/home/gift/giftdonkey.jfif",
+      title: "DUNKY MILK LUXURY",
+      link: "/product-details",
+    },
+
+    {
+      image: "/home/gift/giftdonk.jfif",
+      title: "NOURISHING MILK RITUAL",
+      link: "/product-details",
+    },
+
+  ],
+},
+ "CAMEL MILK SOAP": {
+  products: [
+
+    {
+      name: "Pure Camel Milk Soap",
+      image: "/home/gift/giftbox.jfif",
+      price: 499,
+      oldPrice: 699,
+      link: "/product-details",
+    },
+
+    {
+      name: "Camel Milk & Saffron Soap",
+      image: "/home/gift/gifbboxx.jfif",
+      price: 599,
+      oldPrice: 799,
+      link: "/product-details",
+    },
+
+    {
+      name: "Camel Milk Honey Soap",
+      image: "/home/gift/giftboox.jfif",
+      price: 549,
+      oldPrice: 749,
+      link: "/product-details",
+    },
+
+    {
+      name: "Camel Milk & Rose Soap",
+      image: "/home/gift/giftcamel.jfif",
+      price: 549,
+      oldPrice: 749,
+      link: "/product-details",
+    },
+
+    {
+      name: "Camel Milk Luxury Bath Soap",
+      image: "/home/gift/giftfour.jfif",
+      price: 649,
+      oldPrice: 849,
+      link: "/product-details",
+    },
+
+    {
+      name: "Camel Milk Nourishing Soap",
+      image: "/home/gift/giftgoat.jfif",
+      price: 599,
+      oldPrice: 799,
+      link: "/product-details",
+    },
+
+  ],
+
+  banners: [
+    {
+      image: "/home/gift/giftbbox.jfif",
+      title: "CAMEL MILK LUXURY",
+      link: "/face",
+    },
+
+    {
+      image: "/home/gift/giftbboxx.jfif",
+      title: "NOURISHING BATH RITUALS",
+      link: "/face",
+    },
+  ],
+},
 
 
     

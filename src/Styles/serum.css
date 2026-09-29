@@ -1,0 +1,822 @@
+/* =========================================================
+   TELLUS ESSENTIALS — SERUM PAGE
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.serum-page {
+  width: 100%;
+  overflow: hidden;
+  background: #fbf8ed;
+  color: #30340f;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.serum-hero {
+  min-height: 650px;
+
+  position: relative;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(35, 37, 15, 0.88),
+      rgba(35, 37, 15, 0.52),
+      rgba(35, 37, 15, 0.12)
+    ),
+    url("/home/serum/serumblack.jfif");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.serum-hero-overlay {
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 80px 8%;
+}
+
+.serum-hero-content {
+  max-width: 600px;
+  color: #fff;
+}
+
+.serum-hero-small {
+  display: block;
+
+  margin-bottom: 22px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.serum-hero h1 {
+  margin: 0 0 25px;
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(50px, 6vw, 82px);
+
+  line-height: 0.98;
+
+  font-weight: 400;
+}
+
+.serum-hero p {
+  max-width: 530px;
+
+  margin-bottom: 32px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 15px;
+
+  line-height: 1.85;
+}
+
+.serum-hero-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px 25px;
+
+  background: #9e8643;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  transition: 0.35s ease;
+}
+
+.serum-hero-btn:hover {
+  background: #fff;
+  color: #30340f;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.serum-section,
+.luxury-serum-section {
+  padding: 90px 7%;
+}
+
+.luxury-serum-section {
+  background: #f1ede0;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.serum-heading {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 30px;
+
+  margin-bottom: 45px;
+}
+
+.serum-overline {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #9e8643;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.serum-heading h2 {
+  margin: 0 0 14px;
+
+  font-family: Georgia, serif;
+
+  color: #30340f;
+
+  font-size: clamp(35px, 4vw, 54px);
+
+  font-weight: 400;
+}
+
+.serum-heading p {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: #696957;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.serum-view-all {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid #9e8643;
+
+  color: #30340f;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  white-space: nowrap;
+
+  transition: 0.3s ease;
+}
+
+.serum-view-all:hover {
+  color: #9e8643;
+
+  gap: 15px;
+}
+
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.serum-slider-wrapper {
+  position: relative;
+
+  width: 100%;
+}
+
+.serum-slider {
+  display: flex;
+
+  gap: 22px;
+
+  overflow-x: auto;
+
+  scroll-behavior: smooth;
+
+  scroll-snap-type: x mandatory;
+
+  padding: 5px 3px 20px;
+
+  scrollbar-width: none;
+}
+
+.serum-slider::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.serum-card {
+  flex: 0 0 calc(25% - 17px);
+
+  min-width: 250px;
+
+  scroll-snap-align: start;
+
+  background: #fff;
+
+  border: 1px solid rgba(48, 52, 15, 0.07);
+
+  transition: 0.4s ease;
+}
+
+.serum-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 45px rgba(48, 52, 15, 0.13);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.serum-image-box {
+  display: block;
+
+  position: relative;
+
+  height: 340px;
+
+  overflow: hidden;
+
+  background: #eee9da;
+}
+
+.serum-image-box img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.serum-card:hover .serum-image-box img {
+  transform: scale(1.07);
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.serum-badge {
+  position: absolute;
+
+  top: 14px;
+  left: 14px;
+
+  z-index: 2;
+
+  padding: 7px 11px;
+
+  background: #30340f;
+
+  color: #fff;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.serum-info {
+  padding: 20px 18px 22px;
+}
+
+.serum-product-name {
+  color: #30340f;
+
+  text-decoration: none;
+}
+
+.serum-product-name h3 {
+  min-height: 44px;
+
+  margin: 0 0 7px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  transition: color 0.3s ease;
+}
+
+.serum-product-name:hover h3 {
+  color: #9e8643;
+}
+
+.serum-subtitle {
+  min-height: 38px;
+
+  margin: 0 0 12px;
+
+  color: #777762;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.serum-price {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 17px;
+}
+
+.serum-current-price {
+  color: #9e8643;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+.serum-old-price {
+  color: #999;
+
+  font-size: 12px;
+
+  text-decoration: line-through;
+}
+
+
+/* =========================================================
+   ADD TO BAG
+========================================================= */
+
+.serum-add-btn {
+  width: 100%;
+
+  min-height: 44px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-bottom: 12px;
+
+  border: 1px solid #30340f;
+
+  background: #30340f;
+
+  color: #fff;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  transition:
+    0.3s ease;
+}
+
+.serum-add-btn svg {
+  font-size: 13px;
+
+  transition: 0.3s ease;
+}
+
+.serum-add-btn:hover {
+  background: #9e8643;
+
+  border-color: #9e8643;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(158, 134, 67, 0.25);
+}
+
+.serum-add-btn:hover svg {
+  transform: translateY(-1px);
+}
+
+.serum-add-btn:active {
+  transform: scale(0.97);
+}
+
+
+/* =========================================================
+   VIEW PRODUCT
+========================================================= */
+
+.serum-view-btn {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 11px 0;
+
+  border-top: 1px solid #e5e1d4;
+
+  color: #30340f;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  transition: 0.3s ease;
+}
+
+.serum-view-btn svg {
+  font-size: 10px;
+
+  transition: 0.3s ease;
+}
+
+.serum-view-btn:hover {
+  color: #9e8643;
+}
+
+.serum-view-btn:hover svg {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.serum-arrow {
+  position: absolute;
+
+  top: 43%;
+
+  z-index: 5;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid rgba(48, 52, 15, 0.18);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  color: #30340f;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s ease;
+}
+
+.serum-arrow:hover {
+  background: #30340f;
+
+  color: #fff;
+
+  transform: scale(1.08);
+}
+
+.serum-arrow-left {
+  left: -22px;
+}
+
+.serum-arrow-right {
+  right: -22px;
+}
+
+
+/* =========================================================
+   PHILOSOPHY
+========================================================= */
+
+.serum-philosophy {
+  min-height: 500px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 90px 7%;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(35, 37, 15, 0.76),
+      rgba(35, 37, 15, 0.76)
+    ),
+    url("/home/serum/serumc.jfif");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+.serum-philosophy-content {
+  max-width: 780px;
+
+  color: #fff;
+}
+
+.serum-philosophy-content > span {
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.serum-philosophy-content h2 {
+  margin: 20px 0;
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(40px, 5vw, 66px);
+
+  line-height: 1.05;
+
+  font-weight: 400;
+}
+
+.serum-philosophy-content p {
+  max-width: 650px;
+
+  margin: 0 auto 30px;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+.serum-philosophy-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 23px;
+
+  background: #9e8643;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  transition: 0.3s ease;
+}
+
+.serum-philosophy-btn:hover {
+  background: #fff;
+
+  color: #30340f;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .serum-card {
+    flex: 0 0 calc(33.333% - 15px);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .serum-hero,
+  .serum-hero-overlay {
+    min-height: 560px;
+  }
+
+  .serum-section,
+  .luxury-serum-section {
+    padding: 70px 6%;
+  }
+
+  .serum-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    margin-bottom: 35px;
+  }
+
+  .serum-card {
+    flex: 0 0 calc(50% - 11px);
+  }
+
+  .serum-image-box {
+    height: 320px;
+  }
+
+  .serum-arrow-left {
+    left: -10px;
+  }
+
+  .serum-arrow-right {
+    right: -10px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .serum-hero {
+    min-height: 540px;
+
+    background-position: 60% center;
+  }
+
+  .serum-hero-overlay {
+    min-height: 540px;
+
+    padding: 60px 22px;
+  }
+
+  .serum-hero h1 {
+    font-size: 48px;
+  }
+
+  .serum-hero p {
+    font-size: 14px;
+  }
+
+  .serum-section,
+  .luxury-serum-section {
+    padding: 60px 20px;
+  }
+
+  .serum-heading h2 {
+    font-size: 36px;
+  }
+
+  .serum-card {
+    flex: 0 0 78%;
+
+    min-width: 78%;
+  }
+
+  .serum-image-box {
+    height: 340px;
+  }
+
+  .serum-arrow {
+    width: 38px;
+    height: 38px;
+
+    font-size: 11px;
+  }
+
+  .serum-arrow-left {
+    left: -5px;
+  }
+
+  .serum-arrow-right {
+    right: -5px;
+  }
+
+  .serum-philosophy {
+    min-height: 440px;
+
+    padding: 65px 25px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .serum-hero h1 {
+    font-size: 42px;
+  }
+
+  .serum-card {
+    flex: 0 0 86%;
+
+    min-width: 86%;
+  }
+
+  .serum-image-box {
+    height: 310px;
+  }
+
+  .serum-heading h2 {
+    font-size: 32px;
+  }
+
+}

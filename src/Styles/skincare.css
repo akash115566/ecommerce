@@ -1,0 +1,811 @@
+/* =========================================================
+   TELLUS ESSENTIALS — SKINCARE / SOAP PAGE
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.skincare-page {
+  width: 100%;
+  background: #fbf8ed;
+  color: #30340f;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.skincare-hero {
+  min-height: 620px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 90px 8%;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(35, 37, 15, 0.82),
+      rgba(35, 37, 15, 0.28),
+      rgba(35, 37, 15, 0)
+    ),
+    url("/home/gift/giftbbox.jfif");
+
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+
+.skincare-hero-content {
+  max-width: 580px;
+  color: #fff;
+}
+
+.hero-small-title {
+  display: block;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 22px;
+}
+
+.skincare-hero h1 {
+  font-family: Georgia, serif;
+
+  font-size: clamp(48px, 6vw, 82px);
+
+  line-height: 0.98;
+
+  font-weight: 400;
+
+  margin: 0 0 25px;
+}
+
+.skincare-hero p {
+  max-width: 520px;
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  margin-bottom: 32px;
+}
+
+.hero-button {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px 25px;
+
+  background: #b2934c;
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+
+  transition: 0.35s ease;
+}
+
+.hero-button:hover {
+  background: #fff;
+  color: #30340f;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.soap-section,
+.luxury-soap-section {
+  padding: 90px 7%;
+}
+
+.luxury-soap-section {
+  background: #f1ede0;
+}
+
+.soap-heading {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 30px;
+
+  margin-bottom: 45px;
+}
+
+.section-overline {
+  display: block;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #9e8643;
+
+  margin-bottom: 12px;
+}
+
+.soap-heading h2 {
+  font-family: Georgia, serif;
+
+  font-size: clamp(34px, 4vw, 54px);
+
+  font-weight: 400;
+
+  margin: 0 0 14px;
+
+  color: #30340f;
+}
+
+.soap-heading p {
+  max-width: 570px;
+
+  color: #696957;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  margin: 0;
+}
+
+.view-all {
+  display: flex;
+
+  align-items: center;
+  gap: 10px;
+
+  color: #30340f;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid #9e8643;
+
+  white-space: nowrap;
+
+  transition: 0.3s ease;
+}
+
+.view-all:hover {
+  color: #9e8643;
+  gap: 15px;
+}
+
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.soap-slider-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.soap-slider {
+  display: flex;
+
+  gap: 22px;
+
+  overflow-x: auto;
+
+  scroll-behavior: smooth;
+
+  scroll-snap-type: x mandatory;
+
+  padding: 5px 3px 20px;
+
+  scrollbar-width: none;
+}
+
+.soap-slider::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.soap-card {
+  flex: 0 0 calc(25% - 17px);
+
+  min-width: 250px;
+
+  scroll-snap-align: start;
+
+  background: #fff;
+
+  transition: 0.4s ease;
+
+  border: 1px solid rgba(48, 52, 15, 0.07);
+}
+
+.soap-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 45px rgba(48, 52, 15, 0.13);
+}
+
+
+/* IMAGE */
+
+.soap-image-box {
+  display: block;
+
+  height: 330px;
+
+  background: #eee9da;
+
+  position: relative;
+
+  overflow: hidden;
+
+  text-decoration: none;
+}
+
+.soap-image-box img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.65s ease;
+}
+
+.soap-card:hover .soap-image-box img {
+  transform: scale(1.07);
+}
+
+
+/* BADGE */
+
+.soap-badge {
+  position: absolute;
+
+  top: 14px;
+  left: 14px;
+
+  z-index: 2;
+
+  background: #30340f;
+  color: #fff;
+
+  padding: 7px 10px;
+
+  font-size: 9px;
+
+  letter-spacing: 1.3px;
+
+  font-weight: 700;
+}
+
+
+/* INFO */
+
+.soap-info {
+  padding: 20px 18px 22px;
+}
+
+.soap-info h3 {
+  font-size: 15px;
+
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  min-height: 45px;
+
+  margin: 0 0 12px;
+
+  color: #30340f;
+}
+
+.soap-price {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 17px;
+}
+
+.current-price {
+  font-size: 16px;
+
+  font-weight: 700;
+
+  color: #9e8643;
+}
+
+.old-price {
+  font-size: 12px;
+
+  color: #999;
+
+  text-decoration: line-through;
+}
+
+
+/* VIEW BUTTON */
+
+.soap-view-btn {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 11px 0;
+
+  border-top: 1px solid #e5e1d4;
+
+  color: #30340f;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  transition: 0.3s ease;
+}
+
+.soap-view-btn svg {
+  font-size: 10px;
+
+  transition: 0.3s ease;
+}
+
+.soap-view-btn:hover {
+  color: #9e8643;
+}
+
+.soap-view-btn:hover svg {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.soap-arrow {
+  position: absolute;
+
+  top: 43%;
+
+  z-index: 5;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(48, 52, 15, 0.2);
+
+  background: rgba(255, 255, 255, 0.95);
+
+  color: #30340f;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s ease;
+}
+
+.soap-arrow:hover {
+  background: #30340f;
+  color: #fff;
+
+  transform: scale(1.08);
+}
+
+.soap-arrow-left {
+  left: -22px;
+}
+
+.soap-arrow-right {
+  right: -22px;
+}
+
+
+/* =========================================================
+   PRODUCT NAME
+========================================================= */
+
+.soap-product-name {
+  display: block;
+
+  color: inherit;
+
+  text-decoration: none;
+}
+
+.soap-product-name h3 {
+  transition: color 0.3s ease;
+}
+
+.soap-product-name:hover h3 {
+  color: #9e8643;
+}
+
+
+/* =========================================================
+   ADD TO BAG
+========================================================= */
+
+.soap-add-btn {
+  width: 100%;
+
+  min-height: 44px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  border: 1px solid #30340f;
+
+  background: #30340f;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 12px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.soap-add-btn svg {
+  font-size: 13px;
+
+  transition: transform 0.3s ease;
+}
+
+.soap-add-btn:hover {
+  background: #9e8643;
+
+  border-color: #9e8643;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(158, 134, 67, 0.25);
+}
+
+.soap-add-btn:hover svg {
+  transform: translateY(-1px);
+}
+
+.soap-add-btn:active {
+  transform: scale(0.97);
+}
+
+
+/* =========================================================
+   VIEW PRODUCT
+========================================================= */
+
+.soap-view-btn {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 11px 0;
+
+  border-top: 1px solid #e5e1d4;
+
+  color: #30340f;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  transition: 0.3s ease;
+}
+
+.soap-view-btn svg {
+  font-size: 10px;
+
+  transition: 0.3s ease;
+}
+
+.soap-view-btn:hover {
+  color: #9e8643;
+}
+
+.soap-view-btn:hover svg {
+  transform: translateX(5px);
+}
+
+/* =========================================================
+   PHILOSOPHY
+========================================================= */
+
+.soap-philosophy {
+  min-height: 480px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 80px 7%;
+
+  background:
+    linear-gradient(
+      rgba(35, 37, 15, 0.68),
+      rgba(35, 37, 15, 0.68)
+    ),
+    url("/home/gift/giftcamel.jfif");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.philosophy-content {
+  max-width: 760px;
+
+  color: #fff;
+}
+
+.philosophy-content > span {
+  font-size: 11px;
+
+  letter-spacing: 4px;
+
+  font-weight: 700;
+}
+
+.philosophy-content h2 {
+  font-family: Georgia, serif;
+
+  font-weight: 400;
+
+  font-size: clamp(40px, 5vw, 65px);
+
+  line-height: 1.05;
+
+  margin: 20px 0;
+}
+
+.philosophy-content p {
+  max-width: 650px;
+
+  margin: auto;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  color: rgba(255, 255, 255, 0.88);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .soap-card {
+    flex: 0 0 calc(33.333% - 15px);
+  }
+
+  .soap-image-box {
+    height: 300px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .skincare-hero {
+    min-height: 560px;
+
+    padding: 70px 7%;
+
+    background-position: 60% center;
+  }
+
+  .soap-section,
+  .luxury-soap-section {
+    padding: 70px 6%;
+  }
+
+  .soap-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    margin-bottom: 35px;
+  }
+
+  .soap-card {
+    flex: 0 0 calc(50% - 11px);
+  }
+
+  .soap-image-box {
+    height: 320px;
+  }
+
+  .soap-arrow-left {
+    left: -10px;
+  }
+
+  .soap-arrow-right {
+    right: -10px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .skincare-hero {
+    min-height: 540px;
+
+    padding: 60px 22px;
+
+    background:
+      linear-gradient(
+        rgba(35, 37, 15, 0.68),
+        rgba(35, 37, 15, 0.48)
+      ),
+      url("/home/gift/giftbbox.jfif");
+
+    background-position: center;
+  }
+
+  .skincare-hero h1 {
+    font-size: 48px;
+  }
+
+  .skincare-hero p {
+    font-size: 14px;
+  }
+
+  .soap-section,
+  .luxury-soap-section {
+    padding: 60px 20px;
+  }
+
+  .soap-heading h2 {
+    font-size: 36px;
+  }
+
+  .soap-heading p {
+    font-size: 13px;
+  }
+
+  .soap-card {
+    flex: 0 0 78%;
+    min-width: 78%;
+  }
+
+  .soap-image-box {
+    height: 340px;
+  }
+
+  .soap-arrow {
+    width: 38px;
+    height: 38px;
+
+    font-size: 11px;
+  }
+
+  .soap-arrow-left {
+    left: -5px;
+  }
+
+  .soap-arrow-right {
+    right: -5px;
+  }
+
+  .soap-philosophy {
+    min-height: 420px;
+
+    padding: 60px 25px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .skincare-hero h1 {
+    font-size: 42px;
+  }
+
+  .soap-card {
+    flex: 0 0 86%;
+    min-width: 86%;
+  }
+
+  .soap-image-box {
+    height: 310px;
+  }
+
+  .soap-heading h2 {
+    font-size: 32px;
+  }
+
+}
