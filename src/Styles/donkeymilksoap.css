@@ -432,8 +432,8 @@
 
 .donkey-add-btn {
   gap: 7px;
-  background: #30340f;
-  color: #fff;
+  background: #bcbdaa;
+  color: #111;
 }
 
 .donkey-add-btn:hover {
@@ -441,12 +441,12 @@
 }
 
 .donkey-view-btn {
-  border: 1px solid #30340f;
-  color: #30340f;
+  border: 1px solid #d0d1c5;
+  color: #d0d1c5;
 }
 
 .donkey-view-btn:hover {
-  background: #30340f;
+  background: #d0d1c5;
   color: #fff;
 }
 
@@ -488,7 +488,7 @@
   min-height: 650px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: #30340f;
+  background: #d0d1c5;
   color: #fff;
 }
 
@@ -549,7 +549,7 @@
 
 .donkey-banner-btn:hover {
   background: #fff;
-  color: #30340f;
+  color: #d0d1c5;
 }
 
 

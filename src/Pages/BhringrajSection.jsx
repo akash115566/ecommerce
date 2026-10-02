@@ -53,13 +53,13 @@ function BhringrajSection() {
           MOVING DELIVERY TRUCK
       ===================================================== */}
 
-      <div className="delivery-track">
+      {/* <div className="delivery-track">
 
         <div className="delivery-truck">
           🚚
         </div>
 
-      </div>
+      </div> */}
 
 
       {/* =====================================================
@@ -76,7 +76,7 @@ function BhringrajSection() {
 
 
         <h2>
-          VITAMIN
+         Seabuthorn  VITAMIN
           <br />
           <span>C SERUM</span>
         </h2>

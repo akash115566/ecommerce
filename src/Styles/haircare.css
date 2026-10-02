@@ -1,0 +1,963 @@
+/* =========================================================
+   TELLUS ESSENTIALS — HAIR CARE
+   INTERNATIONAL LUXURY THEME
+========================================================= */
+
+:root {
+  --hair-bg: #f5f1e8;
+  --hair-soft: #eee8da;
+  --hair-white: #ffffff;
+
+  --hair-text: #25251f;
+  --hair-heading: #34342b;
+  --hair-gold: #9b783e;
+  --hair-gold-dark: #a47d3d;
+  --hair-gold-light: #b49154;
+
+  --hair-muted: #817d70;
+  --hair-para: #6b685d;
+
+  --hair-border: rgba(112, 96, 65, 0.18);
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.hair-page {
+  width: 100%;
+  overflow: hidden;
+  background: var(--hair-bg);
+  color: var(--hair-text);
+}
+
+.hair-page * {
+  box-sizing: border-box;
+}
+
+.hair-page a {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hair-hero {
+  min-height: 680px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  background: var(--hair-soft);
+}
+
+.hair-hero-image {
+  width: 58%;
+  height: 680px;
+  overflow: hidden;
+}
+
+.hair-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1.2s ease;
+}
+
+.hair-hero:hover .hair-hero-image img {
+  transform: scale(1.04);
+}
+
+.hair-hero-content {
+  width: 42%;
+  min-height: 680px;
+  padding: 80px 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(180, 145, 84, 0.12),
+      transparent 40%
+    ),
+    var(--hair-soft);
+}
+
+.hair-eyebrow,
+.hair-hero-content > span {
+  color: var(--hair-gold);
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 22px;
+}
+
+.hair-hero-content h1 {
+  margin: 0;
+  color: var(--hair-heading);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(48px, 5vw, 76px);
+  line-height: 1.02;
+  font-weight: 400;
+}
+
+.hair-hero-content h1 em {
+  color: var(--hair-gold);
+  font-style: italic;
+}
+
+.hair-hero-content p {
+  max-width: 480px;
+  margin: 28px 0 35px;
+  color: var(--hair-para);
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 2;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.hair-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 30px;
+  border: 1px solid var(--hair-gold);
+  background: var(--hair-gold);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  transition: all 0.35s ease;
+}
+
+.hair-primary-btn:hover {
+  background: var(--hair-heading);
+  border-color: var(--hair-heading);
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.hair-intro {
+  max-width: 850px;
+  margin: auto;
+  padding: 115px 25px;
+  text-align: center;
+}
+
+.hair-intro-small {
+  margin-bottom: 20px;
+  color: var(--hair-gold);
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.hair-intro h2 {
+  margin: 0;
+  color: var(--hair-heading);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.hair-intro p {
+  max-width: 680px;
+  margin: 28px auto 0;
+  color: var(--hair-para);
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 2;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.hair-benefits {
+  padding: 95px 7%;
+  background: var(--hair-soft);
+}
+
+.hair-section-heading {
+  margin-bottom: 60px;
+}
+
+.hair-section-heading span,
+.hair-products-heading span,
+.hair-featured-content > span,
+.hair-ingredients-content > span,
+.hair-final > span {
+  color: var(--hair-gold);
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.hair-section-heading h2 {
+  margin: 15px 0 0;
+  color: var(--hair-heading);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(40px, 5vw, 58px);
+  line-height: 1.08;
+  font-weight: 400;
+}
+
+.hair-benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--hair-border);
+}
+
+.hair-benefit-card {
+  min-height: 260px;
+  padding: 35px 30px;
+  border-right: 1px solid var(--hair-border);
+  transition: background 0.35s ease;
+}
+
+.hair-benefit-card:first-child {
+  border-left: 1px solid var(--hair-border);
+}
+
+.hair-benefit-card:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.hair-benefit-number {
+  color: var(--hair-gold);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 22px;
+}
+
+.hair-benefit-card h3 {
+  margin: 38px 0 15px;
+  color: var(--hair-heading);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.hair-benefit-card p {
+  margin: 0;
+  color: var(--hair-para);
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.hair-products-section {
+  padding: 110px 0 110px 7%;
+  background: var(--hair-bg);
+}
+
+.hair-products-heading {
+  padding-right: 7%;
+  margin-bottom: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.hair-products-heading h2 {
+  margin: 13px 0 0;
+  color: var(--hair-heading);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(42px, 5vw, 60px);
+  font-weight: 400;
+}
+
+.hair-slider-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.hair-slider-buttons button {
+  width: 45px;
+  height: 45px;
+  border: 1px solid var(--hair-border);
+  background: transparent;
+  color: var(--hair-heading);
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.hair-slider-buttons button:hover {
+  background: var(--hair-gold);
+  border-color: var(--hair-gold);
+  color: white;
+}
+
+.hair-product-slider {
+  width: 100%;
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  padding-right: 7%;
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.hair-product-slider::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.hair-product-card {
+  flex: 0 0 280px;
+  background: #fff;
+  transition: transform 0.4s ease;
+}
+
+.hair-product-card:hover {
+  transform: translateY(-8px);
+}
+
+.hair-product-image {
+  width: 100%;
+  height: 365px;
+  position: relative;
+  overflow: hidden;
+  background: var(--hair-soft);
+}
+
+.hair-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.hair-product-card:hover
+.hair-product-image img {
+  transform: scale(1.06);
+}
+
+.hair-product-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 7px 10px;
+  background: var(--hair-heading);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.hair-product-info {
+  padding: 22px 20px 25px;
+}
+
+.hair-product-subtitle {
+  color: var(--hair-gold);
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  letter-spacing: 0.8px;
+}
+
+.hair-product-info h3 {
+  min-height: 50px;
+  margin: 10px 0;
+  color: var(--hair-heading);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.hair-product-price {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 18px;
+}
+
+.hair-product-price strong {
+  color: var(--hair-heading);
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.hair-product-price del {
+  color: #aaa;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+}
+
+.hair-product-price span {
+  margin-left: auto;
+  color: var(--hair-muted);
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+}
+
+.hair-product-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hair-add-btn,
+.hair-view-btn {
+  width: 100%;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hair-add-btn {
+  border: 1px solid var(--hair-gold);
+  background: var(--hair-gold);
+  color: #fff;
+}
+
+.hair-add-btn:hover {
+  background: var(--hair-heading);
+  border-color: var(--hair-heading);
+}
+
+.hair-view-btn {
+  border: 1px solid var(--hair-border);
+  background: transparent;
+  color: var(--hair-heading);
+}
+
+.hair-view-btn:hover {
+  border-color: var(--hair-gold);
+  color: var(--hair-gold);
+}
+
+
+/* =========================================================
+   FEATURED
+========================================================= */
+
+.hair-featured {
+  min-height: 650px;
+  display: flex;
+  background: var(--hair-soft);
+}
+
+.hair-featured-image {
+  width: 50%;
+  min-height: 650px;
+  overflow: hidden;
+}
+
+.hair-featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+
+.hair-featured:hover .hair-featured-image img {
+  transform: scale(1.04);
+}
+
+.hair-featured-content {
+  width: 50%;
+  padding: 90px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hair-featured-content h2 {
+  margin: 17px 0 25px;
+  color: var(--hair-heading);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(42px, 5vw, 65px);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.hair-featured-content h2 em {
+  color: var(--hair-gold);
+  font-style: italic;
+}
+
+.hair-featured-content > p {
+  max-width: 500px;
+  color: var(--hair-para);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.hair-featured-points {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hair-featured-points div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hair-featured-points span {
+  color: var(--hair-gold);
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+}
+
+.hair-featured-points p {
+  margin: 0;
+  color: var(--hair-heading);
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   INGREDIENTS
+========================================================= */
+
+.hair-ingredients {
+  padding: 115px 7%;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 100px;
+  background: var(--hair-bg);
+}
+
+.hair-ingredients-content h2 {
+  margin: 15px 0 25px;
+  color: var(--hair-heading);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(42px, 5vw, 62px);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.hair-ingredients-content p {
+  max-width: 480px;
+  margin: 0;
+  color: var(--hair-para);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.hair-ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--hair-border);
+  border-left: 1px solid var(--hair-border);
+}
+
+.hair-ingredient-item {
+  min-height: 230px;
+  padding: 30px;
+  border-right: 1px solid var(--hair-border);
+  border-bottom: 1px solid var(--hair-border);
+}
+
+.hair-ingredient-item span {
+  color: var(--hair-gold);
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+}
+
+.hair-ingredient-item h3 {
+  margin: 35px 0 12px;
+  color: var(--hair-heading);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.hair-ingredient-item p {
+  margin: 0;
+  color: var(--hair-para);
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   PHILOSOPHY
+========================================================= */
+
+.hair-philosophy {
+  min-height: 620px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      rgba(37, 37, 31, 0.68),
+      rgba(37, 37, 31, 0.68)
+    ),
+    url("/home/hair/hair-philosophy.jfif");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hair-philosophy-overlay {
+  max-width: 750px;
+  padding: 40px;
+  text-align: center;
+}
+
+.hair-philosophy-overlay > span {
+  color: #d2b77c;
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.hair-philosophy-overlay h2 {
+  margin: 20px 0;
+  color: #fff;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(48px, 6vw, 78px);
+  line-height: 1;
+  font-weight: 400;
+}
+
+.hair-philosophy-overlay p {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  color: rgba(255, 255, 255, 0.82);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.hair-light-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 30px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  transition: all 0.3s ease;
+}
+
+.hair-light-btn:hover {
+  background: #fff;
+  color: var(--hair-heading);
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.hair-final {
+  padding: 110px 25px;
+  text-align: center;
+  background: var(--hair-soft);
+}
+
+.hair-final h2 {
+  margin: 17px 0 20px;
+  color: var(--hair-heading);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.08;
+  font-weight: 400;
+}
+
+.hair-final p {
+  max-width: 520px;
+  margin: 0 auto 30px;
+  color: var(--hair-para);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1100px
+========================================================= */
+
+@media screen and (max-width: 1100px) {
+
+  .hair-hero-image,
+  .hair-hero-content {
+    width: 50%;
+  }
+
+  .hair-benefits {
+    padding: 80px 5%;
+  }
+
+  .hair-benefit-card {
+    padding: 25px 20px;
+  }
+
+  .hair-products-section {
+    padding-left: 5%;
+  }
+
+  .hair-products-heading {
+    padding-right: 5%;
+  }
+
+  .hair-featured-content {
+    padding: 70px 6%;
+  }
+
+  .hair-ingredients {
+    padding: 90px 5%;
+    gap: 50px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 850px
+========================================================= */
+
+@media screen and (max-width: 850px) {
+
+  .hair-hero {
+    min-height: auto;
+    flex-direction: column;
+  }
+
+  .hair-hero-image {
+    width: 100%;
+    height: 520px;
+  }
+
+  .hair-hero-content {
+    width: 100%;
+    min-height: auto;
+    padding: 75px 8%;
+  }
+
+  .hair-benefit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hair-benefit-card:nth-child(2) {
+    border-right: none;
+  }
+
+  .hair-benefit-card:nth-child(3) {
+    border-left: 1px solid var(--hair-border);
+  }
+
+  .hair-featured {
+    flex-direction: column;
+  }
+
+  .hair-featured-image {
+    width: 100%;
+    height: 550px;
+    min-height: 550px;
+  }
+
+  .hair-featured-content {
+    width: 100%;
+    padding: 75px 8%;
+  }
+
+  .hair-ingredients {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 600px
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+  .hair-hero-image {
+    height: 430px;
+  }
+
+  .hair-hero-content {
+    padding: 60px 25px;
+  }
+
+  .hair-hero-content h1 {
+    font-size: 46px;
+  }
+
+  .hair-hero-content p {
+    font-size: 11px;
+    line-height: 1.9;
+  }
+
+  .hair-intro {
+    padding: 80px 22px;
+  }
+
+  .hair-benefits {
+    padding: 70px 20px;
+  }
+
+  .hair-benefit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hair-benefit-card,
+  .hair-benefit-card:first-child,
+  .hair-benefit-card:nth-child(3) {
+    border-left: 1px solid var(--hair-border);
+    border-right: 1px solid var(--hair-border);
+  }
+
+  .hair-benefit-card {
+    min-height: 220px;
+  }
+
+  .hair-products-section {
+    padding: 75px 0 75px 20px;
+  }
+
+  .hair-products-heading {
+    padding-right: 20px;
+    align-items: flex-end;
+  }
+
+  .hair-products-heading h2 {
+    font-size: 42px;
+  }
+
+  .hair-slider-buttons button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hair-product-card {
+    flex-basis: 255px;
+  }
+
+  .hair-product-image {
+    height: 330px;
+  }
+
+  .hair-featured-image {
+    height: 430px;
+    min-height: 430px;
+  }
+
+  .hair-featured-content {
+    padding: 65px 25px;
+  }
+
+  .hair-ingredients {
+    padding: 75px 20px;
+  }
+
+  .hair-ingredients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hair-philosophy {
+    min-height: 550px;
+  }
+
+  .hair-philosophy-overlay {
+    padding: 25px;
+  }
+
+  .hair-final {
+    padding: 80px 20px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 400px
+========================================================= */
+
+@media screen and (max-width: 400px) {
+
+  .hair-hero-image {
+    height: 360px;
+  }
+
+  .hair-hero-content h1 {
+    font-size: 39px;
+  }
+
+  .hair-hero-content {
+    padding: 50px 20px;
+  }
+
+  .hair-intro h2,
+  .hair-section-heading h2,
+  .hair-products-heading h2,
+  .hair-featured-content h2,
+  .hair-ingredients-content h2 {
+    font-size: 38px;
+  }
+
+  .hair-product-card {
+    flex-basis: 235px;
+  }
+
+  .hair-product-image {
+    height: 300px;
+  }
+
+  .hair-philosophy-overlay h2 {
+    font-size: 45px;
+  }
+
+}

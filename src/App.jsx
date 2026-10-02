@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
@@ -33,17 +35,30 @@ import OurPhilosophy from "./Pages/OurPhilosophy";
 import Skincare from "./Pages/Skincare";
 import Serum from "./Pages/Serum"; 
 import DonkeyMilkSoap from "./Pages/DonkeyMilkSoap";
-
-
-import {
-  CartProvider,
-  useCart,
-} from "./Context/CartContext";
+import { CartProvider, useCart,} from "./Context/CartContext";
+import Collection from "./Pages/Collection";
+import CamelSoap from "./Pages/CamelSoap";
+import HairCare from "./Pages/HairCare";
+import LuxurySoap from "./Pages/LuxurySoap";
 
 
 
 
 const AppContent = () => {
+
+  function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  }, [pathname]);
+
+  return null;
+}
 
   const {
     cartOpen,
@@ -52,6 +67,7 @@ const AppContent = () => {
 
   return (
     <BrowserRouter>
+       <ScrollToTop />
 
       <Navbar />
 
@@ -62,7 +78,7 @@ const AppContent = () => {
           element={<Home />}
         />
             <Route path="/our-story" element={<OurStory />} />
-        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/about" element={<AboutUs />} />
          <Route path="/home" element={<Home />} />
 
         <Route
@@ -111,7 +127,10 @@ const AppContent = () => {
           <Route path="/skincare" element={<Skincare /> } />
            <Route path="/serum" element={<Serum /> } />
             <Route path="/donkeymilk" element={<DonkeyMilkSoap /> } />
-
+            <Route path="/collection" element={<Collection /> } />
+             <Route path="/camelsoap" element={<CamelSoap /> } />
+              <Route path="/haircare" element={<HairCare /> } />
+              <Route path="/luxurysoap" element={<LuxurySoap /> } />
         
       
         

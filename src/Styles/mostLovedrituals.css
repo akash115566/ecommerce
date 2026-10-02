@@ -1,4 +1,4 @@
-.ritual-section {
+.ritual-section1 {
   width: 100%;
   padding: 70px 8%;
   background: #ffffff;
@@ -11,7 +11,7 @@
    HEADER
 ========================= */
 
-.ritual-header {
+.ritual-header1 {
   width: 100%;
 
   display: flex;
@@ -21,7 +21,7 @@
   margin-bottom: 28px;
 }
 
-.ritual-header h2 {
+.ritual-header1 h2 {
   margin: 0;
 
   font-family: Georgia, "Times New Roman", serif;
@@ -56,13 +56,13 @@
    SLIDER
 ========================= */
 
-.ritual-slider {
+.ritual-slider1 {
   width: 100%;
   position: relative;
   overflow: hidden;
 }
 
-.ritual-track {
+.ritual-track1 {
   display: flex;
   align-items: flex-start;
 
@@ -71,7 +71,7 @@
   will-change: transform;
 }
 
-.ritual-track.no-transition {
+.ritual-track1.no-transition {
   transition: none !important;
 }
 
@@ -268,7 +268,7 @@
 
 @media (max-width: 900px) {
 
-  .ritual-section {
+  .ritual-section1 {
     padding: 60px 5%;
   }
 
@@ -285,15 +285,15 @@
 
 @media (max-width: 600px) {
 
-  .ritual-section {
+  .ritual-section1 {
     padding: 50px 12px;
   }
 
-  .ritual-header {
+  .ritual-header1 {
     margin-bottom: 20px;
   }
 
-  .ritual-header h2 {
+  .ritual-header1 h2 {
     font-size: 23px;
     letter-spacing: 1px;
   }
@@ -348,11 +348,11 @@
 
 @media (max-width: 380px) {
 
-  .ritual-section {
+  .ritual-section1 {
     padding: 40px 8px;
   }
 
-  .ritual-header h2 {
+  .ritual-header1 h2 {
     font-size: 20px;
   }
 

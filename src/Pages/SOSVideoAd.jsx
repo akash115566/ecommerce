@@ -22,6 +22,21 @@ function SOSVideoAd() {
 
         Your browser does not support the video tag.
       </video>
+       <video
+        className="sos-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+      >
+        <source
+          src="/home/vide.mp4"
+          type="video/mp4"
+        />
+
+        Your browser does not support the video tag.
+      </video>
 
 
       {/* DARK LUXURY OVERLAY */}

@@ -1,743 +1,816 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+import {
+  FaSearch,
+  FaUser,
+  FaShoppingBag,
+  FaBars,
+  FaTimes,
+  FaChevronDown,
+  FaChevronRight,
+} from "react-icons/fa";
+
 import "../Styles/navbar.css";
 
-function Navbar() {
-  /* =========================================================
-     STATES
-  ========================================================= */
 
-  const [offerSlide, setOfferSlide] = useState(0);
+const menuData = {
 
-  // Desktop Mega Menu
-  const [shopMenuOpen, setShopMenuOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState("SKIN CARE");
+  "SKIN CARE": {
+    path: "/serum",
 
-  // Mobile Menu
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [mobileConcernOpen, setMobileConcernOpen] = useState(false);
-  const [mobileCategory, setMobileCategory] = useState(null);
+    items: [
+      {
+        name: "Premium Face Serums",
+        image: "/home/serum/serumblack.jfif",
+        path: "/serum",
+      },
+      {
+        name: "Vitamin C Radiance Serum",
+        image: "/home/serum/serumblack.jfif",
+        path: "/serum",
+      },
+      {
+        name: "Hyaluronic Dew Serum",
+        image: "/home/serum/serumc.jfif",
+        path: "/serum",
+      },
+      {
+        name: "Rose Glow Face Serum",
+        image: "/home/serum/serumrose.jfif",
+        path: "/serum",
+      },
+    ],
 
-
-  /* =========================================================
-     OFFER BAR
-  ========================================================= */
-
-  const offerTexts = [
-    "WE DELIVER ACROSS INDIA & INTERNATIONALLY.",
-    "COMPLIMENTARY SAMPLES ABOVE ₹999!",
-    "COMPLIMENTARY TOTE BAG ON ₹12,999+*",
-  ];
-
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setOfferSlide(
-        (prev) => (prev + 1) % offerTexts.length
-      );
-    }, 3000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-
-  /* =========================================================
-     SHOP BY CONCERN DATA
-  ========================================================= */
-
-  const concernData = {
-
-    /* =======================================================
-       SKIN CARE
-    ======================================================= */
-
-    "SKIN CARE": {
-      products: [
-
-        {
-          name: "Vitamin C Face Serum",
-          image: "/home/serum/serumblack.jfif",
-          link: "/serum",
-        },
-
-        {
-          name: "Panchpushp Facial Mist",
-          image: "/home/serum/serumc.jfif",
-          link: "/product-details",
-        },
-
-        {
-          name: "Luxury Face Cream",
-          image: "/home/serum/serumblack.jfif",
-          link: "/product-details",
-        },
-
-        {
-          name: "Natural Face Cleanser",
-          image: "/home/serum/serumc.jfif",
-          link: "/product-details",
-        },
-
-        {
-          name: "Hydrating Skin Serum",
-          image: "/home/serum/serumblack.jfif",
-          link: "/product-details",
-        },
-
-        {
-          name: "Premium Sunscreen",
-          image: "/home/serum/serumc.jfif",
-          link: "/product-details",
-        },
-
-      ],
-
-      banners: [
-
-        {
-          image: "/home/serum/serumblack.jfif",
-          title: "LUXURY SKINCARE",
-          link: "/face",
-        },
-
-        {
-          image: "/home/serum/serumc.jfif",
-          title: "PREMIUM RITUALS",
-          link: "/face",
-        },
-
-      ],
-    },
-    
+    sideItems: [
+      {
+        name: "Luxury Skincare",
+        image: "/home/serum/serumblack.jfif",
+        path: "/serum",
+      },
+      {
+        name: "Most Loved Rituals",
+        image: "/home/serum/serumc.jfif",
+        path: "/most-loved-rituals",
+      },
+    ],
+  },
 
 
-    /* =======================================================
-       BATH & BODY
-    ======================================================= */
+  "BATH & BODY": {
+    path: "/skincare",
 
-    "BATH & BODY": {
+    items: [
+      {
+        name: "Luxury Bath Rituals",
+        image: "/home/soap/soap2.jfif",
+        path: "/skincare",
+      },
+      {
+        name: "Premium Body Care",
+        image: "/home/soap/soap3.jfif",
+        path: "/skincare",
+      },
+      {
+        name: "Natural Body Soaps",
+        image: "/home/soap/soap4.jfif",
+        path: "/skincare",
+      },
+      {
+        name: "Luxury Bath Collection",
+        image: "/home/soap/soap5.jfif",
+        path: "/skincare",
+      },
+    ],
 
-      products: [
+    sideItems: [
+      {
+        name: "Bath Essentials",
+        image: "/home/soap/soap6.jfif",
+        path: "/skincare",
+      },
+      {
+        name: "Body Care Rituals",
+        image: "/home/soap/soap2.jfif",
+        path: "/skincare",
+      },
+    ],
+  },
 
-        {
-          name: "Luxury Body Wash",
-          image: "/home/soap/soapgold.jfif",
-          link: "/seasonal",
-        },
+ "PREMIUM LUXURY SOAP": {
+    path: "/luxurysoap",
 
-        {
-          name: "Natural Body Lotion",
-           image: "/home/soap/soapgreen.jfif",
-          link: "/SKINCARE",
-        },
+    items: [
+      {
+        name: "Coffee Vanilla Luxury Soap",
+        image: "/home/luxurysoap/coffee.jfif",
+        path: "/luxurysoap",
+      },
+      {
+        name: "Orange Mandarin Luxury Soap",
+        image: "/home/luxurysoap/orange.jfif",
+        path: "/luxurysoap",
+      },
+      {
+        name: "Aloe Vera Luxury Soap",
+        image: "/home/luxurysoap/aloevera.jfif",
+        path: "/luxurysoap",
+      },
+      {
+        name: "Aloe Vera & Orange Luxury Soap",
+        image: "/home/luxurysoap/aloe.jfif",
+        path: "/luxurysoap",
+      },
+    ],
 
-        {
-          name: "Bath & Body Oil",
-           image: "/home/soap/soappink.jfif",
-          link: "/bath-body",
-        },
+    sideItems: [
+      {
+        name: "Coffee  Luxury Soap",
+        image: "/home/luxurysoap/coff.jfif",
+        path: "/luxurysoap",
+      },
+      {
+        name: "orange  Luxury Soap",
+        image: "/home/luxurysoap/orang.jfif",
+        path: "/luxurysoap",
+      },
+    ],
+  },
 
-        {
-          name: "Hand Care Ritual",
-          image: "/home/soap/soapred.jfif",
-          link: "/bath-body",
-        },
-
-      ],
-
-      banners: [
-
-        {
-           image: "/home/soap/soapwhite.jfif",
-          title: "BODY RITUALS",
-          link: "/bath-body",
-        },
-
-        {
-           image: "/home/soap/soapgold.jfif",
-          title: "BATH ESSENTIALS",
-          link: "/bath-body",
-        },
-
-      ],
-    },
-
-   "PREMIUM LUXURY SOAP": {
-  products: [
-
-    {
-      name: "Pure Camel Milk Luxury Soap",
-      image: "/home/gift/giftbbox.jfif",
-      link: "/skincare",
-    },
-
-    {
-      name: "Saffron & Turmeric Glow Soap",
-       image: "/home/gift/giftbboxx.jfif",
-      link: "/product-details",
-    },
-
-   
-  
-
-  ],
-
-  banners: [
-
-    {
-      image: "/home/gift/giftbox.jfif",
-      title: "CAMEL MILK LUXURY",
-      link: "/product-details",
-    },
-
-    {
-      image: "/home/gift/giftcamel.jfif",
-      title: "PREMIUM GLOW RITUALS",
-      link: "/product-details",
-    },
-
-  ],
-},
 
   "DUNKY MILK SOAP": {
-  products: [
+    path: "/donkeymilk",
 
-    {
-      name: "Pure Dunky Milk Luxury Soap",
-      image: "/home/gift/giftdon.jfif",
-      link: "/donkeymilk",
-        price: 499,
-      oldPrice: 599,
-    },
+    items: [
+      {
+        name: "Pure Dunky Milk Luxury Soap",
+        image: "/home/soap/dunkymilk.jfif",
+        path: "/donkeymilksoap",
+      },
+      {
+        name: "Dunky Milk & Honey Soap",
+        image: "/home/soap/soap2.jfif",
+        path: "/donkeymilksoap",
+      },
+      {
+        name: "Dunky Milk & Saffron Soap",
+        image: "/home/soap/soap3.jfif",
+        path: "/donkeymilksoap",
+      },
+      {
+        name: "Dunky Milk & Rose Soap",
+        image: "/home/soap/soap4.jfif",
+        path: "/donkeymilksoap",
+      },
+    ],
 
-    {
-      name: "Dunky Milk & Saffron Soap",
-      image: "/home/gift/giftdonk.jfif",
-      link: "/product-details",
-        price: 499,
-      oldPrice: 599,
-    },
-
-  
-    {
-      name: "Dunky Milk & Shea Butter Soap",
-      image: "/home/gift/giftdonkey.jfif",
-      link: "/product-details",
-        price: 499,
-      oldPrice: 599,
-    },
-
-  
-
-  ],
-
-  banners: [
-
-    {
-      image: "/home/gift/giftdonkey.jfif",
-      title: "DUNKY MILK LUXURY",
-      link: "/product-details",
-    },
-
-    {
-      image: "/home/gift/giftdonk.jfif",
-      title: "NOURISHING MILK RITUAL",
-      link: "/product-details",
-    },
-
-  ],
-},
- "CAMEL MILK SOAP": {
-  products: [
-
-    {
-      name: "Pure Camel Milk Soap",
-      image: "/home/gift/giftbox.jfif",
-      price: 499,
-      oldPrice: 699,
-      link: "/product-details",
-    },
-
-    {
-      name: "Camel Milk & Saffron Soap",
-      image: "/home/gift/gifbboxx.jfif",
-      price: 599,
-      oldPrice: 799,
-      link: "/product-details",
-    },
-
-    {
-      name: "Camel Milk Honey Soap",
-      image: "/home/gift/giftboox.jfif",
-      price: 549,
-      oldPrice: 749,
-      link: "/product-details",
-    },
-
-    {
-      name: "Camel Milk & Rose Soap",
-      image: "/home/gift/giftcamel.jfif",
-      price: 549,
-      oldPrice: 749,
-      link: "/product-details",
-    },
-
-    {
-      name: "Camel Milk Luxury Bath Soap",
-      image: "/home/gift/giftfour.jfif",
-      price: 649,
-      oldPrice: 849,
-      link: "/product-details",
-    },
-
-    {
-      name: "Camel Milk Nourishing Soap",
-      image: "/home/gift/giftgoat.jfif",
-      price: 599,
-      oldPrice: 799,
-      link: "/product-details",
-    },
-
-  ],
-
-  banners: [
-    {
-      image: "/home/gift/giftbbox.jfif",
-      title: "CAMEL MILK LUXURY",
-      link: "/face",
-    },
-
-    {
-      image: "/home/gift/giftbboxx.jfif",
-      title: "NOURISHING BATH RITUALS",
-      link: "/face",
-    },
-  ],
-},
+    sideItems: [
+      {
+        name: "Dunky Milk & Shea Butter",
+        image: "/home/soap/soap5.jfif",
+        path: "/donkeymilksoap",
+      },
+      {
+        name: "Dunky Milk & Almond",
+        image: "/home/soap/soap6.jfif",
+        path: "/donkeymilksoap",
+      },
+    ],
+  },
 
 
-    
+  "CAMEL MILK SOAP": {
+    path: "/camelsoap",
 
-    /* =======================================================
-       GIFTING
-    ======================================================= */
+    items: [
+      {
+        name: "Pure Camel Milk Luxury Soap",
+        image: "/home/soap/camelmilk.jfif",
+        path: "/skincare",
+      },
+      {
+        name: "Camel Milk & Honey Soap",
+        image: "/home/soap/soap2.jfif",
+        path: "/skincare",
+      },
+      {
+        name: "Camel Milk & Saffron Soap",
+        image: "/home/soap/soap3.jfif",
+        path: "/skincare",
+      },
+      {
+        name: "Camel Milk & Rose Soap",
+        image: "/home/soap/soap4.jfif",
+        path: "/skincare",
+      },
+    ],
 
-    "GIFTING": {
-
-      products: [
-
-        {
-          name: "Normal Gift",
-          image: "/home/gift/giftcamel.jfif",
-          link: "/gifting",
-        },
-
-        {
-          name: "Luxury Gift",
-          image: "/home/gift/giftfour.jfif",
-          link: "/gifting",
-        },
-
-        {
-          name: "Premium Gift Set",
-          image: "/home/gift/giftgoat.jfif",
-          link: "/gifting",
-        },
-
-        {
-          name: "Signature Gift",
-          image: "/home/gift/giftmilk.jfif",
-          link: "/gifting",
-        },
-
-      ],
-
-      banners: [
-
-        {
-          image: "/home/gift/giftbbox.jfif",
-          title: "LUXURY GIFTING",
-          link: "/gifting",
-        },
-
-        {
-          image: "/home/gift/giftboox.jfif",
-          title: "SIGNATURE GIFTS",
-          link: "/gifting",
-        },
-
-      ],
-    },
+    sideItems: [
+      {
+        name: "Camel Milk Luxury",
+        image: "/home/soap/camelmilk.jfif",
+        path: "/skincare",
+      },
+      {
+        name: "Premium Milk Ritual",
+        image: "/home/soap/soap5.jfif",
+        path: "/skincare",
+      },
+    ],
+  },
 
 
-    /* =======================================================
-       MEN
-    ======================================================= */
+  "GIFTING": {
+    path: "/gifting",
 
-    "HAIR  CLEANSER": {
+    items: [
+      {
+        name: "Luxury Gift Sets",
+        image: "/home/gifting/gift1.jfif",
+        path: "/gifting",
+      },
+      {
+        name: "Personal Gifting",
+        image: "/home/gifting/gift2.jfif",
+        path: "/gifting",
+      },
+      {
+        name: "Corporate Gifting",
+        image: "/home/gifting/gift3.jfif",
+        path: "/gifting",
+      },
+      {
+        name: "Festive Gifting",
+        image: "/home/gifting/gift4.jfif",
+        path: "/gifting",
+      },
+    ],
 
-      products: [
-
-       {
-  name: "Hair Cleanser",
-  image: "/home/hair/hairbox.jfif",
-  link: "/hair",
-},
-
-{
-  name: "Hair Oil",
-  image: "/home/hair/haircream.jfif",
-  link: "/hair",
-},
-
-{
-  name: "Hair Mask",
- image: "/home/hair/hairoil.jfif",
-  link: "/hair",
-},
-
-{
-  name: "Hair Serum",
-  image: "/home/hair/hairpack.jfif",
-  link: "/hair",
-},
-
-      ],
-
-      banners: [
-
-        {
-          image: "/home/hair/hairjatrapha.jfif",
-          title: "HAIR GROOMING",
-          link: "/men",
-        },
-
-        {
-          image: "/home/hair/hairbox.jfif",
-          title: "MEN'S ESSENTIALS",
-          link: "/men",
-        },
-
-      ],
-    },
+    sideItems: [
+      {
+        name: "Premium Gifts",
+        image: "/home/gifting/gift5.jfif",
+        path: "/gifting",
+      },
+      {
+        name: "Gift Collections",
+        image: "/home/gifting/gift6.jfif",
+        path: "/gifting",
+      },
+    ],
+  },
 
 
-    /* =======================================================
-       FRAGRANCE
-    ======================================================= */
+  "HAIR CLEANSER": {
+    path: "/haircare",
 
-    "7 STAR HOTEL LUXURY RANGE": {
+    items: [
+      {
+        name: "Bhringraj Hair Cleanser",
+        image: "/home/serum/serumblack.jfif",
+        path: "/serum",
+      },
+      {
+        name: "Herbal Hair Cleanser",
+        image: "/home/serum/serumc.jfif",
+        path: "/serum",
+      },
+      {
+        name: "Nourishing Hair Ritual",
+        image: "/home/serum/serumblack.jfif",
+        path: "/serum",
+      },
+      {
+        name: "Luxury Hair Care",
+        image: "/home/serum/serumc.jfif",
+        path: "/serum",
+      },
+    ],
 
-      products: [
+    sideItems: [
+      {
+        name: "Hair Care Ritual",
+        image: "/home/serum/serumblack.jfif",
+        path: "/serum",
+      },
+      {
+        name: "Premium Hair Care",
+        image: "/home/serum/serumc.jfif",
+        path: "/serum",
+      },
+    ],
+  },
 
-        {
-          name: "Luxury Perfume",
-          image: "/home/serum/serumblack.jfif",
-          link: "/fragrance",
-        },
 
-        {
-          name: "Premium Body Mist",
-          image: "/home/serum/serumc.jfif",
-          link: "/fragrance",
-        },
+  "7 STAR HOTEL LUXURY RANGE": {
+    path: "/collection",
 
-        {
-          name: "Essential Oils",
-          image: "/home/serum/serumblack.jfif",
-          link: "/fragrance",
-        },
+    items: [
+      {
+        name: "Luxury Hotel Soap",
+        image: "/home/soap/soap2.jfif",
+        path: "/collection",
+      },
+      {
+        name: "Premium Guest Amenities",
+        image: "/home/soap/soap3.jfif",
+        path: "/collection",
+      },
+      {
+        name: "Hotel Luxury Collection",
+        image: "/home/soap/soap4.jfif",
+        path: "/collection",
+      },
+      {
+        name: "Exclusive Hotel Range",
+        image: "/home/soap/soap5.jfif",
+        path: "/collection",
+      },
+    ],
 
-      ],
+    sideItems: [
+      {
+        name: "7 Star Luxury",
+        image: "/home/soap/collection-banner.jfif",
+        path: "/collection",
+      },
+      {
+        name: "Hotel Essentials",
+        image: "/home/soap/collection-bottom.jfif",
+        path: "/collection",
+      },
+    ],
+  },
 
-      banners: [
 
-        {
-          image: "/home/serum/serumblack.jfif",
-          title: "SIGNATURE FRAGRANCE",
-          link: "/fragrance",
-        },
+  "OUR STORY": {
+    path: "/our-story",
 
-        {
-          image: "/home/serum/serumc.jfif",
-          title: "LUXURY SCENTS",
-          link: "/fragrance",
-        },
+    items: [
+      {
+        name: "Our Philosophy",
+        image: "/home/story/story1.jfif",
+        path: "/our-story",
+      },
+      {
+        name: "Our Ingredients",
+        image: "/home/story/story2.jfif",
+        path: "/our-story",
+      },
+      {
+        name: "Our Rituals",
+        image: "/home/story/story3.jfif",
+        path: "/our-story",
+      },
+      {
+        name: "Our Promise",
+        image: "/home/story/story4.jfif",
+        path: "/our-story",
+      },
+    ],
 
-      ],
-    },
+    sideItems: [
+      {
+        name: "Ancient Wisdom",
+        image: "/home/story/story5.jfif",
+        path: "/our-story",
+      },
+      {
+        name: "Modern Luxury",
+        image: "/home/story/story6.jfif",
+        path: "/our-story",
+      },
+    ],
+  },
 
+
+  "ABOUT": {
+    path: "/about",
+
+    items: [
+      {
+        name: "About Tellus",
+        image: "/home/about/about1.jfif",
+        path: "/about",
+      },
+      {
+        name: "Our Philosophy",
+        image: "/home/about/about2.jfif",
+        path: "/about",
+      },
+      {
+        name: "Luxury Skincare",
+        image: "/home/about/about3.jfif",
+        path: "/about",
+      },
+      {
+        name: "Natural Ingredients",
+        image: "/home/about/about4.jfif",
+        path: "/about",
+      },
+    ],
+
+    sideItems: [
+      {
+        name: "Our Story",
+        image: "/home/about/about5.jfif",
+        path: "/our-story",
+      },
+      {
+        name: "Our Promise",
+        image: "/home/about/about6.jfif",
+        path: "/about",
+      },
+    ],
+  },
+
+
+  "BLOG": {
+    path: "/blog",
+
+    items: [
+      {
+        name: "Skincare Rituals",
+        image: "/home/blog/blog1.jfif",
+        path: "/blog",
+      },
+      {
+        name: "Beauty Secrets",
+        image: "/home/blog/blog2.jfif",
+        path: "/blog",
+      },
+      {
+        name: "Ancient Beauty",
+        image: "/home/blog/blog3.jfif",
+        path: "/blog",
+      },
+      {
+        name: "Ingredient Stories",
+        image: "/home/blog/blog4.jfif",
+        path: "/blog",
+      },
+    ],
+
+    sideItems: [
+      {
+        name: "Latest Journal",
+        image: "/home/blog/blog5.jfif",
+        path: "/blog",
+      },
+      {
+        name: "Beauty Guide",
+        image: "/home/blog/blog6.jfif",
+        path: "/blog",
+      },
+    ],
+  },
+
+};
+
+
+const navLinks = [
+  "SKIN CARE",
+  "BATH & BODY",
+  "PREMIUM LUXURY SOAP",
+  "DUNKY MILK SOAP",
+  "CAMEL MILK SOAP",
+  "GIFTING",
+  "HAIR CLEANSER",
+  "7 STAR HOTEL LUXURY RANGE",
+  "OUR STORY",
+  "ABOUT",
+  "BLOG",
+];
+
+
+function Navbar() {
+
+  const navigate = useNavigate();
+
+  const [activeMenu, setActiveMenu] = useState(null);
+
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const [mobileSubmenu, setMobileSubmenu] = useState(null);
+
+  const [searchOpen, setSearchOpen] = useState(false);
+
+  const [searchText, setSearchText] = useState("");
+
+
+  const handleSearch = (e) => {
+
+    e.preventDefault();
+
+    if (!searchText.trim()) return;
+
+    navigate(
+      `/search?q=${encodeURIComponent(
+        searchText.trim()
+      )}`
+    );
+
+    setSearchOpen(false);
+
+    setSearchText("");
   };
 
 
-  const categories = Object.keys(concernData);
+  const closeAll = () => {
 
+    setActiveMenu(null);
 
-  /* =========================================================
-     CLOSE MOBILE MENU
-  ========================================================= */
+    setMobileOpen(false);
 
-  const closeMobileMenu = () => {
-    setMobileMenuOpen(false);
-    setMobileConcernOpen(false);
-    setMobileCategory(null);
+    setMobileSubmenu(null);
+
   };
 
-
-  /* =========================================================
-     RENDER
-  ========================================================= */
 
   return (
-    <>
 
-      {/* =====================================================
-          OFFER BAR
-      ===================================================== */}
+    <header className="tellus-navbar">
 
-      <div className="offer-bar">
 
-        <div className="offer-slider">
-          {offerTexts[offerSlide]}
+      {/* =================================================
+          TOP HEADER
+      ================================================= */}
+
+      <div className="tellus-top-header">
+
+
+        {/* LEFT LOGO */}
+
+        <Link
+          to="/"
+          className="tellus-logo"
+          onClick={closeAll}
+        >
+
+          <div className="tellus-logo-image">
+
+            <img
+              src="/home/logo.jpeg"
+              alt="Tellus Essentials"
+            />
+
+          </div>
+
+        </Link>
+
+
+        {/* CENTER BRAND */}
+
+        <Link
+          to="/"
+          className="tellus-brand"
+          onClick={closeAll}
+        >
+
+          <span className="tellus-brand-main">
+            TELLUS
+          </span>
+
+          <span className="tellus-brand-sub">
+            ESSENTIALS
+          </span>
+
+          <span className="tellus-brand-tagline">
+            PREMIUM LUXURY SKIN CARE
+          </span>
+
+        </Link>
+
+
+        {/* RIGHT ACTIONS */}
+
+        <div className="tellus-actions">
+
+
+          {/* SEARCH */}
+
+          <div
+            className={`tellus-search ${
+              searchOpen
+                ? "search-active"
+                : ""
+            }`}
+          >
+
+            <form
+              onSubmit={handleSearch}
+            >
+
+              <input
+                type="text"
+                placeholder="Search products..."
+                value={searchText}
+                onChange={(e) =>
+                  setSearchText(e.target.value)
+                }
+              />
+
+              <button
+                type="button"
+                onClick={() =>
+                  setSearchOpen(!searchOpen)
+                }
+                aria-label="Search"
+              >
+
+                <FaSearch />
+
+              </button>
+
+            </form>
+
+          </div>
+
+
+          {/* ACCOUNT */}
+
+          <Link
+            to="/account"
+            className="tellus-action-icon"
+            aria-label="Account"
+            onClick={closeAll}
+          >
+
+            <FaUser />
+
+          </Link>
+
+
+          {/* CART */}
+
+          <Link
+            to="/bag"
+            className="tellus-action-icon cart-icon"
+            aria-label="Shopping Bag"
+            onClick={closeAll}
+          >
+
+            <FaShoppingBag />
+
+            <span className="cart-count">
+              0
+            </span>
+
+          </Link>
+
+
         </div>
+
 
       </div>
 
 
-      {/* =====================================================
-          DESKTOP HEADER
-      ===================================================== */}
+      {/* =================================================
+          LINE + NAVIGATION
+      ================================================= */}
 
-      <header className="header">
-
-        <div className="main-header">
+      <div className="tellus-nav-border" />
 
 
-          {/* =================================================
-              DESKTOP LEFT NAV
-          ================================================= */}
-
-          <nav className="desktop-left-nav">
-             {/* LOGO — STARTING */}
-              <Link to="/" className="header-logo">
-    <img
-      src="/home/logo.jpeg"
-      alt="Tellus Essentials"
-      style={{ height:"50px",width:'80px',background: "transparent",zIndex:"3px"}}
-    />
-  </Link>
- 
+      <nav className="tellus-desktop-nav">
 
 
-            {/* ===============================================
-                SHOP BY CONCERN
-            =============================================== */}
+        {navLinks.map((link) => {
+
+          const data = menuData[link];
+
+          return (
 
             <div
-              className="shop-concern-wrapper"
-
-              onMouseEnter={() => {
-                setShopMenuOpen(true);
-              }}
+              key={link}
+              className="tellus-nav-item"
+              onMouseEnter={() =>
+                setActiveMenu(link)
+              }
+              onMouseLeave={() =>
+                setActiveMenu(null)
+              }
             >
 
               <Link
-                to="/face"
-                className="main-nav-link shop-concern-link"
+                to={data.path}
+                className="tellus-nav-link"
+                onClick={closeAll}
               >
-                SHOP BY CONCERN
+
+                {link}
+
               </Link>
 
 
-              {/* =============================================
+              {/* ======================================
                   DESKTOP MEGA MENU
-              ============================================= */}
+              ====================================== */}
 
-              {shopMenuOpen && (
+              {activeMenu === link && (
 
-                <div
-                  className="mega-menu"
-
-                  onMouseLeave={() => {
-                    setShopMenuOpen(false);
-                  }}
-                >
+                <div className="tellus-mega-menu">
 
 
-                  {/* =========================================
-                      LEFT CATEGORY
-                  ========================================= */}
+                  {/* LEFT LINKS */}
 
-                  <div className="mega-sidebar">
+                  <div className="mega-left">
 
-                    {categories.map((category) => (
+                    <div className="mega-left-title">
+                      {link}
+                    </div>
 
-                      <Link
-                        to={
-                          concernData[category]
-                            .products[0]?.link || "#"
-                        }
 
-                        state={{
-                          category: category,
-                        }}
+                    {data.items.map(
+                      (item, index) => (
 
-                        key={category}
+                        <Link
+                          key={index}
+                          to={item.path}
+                          className="mega-left-link"
+                        >
 
-                        className={`mega-category ${
-                          activeCategory === category
-                            ? "active"
-                            : ""
-                        }`}
+                          {item.name}
 
-                        onMouseEnter={() =>
-                          setActiveCategory(category)
-                        }
+                        </Link>
 
-                        onClick={() =>
-                          setShopMenuOpen(false)
-                        }
-                      >
-
-                        {category}
-
-                      </Link>
-
-                    ))}
+                      )
+                    )}
 
                   </div>
 
 
-                  {/* =========================================
-                      CENTER PRODUCTS
-                  ========================================= */}
+                  {/* CENTER 4 IMAGES */}
 
-                  <div className="mega-products">
+                  <div className="mega-center">
 
-
-                    <div className="mega-products-heading">
-
-                      {activeCategory}
-
-                    </div>
-
-
-                    <div className="product-list">
-
-                      {concernData[
-                        activeCategory
-                      ].products.map((product, index) => (
+                    {data.items.map(
+                      (item, index) => (
 
                         <Link
-                          to={product.link}
-
-                          state={{
-                            category: activeCategory,
-                            product: product,
-                          }}
-
-                          className="mega-product"
-
                           key={index}
-
-                          onClick={() =>
-                            setShopMenuOpen(false)
-                          }
+                          to={item.path}
+                          className="mega-product"
                         >
 
                           <div className="mega-product-image">
 
                             <img
-                              src={product.image}
-                              alt={product.name}
+                              src={item.image}
+                              alt={item.name}
                             />
 
                           </div>
 
+                          <h4>
+                            {item.name}
+                          </h4>
+
+                        </Link>
+
+                      )
+                    )}
+
+                  </div>
+
+
+                  {/* RIGHT 2 IMAGES */}
+
+                  <div className="mega-right">
+
+                    {data.sideItems.map(
+                      (item, index) => (
+
+                        <Link
+                          key={index}
+                          to={item.path}
+                          className="mega-side-card"
+                        >
+
+                          <div className="mega-side-image">
+
+                            <img
+                              src={item.image}
+                              alt={item.name}
+                            />
+
+                          </div>
+
+                          <h4>
+                            {item.name}
+                          </h4>
+
                           <span>
-                            {product.name}
+                            DISCOVER MORE
                           </span>
 
                         </Link>
 
-                      ))}
-
-                    </div>
-
-
-                    {/* =======================================
-                        VIEW ALL
-                    ======================================= */}
-
-                    <Link
-                      to={
-                        concernData[
-                          activeCategory
-                        ].products[0]?.link || "#"
-                      }
-
-                      state={{
-                        category: activeCategory,
-                      }}
-
-                      className="mega-view-all"
-
-                      onClick={() =>
-                        setShopMenuOpen(false)
-                      }
-                    >
-
-                      VIEW ALL {activeCategory} →
-
-                    </Link>
+                      )
+                    )}
 
                   </div>
 
-
-                  {/* =========================================
-                      RIGHT BANNERS
-                  ========================================= */}
-
-                  <div className="mega-banners">
-
-                    {concernData[
-                      activeCategory
-                    ].banners.map((banner, index) => (
-
-                      <Link
-                        to={banner.link}
-
-                        state={{
-                          category: activeCategory,
-                        }}
-
-                        className="mega-banner"
-
-                        key={index}
-
-                        onClick={() =>
-                          setShopMenuOpen(false)
-                        }
-                      >
-
-                        <img
-                          src={banner.image}
-                          alt={banner.title}
-                        />
-
-                        <div className="mega-banner-overlay">
-
-                          <span>
-                            {banner.title}
-                          </span>
-
-                        </div>
-
-                      </Link>
-
-                    ))}
-
-                  </div>
 
                 </div>
 
@@ -745,510 +818,293 @@ function Navbar() {
 
             </div>
 
+          );
 
-            {/* =================================================
-                COLLECTIONS
-            ================================================= */}
+        })}
 
-            <Link
-              to="/collections"
-              className="main-nav-link"
-            >
-              COLLECTIONS
-            </Link>
+      </nav>
 
 
-            {/* =================================================
-                OUR STORY
-            ================================================= */}
+      {/* =================================================
+          MOBILE HEADER
+      ================================================= */}
 
-            <Link
-              to="/our-story"
-              className="main-nav-link"
-            >
-              OUR STORY
-            </Link>
+      <div className="tellus-mobile-header">
 
 
-            {/* =================================================
-                ABOUT
-            ================================================= */}
+        {/* TOGGLE */}
 
-            <Link
-              to="/about-us"
-              className="main-nav-link"
-            >
-              ABOUT
-            </Link>
+        <button
+          type="button"
+          className={`mobile-toggle ${
+            mobileOpen
+              ? "is-open"
+              : ""
+          }`}
+          onClick={() =>
+            setMobileOpen(!mobileOpen)
+          }
+          aria-label="Open menu"
+        >
 
+          {mobileOpen
+            ? <FaTimes />
+            : <FaBars />
+          }
 
-            {/* =================================================
-                BLOGS
-            ================================================= */}
-
-            <Link
-              to="/blog"
-              className="main-nav-link"
-            >
-              BLOGS
-            </Link>
-
-
-            {/* =================================================
-                GIFTING
-            ================================================= */}
-
-            <Link
-              to="/gifting"
-              className="main-nav-link"
-            >
-              GIFTING
-            </Link>
-
-          </nav>
+        </button>
 
 
-          {/* =================================================
-              LOGO
-          ================================================= */}
+        {/* MOBILE CENTER LOGO */}
+
+        <Link
+          to="/"
+          className="mobile-brand"
+          onClick={closeAll}
+        >
+
+          <span>
+            TELLUS
+          </span>
+
+          <small>
+            ESSENTIALS
+          </small>
+
+        </Link>
+
+
+        {/* MOBILE ACTIONS */}
+
+        <div className="mobile-actions">
+
+          <button
+            type="button"
+            onClick={() =>
+              setSearchOpen(!searchOpen)
+            }
+          >
+            <FaSearch />
+          </button>
 
           <Link
-            to="/"
-            className="logo"
+            to="/account"
+            onClick={closeAll}
+          >
+            <FaUser />
+          </Link>
+
+          <Link
+            to="/bag"
+            className="mobile-cart"
+            onClick={closeAll}
           >
 
-            <span className="logo-main">
-              TELLUS
-            </span>
+            <FaShoppingBag />
 
-            <span className="logo-sub">
-              ESSENTIALS
+            <span>
+              0
             </span>
-
-            <small>
-              PREMIUM LUXURY SKIN CARE
-            </small>
 
           </Link>
 
-
-          {/* =================================================
-              RIGHT MENU
-          ================================================= */}
-
-          <div className="right-menu">
-
-
-            {/* TRACK ORDER */}
-
-            {/* <Link
-              to="/track-order"
-              className="track-order"
-            >
-
-              <span className="truck-icon">
-                ♧
-              </span>
-
-              Track Order
-
-            </Link> */}
-
-
-            {/* SEARCH */}
-
-            <div className="search-box">
-
-              <input
-                type="text"
-                placeholder="Search"
-              />
-
-              <span className="search-icon">
-                ⌕
-              </span>
-
-            </div>
-
-
-            {/* ACCOUNT */}
-
-            <Link
-              to="/account"
-              className="round-icon"
-            >
-              ♙
-            </Link>
-
-
-            {/* CART */}
-
-            <Link
-              to="/cart"
-              className="round-icon cart-icon"
-            >
-
-              🛒
-
-              <b>
-                0
-              </b>
-
-            </Link>
-
-          </div>
-
         </div>
 
-
-        {/* =====================================================
-            MOBILE NAVIGATION
-        ===================================================== */}
-
-        <div className="mobile-nav">
+      </div>
 
 
-          {/* ===================================================
-              MOBILE TOP
-          =================================================== */}
+      {/* =================================================
+          MOBILE MENU
+      ================================================= */}
 
-          <div className="mobile-nav-top">
+      {mobileOpen && (
 
-
-            {/* HAMBURGER */}
-
-            <button
-              type="button"
-              className="mobile-menu-btn"
-
-              onClick={() =>
-                setMobileMenuOpen(
-                  !mobileMenuOpen
-                )
-              }
-            >
-
-              <span></span>
-              <span></span>
-              <span></span>
-
-            </button>
+        <div className="tellus-mobile-menu">
 
 
-            {/* MOBILE LOGO */}
+          {navLinks.map((link) => {
 
-            <Link
-              to="/"
-              className="mobile-logo"
+            const data = menuData[link];
 
-              onClick={closeMobileMenu}
-            >
-
-              <span>
-                TELLUS
-              </span>
-
-              <small>
-                ESSENTIALS
-              </small>
-
-            </Link>
+            const isOpen =
+              mobileSubmenu === link;
 
 
-            {/* MOBILE CART */}
+            return (
 
-            <Link
-              to="/cart"
-              className="mobile-cart"
-            >
-
-              🛒
-
-              <b>
-                0
-              </b>
-
-            </Link>
-
-          </div>
-
-
-          {/* ===================================================
-              MOBILE MENU
-          =================================================== */}
-
-          {mobileMenuOpen && (
-
-            <div className="mobile-menu">
-
-
-              {/* =============================================
-                  SHOP BY CONCERN
-              ============================================= */}
-
-              <button
-                type="button"
-                className="mobile-menu-item mobile-shop-btn"
-
-                onClick={() => {
-
-                  setMobileConcernOpen(
-                    !mobileConcernOpen
-                  );
-
-                  setMobileCategory(null);
-
-                }}
+              <div
+                key={link}
+                className="mobile-menu-section"
               >
 
-                <span>
-                  SHOP BY CONCERN
-                </span>
 
-                <span className="mobile-plus">
+                {/* MOBILE LINK */}
 
-                  {mobileConcernOpen
-                    ? "−"
-                    : "+"}
+                <div className="mobile-menu-row">
 
-                </span>
+                  <Link
+                    to={data.path}
+                    className="mobile-main-link"
+                    onClick={closeAll}
+                  >
 
-              </button>
+                    {link}
 
-
-              {/* =============================================
-                  CONCERN CATEGORIES
-              ============================================= */}
-
-              {mobileConcernOpen && (
-
-                <div className="mobile-concern-list">
+                  </Link>
 
 
-                  {categories.map((category) => (
+                  <button
+                    type="button"
+                    className="mobile-expand"
+                    onClick={() =>
+                      setMobileSubmenu(
+                        isOpen
+                          ? null
+                          : link
+                      )
+                    }
+                  >
 
-                    <div
-                      className="mobile-category-block"
-                      key={category}
-                    >
+                    {isOpen
+                      ? "−"
+                      : "+"
+                    }
 
+                  </button>
 
-                      {/* CATEGORY */}
-
-                      <button
-                        type="button"
-                        className="mobile-category"
-
-                        onClick={() => {
-
-                          setMobileCategory(
-
-                            mobileCategory === category
-                              ? null
-                              : category
-
-                          );
-
-                        }}
-                      >
-
-                        <span>
-                          {category}
-                        </span>
-
-                        <span>
-
-                          {mobileCategory === category
-                            ? "−"
-                            : "+"}
-
-                        </span>
-
-                      </button>
+                </div>
 
 
-                      {/* ===================================
-                          PRODUCTS
-                      =================================== */}
+                {/* MOBILE PRODUCTS */}
 
-                      {mobileCategory === category && (
+                {isOpen && (
 
-                        <div className="mobile-products">
+                  <div className="mobile-submenu">
 
-                          {concernData[
-                            category
-                          ].products.map(
-                            (product, index) => (
 
-                              <Link
-                                key={index}
+                    <div className="mobile-submenu-grid">
 
-                                to={product.link}
+                      {data.items.map(
+                        (item, index) => (
 
-                                state={{
-                                  category: category,
-                                  product: product,
-                                }}
+                          <Link
+                            key={index}
+                            to={item.path}
+                            className="mobile-product-card"
+                            onClick={closeAll}
+                          >
 
-                                className="mobile-product"
+                            <img
+                              src={item.image}
+                              alt={item.name}
+                            />
 
-                                onClick={
-                                  closeMobileMenu
-                                }
-                              >
+                            <span>
+                              {item.name}
+                            </span>
 
-                                <div className="mobile-product-image">
+                          </Link>
 
-                                  <img
-                                    src={product.image}
-                                    alt={product.name}
-                                  />
-
-                                </div>
-
-                                <span>
-                                  {product.name}
-                                </span>
-
-                              </Link>
-
-                            )
-                          )}
-
-                        </div>
-
+                        )
                       )}
 
                     </div>
 
-                  ))}
 
-                </div>
+                    {/* 2 FEATURED */}
 
-              )}
+                    <div className="mobile-featured">
 
+                      {data.sideItems.map(
+                        (item, index) => (
 
-              {/* =============================================
-                  COLLECTIONS
-              ============================================= */}
+                          <Link
+                            key={index}
+                            to={item.path}
+                            className="mobile-featured-card"
+                            onClick={closeAll}
+                          >
 
-              <Link
-                to="/collections"
-                className="mobile-menu-item"
+                            <img
+                              src={item.image}
+                              alt={item.name}
+                            />
 
-                onClick={closeMobileMenu}
-              >
+                            <div>
 
-                COLLECTIONS
+                              <strong>
+                                {item.name}
+                              </strong>
 
-              </Link>
+                              <small>
+                                DISCOVER MORE
+                              </small>
 
+                            </div>
 
-              {/* =============================================
-                  OUR STORY
-              ============================================= */}
+                          </Link>
 
-              <Link
-                to="/our-story"
-                className="mobile-menu-item"
+                        )
+                      )}
 
-                onClick={closeMobileMenu}
-              >
-
-                OUR STORY
-
-              </Link>
-
-
-              {/* =============================================
-                  ABOUT
-              ============================================= */}
-
-              <Link
-                to="/about-us"
-                className="mobile-menu-item"
-
-                onClick={closeMobileMenu}
-              >
-
-                ABOUT
-
-              </Link>
+                    </div>
 
 
-              {/* =============================================
-                  BLOGS
-              ============================================= */}
+                  </div>
 
-              <Link
-                to="/blog"
-                className="mobile-menu-item"
+                )}
 
-                onClick={closeMobileMenu}
-              >
+              </div>
 
-                BLOGS
+            );
 
-              </Link>
+          })}
 
-
-              {/* =============================================
-                  GIFTING
-              ============================================= */}
-
-              <Link
-                to="/gifting"
-                className="mobile-menu-item"
-
-                onClick={closeMobileMenu}
-              >
-
-                GIFTING
-
-              </Link>
-
-
-              {/* =============================================
-                  TRACK ORDER
-              ============================================= */}
-
-              <Link
-                to="/track-order"
-                className="mobile-menu-item"
-
-                onClick={closeMobileMenu}
-              >
-
-                TRACK ORDER
-
-              </Link>
-
-
-              {/* =============================================
-                  ACCOUNT
-              ============================================= */}
-
-              <Link
-                to="/account"
-                className="mobile-menu-item"
-
-                onClick={closeMobileMenu}
-              >
-
-                MY ACCOUNT
-
-              </Link>
-
-            </div>
-
-          )}
 
         </div>
 
-      </header>
+      )}
 
-    </>
+
+      {/* =================================================
+          MOBILE SEARCH
+      ================================================= */}
+
+      {searchOpen && (
+
+        <div className="mobile-search-box">
+
+          <form
+            onSubmit={handleSearch}
+          >
+
+            <input
+              autoFocus
+              type="text"
+              placeholder="Search products..."
+              value={searchText}
+              onChange={(e) =>
+                setSearchText(
+                  e.target.value
+                )
+              }
+            />
+
+            <button type="submit">
+              <FaSearch />
+            </button>
+
+          </form>
+
+        </div>
+
+      )}
+
+    </header>
+
   );
+
 }
+
 
 export default Navbar;

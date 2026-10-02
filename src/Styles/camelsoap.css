@@ -1,0 +1,1815 @@
+/* =========================================================
+   CAMEL SOAP
+   TELLUS ESSENTIALS
+   LUXURY COLLECTION
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+.camel-page {
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #f5f1e8;
+
+  color: #25251f;
+
+  font-family: "Poppins", sans-serif;
+}
+
+
+.camel-page a {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.camel-section-label {
+  display: inline-block;
+
+  color: #9b783e;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.camel-hero {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 720px;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #25251f;
+}
+
+
+.camel-hero-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+}
+
+
+.camel-hero-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  animation:
+    camelHeroZoom 12s ease-in-out infinite alternate;
+}
+
+
+.camel-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(37, 37, 31, 0.82) 0%,
+      rgba(37, 37, 31, 0.62) 38%,
+      rgba(37, 37, 31, 0.18) 75%,
+      rgba(37, 37, 31, 0.12) 100%
+    );
+}
+
+
+.camel-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding:
+    100px 7%;
+
+  color: #ffffff;
+}
+
+
+.camel-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 25px;
+
+  color: #e2c38b;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+
+.camel-hero h1 {
+  max-width: 700px;
+
+  margin: 0 0 25px;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(
+    65px,
+    8vw,
+    112px
+  );
+
+  font-weight: 400;
+
+  line-height: 0.93;
+
+  letter-spacing: -2px;
+}
+
+
+.camel-hero p {
+  max-width: 490px;
+
+  margin: 0 0 35px;
+
+  color: rgba(
+    255,
+    255,
+    255,
+    0.82
+  );
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+
+.camel-primary-btn {
+  min-height: 48px;
+
+  padding:
+    0 28px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #a47d3d;
+
+  color: #ffffff;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.8px;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.camel-primary-btn:hover {
+  background: #9b783e;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.camel-intro {
+  width: 100%;
+
+  padding:
+    120px 8%;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 0.85fr;
+
+  gap: 90px;
+
+  align-items: center;
+
+  background: #f5f1e8;
+}
+
+
+.camel-intro-content h2 {
+  margin: 18px 0 30px;
+
+  color: #34342b;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(
+    45px,
+    5vw,
+    70px
+  );
+
+  font-weight: 400;
+
+  line-height: 1.02;
+}
+
+
+.camel-intro-content p {
+  max-width: 570px;
+
+  margin: 0 0 18px;
+
+  color: #6b685d;
+
+  font-size: 12px;
+
+  line-height: 2;
+}
+
+
+.camel-intro-image {
+  position: relative;
+
+  min-height: 560px;
+
+  overflow: hidden;
+
+  background: #eee8da;
+}
+
+
+.camel-intro-image img {
+  width: 100%;
+
+  height: 560px;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.8s ease;
+}
+
+
+.camel-intro-image:hover img {
+  transform: scale(1.04);
+}
+
+
+.camel-image-caption {
+  position: absolute;
+
+  left: 25px;
+
+  right: 25px;
+
+  bottom: 25px;
+
+  padding:
+    18px 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background:
+    rgba(
+      245,
+      241,
+      232,
+      0.93
+    );
+
+  backdrop-filter:
+    blur(8px);
+
+  color: #34342b;
+}
+
+
+.camel-image-caption span {
+  font-size: 7px;
+
+  letter-spacing: 2px;
+
+  color: #817d70;
+}
+
+
+.camel-image-caption strong {
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: 18px;
+
+  font-weight: 400;
+
+  color: #9b783e;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.camel-benefits {
+  padding:
+    110px 7%;
+
+  background: #eee8da;
+}
+
+
+.camel-benefits-heading {
+  margin-bottom: 55px;
+}
+
+
+.camel-benefits-heading h2 {
+  margin: 17px 0 0;
+
+  color: #34342b;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(
+    45px,
+    5vw,
+    68px
+  );
+
+  font-weight: 400;
+
+  line-height: 1.02;
+}
+
+
+.camel-benefits-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  border-top:
+    1px solid
+    rgba(
+      112,
+      96,
+      65,
+      0.18
+    );
+
+  border-bottom:
+    1px solid
+    rgba(
+      112,
+      96,
+      65,
+      0.18
+    );
+}
+
+
+.camel-benefit-card {
+  min-height: 260px;
+
+  padding:
+    35px 28px;
+
+  border-right:
+    1px solid
+    rgba(
+      112,
+      96,
+      65,
+      0.18
+    );
+}
+
+
+.camel-benefit-card:last-child {
+  border-right: none;
+}
+
+
+.camel-benefit-number {
+  display: block;
+
+  margin-bottom: 40px;
+
+  color: #9b783e;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+}
+
+
+.camel-benefit-card h3 {
+  margin: 0 0 14px;
+
+  color: #34342b;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: 27px;
+
+  font-weight: 400;
+}
+
+
+.camel-benefit-card p {
+  margin: 0;
+
+  color: #6b685d;
+
+  font-size: 11px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.camel-products-section {
+  width: 100%;
+
+  padding:
+    115px 7%;
+
+  background: #f5f1e8;
+}
+
+
+.camel-products-heading {
+  margin-bottom: 52px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 50px;
+}
+
+
+.camel-products-heading h2 {
+  margin: 16px 0 0;
+
+  color: #25251f;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(
+    45px,
+    5vw,
+    70px
+  );
+
+  font-weight: 400;
+
+  line-height: 1.03;
+}
+
+
+.camel-products-heading > p {
+  max-width: 400px;
+
+  margin: 0;
+
+  color: #6b685d;
+
+  font-size: 12px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   SLIDER WRAPPER
+========================================================= */
+
+.camel-products-slider-wrap {
+  position: relative;
+
+  width: 100%;
+}
+
+
+.camel-products-slider {
+  width: 100%;
+
+  display: flex;
+
+  gap: 20px;
+
+  overflow-x: auto;
+
+  scroll-behavior: smooth;
+
+  scroll-snap-type: x mandatory;
+
+  padding:
+    5px 3px 30px;
+
+  scrollbar-width: none;
+}
+
+
+.camel-products-slider::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.camel-product-card {
+  flex:
+    0 0
+    calc(
+      (100% - 60px) / 4
+    );
+
+  min-width: 250px;
+
+  scroll-snap-align: start;
+
+  background: #eee8da;
+
+  border:
+    1px solid
+    rgba(
+      112,
+      96,
+      65,
+      0.12
+    );
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+.camel-product-card:hover {
+  transform:
+    translateY(-8px);
+
+  box-shadow:
+    0 22px 50px
+    rgba(
+      65,
+      54,
+      32,
+      0.13
+    );
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.camel-product-card-image {
+  position: relative;
+
+  width: 100%;
+
+  height: 330px;
+
+  overflow: hidden;
+
+  background: #f5f1e8;
+}
+
+
+.camel-product-card-image img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.65s ease;
+}
+
+
+.camel-product-card:hover
+.camel-product-card-image img {
+  transform:
+    scale(1.06);
+}
+
+
+.camel-product-badge {
+  position: absolute;
+
+  top: 14px;
+
+  left: 14px;
+
+  z-index: 3;
+
+  padding:
+    7px 11px;
+
+  background: #a47d3d;
+
+  color: #ffffff;
+
+  font-size: 7px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   PRODUCT CONTENT
+========================================================= */
+
+.camel-product-card-content {
+  padding:
+    21px 20px 23px;
+}
+
+
+.camel-product-size {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #9b783e;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+
+.camel-product-card h3 {
+  min-height: 52px;
+
+  margin:
+    0 0 7px;
+
+  color: #34342b;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: 21px;
+
+  font-weight: 400;
+
+  line-height: 1.25;
+}
+
+
+.camel-product-subtitle {
+  min-height: 34px;
+
+  margin:
+    0 0 14px;
+
+  color: #817d70;
+
+  font-size: 8px;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.camel-card-price {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 17px;
+}
+
+
+.camel-card-price span {
+  color: #25251f;
+
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+
+.camel-card-price del {
+  color: #999384;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   PRODUCT BUTTONS
+========================================================= */
+
+.camel-product-actions {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.camel-add-btn,
+.camel-view-btn {
+  width: 100%;
+
+  min-height: 43px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: none;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.4px;
+
+  cursor: pointer;
+
+  transition:
+    0.3s ease;
+}
+
+
+.camel-add-btn {
+  background: #a47d3d;
+
+  color: #ffffff;
+}
+
+
+.camel-add-btn:hover {
+  background: #9b783e;
+
+  transform:
+    translateY(-2px);
+}
+
+
+.camel-view-btn {
+  border:
+    1px solid
+    rgba(
+      155,
+      120,
+      62,
+      0.4
+    );
+
+  background: transparent;
+
+  color: #9b783e;
+}
+
+
+.camel-view-btn:hover {
+  background: #9b783e;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   SLIDER ARROWS
+========================================================= */
+
+.camel-slider-btn {
+  position: absolute;
+
+  top: 43%;
+
+  z-index: 10;
+
+  width: 46px;
+
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(
+      155,
+      120,
+      62,
+      0.35
+    );
+
+  border-radius: 50%;
+
+  background: #f5f1e8;
+
+  color: #9b783e;
+
+  font-family: Georgia, serif;
+
+  font-size: 28px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 25px
+    rgba(
+      50,
+      40,
+      20,
+      0.12
+    );
+
+  transition:
+    0.3s ease;
+}
+
+
+.camel-slider-btn:hover {
+  background: #a47d3d;
+
+  color: #ffffff;
+
+  transform:
+    scale(1.08);
+}
+
+
+.camel-slider-prev {
+  left: -22px;
+}
+
+
+.camel-slider-next {
+  right: -22px;
+}
+
+
+/* =========================================================
+   LUXURY BANNER
+========================================================= */
+
+.camel-luxury-banner {
+  position: relative;
+
+  min-height: 600px;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    url("/home/soap/camelmilk.jfif")
+    center / cover
+    no-repeat;
+}
+
+
+.camel-luxury-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(
+        37,
+        37,
+        31,
+        0.82
+      ),
+      rgba(
+        37,
+        37,
+        31,
+        0.50
+      ),
+      rgba(
+        37,
+        37,
+        31,
+        0.20
+      )
+    );
+}
+
+
+.camel-luxury-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 650px;
+
+  padding:
+    80px 8%;
+
+  color: #ffffff;
+}
+
+
+.camel-luxury-content > span {
+  color: #d9b977;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+
+.camel-luxury-content h2 {
+  margin:
+    18px 0 20px;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(
+    48px,
+    5vw,
+    72px
+  );
+
+  font-weight: 400;
+
+  line-height: 1.02;
+}
+
+
+.camel-luxury-content p {
+  max-width: 470px;
+
+  margin:
+    0 0 32px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.78
+    );
+
+  font-size: 12px;
+
+  line-height: 1.9;
+}
+
+
+.camel-light-btn {
+  min-height: 47px;
+
+  padding:
+    0 27px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.6
+    );
+
+  color: #ffffff;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.7px;
+
+  transition:
+    0.3s ease;
+}
+
+
+.camel-light-btn:hover {
+  background: #ffffff;
+
+  color: #34342b;
+}
+
+
+/* =========================================================
+   INGREDIENTS
+========================================================= */
+
+.camel-ingredients {
+  display: grid;
+
+  grid-template-columns:
+    0.9fr 1fr;
+
+  min-height: 700px;
+
+  background: #eee8da;
+}
+
+
+.camel-ingredients-image {
+  min-height: 700px;
+
+  overflow: hidden;
+}
+
+
+.camel-ingredients-image img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.8s ease;
+}
+
+
+.camel-ingredients-image:hover img {
+  transform:
+    scale(1.04);
+}
+
+
+.camel-ingredients-content {
+  padding:
+    100px 9%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+.camel-ingredients-content h2 {
+  margin:
+    18px 0 22px;
+
+  color: #34342b;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(
+    45px,
+    5vw,
+    68px
+  );
+
+  font-weight: 400;
+
+  line-height: 1.02;
+}
+
+
+.camel-ingredients-content > p {
+  max-width: 550px;
+
+  margin:
+    0 0 35px;
+
+  color: #6b685d;
+
+  font-size: 12px;
+
+  line-height: 1.9;
+}
+
+
+.camel-ingredient-list {
+  border-top:
+    1px solid
+    rgba(
+      112,
+      96,
+      65,
+      0.18
+    );
+}
+
+
+.camel-ingredient-item {
+  display: grid;
+
+  grid-template-columns:
+    45px 1fr;
+
+  gap: 18px;
+
+  padding:
+    22px 0;
+
+  border-bottom:
+    1px solid
+    rgba(
+      112,
+      96,
+      65,
+      0.18
+    );
+}
+
+
+.camel-ingredient-item > span {
+  color: #9b783e;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+
+.camel-ingredient-item h3 {
+  margin:
+    0 0 6px;
+
+  color: #34342b;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: 22px;
+
+  font-weight: 400;
+}
+
+
+.camel-ingredient-item p {
+  margin: 0;
+
+  color: #817d70;
+
+  font-size: 10px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.camel-final-cta {
+  padding:
+    120px 20px;
+
+  text-align: center;
+
+  background: #f5f1e8;
+}
+
+
+.camel-final-cta h2 {
+  margin:
+    17px 0 22px;
+
+  color: #34342b;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(
+    48px,
+    6vw,
+    78px
+  );
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+
+.camel-final-cta p {
+  max-width: 500px;
+
+  margin:
+    0 auto 32px;
+
+  color: #6b685d;
+
+  font-size: 12px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes camelHeroZoom {
+
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media screen and (max-width: 1100px) {
+
+  .camel-intro {
+    gap: 55px;
+  }
+
+
+  .camel-product-card {
+    flex:
+      0 0
+      calc(
+        (100% - 40px) / 3
+      );
+  }
+
+
+  .camel-benefits-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .camel-benefit-card:nth-child(2) {
+    border-right: none;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET SMALL
+========================================================= */
+
+@media screen and (max-width: 850px) {
+
+  .camel-hero {
+    min-height: 650px;
+  }
+
+
+  .camel-hero-content {
+    padding:
+      90px 6%;
+  }
+
+
+  .camel-intro {
+    grid-template-columns: 1fr;
+
+    padding:
+      85px 6%;
+  }
+
+
+  .camel-intro-image {
+    min-height: 500px;
+  }
+
+
+  .camel-intro-image img {
+    height: 500px;
+  }
+
+
+  .camel-products-section {
+    padding:
+      85px 5%;
+  }
+
+
+  .camel-products-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+
+  .camel-products-heading > p {
+    max-width: 600px;
+  }
+
+
+  .camel-product-card {
+    flex:
+      0 0
+      calc(
+        (100% - 20px) / 2
+      );
+  }
+
+
+  .camel-ingredients {
+    grid-template-columns: 1fr;
+  }
+
+
+  .camel-ingredients-image {
+    min-height: 550px;
+  }
+
+
+  .camel-ingredients-content {
+    padding:
+      80px 7%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+  .camel-hero {
+    min-height: 620px;
+  }
+
+
+  .camel-hero-image img {
+    object-position: 60% center;
+  }
+
+
+  .camel-hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(
+          37,
+          37,
+          31,
+          0.84
+        ),
+        rgba(
+          37,
+          37,
+          31,
+          0.45
+        )
+      );
+  }
+
+
+  .camel-hero-content {
+    padding:
+      80px 22px;
+  }
+
+
+  .camel-eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 2.5px;
+  }
+
+
+  .camel-hero h1 {
+    font-size: 58px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .camel-hero p {
+    max-width: 360px;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+  }
+
+
+  .camel-intro {
+    padding:
+      70px 20px;
+
+    gap: 45px;
+  }
+
+
+  .camel-intro-content h2 {
+    font-size: 43px;
+  }
+
+
+  .camel-intro-content p {
+    font-size: 11px;
+  }
+
+
+  .camel-intro-image {
+    min-height: 430px;
+  }
+
+
+  .camel-intro-image img {
+    height: 430px;
+  }
+
+
+  .camel-image-caption {
+    left: 14px;
+
+    right: 14px;
+
+    bottom: 14px;
+
+    padding:
+      14px;
+  }
+
+
+  .camel-benefits {
+    padding:
+      70px 20px;
+  }
+
+
+  .camel-benefits-heading h2 {
+    font-size: 43px;
+  }
+
+
+  .camel-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .camel-benefit-card {
+    min-height: auto;
+
+    padding:
+      27px 5px;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid
+      rgba(
+        112,
+        96,
+        65,
+        0.18
+      );
+  }
+
+
+  .camel-benefit-card:last-child {
+    border-bottom: none;
+  }
+
+
+  .camel-benefit-number {
+    margin-bottom: 18px;
+  }
+
+
+  .camel-products-section {
+    padding:
+      70px 18px;
+  }
+
+
+  .camel-products-heading {
+    margin-bottom: 35px;
+  }
+
+
+  .camel-products-heading h2 {
+    font-size: 42px;
+  }
+
+
+  .camel-products-heading > p {
+    font-size: 11px;
+  }
+
+
+  .camel-products-slider {
+    gap: 14px;
+
+    padding:
+      3px 3px 25px;
+  }
+
+
+  .camel-product-card {
+    flex: 0 0 82%;
+
+    min-width: 0;
+  }
+
+
+  .camel-product-card-image {
+    height: 330px;
+  }
+
+
+  .camel-product-card-content {
+    padding:
+      20px 17px 22px;
+  }
+
+
+  .camel-product-card h3 {
+    font-size: 20px;
+  }
+
+
+  .camel-slider-btn {
+    width: 38px;
+
+    height: 38px;
+
+    font-size: 23px;
+  }
+
+
+  .camel-slider-prev {
+    left: -7px;
+  }
+
+
+  .camel-slider-next {
+    right: -7px;
+  }
+
+
+  .camel-luxury-banner {
+    min-height: 570px;
+
+    background-position:
+      60% center;
+  }
+
+
+  .camel-luxury-content {
+    padding:
+      70px 22px;
+  }
+
+
+  .camel-luxury-content h2 {
+    font-size: 48px;
+  }
+
+
+  .camel-luxury-content p {
+    font-size: 11px;
+  }
+
+
+  .camel-ingredients-image {
+    min-height: 430px;
+  }
+
+
+  .camel-ingredients-content {
+    padding:
+      70px 22px;
+  }
+
+
+  .camel-ingredients-content h2 {
+    font-size: 43px;
+  }
+
+
+  .camel-ingredient-item {
+    grid-template-columns:
+      35px 1fr;
+
+    gap: 10px;
+  }
+
+
+  .camel-final-cta {
+    padding:
+      75px 20px;
+  }
+
+
+  .camel-final-cta h2 {
+    font-size: 48px;
+  }
+
+
+  .camel-final-cta p {
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media screen and (max-width: 400px) {
+
+  .camel-hero h1 {
+    font-size: 51px;
+  }
+
+
+  .camel-primary-btn {
+    padding:
+      0 21px;
+
+    font-size: 8px;
+  }
+
+
+  .camel-intro-content h2,
+  .camel-benefits-heading h2,
+  .camel-products-heading h2,
+  .camel-ingredients-content h2 {
+    font-size: 38px;
+  }
+
+
+  .camel-product-card {
+    flex: 0 0 88%;
+  }
+
+
+  .camel-product-card-image {
+    height: 300px;
+  }
+
+
+  .camel-slider-btn {
+    width: 34px;
+
+    height: 34px;
+
+    font-size: 20px;
+  }
+
+
+  .camel-slider-prev {
+    left: -5px;
+  }
+
+
+  .camel-slider-next {
+    right: -5px;
+  }
+
+
+  .camel-luxury-content h2 {
+    font-size: 42px;
+  }
+
+
+  .camel-final-cta h2 {
+    font-size: 43px;
+  }
+
+}

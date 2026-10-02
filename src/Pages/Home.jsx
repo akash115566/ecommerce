@@ -109,10 +109,7 @@ Wisdom brought back to life a time tested ritual for deeply hydrated,  youthful 
       <div className="full-banner-overlay"></div>
 
 
-      {/* RUNNING TOY / CHARACTER */}
-      <div className="running-character">
-        <span>🏃</span>
-      </div>
+      
 
 
       {/* CENTER CONTENT */}
@@ -132,14 +129,14 @@ Wisdom brought back to life a time tested ritual for deeply hydrated,  youthful 
 
 
       {/* BOTTOM ANIMATED PRODUCT */}
-      <div className="bottom-product-animation">
+      {/* <div className="bottom-product-animation">
 
         <img
           src="/home/serum/serumblack.jfif"
           alt="Tellus Premium Product"
         />
 
-      </div>
+      </div> */}
 
 
       {/* BOTTOM DECORATIVE LINE */}

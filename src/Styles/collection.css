@@ -1,0 +1,1726 @@
+/* =========================================================
+   TELLUS ESSENTIALS
+   COLLECTION PAGE
+   LUXURY CREAM + GOLD THEME
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.collection-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #f5f1e8;
+  color: #25251f;
+
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================================
+   COLOR PALETTE
+========================================================= */
+
+:root {
+  --collection-bg: #f5f1e8;
+  --collection-soft-bg: #eee8da;
+
+  --collection-text: #25251f;
+  --collection-heading: #34342b;
+
+  --collection-gold: #9b783e;
+  --collection-gold-dark: #a47d3d;
+  --collection-gold-light: #b49154;
+
+  --collection-text-light: #6b685d;
+  --collection-muted: #817d70;
+
+  --collection-border: rgba(112, 96, 65, 0.18);
+
+  --collection-white: #ffffff;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.collection-hero {
+  position: relative;
+
+  min-height: 560px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 90px 7%;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(185, 145, 74, 0.09),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(110, 130, 95, 0.08),
+      transparent 30%
+    ),
+    #f5f1e8;
+}
+
+
+/* subtle luxury texture */
+
+.collection-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.32;
+
+  background-image:
+    radial-gradient(
+      rgba(90, 75, 45, 0.07) 0.6px,
+      transparent 0.6px
+    );
+
+  background-size: 8px 8px;
+}
+
+
+/* Hero image */
+
+.collection-hero::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  top: 0;
+
+  width: 55%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f5f1e8 0%,
+      rgba(245, 241, 232, 0.72) 20%,
+      rgba(245, 241, 232, 0.08) 70%
+    ),
+    url("/home/soap/collection-banner.jfif");
+
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0.95;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.collection-hero-content {
+  position: relative;
+
+  z-index: 3;
+
+  width: 620px;
+  max-width: 100%;
+}
+
+.collection-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: #9b783e;
+}
+
+.collection-hero h1 {
+  margin: 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(52px, 6vw, 86px);
+
+  line-height: 0.98;
+
+  font-weight: 400;
+
+  letter-spacing: -2px;
+
+  color: #25251f;
+}
+
+.collection-hero h1 span {
+  color: #a47d3d;
+}
+
+.collection-hero p {
+  max-width: 550px;
+
+  margin: 28px 0 32px;
+
+  font-size: 14px;
+
+  line-height: 2;
+
+  color: #6b685d;
+}
+
+
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
+.collection-hero-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 14px 25px;
+
+  background: #a47d3d;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.7px;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.collection-hero-btn:hover {
+  background: #9b783e;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 28px rgba(112, 85, 39, 0.2);
+}
+
+.collection-hero-btn svg {
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.collection-section-heading {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1350px;
+
+  margin: auto;
+
+  padding: 90px 7% 38px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+.collection-section-heading > div {
+  max-width: 760px;
+}
+
+.collection-section-heading span {
+  display: block;
+
+  margin-bottom: 13px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  color: #9b783e;
+}
+
+.collection-section-heading h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(38px, 4.5vw, 62px);
+
+  line-height: 1;
+
+  font-weight: 400;
+
+  letter-spacing: -1px;
+
+  color: #25251f;
+}
+
+.collection-section-heading p {
+  max-width: 680px;
+
+  margin-top: 18px;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+
+  color: #6b685d;
+}
+
+
+/* =========================================================
+   VIEW ALL
+========================================================= */
+
+.collection-view-all {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding-bottom: 8px;
+
+  border-bottom:
+    1px solid #b49154;
+
+  color: #9b783e;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  transition: 0.3s ease;
+}
+
+.collection-view-all:hover {
+  color: #25251f;
+
+  border-color: #25251f;
+}
+
+.collection-count {
+  white-space: nowrap;
+
+  color: #9b783e !important;
+
+  font-size: 10px !important;
+
+  letter-spacing: 2px !important;
+}
+
+
+/* =========================================================
+   JASMINE SECTION
+========================================================= */
+
+.jasmine-section {
+  position: relative;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(185, 145, 74, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(110, 130, 95, 0.07),
+      transparent 30%
+    ),
+    #f5f1e8;
+
+  padding-bottom: 85px;
+}
+
+
+/* texture */
+
+.jasmine-section::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.25;
+
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(
+      rgba(90, 75, 45, 0.06) 0.6px,
+      transparent 0.6px
+    );
+
+  background-size: 8px 8px;
+}
+
+
+/* =========================================================
+   JASMINE SLIDER
+========================================================= */
+
+.jasmine-slider-wrapper {
+  position: relative;
+
+  width: min(1120px, 90%);
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.jasmine-slider {
+  width: 100%;
+
+  overflow-x: auto;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+
+  padding: 15px 35px 30px;
+}
+
+.jasmine-slider::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   JASMINE PRODUCT CARD
+========================================================= */
+
+.jasmine-product-card {
+  min-width: 760px;
+
+  display: grid;
+
+  grid-template-columns: 48% 52%;
+
+  overflow: hidden;
+
+  background: #eee8da;
+
+  border:
+    1px solid rgba(164, 125, 61, 0.3);
+
+  box-shadow:
+    0 25px 60px rgba(48, 42, 28, 0.12);
+}
+
+
+/* =========================================================
+   JASMINE IMAGE
+========================================================= */
+
+.jasmine-product-image {
+  position: relative;
+
+  min-height: 370px;
+
+  overflow: hidden;
+
+  background: #e9e3d5;
+}
+
+.jasmine-product-image a {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+.jasmine-product-image img {
+  width: 100%;
+  height: 100%;
+
+  min-height: 370px;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 1s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.jasmine-product-card:hover
+.jasmine-product-image img {
+  transform: scale(1.07);
+}
+
+
+/* Image badge */
+
+.jasmine-product-image > span {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  padding: 7px 12px;
+
+  background: #a47d3d;
+
+  color: #ffffff;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   JASMINE DETAILS
+========================================================= */
+
+.jasmine-product-details {
+  padding: 45px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.jasmine-product-details small {
+  color: #9b783e;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+}
+
+.jasmine-product-details h3 {
+  margin: 14px 0 12px;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 38px;
+
+  line-height: 1.1;
+
+  font-weight: 400;
+
+  color: #25251f;
+}
+
+.jasmine-product-details p {
+  margin: 0 0 22px;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+  color: #6b685d;
+}
+
+
+/* =========================================================
+   JASMINE PRICE
+========================================================= */
+
+.jasmine-price {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 24px;
+}
+
+.jasmine-price strong {
+  color: #9b763a;
+
+  font-size: 24px;
+
+  font-weight: 600;
+}
+
+.jasmine-price del {
+  color: #817d70;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   JASMINE ADD BUTTON
+========================================================= */
+
+.jasmine-add-btn {
+  width: max-content;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 11px;
+
+  padding: 13px 23px;
+
+  border: 0;
+
+  background: #a47d3d;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.3px;
+
+  transition: 0.35s ease;
+}
+
+.jasmine-add-btn:hover {
+  background: #25251f;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   JASMINE VIEW
+========================================================= */
+
+.jasmine-view-btn {
+  width: max-content;
+
+  margin-top: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #9b783e;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.3px;
+
+  transition: 0.3s ease;
+}
+
+.jasmine-view-btn:hover {
+  color: #25251f;
+}
+
+
+/* =========================================================
+   SLIDER ARROWS
+========================================================= */
+
+.collection-slider-arrow {
+  position: absolute;
+
+  z-index: 20;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid
+    rgba(164, 125, 61, 0.35);
+
+  border-radius: 50%;
+
+  background: #eee8da;
+
+  color: #9b783e;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 30px rgba(48, 42, 28, 0.12);
+
+  transition:
+    0.3s ease;
+}
+
+.collection-slider-arrow:hover {
+  background: #a47d3d;
+
+  color: #ffffff;
+
+  border-color: #a47d3d;
+
+  transform: scale(1.08);
+}
+
+.jasmine-left {
+  left: -22px;
+}
+
+.jasmine-right {
+  right: -22px;
+}
+
+
+/* =========================================================
+   PREMIUM COLLECTION SECTION
+========================================================= */
+
+.premium-collection-section {
+  position: relative;
+
+  padding-bottom: 70px;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(185, 145, 74, 0.09),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(110, 130, 95, 0.08),
+      transparent 30%
+    ),
+    #f5f1e8;
+}
+
+
+/* subtle texture */
+
+.premium-collection-section::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.28;
+
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(
+      rgba(90, 75, 45, 0.07) 0.6px,
+      transparent 0.6px
+    );
+
+  background-size: 8px 8px;
+}
+
+
+/* =========================================================
+   MAIN PRODUCT SLIDER
+========================================================= */
+
+.premium-slider-main {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.premium-products-slider {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  display: flex;
+
+  gap: 20px;
+
+  overflow-x: auto;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+
+  padding: 20px 7% 30px;
+}
+
+.premium-products-slider::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.collection-product-card {
+  flex: 0 0 235px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: #eee8da;
+
+  border:
+    1px solid rgba(164, 125, 61, 0.24);
+
+  box-shadow:
+    0 15px 40px rgba(48, 42, 28, 0.08);
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.collection-product-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 25px 55px rgba(48, 42, 28, 0.15);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.collection-product-image {
+  position: relative;
+
+  width: 100%;
+  height: 280px;
+
+  overflow: hidden;
+
+  background: #e9e3d5;
+}
+
+.collection-image-link {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+.collection-product-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.collection-product-card:hover
+.collection-product-image img {
+  transform: scale(1.07);
+}
+
+
+/* =========================================================
+   PRODUCT BADGE
+========================================================= */
+
+.collection-product-badge {
+  position: absolute;
+
+  top: 13px;
+  left: 13px;
+
+  padding: 6px 10px;
+
+  background: #a47d3d;
+
+  color: #ffffff;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.3px;
+}
+
+
+/* =========================================================
+   PRODUCT CONTENT
+========================================================= */
+
+.collection-product-content {
+  padding: 18px 16px 19px;
+}
+
+.collection-product-content h3 {
+  min-height: 42px;
+
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.45;
+
+  font-weight: 600;
+
+  color: #34342b;
+}
+
+.collection-product-subtitle {
+  min-height: 36px;
+
+  margin: 7px 0 13px;
+
+  font-size: 10px;
+
+  line-height: 1.55;
+
+  color: #817d70;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.collection-price-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 15px;
+}
+
+.collection-current-price {
+  color: #9b763a;
+
+  font-size: 17px;
+
+  font-weight: 600;
+}
+
+.collection-old-price {
+  color: #817d70;
+
+  font-size: 11px;
+
+  text-decoration: line-through;
+}
+
+
+/* =========================================================
+   PRODUCT ACTIONS
+========================================================= */
+
+.collection-card-actions {
+  display: flex;
+
+  align-items: stretch;
+
+  gap: 7px;
+}
+
+.collection-add-btn {
+  flex: 1;
+
+  min-height: 38px;
+
+  border: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  background: #a47d3d;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.8px;
+
+  transition: 0.3s ease;
+}
+
+.collection-add-btn svg {
+  font-size: 10px;
+}
+
+.collection-add-btn:hover {
+  background: #25251f;
+}
+
+.collection-view-btn {
+  min-height: 38px;
+
+  padding: 0 11px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid rgba(164, 125, 61, 0.45);
+
+  color: #9b783e;
+
+  text-decoration: none;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.8px;
+
+  transition: 0.3s ease;
+}
+
+.collection-view-btn:hover {
+  background: #a47d3d;
+
+  color: #ffffff;
+
+  border-color: #a47d3d;
+}
+
+
+/* =========================================================
+   MAIN SLIDER ARROWS
+========================================================= */
+
+.collection-left {
+  left: 18px;
+}
+
+.collection-right {
+  right: 18px;
+}
+
+
+/* =========================================================
+   SLIDER DOTS
+========================================================= */
+
+.collection-slider-dots {
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 18px;
+}
+
+.collection-slider-dots span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #d2c4aa;
+
+  transition: 0.3s ease;
+}
+
+.collection-slider-dots span.active {
+  width: 25px;
+
+  border-radius: 20px;
+
+  background: #a47d3d;
+}
+
+
+/* =========================================================
+   PHILOSOPHY SECTION
+========================================================= */
+
+.collection-philosophy {
+  position: relative;
+
+  min-height: 500px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 90px 7%;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      rgba(37, 37, 31, 0.72),
+      rgba(37, 37, 31, 0.72)
+    ),
+    url("/home/soap/collection-bottom.jfif");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+
+/* Gold overlay glow */
+
+.collection-philosophy::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: -200px;
+  left: -150px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(180, 145, 84, 0.2),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+.philosophy-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 760px;
+}
+
+.philosophy-content > span {
+  display: block;
+
+  margin-bottom: 17px;
+
+  color: #b49154;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+.philosophy-content h2 {
+  margin: 0 0 22px;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(45px, 5vw, 70px);
+
+  line-height: 1.05;
+
+  font-weight: 400;
+
+  color: #ffffff;
+}
+
+.philosophy-content h2 em {
+  color: #d0ae6e;
+
+  font-style: normal;
+}
+
+.philosophy-content p {
+  max-width: 670px;
+
+  margin: 0 auto 30px;
+
+  font-size: 13px;
+
+  line-height: 2;
+
+  color: rgba(255, 255, 255, 0.82);
+}
+
+
+/* =========================================================
+   PHILOSOPHY BUTTON
+========================================================= */
+
+.philosophy-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 14px 25px;
+
+  background: #a47d3d;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  transition: 0.35s ease;
+}
+
+.philosophy-btn:hover {
+  background: #ffffff;
+
+  color: #25251f;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .collection-hero {
+    min-height: 520px;
+
+    padding: 75px 6%;
+  }
+
+  .collection-hero::after {
+    width: 60%;
+  }
+
+  .collection-section-heading {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .premium-products-slider {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .collection-product-card {
+    flex-basis: 220px;
+  }
+
+  .collection-product-image {
+    height: 260px;
+  }
+}
+
+
+/* =========================================================
+   900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .collection-hero {
+    min-height: 520px;
+  }
+
+  .collection-hero::after {
+    width: 65%;
+
+    opacity: 0.55;
+  }
+
+  .collection-section-heading {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 22px;
+  }
+
+  .jasmine-product-card {
+    min-width: 680px;
+  }
+}
+
+
+/* =========================================================
+   800px
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .collection-hero {
+    min-height: 520px;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+      radial-gradient(
+        circle at 10% 20%,
+        rgba(185, 145, 74, 0.09),
+        transparent 30%
+      ),
+      #f5f1e8;
+  }
+
+  .collection-hero::after {
+    width: 100%;
+
+    opacity: 0.18;
+
+    background:
+      url("/home/soap/collection-banner.jfif");
+
+    background-size: cover;
+
+    background-position: center;
+  }
+
+  .collection-hero-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .collection-hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .collection-section-heading {
+    padding: 65px 5% 32px;
+  }
+
+  .jasmine-product-card {
+    min-width: 620px;
+  }
+
+  .jasmine-product-image,
+  .jasmine-product-image img {
+    min-height: 330px;
+  }
+
+  .jasmine-product-details {
+    padding: 35px;
+  }
+
+  .collection-left {
+    left: 8px;
+  }
+
+  .collection-right {
+    right: 8px;
+  }
+}
+
+
+/* =========================================================
+   600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .collection-hero {
+    min-height: 470px;
+
+    padding: 60px 22px;
+  }
+
+  .collection-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+  }
+
+  .collection-hero h1 {
+    font-size: 43px;
+
+    letter-spacing: -1px;
+  }
+
+  .collection-hero p {
+    font-size: 12px;
+
+    line-height: 1.8;
+  }
+
+  .collection-section-heading {
+    padding: 50px 20px 28px;
+  }
+
+  .collection-section-heading h2 {
+    font-size: 36px;
+  }
+
+  .collection-section-heading p {
+    font-size: 12px;
+  }
+
+  .collection-view-all {
+    font-size: 9px;
+  }
+
+
+  /* JASMINE */
+
+  .jasmine-slider-wrapper {
+    width: 94%;
+  }
+
+  .jasmine-slider {
+    padding: 10px 15px 25px;
+  }
+
+  .jasmine-product-card {
+    min-width: 92vw;
+
+    grid-template-columns: 1fr;
+  }
+
+  .jasmine-product-image,
+  .jasmine-product-image img {
+    min-height: 290px;
+
+    height: 290px;
+  }
+
+  .jasmine-product-details {
+    padding: 28px 25px;
+  }
+
+  .jasmine-product-details h3 {
+    font-size: 30px;
+  }
+
+  .jasmine-product-details p {
+    font-size: 12px;
+  }
+
+  .jasmine-left {
+    left: -5px;
+  }
+
+  .jasmine-right {
+    right: -5px;
+  }
+
+
+  /* ARROWS */
+
+  .collection-slider-arrow {
+    width: 36px;
+    height: 36px;
+
+    font-size: 11px;
+  }
+
+
+  /* PRODUCTS */
+
+  .premium-products-slider {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    gap: 14px;
+  }
+
+  .collection-product-card {
+    flex-basis: 205px;
+  }
+
+  .collection-product-image {
+    height: 235px;
+  }
+
+  .collection-product-content {
+    padding: 14px 12px 15px;
+  }
+
+  .collection-product-content h3 {
+    font-size: 13px;
+  }
+
+  .collection-product-subtitle {
+    font-size: 9px;
+  }
+
+  .collection-current-price {
+    font-size: 15px;
+  }
+
+  .collection-add-btn {
+    font-size: 7px;
+  }
+
+  .collection-view-btn {
+    padding: 0 8px;
+
+    font-size: 7px;
+  }
+
+  .collection-left {
+    left: 4px;
+  }
+
+  .collection-right {
+    right: 4px;
+  }
+
+
+  /* PHILOSOPHY */
+
+  .collection-philosophy {
+    min-height: 430px;
+
+    padding: 65px 22px;
+  }
+
+  .philosophy-content h2 {
+    font-size: 43px;
+  }
+
+  .philosophy-content p {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .collection-hero {
+    min-height: 450px;
+
+    padding: 50px 18px;
+  }
+
+  .collection-hero h1 {
+    font-size: 39px;
+  }
+
+  .collection-hero p {
+    font-size: 11px;
+  }
+
+  .collection-hero-btn {
+    padding: 13px 19px;
+
+    font-size: 9px;
+  }
+
+  .collection-section-heading {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .collection-section-heading h2 {
+    font-size: 32px;
+  }
+
+  .jasmine-product-image,
+  .jasmine-product-image img {
+    height: 270px;
+
+    min-height: 270px;
+  }
+
+  .jasmine-product-details {
+    padding: 25px 20px;
+  }
+
+  .jasmine-product-details h3 {
+    font-size: 27px;
+  }
+
+  .jasmine-price strong {
+    font-size: 21px;
+  }
+
+  .collection-product-card {
+    flex-basis: 190px;
+  }
+
+  .collection-product-image {
+    height: 215px;
+  }
+
+  .collection-product-content h3 {
+    font-size: 12px;
+  }
+
+  .collection-add-btn {
+    min-height: 35px;
+
+    font-size: 7px;
+  }
+
+  .collection-view-btn {
+    min-height: 35px;
+
+    padding: 0 7px;
+  }
+
+  .philosophy-content h2 {
+    font-size: 37px;
+  }
+}
+
+
+/* =========================================================
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .collection-hero {
+    min-height: 430px;
+
+    padding: 45px 15px;
+  }
+
+  .collection-hero h1 {
+    font-size: 35px;
+  }
+
+  .collection-section-heading h2 {
+    font-size: 29px;
+  }
+
+  .jasmine-product-details h3 {
+    font-size: 24px;
+  }
+
+  .collection-product-card {
+    flex-basis: 180px;
+  }
+
+  .collection-product-image {
+    height: 205px;
+  }
+
+  .collection-product-content {
+    padding: 12px 10px;
+  }
+
+  .collection-current-price {
+    font-size: 14px;
+  }
+
+  .collection-old-price {
+    font-size: 9px;
+  }
+
+  .philosophy-content h2 {
+    font-size: 33px;
+  }
+}

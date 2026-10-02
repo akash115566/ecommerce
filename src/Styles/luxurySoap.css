@@ -1,0 +1,864 @@
+/* =========================================================
+   TELLUS ESSENTIALS
+   PREMIUM LUXURY SOAP
+========================================================= */
+
+:root {
+  --lux-soap-bg: #f5f1e8;
+  --lux-soap-soft: #eee8da;
+  --lux-soap-white: #ffffff;
+
+  --lux-soap-text: #25251f;
+  --lux-soap-heading: #34342b;
+
+  --lux-soap-gold: #9b783e;
+  --lux-soap-gold-dark: #a47d3d;
+  --lux-soap-gold-light: #b49154;
+
+  --lux-soap-para: #6b685d;
+  --lux-soap-muted: #817d70;
+
+  --lux-soap-border: rgba(112, 96, 65, 0.18);
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.luxury-soap-page {
+  width: 100%;
+  overflow: hidden;
+  background: var(--lux-soap-bg);
+  color: var(--lux-soap-text);
+}
+
+.luxury-soap-page * {
+  box-sizing: border-box;
+}
+
+.luxury-soap-page a {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.luxury-soap-hero {
+  width: 100%;
+  min-height: 680px;
+  display: flex;
+  overflow: hidden;
+  background: var(--lux-soap-soft);
+}
+
+.luxury-soap-hero-image {
+  width: 58%;
+  height: 680px;
+  overflow: hidden;
+}
+
+.luxury-soap-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1.2s ease;
+}
+
+.luxury-soap-hero:hover
+.luxury-soap-hero-image img {
+  transform: scale(1.04);
+}
+
+.luxury-soap-hero-content {
+  width: 42%;
+  min-height: 680px;
+  padding: 80px 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(180, 145, 84, 0.14),
+      transparent 42%
+    ),
+    var(--lux-soap-soft);
+}
+
+.luxury-soap-eyebrow {
+  margin-bottom: 22px;
+  color: var(--lux-soap-gold);
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.luxury-soap-hero-content h1 {
+  margin: 0;
+  color: var(--lux-soap-heading);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(48px, 5vw, 76px);
+  font-weight: 400;
+  line-height: 1.02;
+}
+
+.luxury-soap-hero-content h1 em {
+  color: var(--lux-soap-gold);
+  font-style: italic;
+}
+
+.luxury-soap-hero-content p {
+  max-width: 470px;
+  margin: 28px 0 35px;
+  color: var(--lux-soap-para);
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 2;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.luxury-soap-primary-btn {
+  min-height: 48px;
+  padding: 0 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--lux-soap-gold);
+  background: var(--lux-soap-gold);
+  color: #fff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+
+  transition: all 0.35s ease;
+}
+
+.luxury-soap-primary-btn:hover {
+  background: var(--lux-soap-heading);
+  border-color: var(--lux-soap-heading);
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.luxury-soap-intro {
+  max-width: 850px;
+  margin: auto;
+  padding: 115px 25px;
+  text-align: center;
+}
+
+.luxury-soap-intro > span,
+.luxury-soap-heading span,
+.luxury-soap-ritual-content > span,
+.luxury-soap-ingredients-heading > span,
+.luxury-soap-final > span {
+  color: var(--lux-soap-gold);
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.luxury-soap-intro h2 {
+  margin: 18px 0 25px;
+  color: var(--lux-soap-heading);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(40px, 5vw, 60px);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.luxury-soap-intro p {
+  max-width: 680px;
+  margin: auto;
+  color: var(--lux-soap-para);
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 2;
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.luxury-soap-products {
+  padding: 110px 0 110px 7%;
+  background: var(--lux-soap-bg);
+}
+
+.luxury-soap-heading {
+  padding-right: 7%;
+  margin-bottom: 45px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.luxury-soap-heading h2 {
+  margin: 14px 0 0;
+  color: var(--lux-soap-heading);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(42px, 5vw, 60px);
+  font-weight: 400;
+}
+
+.luxury-soap-slider-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.luxury-soap-slider-buttons button {
+  width: 45px;
+  height: 45px;
+
+  border: 1px solid var(--lux-soap-border);
+  background: transparent;
+  color: var(--lux-soap-heading);
+
+  font-size: 18px;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.luxury-soap-slider-buttons button:hover {
+  border-color: var(--lux-soap-gold);
+  background: var(--lux-soap-gold);
+  color: #fff;
+}
+
+.luxury-soap-slider {
+  width: 100%;
+  display: flex;
+  gap: 22px;
+
+  overflow-x: auto;
+  padding-right: 7%;
+  padding-bottom: 20px;
+
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.luxury-soap-slider::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.luxury-soap-card {
+  flex: 0 0 280px;
+  background: #fff;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.luxury-soap-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(45, 38, 25, 0.09);
+}
+
+.luxury-soap-card-image {
+  width: 100%;
+  height: 365px;
+  position: relative;
+  overflow: hidden;
+  background: var(--lux-soap-soft);
+}
+
+.luxury-soap-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  transition: transform 0.6s ease;
+}
+
+.luxury-soap-card:hover
+.luxury-soap-card-image img {
+  transform: scale(1.06);
+}
+
+.luxury-soap-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  padding: 7px 10px;
+
+  background: var(--lux-soap-heading);
+  color: #fff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.luxury-soap-card-content {
+  padding: 22px 20px 25px;
+}
+
+.luxury-soap-subtitle {
+  color: var(--lux-soap-gold);
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  letter-spacing: 0.7px;
+}
+
+.luxury-soap-card-content h3 {
+  min-height: 52px;
+  margin: 10px 0;
+
+  color: var(--lux-soap-heading);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.luxury-soap-price {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 18px;
+}
+
+.luxury-soap-price strong {
+  color: var(--lux-soap-heading);
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.luxury-soap-price del {
+  color: #aaa;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+}
+
+.luxury-soap-price span {
+  margin-left: auto;
+  color: var(--lux-soap-muted);
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+}
+
+.luxury-soap-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.luxury-soap-add,
+.luxury-soap-view {
+  width: 100%;
+  min-height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.luxury-soap-add {
+  border: 1px solid var(--lux-soap-gold);
+  background: var(--lux-soap-gold);
+  color: #fff;
+}
+
+.luxury-soap-add:hover {
+  border-color: var(--lux-soap-heading);
+  background: var(--lux-soap-heading);
+}
+
+.luxury-soap-view {
+  border: 1px solid var(--lux-soap-border);
+  background: transparent;
+  color: var(--lux-soap-heading);
+}
+
+.luxury-soap-view:hover {
+  border-color: var(--lux-soap-gold);
+  color: var(--lux-soap-gold);
+}
+
+
+/* =========================================================
+   BANNER
+========================================================= */
+
+.luxury-soap-banner {
+  min-height: 620px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      rgba(37, 37, 31, 0.68),
+      rgba(37, 37, 31, 0.68)
+    ),
+    url("/home/luxurysoap/coffee.jfif");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.luxury-soap-banner-overlay {
+  max-width: 750px;
+  padding: 40px;
+  text-align: center;
+}
+
+.luxury-soap-banner-overlay > span {
+  color: #d2b77c;
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.luxury-soap-banner-overlay h2 {
+  margin: 20px 0;
+  color: #fff;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(48px, 6vw, 78px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.luxury-soap-banner-overlay p {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  color: rgba(255, 255, 255, 0.82);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.luxury-soap-light-btn {
+  min-height: 48px;
+  padding: 0 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255,255,255,0.65);
+  color: #fff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+
+  transition: all 0.3s ease;
+}
+
+.luxury-soap-light-btn:hover {
+  background: #fff;
+  color: var(--lux-soap-heading);
+}
+
+
+/* =========================================================
+   RITUAL
+========================================================= */
+
+.luxury-soap-ritual {
+  min-height: 650px;
+  display: flex;
+  background: var(--lux-soap-soft);
+}
+
+.luxury-soap-ritual-image {
+  width: 50%;
+  min-height: 650px;
+  overflow: hidden;
+}
+
+.luxury-soap-ritual-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 1s ease;
+}
+
+.luxury-soap-ritual:hover
+.luxury-soap-ritual-image img {
+  transform: scale(1.04);
+}
+
+.luxury-soap-ritual-content {
+  width: 50%;
+  padding: 90px 8%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.luxury-soap-ritual-content h2 {
+  margin: 17px 0 25px;
+
+  color: var(--lux-soap-heading);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(42px, 5vw, 65px);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.luxury-soap-ritual-content h2 em {
+  color: var(--lux-soap-gold);
+  font-style: italic;
+}
+
+.luxury-soap-ritual-content > p {
+  max-width: 500px;
+  color: var(--lux-soap-para);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.luxury-soap-points {
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.luxury-soap-points div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.luxury-soap-points b {
+  color: var(--lux-soap-gold);
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+}
+
+.luxury-soap-points span {
+  color: var(--lux-soap-heading);
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   INGREDIENTS
+========================================================= */
+
+.luxury-soap-ingredients {
+  padding: 115px 7%;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 100px;
+
+  background: var(--lux-soap-bg);
+}
+
+.luxury-soap-ingredients-heading h2 {
+  margin: 15px 0 25px;
+
+  color: var(--lux-soap-heading);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(42px, 5vw, 62px);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.luxury-soap-ingredients-heading p {
+  max-width: 480px;
+  color: var(--lux-soap-para);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.luxury-soap-ingredient-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  border-top: 1px solid var(--lux-soap-border);
+  border-left: 1px solid var(--lux-soap-border);
+}
+
+.luxury-soap-ingredient-grid > div {
+  min-height: 220px;
+  padding: 30px;
+
+  border-right: 1px solid var(--lux-soap-border);
+  border-bottom: 1px solid var(--lux-soap-border);
+}
+
+.luxury-soap-ingredient-grid span {
+  color: var(--lux-soap-gold);
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+}
+
+.luxury-soap-ingredient-grid h3 {
+  margin: 35px 0 12px;
+
+  color: var(--lux-soap-heading);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.luxury-soap-ingredient-grid p {
+  margin: 0;
+  color: var(--lux-soap-para);
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.luxury-soap-final {
+  padding: 110px 25px;
+  text-align: center;
+  background: var(--lux-soap-soft);
+}
+
+.luxury-soap-final h2 {
+  margin: 18px 0 20px;
+
+  color: var(--lux-soap-heading);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(42px, 5vw, 64px);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.luxury-soap-final p {
+  max-width: 520px;
+  margin: 0 auto 30px;
+
+  color: var(--lux-soap-para);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   1100px
+========================================================= */
+
+@media screen and (max-width: 1100px) {
+
+  .luxury-soap-hero-image,
+  .luxury-soap-hero-content {
+    width: 50%;
+  }
+
+  .luxury-soap-products {
+    padding-left: 5%;
+  }
+
+  .luxury-soap-heading {
+    padding-right: 5%;
+  }
+
+  .luxury-soap-ritual-content {
+    padding: 70px 6%;
+  }
+
+  .luxury-soap-ingredients {
+    padding: 90px 5%;
+    gap: 50px;
+  }
+}
+
+
+/* =========================================================
+   850px
+========================================================= */
+
+@media screen and (max-width: 850px) {
+
+  .luxury-soap-hero {
+    flex-direction: column;
+  }
+
+  .luxury-soap-hero-image {
+    width: 100%;
+    height: 520px;
+  }
+
+  .luxury-soap-hero-content {
+    width: 100%;
+    min-height: auto;
+    padding: 75px 8%;
+  }
+
+  .luxury-soap-ritual {
+    flex-direction: column;
+  }
+
+  .luxury-soap-ritual-image {
+    width: 100%;
+    height: 520px;
+    min-height: 520px;
+  }
+
+  .luxury-soap-ritual-content {
+    width: 100%;
+    padding: 75px 8%;
+  }
+
+  .luxury-soap-ingredients {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   600px
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+  .luxury-soap-hero-image {
+    height: 430px;
+  }
+
+  .luxury-soap-hero-content {
+    padding: 60px 25px;
+  }
+
+  .luxury-soap-hero-content h1 {
+    font-size: 46px;
+  }
+
+  .luxury-soap-intro {
+    padding: 80px 22px;
+  }
+
+  .luxury-soap-products {
+    padding: 75px 0 75px 20px;
+  }
+
+  .luxury-soap-heading {
+    padding-right: 20px;
+  }
+
+  .luxury-soap-heading h2 {
+    font-size: 40px;
+  }
+
+  .luxury-soap-slider-buttons button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .luxury-soap-card {
+    flex-basis: 255px;
+  }
+
+  .luxury-soap-card-image {
+    height: 330px;
+  }
+
+  .luxury-soap-banner {
+    min-height: 540px;
+  }
+
+  .luxury-soap-ritual-image {
+    height: 430px;
+    min-height: 430px;
+  }
+
+  .luxury-soap-ritual-content {
+    padding: 65px 25px;
+  }
+
+  .luxury-soap-ingredients {
+    padding: 75px 20px;
+  }
+
+  .luxury-soap-ingredient-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .luxury-soap-final {
+    padding: 80px 20px;
+  }
+}
+
+
+/* =========================================================
+   400px
+========================================================= */
+
+@media screen and (max-width: 400px) {
+
+  .luxury-soap-hero-image {
+    height: 360px;
+  }
+
+  .luxury-soap-hero-content {
+    padding: 50px 20px;
+  }
+
+  .luxury-soap-hero-content h1 {
+    font-size: 40px;
+  }
+
+  .luxury-soap-card {
+    flex-basis: 235px;
+  }
+
+  .luxury-soap-card-image {
+    height: 300px;
+  }
+
+  .luxury-soap-banner-overlay h2 {
+    font-size: 46px;
+  }
+}

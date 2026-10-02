@@ -216,11 +216,11 @@ function MostLovedRituals() {
   };
 
   return (
-    <section className="ritual-section">
+    <section className="ritual-section1">
 
       {/* ================= HEADER ================= */}
 
-      <div className="ritual-header">
+      <div className="ritual-header1">
 
         <h2>MOST LOVED RITUALS</h2>
 
@@ -236,12 +236,12 @@ function MostLovedRituals() {
       {/* ================= SLIDER ================= */}
 
       <div
-        className="ritual-slider"
+        className="ritual-slider1"
         ref={sliderRef}
       >
 
         <div
-          className="ritual-track"
+          className="ritual-track1"
           style={{
             transform: `translate3d(-${
               currentIndex * cardWidth

@@ -1,473 +1,1008 @@
-.footer {
-  width: 100%;
+/* =========================================================
+   TELLUS ESSENTIALS — FOOTER
+   PREMIUM LUXURY THEME
+========================================================= */
 
-  background: #faf9f7;
-
-  color: #222;
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  position: relative;
-
+* {
   box-sizing: border-box;
 }
 
 
-/* =========================
-   MAIN FOOTER
-========================= */
+/* =========================================================
+   FOOTER MAIN
+========================================================= */
+
+.footer {
+  width: 100%;
+  position: relative;
+
+  background: #f5f1e8;
+
+  color: #25251f;
+
+  border-top: 1px solid
+    rgba(112, 96, 65, 0.18);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   FOOTER CONTAINER
+========================================================= */
 
 .footer-container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1250px;
+
   margin: 0 auto;
 
-  padding: 75px 6% 65px;
+  padding: 65px 55px 55px;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 70px;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  column-gap: 80px;
+
+  row-gap: 45px;
+
+  border-bottom: 1px solid
+    rgba(112, 96, 65, 0.18);
 }
 
 
-/* =========================
-   COLUMNS
-========================= */
+/* =========================================================
+   FOOTER COLUMN
+========================================================= */
+
+.footer-column {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   COLUMN HEADING
+========================================================= */
 
 .footer-column h3 {
-  margin: 0 0 28px;
+  margin: 0 0 25px;
 
-  font-family: Georgia, "Times New Roman", serif;
+  padding: 0;
 
-  font-size: 15px;
+  color: #9b783e;
 
-  font-weight: 400;
+  font-family:
+    "Poppins",
+    sans-serif;
 
-  letter-spacing: 1px;
+  font-size: 12px;
 
-  color: #555;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  line-height: 1.4;
 }
 
-.footer-column > a {
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.footer-column a {
   display: block;
 
   width: fit-content;
 
-  margin-bottom: 13px;
+  margin: 0 0 14px;
 
-  color: #111;
+  padding: 0;
+
+  color: #5f5c52;
+
+  background: transparent;
 
   text-decoration: none;
+
+  font-family:
+    "Poppins",
+    sans-serif;
 
   font-size: 10px;
 
-  letter-spacing: 0.8px;
+  font-weight: 500;
 
-  line-height: 1.4;
+  letter-spacing: 1px;
 
-  transition: color 0.3s ease;
-}
+  line-height: 1.5;
 
-.footer-column > a:hover {
-  color: #777;
-
-  text-decoration: underline;
-}
-
-
-/* =========================
-   NEW BADGE
-========================= */
-
-.new-badge {
-  display: inline-block;
-
-  margin-left: 7px;
-
-  padding: 2px 5px;
-
-  background: #555;
-
-  color: white;
-
-  border-radius: 2px;
-
-  font-size: 7px;
-
-  letter-spacing: 0.5px;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 
-/* =========================
-   CONTACT
-========================= */
+/* =========================================================
+   LINK HOVER
+========================================================= */
 
-.contact-item {
-  margin-bottom: 14px;
-}
+.footer-column a:hover {
+  color: #9b783e;
 
-.contact-item span {
-  display: block;
-
-  margin-bottom: 4px;
-
-  font-size: 11px;
-
-  color: #555;
-}
-
-.contact-item a {
-  color: #222;
-
-  font-size: 11px;
-
-  text-decoration: underline;
-
-  text-underline-offset: 3px;
-}
-
-.contact-link {
-  margin-top: 5px !important;
+  transform:
+    translateX(4px);
 }
 
 
-/* =========================
-   FOLLOW
-========================= */
-
-.follow-title {
-  margin-top: 48px !important;
-
-  margin-bottom: 25px !important;
-}
-
-.social-icons {
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-}
-
-.social-icons a {
-  width: 25px;
-  height: 25px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  background: #ddd;
-
-  color: white;
-
-  border-radius: 4px;
-
-  text-decoration: none;
-
-  font-size: 14px;
-
-  transition: 0.3s ease;
-}
-
-.social-icons a:hover {
-  background: #555;
-
-  transform: translateY(-2px);
-}
-
-
-/* =========================
-   BOTTOM
-========================= */
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
 
 .footer-bottom {
-  max-width: 1100px;
+  width: 100%;
+  max-width: 1250px;
 
-  margin: auto;
+  margin: 0 auto;
 
-  display: grid;
+  padding: 30px 55px;
 
-  grid-template-columns: 1fr 1fr;
+  display: flex;
 
-  gap: 32px;
+  flex-direction: row;
 
-  border-top: 1px solid #e2e0dd;
+  align-items: center;
 
-  padding: 22px 0 40px;
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+
+/* =========================================================
+   PAYMENT SECTION
+========================================================= */
+
+.payment-section {
+  flex: 1 1 auto;
+
+  width: auto;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   PAYMENT HEADING
+========================================================= */
+
+.payment-section h4 {
+  margin: 0;
+
+  padding: 0;
+
+  color: #25251f;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   PAYMENT METHODS
+   IMPORTANT — SINGLE ROW
+========================================================= */
+
+.payment-methods {
+  width: 100%;
+
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  flex-wrap: nowrap !important;
+
+  align-items: center !important;
+
+  justify-content: flex-start !important;
+
+  gap: 10px !important;
+
+  white-space: nowrap !important;
+
+  overflow-x: visible;
+
+  overflow-y: hidden;
+}
+
+
+/* =========================================================
+   ALL PAYMENT ITEMS
+========================================================= */
+
+.payment-methods .payment {
+  flex: 0 0 auto !important;
+
+  width: auto !important;
+
+  min-width: 0 !important;
+
+  height: 32px;
+
+  min-height: 32px;
+
+  margin: 0 !important;
+
+  padding: 5px 9px;
+
+  display: inline-flex !important;
+
+  flex-direction: row !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  vertical-align: middle;
+
+  white-space: nowrap !important;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  border-radius: 0;
 
   box-sizing: border-box;
 }
 
 
-/* =========================
-   PAYMENT
-========================= */
+/* =========================================================
+   VISA
+========================================================= */
 
-.payment-section h4 {
-  margin: 0 0 28px;
+.payment-methods .visa {
+  min-width: 54px !important;
+
+  color: #172b85;
+
+  background: transparent;
+
+  border: none;
+
+  border-bottom:
+    3px solid #e6df00;
+
+  font-size: 14px;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   MASTERCARD
+========================================================= */
+
+.payment-methods .mastercard {
+  min-width: 42px !important;
+
+  color: #ef4c4c;
+
+  background: transparent;
+
+  border: none;
+
+  font-size: 16px;
+
+  letter-spacing: -2px;
+}
+
+
+/* =========================================================
+   AMERICAN EXPRESS
+========================================================= */
+
+.payment-methods .amex {
+  min-width: 43px !important;
+
+  color: #ffffff;
+
+  background: #1479b8;
+
+  border: none;
+
+  font-size: 9px;
+
+  letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   RUPAY
+========================================================= */
+
+.payment-methods .rupay {
+  min-width: 50px !important;
+
+  color: #173e91;
+
+  background: transparent;
+
+  border: none;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   PAYPAL
+========================================================= */
+
+.payment-methods .paypal {
+  min-width: 55px !important;
+
+  color: #153b8d;
+
+  background: transparent;
+
+  border: none;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   NET BANKING
+========================================================= */
+
+.payment-methods .netbanking {
+  min-width: 76px !important;
+
+  color: #ffffff;
+
+  background: #111111;
+
+  border: none;
+
+  font-size: 9px;
+
+  letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   CASH ON DELIVERY
+========================================================= */
+
+.payment-methods .cod {
+  min-width: 108px !important;
+
+  height: 32px;
+
+  color: #25251f;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    rgba(112, 96, 65, 0.25);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  line-height: 1 !important;
+
+  text-align: center;
+
+  white-space: nowrap !important;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+.copyright {
+  flex: 0 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  text-align: right;
+}
+
+
+.copyright p {
+  margin: 0;
+
+  padding: 0;
+
+  color: #6b685d;
+
+  font-family:
+    "Poppins",
+    sans-serif;
 
   font-size: 10px;
 
   font-weight: 400;
 
-  letter-spacing: 0.5px;
-}
+  letter-spacing: 0.4px;
 
-.payment-methods {
-  display: flex;
+  line-height: 1.5;
 
-  align-items: center;
-
-  flex-wrap: wrap;
-
-  gap: 15px;
-}
-
-.payment {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  min-width: 35px;
-
-  height: 24px;
-
-  font-size: 10px;
-
-  font-weight: 600;
-}
-
-.visa {
-  font-size: 16px;
-
-  color: #1b216d;
-
-  border-bottom: 3px solid #e6d900;
-}
-
-.mastercard {
-  font-size: 17px;
-
-  color: #e74c3c;
-}
-
-.amex {
-  background: #1675b9;
-
-  color: white;
-
-  padding: 2px 4px;
-}
-
-.rupay {
-  color: #303080;
-
-  font-size: 15px;
-
-  font-weight: 700;
-}
-
-.paypal {
-  color: #1c3d91;
-
-  font-size: 14px;
-}
-
-.netbanking {
-  background: #111;
-
-  color: white;
-
-  padding: 0 6px;
-
-  font-size: 9px;
-}
-
-.cod {
-  border: 1px solid #555;
-
-  padding: 2px 5px;
-
-  line-height: 1;
-
-  font-size: 7px;
+  white-space: nowrap;
 }
 
 
-/* =========================
-   COPYRIGHT
-========================= */
-
-.copyright {
-  border-top: none;
-
-  display: flex;
-
-  align-items: flex-start;
-
-  padding-top: 0;
-}
-
-.copyright p {
-  margin: 0;
-
-  font-size: 11px;
-
-  color: #222;
-}
-
-
-/* =========================
-   SCROLL TOP
-========================= */
+/* =========================================================
+   BACK TO TOP
+========================================================= */
 
 .scroll-top {
   position: fixed;
 
-  left: 15px;
+  right: 18px;
 
-  bottom: 15px;
+  bottom: 18px;
 
-  width: 32px;
-  height: 32px;
+  z-index: 9999;
+
+  width: 34px;
+
+  height: 34px;
+
+  padding: 0;
 
   border: none;
 
-  background: #444;
+  border-radius: 4px;
 
-  color: white;
+  background: #3f3f3a;
 
-  border-radius: 3px;
-
-  cursor: pointer;
+  color: #ffffff;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
-  font-size: 13px;
+  cursor: pointer;
 
-  z-index: 100;
+  box-shadow:
+    0 5px 18px
+    rgba(0, 0, 0, 0.15);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
 }
+
 
 .scroll-top:hover {
-  background: #222;
+  background: #9b783e;
+
+  transform:
+    translateY(-3px);
 }
 
 
-/* =========================
-   TABLET
-========================= */
+.scroll-top svg {
+  font-size: 13px;
+}
 
-@media (max-width: 900px) {
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media screen and (max-width: 1100px) {
 
   .footer-container {
-    padding: 55px 5% 45px;
+    padding-left: 40px;
+    padding-right: 40px;
 
-    grid-template-columns:
-      repeat(2, 1fr);
-
-    gap: 45px 50px;
+    column-gap: 45px;
   }
+
 
   .footer-bottom {
-    margin: 0 5%;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    gap: 25px;
+  }
+
+
+  .payment-methods {
+    gap: 7px !important;
+  }
+
+
+  .payment-methods .payment {
+    padding-left: 7px;
+    padding-right: 7px;
   }
 
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* =========================================================
+   TABLET
+========================================================= */
 
-@media (max-width: 600px) {
+@media screen and (max-width: 900px) {
 
   .footer-container {
-    padding: 45px 25px;
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
 
-    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
 
-    gap: 40px 25px;
+    padding:
+      50px 30px 45px;
   }
+
 
   .footer-column h3 {
-    font-size: 14px;
+    font-size: 10px;
 
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 
-  .footer-column > a {
+
+  .footer-column a {
     font-size: 9px;
 
     margin-bottom: 12px;
   }
 
-  .contact-item span,
-  .contact-item a {
-    font-size: 9px;
-  }
 
-  .social-icons {
-    gap: 6px;
-  }
-
-  .social-icons a {
-    width: 23px;
-    height: 23px;
-
-    font-size: 12px;
-  }
+  /* Bottom becomes stacked */
 
   .footer-bottom {
-    margin: 0 25px;
+    padding:
+      28px 30px;
 
-    grid-template-columns: 1fr;
+    flex-direction: column;
 
-    gap: 25px;
+    align-items: center;
 
-    padding-bottom: 35px;
+    justify-content: center;
+
+    gap: 22px;
   }
 
-  .copyright {
-    border-top: 1px solid #e2e0dd;
 
-    padding-top: 20px;
+  .payment-section {
+    width: 100%;
+
+    flex: none;
+
+    align-items: center;
+  }
+
+
+  .payment-section h4 {
+    text-align: center;
+  }
+
+
+  /*
+     Still one horizontal row
+  */
+
+  .payment-methods {
+    width: 100%;
+
+    justify-content: center !important;
+
+    flex-wrap: nowrap !important;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    padding:
+      3px 2px 8px;
+
+    scrollbar-width: none;
+  }
+
+
+  .payment-methods::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .copyright {
+    width: 100%;
+
+    justify-content: center;
+
+    text-align: center;
+  }
+
+
+  .copyright p {
+    white-space: normal;
+
+    text-align: center;
   }
 
 }
 
 
-/* =========================
-   SMALL MOBILE
-========================= */
+/* =========================================================
+   MOBILE
+========================================================= */
 
-@media (max-width: 380px) {
+@media screen and (max-width: 600px) {
 
   .footer-container {
-    padding: 40px 15px;
+    width: 100%;
 
-    gap: 35px 15px;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    column-gap: 20px;
+
+    row-gap: 35px;
+
+    padding:
+      40px 20px;
   }
 
+
   .footer-column h3 {
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 17px;
+  }
+
+
+  .footer-column a {
+    font-size: 8px;
+
+    letter-spacing: 0.7px;
+
+    margin-bottom: 10px;
+  }
+
+
+  /* =====================================================
+     PAYMENT
+  ===================================================== */
+
+  .footer-bottom {
+    width: 100%;
+
+    padding:
+      25px 12px 30px;
+
+    gap: 20px;
+  }
+
+
+  .payment-section {
+    width: 100%;
+
+    align-items: center;
+  }
+
+
+  .payment-section h4 {
+    font-size: 9px;
+  }
+
+
+  /*
+     ONE HORIZONTAL ROW
+     NO VERTICAL STACK
+  */
+
+  .payment-methods {
+    width: 100% !important;
+
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    flex-wrap: nowrap !important;
+
+    align-items: center !important;
+
+    justify-content: flex-start !important;
+
+    gap: 8px !important;
+
+    overflow-x: auto !important;
+
+    overflow-y: hidden !important;
+
+    white-space: nowrap !important;
+
+    padding:
+      4px 5px 9px !important;
+
+    scrollbar-width: none;
+  }
+
+
+  .payment-methods::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .payment-methods .payment {
+    flex:
+      0 0 auto !important;
+
+    width: auto !important;
+
+    min-width: 0 !important;
+
+    height: 30px;
+
+    min-height: 30px;
+
+    margin: 0 !important;
+
+    padding:
+      5px 8px !important;
+  }
+
+
+  .payment-methods .visa {
+    min-width: 50px !important;
+
     font-size: 12px;
   }
 
-  .footer-column > a {
+
+  .payment-methods .mastercard {
+    min-width: 36px !important;
+
+    font-size: 14px;
+  }
+
+
+  .payment-methods .amex {
+    min-width: 40px !important;
+
     font-size: 8px;
   }
 
-  .footer-bottom {
-    margin: 0 15px;
+
+  .payment-methods .rupay {
+    min-width: 45px !important;
+
+    font-size: 11px;
   }
 
+
+  .payment-methods .paypal {
+    min-width: 48px !important;
+
+    font-size: 11px;
+  }
+
+
+  .payment-methods .netbanking {
+    min-width: 68px !important;
+
+    font-size: 8px;
+  }
+
+
+  .payment-methods .cod {
+    min-width: 105px !important;
+
+    font-size: 7px;
+
+    white-space: nowrap !important;
+  }
+
+
+  .copyright {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  .copyright p {
+    font-size: 8px;
+
+    white-space: normal;
+
+    text-align: center;
+
+    line-height: 1.6;
+  }
+
+
+  .scroll-top {
+    right: 12px;
+
+    bottom: 12px;
+
+    width: 32px;
+
+    height: 32px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media screen and (max-width: 400px) {
+
+  .footer-container {
+    padding:
+      35px 15px;
+
+    column-gap: 15px;
+
+    row-gap: 30px;
+  }
+
+
+  .footer-column h3 {
+    font-size: 8px;
+
+    letter-spacing: 1.2px;
+  }
+
+
+  .footer-column a {
+    font-size: 7px;
+
+    letter-spacing: 0.5px;
+  }
+
+
+  .footer-bottom {
+    padding:
+      22px 8px 28px;
+  }
+
+
   .payment-methods {
-    gap: 10px;
+    gap: 6px !important;
+
+    padding-left: 2px !important;
+
+    padding-right: 2px !important;
+  }
+
+
+  .payment-methods .payment {
+    height: 28px;
+
+    min-height: 28px;
+
+    padding:
+      4px 7px !important;
+  }
+
+
+  .payment-methods .visa {
+    min-width: 47px !important;
+  }
+
+
+  .payment-methods .mastercard {
+    min-width: 34px !important;
+  }
+
+
+  .payment-methods .amex {
+    min-width: 38px !important;
+  }
+
+
+  .payment-methods .rupay {
+    min-width: 43px !important;
+  }
+
+
+  .payment-methods .paypal {
+    min-width: 45px !important;
+  }
+
+
+  .payment-methods .netbanking {
+    min-width: 65px !important;
+  }
+
+
+  .payment-methods .cod {
+    min-width: 100px !important;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media screen and (max-width: 360px) {
+
+  .footer-container {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    padding:
+      30px 12px;
+  }
+
+
+  .footer-column a {
+    font-size: 6.8px;
+  }
+
+
+  .footer-column h3 {
+    font-size: 7.5px;
+  }
+
+
+  .payment-methods {
+    gap: 5px !important;
+  }
+
+
+  .payment-methods .payment {
+    padding:
+      4px 6px !important;
   }
 
 }
