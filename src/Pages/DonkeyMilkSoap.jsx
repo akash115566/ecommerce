@@ -16,7 +16,7 @@ const donkeyMilkSoaps = [
     price: 499,
     oldPrice: 599,
     size: "100g",
-    image: "/home/gift/giftdon.jfif",
+    image: "/home/donkey/donblue.jfif",
   },
   {
     name: "Donkey Milk & Honey Soap",
@@ -24,7 +24,7 @@ const donkeyMilkSoaps = [
     price: 449,
     oldPrice: 549,
     size: "100g",
-    image: "/home/gift/giftdonk.jfif",
+    image: "/home/donkey/dongold.jfif",
   },
   {
     name: "Donkey Milk & Saffron Soap",
@@ -32,7 +32,7 @@ const donkeyMilkSoaps = [
     price: 599,
     oldPrice: 699,
     size: "100g",
-    image: "/home/gift/giftdonkey.jfif",
+    image: "/home/donkey/donmilk.jfif",
   },
   {
     name: "Donkey Milk & Rose Soap",
@@ -40,7 +40,7 @@ const donkeyMilkSoaps = [
     price: 499,
     oldPrice: 599,
     size: "100g",
-   image: "/home/gift/giftdon.jfif",
+   image: "/home/donkey/donsoap.jfif",
   },
   {
     name: "Donkey Milk & Shea Butter Soap",
