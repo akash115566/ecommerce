@@ -22,7 +22,7 @@ function SOSVideoAd() {
 
         Your browser does not support the video tag.
       </video>
-       <video
+       {/* <video
         className="sos-video"
         autoPlay
         muted
@@ -36,7 +36,7 @@ function SOSVideoAd() {
         />
 
         Your browser does not support the video tag.
-      </video>
+      </video> */}
 
 
       {/* DARK LUXURY OVERLAY */}

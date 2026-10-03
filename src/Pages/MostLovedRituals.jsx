@@ -264,7 +264,7 @@ function MostLovedRituals() {
                 {/* ================= IMAGE ================= */}
 
                 <div
-                  className="ritual-image"
+                  className="ritual-image1"
                   onClick={() =>
                     openProductDetails(product)
                   }

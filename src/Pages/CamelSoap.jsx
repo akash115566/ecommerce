@@ -11,7 +11,7 @@ const camelProducts = [
     price: 499,
     oldPrice: 599,
     size: "100g",
-    image: "/home/soap/camelmilk.jfif",
+   image: "/home/gift/giftbbox.jfif",
   },
   {
     id: "camel-002",
@@ -20,7 +20,7 @@ const camelProducts = [
     price: 549,
     oldPrice: 699,
     size: "100g",
-    image: "/home/soap/soap2.jfif",
+    image: "/home/gift/giftbboxx.jfif",
   },
   {
     id: "camel-003",
@@ -29,7 +29,7 @@ const camelProducts = [
     price: 499,
     oldPrice: 599,
     size: "100g",
-    image: "/home/soap/soap3.jfif",
+    image: "/home/gift/giftboox.jfif",
   },
   {
     id: "camel-004",
@@ -38,7 +38,7 @@ const camelProducts = [
     price: 599,
     oldPrice: 749,
     size: "100g",
-    image: "/home/soap/soap4.jfif",
+    image: "/home/gift/giftcamel.jfif",
   },
   {
     id: "camel-005",
@@ -47,7 +47,7 @@ const camelProducts = [
     price: 549,
     oldPrice: 649,
     size: "100g",
-    image: "/home/soap/soap5.jfif",
+    image: "/home/gift/giftfour.jfif",
   },
   {
     id: "camel-006",
@@ -56,7 +56,7 @@ const camelProducts = [
     price: 579,
     oldPrice: 699,
     size: "100g",
-    image: "/home/soap/soap6.jfif",
+    image: "/home/gift/giftgoat.jfif",
   },
 ];
 
@@ -322,7 +322,7 @@ const CamelSoap = () => {
         <div className="camel-intro-image">
 
           <img
-            src="/home/soap/camelmilk.jfif"
+            src="/home/gift/giftgold.jfif"
             alt="Camel Milk Soap"
           />
 
@@ -483,7 +483,7 @@ const CamelSoap = () => {
         <div className="camel-ingredients-image">
 
           <img
-            src="/home/soap/camelmilk.jfif"
+            src="/home/gift/giftmilk.jfif"
             alt="Camel Milk Luxury Soap"
             loading="lazy"
           />

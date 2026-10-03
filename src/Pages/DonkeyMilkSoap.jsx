@@ -16,7 +16,7 @@ const donkeyMilkSoaps = [
     price: 499,
     oldPrice: 599,
     size: "100g",
-    image: "/home/soap/dunkymilk.jfif",
+    image: "/home/gift/giftdon.jfif",
   },
   {
     name: "Donkey Milk & Honey Soap",
@@ -24,7 +24,7 @@ const donkeyMilkSoaps = [
     price: 449,
     oldPrice: 549,
     size: "100g",
-    image: "/home/soap/soap2.jfif",
+    image: "/home/gift/giftdonk.jfif",
   },
   {
     name: "Donkey Milk & Saffron Soap",
@@ -32,7 +32,7 @@ const donkeyMilkSoaps = [
     price: 599,
     oldPrice: 699,
     size: "100g",
-    image: "/home/soap/soap3.jfif",
+    image: "/home/gift/giftdonkey.jfif",
   },
   {
     name: "Donkey Milk & Rose Soap",
@@ -40,7 +40,7 @@ const donkeyMilkSoaps = [
     price: 499,
     oldPrice: 599,
     size: "100g",
-    image: "/home/soap/soap4.jfif",
+   image: "/home/gift/giftdon.jfif",
   },
   {
     name: "Donkey Milk & Shea Butter Soap",
@@ -48,7 +48,7 @@ const donkeyMilkSoaps = [
     price: 549,
     oldPrice: 649,
     size: "100g",
-    image: "/home/soap/soap5.jfif",
+   image: "/home/gift/giftdonk.jfif",
   },
   {
     name: "Donkey Milk & Almond Soap",
@@ -56,7 +56,7 @@ const donkeyMilkSoaps = [
     price: 479,
     oldPrice: 579,
     size: "100g",
-    image: "/home/soap/soap6.jfif",
+    image: "/home/gift/giftdonkey.jfif",
   },
 ];
 
@@ -146,14 +146,14 @@ function DonkeyMilkSoap() {
           <div className="donkey-glow"></div>
 
           <img
-            src="/home/soap/dunkymilk.jfif"
+            src="/home/gift/giftdon.jfif"
             alt="Donkey Milk Luxury Soap"
           />
 
           <div className="donkey-floating-card">
             <span>PREMIUM RITUAL</span>
             <strong>Donkey Milk</strong>
-            <small>100g Luxury Bath Soap</small>
+            <small>10g Luxury Bath Soap</small>
           </div>
 
         </div>
@@ -161,33 +161,12 @@ function DonkeyMilkSoap() {
       </section>
 
 
-      {/* ================= INTRO ================= */}
-
-      <section className="donkey-intro">
-
-        <span className="section-label">
-          THE MILK RITUAL
-        </span>
-
-        <h2>
-          Where Gentle Care
-          <br />
-          Meets Timeless Luxury
-        </h2>
-
-        <p>
-          Our Donkey Milk Soap collection brings together a luxurious
-          cleansing experience with a soft, creamy character. Created
-          for those who appreciate elegant everyday rituals, each bar
-          is designed to make your bath feel beautifully indulgent.
-        </p>
-
-      </section>
+     
 
 
       {/* ================= BENEFITS ================= */}
 
-      <section className="donkey-benefits">
+      {/* <section className="donkey-benefits">
 
         {ritualBenefits.map((item, index) => (
 
@@ -208,7 +187,10 @@ function DonkeyMilkSoap() {
 
         ))}
 
-      </section>
+      </section> */}
+
+
+ 
 
 
       {/* ================= COLLECTION ================= */}
@@ -350,6 +332,30 @@ function DonkeyMilkSoap() {
       </section>
 
 
+            {/* ================= INTRO ================= */}
+
+      <section className="donkey-intro">
+
+        <span className="section-label">
+          THE MILK RITUAL
+        </span>
+
+        <h2>
+          Where Gentle Care
+          <br />
+          Meets Timeless Luxury
+        </h2>
+
+        <p>
+          Our Donkey Milk Soap collection brings together a luxurious
+          cleansing experience with a soft, creamy character. Created
+          for those who appreciate elegant everyday rituals, each bar
+          is designed to make your bath feel beautifully indulgent.
+        </p>
+
+      </section>
+
+
       {/* ================= LUXURY BANNER ================= */}
 
       <section className="donkey-luxury-banner">
@@ -357,7 +363,7 @@ function DonkeyMilkSoap() {
         <div className="donkey-banner-image">
 
           <img
-            src="/home/soap/dunkymilk.jfif"
+            src="/home/gift/giftdonk.jfif"
             alt="Donkey Milk Ritual"
           />
 

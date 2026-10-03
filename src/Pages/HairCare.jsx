@@ -10,7 +10,7 @@ const hairProducts = [
     price: 1199,
     oldPrice: 1499,
     size: "100ml",
-    image: "/home/hair/bhringraj-hair-oil.jfif",
+    image: "/home/hair/hairpack.jfif",
     subtitle: "Bhringraj • Amla • Botanical Oils",
     badge: "BESTSELLER",
   },
@@ -20,7 +20,7 @@ const hairProducts = [
     price: 1299,
     oldPrice: 1599,
     size: "100ml",
-    image: "/home/hair/argan-hair-oil.jfif",
+    image: "/home/hair/hairoil.jfif",
     subtitle: "Argan • Vitamin E • Silk Protein",
     badge: "PREMIUM",
   },
@@ -30,7 +30,7 @@ const hairProducts = [
     price: 1099,
     oldPrice: 1399,
     size: "100ml",
-    image: "/home/hair/saffron-almond-oil.jfif",
+    image: "/home/hair/hairjatrapha.jfif",
     subtitle: "Saffron • Almond • Jojoba",
     badge: "PREMIUM",
   },
@@ -40,7 +40,7 @@ const hairProducts = [
     price: 1399,
     oldPrice: 1699,
     size: "100ml",
-    image: "/home/hair/kumkumadi-hair-oil.jfif",
+    image: "/home/hair/haircream.jfif",
     subtitle: "Kumkumadi • Herbal Extracts • Botanical Oils",
     badge: "NEW",
   },
@@ -50,7 +50,7 @@ const hairProducts = [
     price: 999,
     oldPrice: 1299,
     size: "50ml",
-    image: "/home/hair/rosemary-serum.jfif",
+    image: "/home/hair/hairclean.jfif",
     subtitle: "Rosemary • Peptides • Botanical Actives",
     badge: "NEW",
   },
@@ -60,30 +60,11 @@ const hairProducts = [
     price: 1199,
     oldPrice: 1499,
     size: "50ml",
-    image: "/home/hair/keratin-serum.jfif",
+    image: "/home/hair/hairbox.jfif",
     subtitle: "Keratin • Argan • Silk Proteins",
     badge: "PREMIUM",
   },
-  {
-    id: 7,
-    name: "Tellus Essentials Bhringraj Shampoo",
-    price: 899,
-    oldPrice: 1099,
-    size: "250ml",
-    image: "/home/hair/bhringraj-shampoo.jfif",
-    subtitle: "Bhringraj • Amla • Herbal Cleansers",
-    badge: "PREMIUM",
-  },
-  {
-    id: 8,
-    name: "Tellus Essentials Saffron Hair Mask",
-    price: 1299,
-    oldPrice: 1599,
-    size: "200g",
-    image: "/home/hair/saffron-hair-mask.jfif",
-    subtitle: "Saffron • Shea Butter • Silk Protein",
-    badge: "LUXURY",
-  },
+  
 ];
 const benefits = [
   {
@@ -166,7 +147,7 @@ const HairCare = () => {
       {/* =====================================================
           INTRO
       ===================================================== */}
-      <section className="hair-intro">
+      {/* <section className="hair-intro">
 
         <div className="hair-intro-small">
           TELLUS ESSENTIALS
@@ -186,50 +167,9 @@ const HairCare = () => {
           indulgent.
         </p>
 
-      </section>
+      </section> */}
 
 
-      {/* =====================================================
-          BENEFITS
-      ===================================================== */}
-      <section className="hair-benefits">
-
-        <div className="hair-section-heading">
-
-          <span>
-            THE TELLUS RITUAL
-          </span>
-
-          <h2>
-            Care Beyond
-            <br />
-            The Ordinary
-          </h2>
-
-        </div>
-
-        <div className="hair-benefit-grid">
-
-          {benefits.map((item) => (
-            <div
-              className="hair-benefit-card"
-              key={item.number}
-            >
-
-              <span className="hair-benefit-number">
-                {item.number}
-              </span>
-
-              <h3>{item.title}</h3>
-
-              <p>{item.text}</p>
-
-            </div>
-          ))}
-
-        </div>
-
-      </section>
 
 
       {/* =====================================================
@@ -426,6 +366,49 @@ const HairCare = () => {
           >
             DISCOVER THE RITUAL
           </Link>
+
+        </div>
+
+      </section>
+
+      
+      {/* =====================================================
+          BENEFITS
+      ===================================================== */}
+      <section className="hair-benefits">
+
+        <div className="hair-section-heading">
+
+          <span>
+            THE TELLUS RITUAL
+          </span>
+
+          <h2>
+            Care Beyond
+            <br />
+            The Ordinary
+          </h2>
+
+        </div>
+
+        <div className="hair-benefit-grid">
+
+          {benefits.map((item) => (
+            <div
+              className="hair-benefit-card"
+              key={item.number}
+            >
+
+              <span className="hair-benefit-number">
+                {item.number}
+              </span>
+
+              <h3>{item.title}</h3>
+
+              <p>{item.text}</p>
+
+            </div>
+          ))}
 
         </div>
 

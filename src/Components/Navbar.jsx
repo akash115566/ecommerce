@@ -27,7 +27,7 @@ const menuData = {
       },
       {
         name: "Vitamin C Radiance Serum",
-        image: "/home/serum/serumblack.jfif",
+        image: "/home/serum/serumcheck.jfif",
         path: "/serum",
       },
       {
@@ -37,7 +37,7 @@ const menuData = {
       },
       {
         name: "Rose Glow Face Serum",
-        image: "/home/serum/serumrose.jfif",
+        image: "/home/serum/serumdot.jfif",
         path: "/serum",
       },
     ],
@@ -45,12 +45,12 @@ const menuData = {
     sideItems: [
       {
         name: "Luxury Skincare",
-        image: "/home/serum/serumblack.jfif",
+        image: "/home/serum/serumdrop.jfif",
         path: "/serum",
       },
       {
         name: "Most Loved Rituals",
-        image: "/home/serum/serumc.jfif",
+        image: "/home/serum/serumhand.jfif",
         path: "/most-loved-rituals",
       },
     ],
@@ -63,22 +63,22 @@ const menuData = {
     items: [
       {
         name: "Luxury Bath Rituals",
-        image: "/home/soap/soap2.jfif",
+        image: "/home/soap/soapgold.jfif",
         path: "/skincare",
       },
       {
         name: "Premium Body Care",
-        image: "/home/soap/soap3.jfif",
+        image: "/home/soap/soapgreen.jfif",
         path: "/skincare",
       },
       {
         name: "Natural Body Soaps",
-        image: "/home/soap/soap4.jfif",
+        image: "/home/soap/soappink.jfif",
         path: "/skincare",
       },
       {
         name: "Luxury Bath Collection",
-        image: "/home/soap/soap5.jfif",
+        image: "/home/soap/soapred.jfif",
         path: "/skincare",
       },
     ],
@@ -86,12 +86,12 @@ const menuData = {
     sideItems: [
       {
         name: "Bath Essentials",
-        image: "/home/soap/soap6.jfif",
+        image: "/home/soap/soapwhite.jfif",
         path: "/skincare",
       },
       {
         name: "Body Care Rituals",
-        image: "/home/soap/soap2.jfif",
+        image: "/home/soap/soapgreen.jfif",
         path: "/skincare",
       },
     ],
@@ -144,36 +144,32 @@ const menuData = {
     items: [
       {
         name: "Pure Dunky Milk Luxury Soap",
-        image: "/home/soap/dunkymilk.jfif",
-        path: "/donkeymilksoap",
+        image: "/home/gift/giftdon.jfif",
+        path: "/donkeymilk",
       },
       {
         name: "Dunky Milk & Honey Soap",
-        image: "/home/soap/soap2.jfif",
-        path: "/donkeymilksoap",
+        image: "/home/gift/giftdonk.jfif",
+        path: "/donkeymilk",
       },
       {
         name: "Dunky Milk & Saffron Soap",
-        image: "/home/soap/soap3.jfif",
-        path: "/donkeymilksoap",
+        image: "/home/gift/giftdonkey.jfif",
+        path: "/donkeymilk",
       },
-      {
-        name: "Dunky Milk & Rose Soap",
-        image: "/home/soap/soap4.jfif",
-        path: "/donkeymilksoap",
-      },
+     
     ],
 
     sideItems: [
       {
         name: "Dunky Milk & Shea Butter",
-        image: "/home/soap/soap5.jfif",
-        path: "/donkeymilksoap",
+         image: "/home/gift/giftdon.jfif",
+        path: "/donkeymilk",
       },
       {
         name: "Dunky Milk & Almond",
-        image: "/home/soap/soap6.jfif",
-        path: "/donkeymilksoap",
+         image: "/home/gift/giftdonk.jfif",
+        path: "/donkeymilk",
       },
     ],
   },
@@ -185,36 +181,36 @@ const menuData = {
     items: [
       {
         name: "Pure Camel Milk Luxury Soap",
-        image: "/home/soap/camelmilk.jfif",
-        path: "/skincare",
+        image: "/home/gift/giftbox.jfif",
+        path: "/camelsoap",
       },
       {
         name: "Camel Milk & Honey Soap",
-        image: "/home/soap/soap2.jfif",
-        path: "/skincare",
+        image: "/home/gift/giftbboxx.jfif",
+        path: "/camelsoap",
       },
       {
         name: "Camel Milk & Saffron Soap",
-        image: "/home/soap/soap3.jfif",
-        path: "/skincare",
+         image: "/home/gift/giftboox.jfif",
+        path: "/camelsoap",
       },
       {
         name: "Camel Milk & Rose Soap",
-        image: "/home/soap/soap4.jfif",
-        path: "/skincare",
+        image: "/home/gift/giftcamel.jfif",
+        path: "/camelsoap",
       },
     ],
 
     sideItems: [
       {
         name: "Camel Milk Luxury",
-        image: "/home/soap/camelmilk.jfif",
-        path: "/skincare",
+       image: "/home/gift/giftfour.jfif",
+        path: "/camelsoap",
       },
       {
         name: "Premium Milk Ritual",
-        image: "/home/soap/soap5.jfif",
-        path: "/skincare",
+       image: "/home/gift/giftgoat.jfif",
+        path: "/camelsoap",
       },
     ],
   },
@@ -226,35 +222,26 @@ const menuData = {
     items: [
       {
         name: "Luxury Gift Sets",
-        image: "/home/gifting/gift1.jfif",
+        image: "/home/gift/giftsoap.jfif",
         path: "/gifting",
       },
       {
         name: "Personal Gifting",
-        image: "/home/gifting/gift2.jfif",
+         image: "/home/gift/giftskin.jfif",
         path: "/gifting",
       },
-      {
-        name: "Corporate Gifting",
-        image: "/home/gifting/gift3.jfif",
-        path: "/gifting",
-      },
-      {
-        name: "Festive Gifting",
-        image: "/home/gifting/gift4.jfif",
-        path: "/gifting",
-      },
+     
     ],
 
     sideItems: [
       {
         name: "Premium Gifts",
-        image: "/home/gifting/gift5.jfif",
+         image: "/home/gift/giftserum.jfif",
         path: "/gifting",
       },
       {
         name: "Gift Collections",
-        image: "/home/gifting/gift6.jfif",
+         image: "/home/gift/giftsea.jfif",
         path: "/gifting",
       },
     ],
@@ -266,77 +253,49 @@ const menuData = {
 
     items: [
       {
-        name: "Bhringraj Hair Cleanser",
-        image: "/home/serum/serumblack.jfif",
-        path: "/serum",
+        name: "Premium Hair Cleanser",
+        image: "/home/hair/hairbox.jfif",
+        path: "/haircare",
       },
-      {
-        name: "Herbal Hair Cleanser",
-        image: "/home/serum/serumc.jfif",
-        path: "/serum",
-      },
-      {
-        name: "Nourishing Hair Ritual",
-        image: "/home/serum/serumblack.jfif",
-        path: "/serum",
-      },
-      {
-        name: "Luxury Hair Care",
-        image: "/home/serum/serumc.jfif",
-        path: "/serum",
-      },
+      
     ],
 
     sideItems: [
       {
         name: "Hair Care Ritual",
-        image: "/home/serum/serumblack.jfif",
-        path: "/serum",
+        image: "/home/hair/haircream.jfif",
+        path: "/haircare",
       },
       {
         name: "Premium Hair Care",
-        image: "/home/serum/serumc.jfif",
-        path: "/serum",
+        image: "/home/hair/hairoil.jfif",
+        path: "/haircare",
       },
     ],
   },
 
 
-  "7 STAR HOTEL LUXURY RANGE": {
-    path: "/collection",
+  "HOME": {
+    path: "/home",
 
     items: [
       {
-        name: "Luxury Hotel Soap",
-        image: "/home/soap/soap2.jfif",
+        name: "HOME LUXURY PRODECT",
+        image: "/home/slide/tellusdrop.jfif",
         path: "/collection",
       },
-      {
-        name: "Premium Guest Amenities",
-        image: "/home/soap/soap3.jfif",
-        path: "/collection",
-      },
-      {
-        name: "Hotel Luxury Collection",
-        image: "/home/soap/soap4.jfif",
-        path: "/collection",
-      },
-      {
-        name: "Exclusive Hotel Range",
-        image: "/home/soap/soap5.jfif",
-        path: "/collection",
-      },
+     
     ],
 
     sideItems: [
       {
-        name: "7 Star Luxury",
-        image: "/home/soap/collection-banner.jfif",
+        name: "Luxury Products",
+        image: "/home/gift/giftbox.jfif",
         path: "/collection",
       },
       {
-        name: "Hotel Essentials",
-        image: "/home/soap/collection-bottom.jfif",
+        name: "Luxury Combo Products",
+        image: "/home/gift/giftboox.jfif",
         path: "/collection",
       },
     ],
@@ -349,35 +308,21 @@ const menuData = {
     items: [
       {
         name: "Our Philosophy",
-        image: "/home/story/story1.jfif",
+        image: "/home/slide/tellusname.jfif",
         path: "/our-story",
       },
-      {
-        name: "Our Ingredients",
-        image: "/home/story/story2.jfif",
-        path: "/our-story",
-      },
-      {
-        name: "Our Rituals",
-        image: "/home/story/story3.jfif",
-        path: "/our-story",
-      },
-      {
-        name: "Our Promise",
-        image: "/home/story/story4.jfif",
-        path: "/our-story",
-      },
+     
     ],
 
     sideItems: [
       {
         name: "Ancient Wisdom",
-        image: "/home/story/story5.jfif",
+        image: "/home/slide/tellussoap.jfif",
         path: "/our-story",
       },
       {
         name: "Modern Luxury",
-        image: "/home/story/story6.jfif",
+        image: "/home/slide/tellusdrop.jfif",
         path: "/our-story",
       },
     ],
@@ -390,35 +335,21 @@ const menuData = {
     items: [
       {
         name: "About Tellus",
-        image: "/home/about/about1.jfif",
+        image: "/home/slide/tellusdrop.jfif",
         path: "/about",
       },
-      {
-        name: "Our Philosophy",
-        image: "/home/about/about2.jfif",
-        path: "/about",
-      },
-      {
-        name: "Luxury Skincare",
-        image: "/home/about/about3.jfif",
-        path: "/about",
-      },
-      {
-        name: "Natural Ingredients",
-        image: "/home/about/about4.jfif",
-        path: "/about",
-      },
+     
     ],
 
     sideItems: [
       {
         name: "Our Story",
-        image: "/home/about/about5.jfif",
+        image: "/home/slide/tellusname.jfif",
         path: "/our-story",
       },
       {
         name: "Our Promise",
-        image: "/home/about/about6.jfif",
+        image: "/home/slide/tellussoap.jfif",
         path: "/about",
       },
     ],
@@ -431,35 +362,26 @@ const menuData = {
     items: [
       {
         name: "Skincare Rituals",
-        image: "/home/blog/blog1.jfif",
+        image: "/home/serum/serumwhite.jfif",
         path: "/blog",
       },
       {
         name: "Beauty Secrets",
-        image: "/home/blog/blog2.jfif",
+        image: "/home/serum/serumdot.jfif",
         path: "/blog",
       },
-      {
-        name: "Ancient Beauty",
-        image: "/home/blog/blog3.jfif",
-        path: "/blog",
-      },
-      {
-        name: "Ingredient Stories",
-        image: "/home/blog/blog4.jfif",
-        path: "/blog",
-      },
+      
     ],
 
     sideItems: [
       {
         name: "Latest Journal",
-        image: "/home/blog/blog5.jfif",
+        image: "/home/serum/serumwhite.jfif",
         path: "/blog",
       },
       {
         name: "Beauty Guide",
-        image: "/home/blog/blog6.jfif",
+        image: "/home/serum/serumwhite.jfif",
         path: "/blog",
       },
     ],
@@ -476,7 +398,7 @@ const navLinks = [
   "CAMEL MILK SOAP",
   "GIFTING",
   "HAIR CLEANSER",
-  "7 STAR HOTEL LUXURY RANGE",
+  "HOME",
   "OUR STORY",
   "ABOUT",
   "BLOG",
