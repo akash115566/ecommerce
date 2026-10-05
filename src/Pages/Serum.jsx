@@ -70,6 +70,14 @@ const premiumSerums = [
     size: "30ml",
     image: "/home/serum/serumhand.jfif",
   },
+    {
+    name: "Saffron Brightening Serum",
+    subtitle: "Illuminating • Nourishing",
+    price: 1599,
+    oldPrice: 1899,
+    size: "30ml",
+    image: "/home/serum/serumblack.jfif",
+  },
 ];
 
 
