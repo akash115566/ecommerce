@@ -50,6 +50,10 @@
   color: #fff;
 }
 
+.serum-hero-content h1{
+  color: #fff;
+}
+
 .serum-hero-small {
   display: block;
 
@@ -71,6 +75,7 @@
   line-height: 0.98;
 
   font-weight: 400;
+  
 }
 
 .serum-hero p {
@@ -123,7 +128,7 @@
 
 .serum-section,
 .luxury-serum-section {
-  padding: 90px 7%;
+  padding: 30px 2%;
 }
 
 .luxury-serum-section {
@@ -256,7 +261,7 @@
 .serum-card {
   flex: 0 0 calc(25% - 17px);
 
-  min-width: 250px;
+  min-width: 260px;
 
   scroll-snap-align: start;
 
@@ -283,8 +288,8 @@
   display: block;
 
   position: relative;
-
-  height: 340px;
+  /* width: 400px; */
+  height: 360px;
 
   overflow: hidden;
 

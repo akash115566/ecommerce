@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
   FaChevronLeft,
   FaChevronRight,
@@ -40,7 +41,7 @@ const premiumSerums = [
     price: 1249,
     oldPrice: 1499,
     size: "30ml",
-    image: "/home/serum/serumblack.jfif",
+    image: "/home/serum/serumcheck.jfif",
   },
 
   {
@@ -49,7 +50,7 @@ const premiumSerums = [
     price: 1299,
     oldPrice: 1599,
     size: "30ml",
-    image: "/home/serum/serumc.jfif",
+    image: "/home/serum/serumdot.jfif",
   },
 
   {
@@ -58,7 +59,7 @@ const premiumSerums = [
     price: 1499,
     oldPrice: 1799,
     size: "30ml",
-    image: "/home/serum/serumblack.jfif",
+    image: "/home/serum/serumdrop.jfif",
   },
 
   {
@@ -67,7 +68,7 @@ const premiumSerums = [
     price: 1599,
     oldPrice: 1899,
     size: "30ml",
-    image: "/home/serum/serumc.jfif",
+    image: "/home/serum/serumhand.jfif",
   },
 ];
 
@@ -83,7 +84,7 @@ const luxurySerums = [
     price: 1999,
     oldPrice: 2499,
     size: "30ml",
-    image: "/home/serum/serumblack.jfif",
+    image: "/home/serum/serumorange.jfif",
   },
 
   {
@@ -92,7 +93,7 @@ const luxurySerums = [
     price: 1799,
     oldPrice: 2199,
     size: "30ml",
-    image: "/home/serum/serumc.jfif",
+    image: "/home/serum/serumshow.jfif",
   },
 
   {
@@ -101,7 +102,7 @@ const luxurySerums = [
     price: 1899,
     oldPrice: 2299,
     size: "30ml",
-    image: "/home/serum/serumblack.jfif",
+    image: "/home/serum/serumstone.jfif",
   },
 
   {
@@ -110,7 +111,7 @@ const luxurySerums = [
     price: 1999,
     oldPrice: 2499,
     size: "30ml",
-    image: "/home/serum/serumc.jfif",
+    image: "/home/serum/serumwhite.jfif",
   },
 
   {
@@ -119,17 +120,17 @@ const luxurySerums = [
     price: 1899,
     oldPrice: 2299,
     size: "30ml",
-    image: "/home/serum/serumblack.jfif",
+    image: "/home/serum/serumyellow.jfif",
   },
 
-  {
-    name: "Royal Botanical Youth Serum",
-    subtitle: "Advanced Botanical Care",
-    price: 2199,
-    oldPrice: 2699,
-    size: "30ml",
-    image: "/home/serum/serumc.jfif",
-  },
+  // {
+  //   name: "Royal Botanical Youth Serum",
+  //   subtitle: "Advanced Botanical Care",
+  //   price: 2199,
+  //   oldPrice: 2699,
+  //   size: "30ml",
+  //   image: "/home/serum/serumblack.jfif",
+  // },
 ];
 
 
@@ -180,6 +181,9 @@ const SerumSlider = ({
 
 
   return (
+  
+    
+   
     <div className="serum-slider-wrapper">
 
 
@@ -338,6 +342,240 @@ const SerumSlider = ({
 const Serum = () => {
 
   return (
+      <>
+     <Helmet>
+        {/* =========================
+            BASIC SEO
+        ========================== */}
+
+        <title>
+          Premium Face Serums | Luxury Skincare Serums | Tellus Essentials
+        </title>
+
+        <meta
+          name="description"
+          content="Discover premium and luxury face serums by Tellus Essentials. Explore Vitamin C, Hyaluronic Acid, Niacinamide, Kumkumadi, Saffron and botanical-inspired skincare serums for radiant, hydrated and nourished skin."
+        />
+
+        <meta
+          name="keywords"
+          content="face serum, premium face serum, luxury face serum, skincare serum, Vitamin C serum, Hyaluronic acid serum, Niacinamide serum, Kumkumadi serum, Saffron serum, natural face serum, luxury skincare, Tellus Essentials serum"
+        />
+
+        <meta
+          name="author"
+          content="Tellus Essentials"
+        />
+
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+
+        <meta
+          name="googlebot"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+
+        <link
+          rel="canonical"
+          href="https://tellusessentials.com/serum"
+        />
+
+
+        {/* =========================
+            OPEN GRAPH
+        ========================== */}
+
+        <meta
+          property="og:type"
+          content="website"
+        />
+
+        <meta
+          property="og:title"
+          content="Premium Face Serums | Luxury Skincare | Tellus Essentials"
+        />
+
+        <meta
+          property="og:description"
+          content="Explore premium and luxury face serums from Tellus Essentials, crafted around botanical inspiration, nourishing ingredients and refined skincare rituals."
+        />
+
+        <meta
+          property="og:url"
+          content="https://tellusessentials.com/serum"
+        />
+
+        <meta
+          property="og:site_name"
+          content="Tellus Essentials"
+        />
+
+        <meta
+          property="og:image"
+          content="https://tellusessentials.com/home/serum/serumblack.jfif"
+        />
+
+        <meta
+          property="og:image:alt"
+          content="Tellus Essentials Premium Face Serum"
+        />
+
+        <meta
+          property="og:locale"
+          content="en_IN"
+        />
+
+
+        {/* =========================
+            TWITTER / X
+        ========================== */}
+
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+
+        <meta
+          name="twitter:title"
+          content="Premium Face Serums | Tellus Essentials"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Discover premium and luxury face serums designed for hydration, radiance, nourishment and everyday skincare rituals."
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://tellusessentials.com/home/serum/serumblack.jfif"
+        />
+
+        <meta
+          name="twitter:image:alt"
+          content="Tellus Essentials Premium Face Serum"
+        />
+
+
+        {/* =========================
+            STRUCTURED DATA
+        ========================== */}
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+
+            name: "Premium Face Serums | Luxury Serum Collection",
+
+            description:
+              "Explore premium and luxury face serums by Tellus Essentials, including Vitamin C, Hyaluronic Acid, Niacinamide, Kumkumadi and Saffron-inspired skincare formulas.",
+
+            url: "https://tellusessentials.com/serum",
+
+            isPartOf: {
+              "@type": "WebSite",
+              name: "Tellus Essentials",
+              url: "https://tellusessentials.com/",
+            },
+
+            about: {
+              "@type": "Thing",
+              name: "Face Serums",
+            },
+
+            publisher: {
+              "@type": "Organization",
+              name: "Tellus Essentials",
+              url: "https://tellusessentials.com/",
+            },
+
+            mainEntity: {
+              "@type": "ItemList",
+
+              itemListElement: [
+                ...premiumSerums.map((product, index) => ({
+                  "@type": "ListItem",
+                  position: index + 1,
+                  name: product.name,
+                  url: "https://tellusessentials.com/product-details",
+                  image: `https://tellusessentials.com${product.image}`,
+                })),
+
+                ...luxurySerums.map((product, index) => ({
+                  "@type": "ListItem",
+                  position: premiumSerums.length + index + 1,
+                  name: product.name,
+                  url: "https://tellusessentials.com/product-details",
+                  image: `https://tellusessentials.com${product.image}`,
+                })),
+              ],
+            },
+          })}
+        </script>
+
+
+        {/* =========================
+            BREADCRUMB SCHEMA
+        ========================== */}
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+
+            "@type": "BreadcrumbList",
+
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://tellusessentials.com/",
+              },
+
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Serums",
+                item: "https://tellusessentials.com/serum",
+              },
+            ],
+          })}
+        </script>
+
+
+        {/* =========================
+            WEBSITE SCHEMA
+        ========================== */}
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+
+            "@type": "WebSite",
+
+            name: "Tellus Essentials",
+
+            url: "https://tellusessentials.com/",
+
+            potentialAction: {
+              "@type": "SearchAction",
+
+              target: {
+                "@type": "EntryPoint",
+
+                urlTemplate:
+                  "https://tellusessentials.com/search?q={search_term_string}",
+              },
+
+              "query-input":
+                "required name=search_term_string",
+            },
+          })}
+        </script>
+
+      </Helmet>
 
     <main className="serum-page">
 
@@ -541,6 +779,7 @@ const Serum = () => {
       </section>
 
     </main>
+     </>
   );
 };
 
