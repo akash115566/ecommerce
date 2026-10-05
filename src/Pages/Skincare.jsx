@@ -18,50 +18,50 @@ import "../Styles/skincare.css";
 const premiumSoaps = [
   {
     name: "Pure Camel Milk Soap",
-    price: 499,
-    oldPrice: 699,
-    size: "100g",
+    price: 5999,
+    oldPrice: 6999,
+    // size: "100g",
     image: "/home/gift/giftbox.jfif",
   },
 
   {
     name: "Camel Milk Honey Soap",
-    price: 549,
-    oldPrice: 749,
-    size: "100g",
+    price: 4500,
+    oldPrice: 5500,
+    // size: "100g",
     image: "/home/gift/giftboox.jfif",
   },
 
   {
     name: "Camel Milk & Rose Soap",
-    price: 549,
-    oldPrice: 749,
-    size: "100g",
+    price: 6200,
+    oldPrice: 7000,
+    // size: "100g",
     image: "/home/gift/giftcamel.jfif",
   },
 
   {
     name: "Camel Milk Nourishing Soap",
-    price: 599,
-    oldPrice: 799,
-    size: "100g",
+    price: 5500,
+    oldPrice: 6500,
+    // size: "100g",
     image: "/home/gift/giftgoat.jfif",
   },
 
   {
     name: "Natural Botanical Soap",
-    price: 449,
-    oldPrice: 599,
-    size: "100g",
-    image: "/home/soap/soap1.jfif",
+    price: 5999,
+    oldPrice: 6999,
+    // size: "100g",
+    image: "/home/gift/giftdon.jfif",
   },
 
   {
     name: "Herbal Glow Soap",
-    price: 499,
-    oldPrice: 649,
-    size: "100g",
-    image: "/home/soap/soap2.jfif",
+    price: 5500,
+    oldPrice: 6500,
+    // size: "100g",
+    image: "/home/gift/giftfour.jfif",
   },
 ];
 
@@ -72,51 +72,51 @@ const premiumSoaps = [
 
 const luxurySoaps = [
   {
-    name: "Camel Milk & Saffron Soap",
-    price: 599,
-    oldPrice: 799,
-    size: "100g",
-    image: "/home/gift/gifbboxx.jfif",
+    name: "Pure Camel Milk Soap",
+    price: 5999,
+    oldPrice: 6999,
+    // size: "100g",
+    image: "/home/gift/giftbox.jfif",
   },
 
   {
-    name: "Camel Milk Luxury Bath Soap",
-    price: 649,
-    oldPrice: 849,
-    size: "100g",
+    name: "Camel Milk Honey Soap",
+    price: 4500,
+    oldPrice: 5500,
+    // size: "100g",
+    image: "/home/gift/giftboox.jfif",
+  },
+
+  {
+    name: "Camel Milk & Rose Soap",
+    price: 6200,
+    oldPrice: 7000,
+    // size: "100g",
+    image: "/home/gift/giftcamel.jfif",
+  },
+
+  {
+    name: "Camel Milk Nourishing Soap",
+    price: 5500,
+    oldPrice: 6500,
+    // size: "100g",
+    image: "/home/gift/giftgoat.jfif",
+  },
+
+  {
+    name: "Natural Botanical Soap",
+    price: 5999,
+    oldPrice: 6999,
+    // size: "100g",
+    image: "/home/gift/giftdon.jfif",
+  },
+
+  {
+    name: "Herbal Glow Soap",
+    price: 5500,
+    oldPrice: 6500,
+    // size: "100g",
     image: "/home/gift/giftfour.jfif",
-  },
-
-  {
-    name: "Royal Saffron Bath Bar",
-    price: 699,
-    oldPrice: 899,
-    size: "100g",
-    image: "/home/soap/soap3.jfif",
-  },
-
-  {
-    name: "Luxury Rose Milk Soap",
-    price: 649,
-    oldPrice: 849,
-    size: "100g",
-    image: "/home/soap/soap4.jfif",
-  },
-
-  {
-    name: "Golden Milk Luxury Soap",
-    price: 749,
-    oldPrice: 999,
-    size: "100g",
-    image: "/home/soap/soap5.jfif",
-  },
-
-  {
-    name: "Royal Botanical Cleansing Bar",
-    price: 699,
-    oldPrice: 899,
-    size: "100g",
-    image: "/home/soap/soap6.jfif",
   },
 ];
 
